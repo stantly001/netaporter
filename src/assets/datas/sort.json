@@ -1,0 +1,14 @@
+[
+    {
+        "sortDisplayName":"New in",
+        "sortTypeName":"newIn"
+    },
+    {
+        "sortDisplayName":"Price High To Low",
+        "sortTypeName":"priceHighToLow"
+    },
+    {
+        "sortDisplayName":"Price Low To High",
+        "sortTypeName":"priceLowToHigh"
+    }
+]

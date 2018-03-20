@@ -1,0 +1,30 @@
+[
+    {
+    "colorId":1,
+    "colorName":"Red"
+    },
+    {
+        "colorId":2,
+        "colorName":"Blue"
+    },
+    {
+        "colorId":3,
+        "colorName":"Green"
+    },
+    {
+        "colorId":4,
+        "colorName":"Yellow"
+    },
+    {
+        "colorId":5,
+        "colorName":"Orange"
+    },
+    {
+        "colorId":6,
+        "colorName":"Pink"
+    },
+    {
+        "colorId":7,
+        "colorName":"Black"
+    }
+]
