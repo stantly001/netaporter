@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+	* Global Stylesheet for Entire Application
+*/
 html, body{
     font-size: 100%;
 	background:	#fff;
@@ -34,7 +36,8 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
 }
 .w3l_logo{
 	float:left;
-	margin-left:22em;
+	margin-left: 6em !important;
+	margin-right: 5em;
 }
 .w3l_logo h1 a{
 	font-size:1.1em;
@@ -1555,7 +1558,6 @@ h3.other-nw {
 }
 .panel_bottom li{
 	list-style-type:none;
-	margin-bottom: 1em;
 }
 .panel-body ul li,.ecommerce_size ul li{
 	list-style-type: none;
@@ -1588,9 +1590,6 @@ ul.panel_bottom {
     padding:1em 0 0 0em;
 }
 
-.w3ls_dresses_grid_left_grid:nth-child(2){
-	margin:2em 0;
-}
 .ecommerce_color ul li{
 	list-style-type:none;
 	margin-bottom:1em;
@@ -1625,9 +1624,6 @@ ul.panel_bottom {
 }
 .dresses_img_hover,.w3ls_dresses_grid_right_grid1{
 	position:relative;
-}
-.w3ls_dresses_grid_left_grid:nth-child(4){
-	margin:2em 0 0;
 }
 .dresses_img_hover_pos{
 	position:absolute;
@@ -1697,7 +1693,7 @@ select.select_item {
     color: #212121;
     padding: 0px;
 	outline:none;
-	margin-right: 1em;
+	/* margin-right: 1em; */
 }
 .dresses_grid{
 	position:relative;
@@ -3719,9 +3715,7 @@ td.invert-image a img {
 	.w3ls_dresses_grid_left_grid h3:before {
 		width: 16%;
 	}
-	.w3ls_dresses_grid_left_grid_sub {
-		padding: 1em 1.5em 1em;
-	}
+	
 	.dresses_img_hover_pos {
 		right: 11%;
 	}
@@ -3872,7 +3866,8 @@ td.invert-image a img {
 		font-size: .4em;
 	}
 	.w3l_logo {
-		margin-left: 3em;
+		margin-left: 4em !important;
+		margin-right: 3em;
 	}
 	.search_box:checked~.search_form {
 		width: 365px;
@@ -4310,4 +4305,27 @@ td.invert-image a img {
 	.close1, .close2, .close3 {
 		right: 111px;
 	}
+}
+body {
+    font-family: '33535gillsansmt'
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: '33535gillsansmt'
+}
+*{
+	list-style-type: none;
+}
+
+.current {
+    padding: 0.1875rem 0.625rem;
+    background:transparent !important;
+    color: #291abd !important;
+    cursor: default;
+}
+.w3ls_dresses_grid_left_grid_sub.filter-category {
+
+    border-bottom: 1px dotted #000 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+
 }

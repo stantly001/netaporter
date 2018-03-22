@@ -240,3 +240,14 @@ padding:6px;
 .span.promotional_block img {
 max-width:100%;
 }
+
+.dropdown-shop:hover .multi-column {
+    display: block;
+}
+
+.dropdown-menu.columns-3 {
+    min-width: 700px !important;
+}
+.dropdown-menu {
+    left:-10% !important;
+}

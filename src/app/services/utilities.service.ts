@@ -5,22 +5,26 @@ export class UtilitiesService {
 
   constructor() { }
 
-   /*
-      * - Join Array of Array structure
+  /**
+   * 
+   * @param data 
+   * Join Array of Array structure
    */
   joinArrayOfArray(data) {
     let arr = [].concat.apply([],data);
     return this.removeDuplicatesFromArray(arr);
   }
 
-  /*
+  /** 
+    * @param arr
     * - Remove Duplicates from Comma seperated Arrays
   */
   removeDuplicatesFromArray(arr) {
     return Array.from(new Set(arr))
   }
 
-  /*
+  /**
+    * @param data
     * - Remove duplicates from Array of Objects
     * x - value
     * i - index
@@ -30,12 +34,59 @@ export class UtilitiesService {
     return data.filter((x,i,a)=>x && a.indexOf(x)===i);
   }
 
+  /**
+   * 
+   * @param arr 
+   * Returns comma seperated Strings
+   */
   convertArrayToString(arr:Array<any>) {
     return arr.join(",");
   }
 
+  /**
+   * get base url
+   */
   getUrlBeforeQueryString() {
     return window.location.href.split('?')[0];
+  }
+
+  /**
+   * 
+   * @param arr 
+   * @param obj 
+   * Sort Object by Array index as object keys
+   */
+  sortObjectByArrayKeys(arr,obj) {
+    let sortedMap:{[k:string]:any}={};
+    for(let i=0;i<arr.length;i++) {
+      sortedMap[arr[i]]=obj[arr[i]];
+    }
+    return sortedMap;
+  }
+
+  /**
+   * 
+   * @param arr 
+   * @param type (asc/desc)
+   * @param key
+   * key exist consider as array object else consider as array
+   */
+  sortArrayByOrders(arr:Array<any>,type:string,key:string){
+    if(key) {
+      return (type=="asc") ? arr.sort((a,b)=>parseFloat(a[key])-parseFloat(b[key])) :arr.sort((a,b)=>parseFloat(b[key])-parseFloat(a[key]));
+    } else {
+      return (type=="asc") ? arr.sort((a,b)=>parseFloat(a)-parseFloat(b)) :arr.sort((a,b)=>parseFloat(b)-parseFloat(a));
+    }
+  }
+
+  /**
+   * 
+   * @param arr 
+   * @param key 
+   * returns the map object from Array Object
+   */
+  mapArrayData(arr:Array<any>,key,value){
+    return arr.filter(data=>data[key]==value)[0];
   }
 
 }

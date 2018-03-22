@@ -1,0 +1,38 @@
+.w3ls_dresses_grid_right_grid3 {
+    z-index: 1 !important;
+    position: relative !important;
+}
+
+.current {
+    padding: 0.1875rem 0.625rem;
+    background:transparent !important;
+    color: #000 !important;
+    cursor: default;
+}
+.description > a {
+    color:#000 !important;
+}
+.description {
+    text-align: left;
+}
+.promotional_block > img {
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+.w3_hs_bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none;
+    /* opacity: 0; */
+    top: 0%;
+    left: 0%;
+    /* z-index: 200; */
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(460px, -100px) rotate(180deg);
+    transform: translate(460px, -100px) rotate(180deg);
+    /* -webkit-transition: all 0.2s 0.4s ease-in-out; */
+    /* transition: all 0.2s 0.4s ease-in-out; */
+}
+

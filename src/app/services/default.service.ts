@@ -34,4 +34,12 @@ export class DefaultService {
     return this.http.get(this.BASE_URL+"sort.json").map((res:Response)=>res);
   }
 
+  getLanuage():any {
+    return this.http.get(this.BASE_URL+"language.json").map((res:Response)=>res);
+  }
+
+  getCountry():any {
+    return this.http.get(this.BASE_URL+"country.json").map((res:Response)=>res);
+  }
+
 }

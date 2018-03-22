@@ -2,6 +2,7 @@
     {
          "id":1,
          "name":"Clothing",
+         "img":"assets/img/cloting.jpg",
          "subCategory":[{
                      "id":1,
                      "name":"Jeans",
@@ -38,8 +39,9 @@
      {
          "id":2,
          "name":"Shoes",
+         "img":"assets/img/accessories.jpg",
          "subCategory":[{
-                     "id":1,
+                     "id":3,
                      "name":"Boots",
                      "subLevelCategory":[{
                                  "id":1,
@@ -53,9 +55,9 @@
                                  "id":3,
                                  "name":"Ankle"
                              }]
-                 },
+                    },
                  {
-                     "id":2,
+                     "id":4,
                      "name":"Sneakers",
                      "subLevelCategory":[{
                                  "id":1,
@@ -74,12 +76,13 @@
      {
          "id":3,
          "name":"Bags",
+         "img":"assets/img/jewllery.jpg",
          "subCategory":[{
-                     "id":1,
+                     "id":5,
                      "name":"BackPacks"
                  },
                  {
-                     "id":2,
+                     "id":6,
                      "name":"Mini-Bags",
                      "subLevelCategory":[{
                                  "id":1,
@@ -93,8 +96,9 @@
      },{
          "id":4,
          "name":"Salwar",
+         "img":"assets/img/cloting.jpg",
          "subCategory":[{
-                     "id":1,
+                     "id":7,
                      "name":"Boots",
                      "subLevelCategory":[{
                                  "id":1,
@@ -110,7 +114,7 @@
                              }]
                  },
                  {
-                     "id":2,
+                     "id":8,
                      "name":"Sneakers",
                      "subLevelCategory":[{
                                  "id":1,
@@ -129,7 +133,8 @@
          "id":5,
          "name":"Sarees",
          "subCategory":[{
-                     "id":1,
+            "img":"assets/img/jewellery.jpg",
+                     "id":9,
                      "name":"Jeans",
                      "subLevelCategory":[{
                                  "id":1,
@@ -145,7 +150,7 @@
                              }]
                  },
                  {
-                     "id":2,
+                     "id":10,
                      "name":"Jackets",
                      "subLevelCategory":[{
                                  "id":1,
@@ -163,12 +168,13 @@
      },{
          "id":6,
          "name":"Kurtas",
+         "img":"assets/img/cloting.jpg",
          "subCategory":[{
-                     "id":1,
+                     "id":11,
                      "name":"BackPacks"
                  },
                  {
-                     "id":2,
+                     "id":12,
                      "name":"Mini-Bags",
                      "subLevelCategory":[{
                                  "id":1,

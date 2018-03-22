@@ -1,25 +1,40 @@
 [{
     "id"	:1,
     "name"	:"Bag1",
-    "price"	:"13.500",
+    "price"	:"10.500",
     "available"	:true,
     "best_seller"	:false,
-    "categories":[2,4],
-    "designerId":[1,4,5,6],
-    "colorId":[1,2,3],
+    "categories":[2],
+    "subCategoryId":[3,4],
+    "designerId":[5,6],
+    "colorId":[1],
     "sizeId":[1,2,3,4],
-    "img"	:"assets/img/bag1.jpg",
+    "subCategoryDesignerId":[4],
+    "subCategoryColorId":[1],
+    "subCategorySizeId":[1,2,3,4],
+    "productImg":"assets/img/bag1.jpg",
+    "outFitImg":"assets/img/bag3.jpg",
     "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
-        {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
-    "description"	:"Man you gonna like these awesome cucumbers."
+    "url":"https://cache.net-a-porter.com/images/products/10https://cache.net-a-porter.com/images/products/148377/1048377_ou_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],
+    "Items":[
+    {
+    "title": "WHY WE LOVE IT",
+    "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+    },
+    {
+    "title": "SIZE & FIT INFORMATION ",
+    "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+    }
+    ],
+    "description":"Portofino 85 PVC-trimmed leather sandals"
     },
     {	
     "id"	:2,
@@ -28,6 +43,7 @@
     "available":false,
     "best_seller":false,
     "categories":[4],	
+    "subCategoryId":[8],
     "designerId":[1,5,6],
     "colorId":[1,2,3,4,5,6,7],
     "sizeId":[1,2],
@@ -42,7 +58,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Double-breasted silk-blend blazer"
     },
     {	
     "id":3,
@@ -51,10 +67,12 @@
     "available":true,
     "best_seller":true,
     "categories":[4],	
+    "subCategoryId":[7],
     "designerId":[1,4,5,6],
     "colorId":[1,2,3,4],
     "sizeId":[1,3,4],
-    "img":"assets/img/bag3.jpg",
+    "productImg":"assets/img/bag3.jpg",
+    "outFitImg":"assets/img/bag1.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -65,7 +83,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Double-breasted silk-blend blazer"
     },
     {	
     "id":4,
@@ -73,11 +91,13 @@
     "price":"35.000",
     "available":false,
     "best_seller":false,
-    "categories":[1,2],	
-    "designerId":[1,2,3,4,5,6],
+    "categories":[1],	
+    "subCategoryId":[2],
+    "designerId":[1,2,3,5,6],
     "colorId":[1],
     "sizeId":[1,4],
-    "img":"assets/img/bag3.jpg",
+    "productImg":"assets/img/bag3.jpg",
+    "outFitImg":"assets/img/bag1.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -88,7 +108,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Double-breasted silk-blend blazer"
     },
     {
     "id":	5,
@@ -96,11 +116,13 @@
     "price"	:"12.000",
     "available":true,
     "best_seller":true,
-    "categories":[1,4],
+    "categories":[1],
+    "subCategoryId":[1],
     "designerId":[1,4,5,6,7,10],
     "colorId":[1,2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/bag4.jpg",
+    "productImg":"assets/img/bag4.jpg",
+    "outFitImg":"assets/img/bag3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -111,7 +133,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {
     "id":6,
@@ -119,11 +141,13 @@
     "price":"120.000",
     "available":true,
     "best_seller":false,
-    "categories":[1,4],	
+    "categories":[1],	
+    "subCategoryId":[1,2],
     "designerId":[1,2,4,5,6,7,8,9,10],
     "colorId":[1,2,3,7],
     "sizeId":[1,2,3,4,5,6],
-    "img":"assets/img/bag5.jpg",
+    "productImg":"assets/img/bag5.jpg",
+    "outFitImg":"assets/img/bag3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -134,7 +158,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	
     "id":7,
@@ -142,11 +166,13 @@
     "price":"50.000",
     "available":false,
     "best_seller":false,
-    "categories":[1,3],	
+    "categories":[1],	
+    "subCategoryId":[1,2],
     "designerId":[1,4],
     "colorId":[1,3,7],
     "sizeId":[1,4,5,6],
-    "img":"assets/img/bag6.jpg",
+    "productImg":"assets/img/bag6.jpg",
+    "outFitImg":"assets/img/bag3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -157,7 +183,7 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	
     "id":8,
@@ -165,11 +191,13 @@
     "price":"29.500",
     "available":true,
     "best_seller":false,
-    "categories":[1,3],
+    "categories":[1],
+    "subCategoryId":[2],
     "designerId":[1,5,6],
     "colorId":[1,2,3,4,5,6,7],
     "sizeId":[1,2,3,4,5,6],
-    "img":"assets/img/bag7.jpg",
+    "productImg":"assets/img/bag7.jpg",
+    "outFitImg":"assets/img/bag6.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -180,19 +208,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	
     "id":9,
     "name":	"Bag8",
-    "price":"15.000",
+    "price":"12.000",
     "available":true,
     "best_seller":true,
-    "categories":[2,4],	
+    "categories":[2],	
+    "subCategoryId":[3,4],
     "designerId":[1,4,5,6,8,10],
-    "colorId":[1,2,3,7],
+    "colorId":[7],
     "sizeId":[5,6],
-    "img":"assets/img/bag8.jpg",
+    "productImg":"assets/img/bag8.jpg",
+    "outFitImg":"assets/img/bag5.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -203,19 +233,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Jase crinkled patent-leather mules"
     },
     {	
     "id":10,
     "name":"cloth1",
-    "price":"215.000",
+    "price":"16.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[2],	
+    "subCategoryId":[3],
     "designerId":[1,3,4,5,6],
-    "colorId":[2,3,7],
+    "colorId":[3],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth1.jpg",
+    "productImg":"assets/img/cloth1.jpg",
+    "outFitImg":"assets/img/cloth2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -226,18 +258,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"C/O Jimmy Choo Victoria 100 crystal-embellished satin and vinyl pumps"
     }, {	
     "id":11,
     "name":"cloth2",
     "price":"215.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth2.jpg",
+    "productImg":"assets/img/cloth2.jpg",
+    "outFitImg":"assets/img/cloth1.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -248,18 +282,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Drew Bijou quilted leather shoulder bag"
     }, {	
     "id":12,
     "name":"cloth3",
-    "price":"215.000",
+    "price":"153.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth3.jpg",
+    "video":"https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "productImg":"assets/img/cloth3.jpg",
+    "outFitImg":"assets/img/cloth2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -270,18 +307,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Biggy color-block textured-leather"
     }, {	
     "id":13,
     "name":"cloth4",
-    "price":"215.000",
+    "price":"96.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5,6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth4.jpg",
+    "productImg":"assets/img/cloth4.jpg",
+    "outFitImg":"assets/img/cloth3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -292,19 +331,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Hortensia smooth and textured"
     },
     {	
     "id":14,
     "name":"cloth5",
-    "price":"215.000",
+    "price":"25.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5,6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth5.jpg",
+    "productImg":"assets/img/cloth5.jpg",
+    "outFitImg":"assets/img/cloth2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -315,19 +356,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Pionnière leather shoulder bag"
     },
     {	
     "id":15,
     "name":"cloth6",
-    "price":"215.000",
+    "price":"36.75",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth6.jpg",
+    "productImg":"assets/img/cloth6.jpg",
+    "outFitImg":"assets/img/cloth2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -338,19 +381,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Amphora leather tote"
     },
     {	
     "id":16,
     "name":"cloth7",
-    "price":"215.000",
+    "price":"82.65",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth7.jpg",
+    "productImg":"assets/img/cloth7.jpg",
+    "outFitImg":"assets/img/cloth3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -361,19 +406,21 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Ophidia patent leather-trimmed suede shoulder bag"
     },
     {	
     "id":17,
     "name":"cloth8",
-    "price":"215.000",
+    "price":"88.14",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5,6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/cloth8.jpg",
+    "productImg":"assets/img/cloth8.jpg",
+    "outFitImg":"assets/img/cloth2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -384,15 +431,16 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Medium printed textured-leather tote"
     },
     {	
     "id":18,
     "name":"shoe1",
-    "price":"215.000",
+    "price":"74.16",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
@@ -407,18 +455,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Walker Sling suede and leather bucket bag"
     },{	
     "id":19,
     "name":"shoe2",
-    "price":"215.000",
+    "price":"72.25",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[6],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe2.jpg",
+    "productImg":"assets/img/shoe2.jpg",
+    "outFitImg":"assets/img/shoe3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -429,18 +479,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Fringed printed leather tote"
     },{	
     "id":20,
     "name":"shoe3",
-    "price":"215.000",
+    "price":"45.20",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],
+    "subCategoryId":[6],	
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe3.jpg",
+    "productImg":"assets/img/shoe3.jpg",
+    "outFitImg":"assets/img/shoe2.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -451,18 +503,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Amberley mini lizard-effect leather shoulder bag"
     },{	
     "id":21,
     "name":"shoe4",
-    "price":"215.000",
+    "price":"256.78",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[2],	
+    "subCategoryId":[3,4],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe4.jpg",
+    "productImg":"assets/img/shoe4.jpg",
+    "outFitImg":"assets/img/shoe3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -473,18 +527,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Barbara suede pumps"
     },{	
     "id":22,
     "name":"shoe5",
-    "price":"215.000",
+    "price":"45.36",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[4],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe5.jpg",
+    "productImg":"assets/img/shoe5.jpg",
+    "outFitImg":"assets/img/shoe3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -495,18 +551,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Leather bucket bag"
     },{	
     "id":23,
     "name":"shoe6",
-    "price":"215.000",
+    "price":"74.10",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[2],
+    "subCategoryId":[4],	
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe6.jpg",
+    "productImg":"assets/img/shoe6.jpg",
+    "outFitImg":"assets/img/shoe5.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -517,18 +575,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Jase leather mules"
     },{	
     "id":24,
     "name":"shoe7",
-    "price":"215.000",
+    "price":"30.000",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[2],
+    "subCategoryId":[4],	
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe7.jpg",
+    "productImg":"assets/img/shoe7.jpg",
+    "outFitImg":"assets/img/shoe6.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -539,18 +599,20 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Margot leather slingback pumps"
     },{	
-    "id":24,
+    "id":25,
     "name":"shoe8",
-    "price":"215.000",
+    "price":"13.76",
     "available":false,
     "best_seller":true,
-    "categories":[2,3],	
+    "categories":[3],	
+    "subCategoryId":[5],
     "designerId":[1,3,4,5,6],
     "colorId":[2,3,7],
     "sizeId":[1,2,3,4],
-    "img":"assets/img/shoe8.jpg",
+    "productImg":"assets/img/shoe8.jpg",
+    "outFitImg":"assets/img/shoe3.jpg",
     "images":[{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         },{
@@ -561,5 +623,5 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
+    "description":"Bonsai 20 nubuck bucket bag"
     }]

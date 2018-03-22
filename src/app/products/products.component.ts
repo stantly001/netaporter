@@ -7,6 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   @Input() products:Array<any>=[];
+  @Input() ImageView:string;
   constructor() { }
 
   ngOnInit() {

@@ -1,87 +1,109 @@
 <div class="container product-view">
-    <div class="col-md-12">
-    <div class="w3ls_dresses_grid_left_grid2_left">
-    <button class="btn btn-default">Product View</button>
-                <select name="select_item" (change)="sortProduct()" class="select_item">
-                    <option value="">Select</option>
-                    <option *ngFor="let sortProduct of sort"
-                     [value]="sortProduct.sortTypeName">
-                      {{sortProduct.sortDisplayName}}
-                    </option>
-                </select>
-      </div>
-      <div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Page No"  [(ngModel)]="pageNum">
-      </div>
-    </div>
-    <li class="nav"><a [routerLink]="['product']" [queryParams]="{ pageNum: pageNum, test:5 }">Product</a></li>
-    </div>
-    <div class="col-md-12">
-      <div class="col-md-4">
-          <div class="w3ls_dresses_grid_left_grid_sub">
-              <ul class="panel_bottom">
-                <li *ngFor="let subCategory of subCategories">
-                  <a (click)="subCategoryName=subCategory.name;loadUrl()"
-                  [routerLink]="['/home/',categoryId,subCategory.name]" 
-                  queryParamsHandling="merge" 
-                >{{subCategory.name}}</a>
-                </li>
-              </ul>
-            </div>
-            <!-- designer -->
-            
-            <div class="w3ls_dresses_grid_left_grid">
-                <h3>designers</h3>
-                <div class="w3ls_dresses_grid_left_grid_sub">
-                 <ul class="panel_bottom">
-                    <li *ngFor="let designer of designers">
-                      <input (click)="filter(designer,$event.target.checked,'designer')" type="checkbox" 
-                      >
-                      <a 
-                      [routerLink]="['/home/',categoryId,subCategoryName?subCategoryName:'']"
-                       >
-                       {{designer.designerDisplayName}}</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            <!-- color -->
-            <div class="w3ls_dresses_grid_left_grid">
-                <h3>Color</h3>
-                <div class="w3ls_dresses_grid_left_grid_sub">
-                 <ul class="panel_bottom">
-                    <li *ngFor="let color of colors">
-                      <input type="checkbox" 
-                      (click)="filter(color,$event.target.checked,'color')">
-                      <a 
-                      [routerLink]="['/home',categoryId,subCategoryName?subCategoryName:'']" 
-                      >
-                        {{color.colorName}}</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- size-->
-              <div class="w3ls_dresses_grid_left_grid">
-                  <h3>Size</h3>
-                  <div class="w3ls_dresses_grid_left_grid_sub">
-                    <ul class="panel_bottom">
-                      <li *ngFor="let size of sizes">
-                      <input type="checkbox" 
-                          (click)="filter(size,$event.target.checked,'size')"
-                          >
-                        <a 
-                        [routerLink]="['/home/',categoryId,subCategoryName?subCategoryName:'']"
-                       
-                        >{{size.sizeName}}</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-      </div>
-      <div class="col-md-8">
-        <app-products [products]="products"></app-products>
+  <div class="col-md-12 category-banner">
+      <div id="product-list-menu" class="product-list-menu ">
+    <div class="col-md-3">
+      <div class="w3ls_dresses_grid_left_grid2_left">
+          <button (click)="imageView($event.target.value)" 
+          *ngIf="productImageView=='product'"
+          value="outFit" 
+          class="btn btn-default">
+            Outfit View
+          </button>
+        <button (click)="imageView($event.target.value)" 
+        *ngIf="productImageView=='outFit'"
+        value="product" 
+        class="btn btn-default">
+          Product View
+        </button>
+        <select name="select_item" (change)="sortProduct($event.target.value)" class="select_item">
+          <option value="all">Select</option>
+          <option *ngFor="let sortProduct of sort" [value]="sortProduct.sortTypeName">
+            {{sortProduct.sortDisplayName}}
+          </option>
+        </select>
       </div>
     </div>
+    <!--<div class="col-md-8">
+      <div class="category-heading">{{header?.name}}</div>
+      <div class="category-count">{{products?.length}} Results</div>
+    </div>-->
+    <div class="product-list-title">
+        <h1>{{header?.name}}</h1>
+        <div class="product-list-results">
+            <span class="product-list-results-container">
+                <span class="total-number-of-products">{{products?.length}}</span>&nbsp;<span class="total-results-message">Results</span>
+            </span>
+        </div>
     </div>
+    <hr>
+    </div>
+  </div>
+ 
+  <div class="col-md-12">
+    <div class="col-md-3">
+
+      <!-- subCategory -->
+      <div class="w3ls_dresses_grid_left_grid_sub filter-category">
+        <ul class="panel_bottom">
+          <li *ngFor="let subCategory of subCategories">
+            <a class="filter-menu" (click)="subCategoryName=subCategory.name;" 
+            [routerLink]="['/shop/',categoryId,subCategory.id]"
+            queryParamsHandling="merge">{{subCategory.name}}</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- designer -->
+      <div class="w3ls_dresses_grid_left_grid">
+        <h3>DESIGNERS</h3>
+        <div class="w3ls_dresses_grid_left_grid_sub">
+          <ul class="panel_bottom">
+            <li *ngFor="let designer of designers">
+              <span>
+                <input (click)="filter(designer,$event.target.checked,'designer')" 
+                id="input-confidencial"
+                class="input-assumpte checkbox-border" 
+                type="checkbox">
+              </span>
+              <span class="checkbox-menu">
+                {{designer.designerDisplayName}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- color -->
+      <div class="w3ls_dresses_grid_left_grid">
+        <h3>Color</h3>
+        <div class="w3ls_dresses_grid_left_grid_sub">
+          <ul class="panel_bottom">
+            <li *ngFor="let color of colors">
+              <span><input type="checkbox" class="checkbox-border" (click)="filter(color,$event.target.checked,'color')"></span>
+              <span class="checkbox-menu">
+                {{color.colorName}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- size-->
+      <div class="w3ls_dresses_grid_left_grid">
+        <h3>Size</h3>
+        <div class="w3ls_dresses_grid_left_grid_sub">
+          <ul class="panel_bottom">
+            <li *ngFor="let size of sizes">
+              <span>
+                <input type="checkbox" class="checkbox-border" (click)="filter(size,$event.target.checked,'size')"></span>
+              <span class="checkbox-menu">{{size.sizeName}}</span>
+            </li>
+          </ul>
+          <a class="size-guide" target="_blank" href="https://www.net-a-porter.com/intl/sizechart.nap">Size Guide</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-9">
+      <app-products [ImageView]="productImageView" [products]="products"></app-products>
+    </div>
+  </div>
+</div>

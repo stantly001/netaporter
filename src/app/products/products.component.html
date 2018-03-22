@@ -1,38 +1,49 @@
 <div class="w3ls_dresses_grid_right_grid3">
-    <div *ngFor="let product of products" class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-      <div class="agile_ecommerce_tab_left dresses_grid">
-        <div class="hs-wrapper hs-wrapper2"> <img src="{{product.img}}" alt=" " class="img-responsive"> <img src="images/ss2.jpg" alt=" " class="img-responsive"> <img src="images/ss3.jpg" alt=" " class="img-responsive"> <img src="images/ss4.jpg" alt=" " class="img-responsive"> <img src="images/ss5.jpg" alt=" " class="img-responsive"> <img src="images/ss6.jpg" alt=" " class="img-responsive"> <img src="images/ss7.jpg" alt=" " class="img-responsive"> <img src="images/ss8.jpg" alt=" " class="img-responsive">
-          <div class="w3_hs_bottom w3_hs_bottom_sub1">
-            <ul>
-              <li> <a routerLink="product/{{product.id}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> </li>
-            </ul>
-          </div>
-        </div>
-       
-       <div class="description">
-          <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-            <span class="designer">{{product.name}}</span>
-          </a>
-          <br>
-          <span class="price ">
-              £ {{product.price}}
-          </span>
-          <br class="clearboth">
-          <span class="slug"></span>
-        </div>
+  <div *ngIf="products.length===0">
+    Sorry! No Matching Products
+  </div>
+
+  <div *ngFor="let product of products | paginate:{itemsPerPage:5,currentPage:p}" class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+    <div class="agile_ecommerce_tab_left dresses_grid">
+      <div class="hs-wrapper hs-wrapper2">
+        <a routerLink="/product/{{product.id}}">
+          <img *ngIf="ImageView=='product'" src="{{product.productImg}}" alt="" >
+          <img *ngIf="ImageView=='outFit'" src="{{product.outFitImg}}" alt="">
+        </a>
+
+      </div>
+
+      <div class="description">
+        <a routerLink="/product/{{product.id}}" title="Printed satin dress" data-position="1">
+          <span class="designer">{{product.name}}</span>
+        </a>
+        <br class="clearboth">
+        <span class="product-description">
+          {{product.description}}
+        </span>
+        <br>
+        <span class="price ">
+          £ {{product.price}}
+        </span>
+        <br class="clearboth">
+        <span class="slug"></span>
       </div>
     </div>
-  
-     
-    
-    <div id="product-list-menu-bottom">
-  <!-- <a class="back-to-top" href="#top">Back to top
-    
-  </a> -->
- 
-</div>
+  </div>
 
-<span class="promotional_block">
+
+
+
+  <div id="product-list-menu-bottom">
+    <!-- <a class="back-to-top" href="#top">Back to top
+    </a> -->
+  </div>
+  <div class="row">
+    <div class="col-md-8 pagination pull-right">
+      <pagination-controls (pageChange)="p=$event"></pagination-controls>
+    </div>
+  </div>
+  <span class="promotional_block">
     <img src="https://www.net-a-porter.com/alfresco/nap/webAssets/webPage/category-landing-pages/clothing/2018/03/09/intl/en.jpg">
-    </span>
+  </span>
 </div>

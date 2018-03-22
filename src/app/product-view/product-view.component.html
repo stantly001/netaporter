@@ -1,0 +1,462 @@
+<section id="description">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="carousel-custom" class="carousel slide " data-ride="carousel" data-interval="false">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="thumbnail-prev-button swiper-button text-center">
+                  <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
+                      <span class="fa fa-chevron-up thumb-arrow"></span>
+                    </a>
+                <!-- <span class="fa fa-chevron-up thumb-arrow"></span> -->
+              </div>
+              <!-- <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+              </a> -->
+              <ol class="carousel-indicators " *ngFor="let image of productsArr?.images;let i = index">
+                <li  data-target="#carousel-custom" [attr.data-slide-to]="i"   [class.active]="i == 0" (click)="isOn=false;">
+                  <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
+                </li>
+                <!-- <li data-target="#carousel-custom" data-slide-to="1">
+                  <img data-image="black" src="https://cache.net-a-porter.com/images/products/1045388/1045388_fr_pp.jpg" alt=""
+                  />
+                  <img class="current" data-image="white" src="https://cache.net-a-porter.com/images/products/1045388/1045388_fr_pp.jpg"
+                    alt="" />
+                  <img data-image="yellow" src="https://cache.net-a-porter.com/images/products/1045388/1045388_fr_pp.jpg"
+                    alt="" /> </li>
+                <li data-target="#carousel-custom" data-slide-to="2">
+                  <img data-image="black" src="https://cache.net-a-porter.com/images/products/1045388/1045388_rw_pp.jpg" alt=""
+                  />
+                  <img data-image="yellow" src="https://cache.net-a-porter.com/images/products/1045388/1045388_rw_pp.jpg"
+                    alt="" />
+                  <img class="current" data-image="white" src="https://cache.net-a-porter.com/images/products/1045388/1045388_rw_pp.jpg"
+                    alt="" /> </li> -->
+              </ol>
+             
+              <div class="thumbnail-next-button swiper-button text-center">
+                  <a class="thumbnail-next-button swiper-button text-center" href="#carousel-custom" data-slide="next">
+                      <span class="fa fa-chevron-down thumb-arrow"></span>
+                    </a>
+                <!-- <span class="fa fa-chevron-down thumb-arrow"></span> -->
+              </div>
+              <div class="icon icon-video_play text-center" (click)="toggleVideo();">
+                <span class="fa fa-play-circle"></span>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="carousel-outer" *ngIf="!isOn">
+                <!-- me art lab slider -->
+                <div  class="carousel-inner " role="listbox">
+                  <div class="item"  *ngFor="let image of productsArr?.images;let i = index" [class.active]="i==0">
+                    <img data-image="yellow" src="{{image?.url}}" alt="" />
+                  </div>
+
+                </div>
+
+                <!-- sag sol -->
+                <a class="left carousel-control" href="#carousel-custom" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-custom" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+              <div class="item" *ngIf="isOn">
+                  <video width="320" height="450" preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
+                  <!-- <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4" /> Browser not supported -->
+                </video>
+              </div>
+              <!-- <video width="320" height="240" controls>
+                <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4">
+              </video> -->
+            </div>
+          </div>
+
+          <!-- thumb -->
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>
+          <span class="in_sport" [innerText]="productsArr?.name"></span>
+        </h3>
+        <span class="product-name" [innerText]="productsArr?.description"></span>
+        <div class="full-price style-scope nap-price" itemprop="price" content="861.61" [innerText]="productsArr?.price"></div>
+
+        <select id="select" class="bootstrap-select style-scope select-dropdown small col-md-12">
+          <option value="-" class="style-scope select-dropdown">Choose your size</option>
+          <option value="1045388-009" data-size="IT36" data-stock="Out_of_Stock" data-morecomingsoon="false">IT36 - sold out</option>
+          <option value="1045388-010" data-size="IT38" data-stock="Low_Stock" data-morecomingsoon="false">IT38 - low stock</option>
+          <option value="1045388-011" data-size="IT40" data-stock="Low_Stock" data-morecomingsoon="false">IT40 - low stock</option>
+          <option value="1045388-012" data-size="IT42" data-stock="In_Stock" data-morecomingsoon="false">IT42 </option>
+          <option value="1045388-013" data-size="IT44" data-stock="In_Stock" data-morecomingsoon="false">IT44 </option>
+          <option value="1045388-014" data-size="IT46" data-stock="Out_of_Stock" data-morecomingsoon="false">IT46 - sold out</option>
+          <option value="1045388-015" data-size="IT48" data-stock="Out_of_Stock" data-morecomingsoon="false">IT48 - sold out</option>
+        </select>
+        <a class="size-guide" href="/intl/pssizechart.nap?productID=1045388&amp;tab=1" target="_blank">
+          <span class="icon-size_guide">View Size Guide</span>
+        </a>
+        <div class="shopping-cart">
+          <button type="button" class="btn btn-primary btn-lg nap-button">Add to shopping bag</button>
+          <button type="button" class="btn btn-default btn-lg wish-list">Add To Wish List</button>
+        </div>
+        <div id="panel-group">
+          <div class="panel panel-default" *ngFor="let item of productsArr?.Items; let i = index">
+            <div class="panel-heading" (click)="current = !current">
+              <h5 class="panel-title">
+                {{item.title}}
+                <div class="pull-right">
+                  <i class='fa' [class.fa-plus]="i != current" [class.fa-minus]="i == current" aria-hidden="true"></i>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
+              <div class="panel-body">{{item.description}}</div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="row">
+
+                  <div id="integration-list">
+                      <ul>
+                          <li>
+                              <a class="expand">
+                                  <div class="right-arrow">+</div>
+                                  <div>
+                                      <span>WHY WE LOVE IT</span></div>
+
+                              </a>
+
+                              <div class="detail">
+
+                                  <div id="right">
+                                      <div id="sup">
+                                          <span>Spring '18 Milan Fashion Week kicked off with Gucci's show, which opened with this T-shirt - it was paired with an oversized blazer, but looks just as cool with one of the house's graphic tees. Made in Italy, it's cut from cotton-blend canvas and printed with an updated version of the 'GG' archival lettering. The red leather piping matches the iconic motif.
+
+                                              Shown here with: JW Anderson Shoulder bag, Rupert Sanderson Sandals, Falke Socks.</span>
+                                          <ul>   
+                                              <li>- Beige and red cotton-blend canvas, red leather</li>
+                                              <li>- Concealed hook and zip fastening at side</li>
+                                              <li>- 71% cotton, 29% polyester; trim: 100% leather (Lamb)</li>
+                                              <li>- Dry clean</li>
+                                              <li>- Made in Italy</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="expand">
+                                  <div class="right-arrow">+</div>
+                                  <div>
+                                      <span>SIZE & FIT INFORMATION</span></div>
+                              </a>
+
+                              <div class="detail">
+
+                                  <div id="right">
+                                      <div id="sup">
+                                          <span>Spring '18 Milan Fashion Week kicked off with Gucci's show, which opened with this T-shirt - it was paired with an oversized blazer, but looks just as cool with one of the house's graphic tees. Made in Italy, it's cut from cotton-blend canvas and printed with an updated version of the 'GG' archival lettering. The red leather piping matches the iconic motif.
+
+                                              Shown here with: JW Anderson Shoulder bag, Rupert Sanderson Sandals, Falke Socks.</span>
+                                          <ul>   
+                                              <li>- Beige and red cotton-blend canvas, red leather</li>
+                                              <li>- Concealed hook and zip fastening at side</li>
+                                              <li>- 71% cotton, 29% polyester; trim: 100% leather (Lamb)</li>
+                                              <li>- Dry clean</li>
+                                              <li>- Made in Italy</li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+
+
+              </div> -->
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="shop-all-gucci">
+  <div class="text-center col-md-12 like-gucci">
+    <span>YOU MAY ALSO LIKE</span>
+  </div>
+  <div class="clearfix"> </div>
+  <div class="container">
+    <div class="w3ls_dresses_grid_right_grid3">
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+            <br class="clearboth">
+            <span class="slug">Runway</span>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+        <div class="agile_ecommerce_tab_left dresses_grid">
+          <div class="hs-wrapper hs-wrapper2">
+            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
+            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
+            <div class="w3_hs_bottom w3_hs_bottom_sub1">
+              <ul>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#myModal6">
+                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+              <span class="designer">Marni</span>
+            </a>
+            <br>Printed satin dress
+            <br>
+            <span class="price ">
+
+              £1,414
+
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</section>
+<section class="address">
+
+  <div class="container">
+    <div class="col-xs-12">
+
+
+      <div class="show-hide-content content row" style="transition: max-height 0.5s ease-in-out 0s; max-height: 0px;">
+        <div class="delivery col-xs-12 col-lg-4">
+          <div class="subheading">DELIVERY</div>
+          <p>Find out the shipping options available for your destination</p>
+          <div class="view-more">
+            <a href="/ae/en/Help/ShippingRatesAndPolicies" target="_blank" class="js-popup enabled help-link" data-link-name="delivery options">View</a>
+          </div>
+        </div>
+        <div class="returns col-xs-12 col-lg-4">
+          <div class="subheading">RETURNS</div>
+          <p>Arrange your return for an exchange or refund within 28 days using our free collection service</p>
+          <div class="view-more">
+            <a href="/ae/en/Help/ReturnsAndExchanges" target="_blank" class="js-popup enabled help-link" data-link-name="returns">Find out more</a>
+          </div>
+        </div>
+
+        <div class="returns col-xs-12 col-lg-4">
+          <div class="subheading">HELP &amp; DEVICE</div>
+          <p>Our Fashion Consultants are available 24 hours a day, 7 days a week, speaking over 14 languages. Call:
+            <span class="no-wrap">+44 330 022 5701</span>
+          </p>
+          <div class="trigger-email help-link" data-link-name="help and advice">Email us: info@gmail.com</div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
