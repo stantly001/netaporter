@@ -6,16 +6,16 @@
           <div class="row">
             <div class="col-md-3">
               <div class="thumbnail-prev-button swiper-button text-center">
-                  <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
-                      <span class="fa fa-chevron-up thumb-arrow"></span>
-                    </a>
+                <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
+                  <span class="fa fa-chevron-up thumb-arrow"></span>
+                </a>
                 <!-- <span class="fa fa-chevron-up thumb-arrow"></span> -->
               </div>
               <!-- <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-up"></span>
               </a> -->
               <ol class="carousel-indicators " *ngFor="let image of productsArr?.images;let i = index">
-                <li  data-target="#carousel-custom" [attr.data-slide-to]="i"   [class.active]="i == 0" (click)="isOn=false;">
+                <li data-target="#carousel-custom" [attr.data-slide-to]="i" [class.active]="i == 0" (click)="isOn=false;">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
                 <!-- <li data-target="#carousel-custom" data-slide-to="1">
@@ -33,11 +33,11 @@
                   <img class="current" data-image="white" src="https://cache.net-a-porter.com/images/products/1045388/1045388_rw_pp.jpg"
                     alt="" /> </li> -->
               </ol>
-             
+
               <div class="thumbnail-next-button swiper-button text-center">
-                  <a class="thumbnail-next-button swiper-button text-center" href="#carousel-custom" data-slide="next">
-                      <span class="fa fa-chevron-down thumb-arrow"></span>
-                    </a>
+                <a class="thumbnail-next-button swiper-button text-center" href="#carousel-custom" data-slide="next">
+                  <span class="fa fa-chevron-down thumb-arrow"></span>
+                </a>
                 <!-- <span class="fa fa-chevron-down thumb-arrow"></span> -->
               </div>
               <div class="icon icon-video_play text-center" (click)="toggleVideo();">
@@ -47,9 +47,13 @@
             <div class="col-md-9">
               <div class="carousel-outer" *ngIf="!isOn">
                 <!-- me art lab slider -->
-                <div  class="carousel-inner " role="listbox">
-                  <div class="item"  *ngFor="let image of productsArr?.images;let i = index" [class.active]="i==0">
-                    <img data-image="yellow" src="{{image?.url}}" alt="" />
+                <div class="carousel-inner " role="listbox">
+                  <div class="item" *ngFor="let image of productsArr?.images;let i = index" [class.active]="i==0">
+                    <span class='zoom' id='ex1'>
+                      <img src='{{image?.url}}' width='555' height='320' alt='Daisy on the Ohoopee' />
+                      <p>Hover</p>
+                    </span>
+                    <!-- <img data-image="yellow" src="{{image?.url}}" alt="" /> -->
                   </div>
 
                 </div>
@@ -63,7 +67,7 @@
                 </a>
               </div>
               <div class="item" *ngIf="isOn">
-                  <video width="320" height="450" preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
+                <video width="320" height="450" preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
                   <!-- <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4" /> Browser not supported -->
                 </video>
               </div>
