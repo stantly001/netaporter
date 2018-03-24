@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DefaultService } from '../services/default.service';
 import * as $ from 'jquery';
-import 'jquery-zoom';
+//import 'jquery-zoom';
 declare var jQuery: any;
 @Component({
   selector: 'app-product-view',
@@ -26,6 +26,13 @@ export class ProductViewComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService) {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
+  }
+  ngAfterViewInit() {
+    (<any>$('.zoom'))
+    .wrap('<span style="display:inline-block"></span>')
+    .css('display', 'block')
+    .parent()
+    .zoom();
   }
 
   ngOnInit() {
