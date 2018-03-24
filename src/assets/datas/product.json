@@ -1,8 +1,9 @@
 [{
     "id"	:1,
     "name"	:"Bag1",
-    "price"	:"10.500",
-    "available"	:true,
+    "orginalPrice"	:"10.500",
+    "offerPrice":"5.652",
+    "available"	:true, 
     "best_seller"	:false,
     "categories":[2],
     "subCategoryId":[3,4],
@@ -12,7 +13,7 @@
     "subCategoryDesignerId":[4],
     "subCategoryColorId":[1],
     "subCategorySizeId":[1,2,3,4],
-    "productImg":"assets/img/bag1.jpg",
+    "productImg":"assets/img/bag1.jpg",  
     "outFitImg":"assets/img/bag3.jpg",
     "images":[{
     "url":"https://cache.net-a-porter.com/images/products/10https://cache.net-a-porter.com/images/products/148377/1048377_ou_pp.jpg"
@@ -25,11 +26,11 @@
     "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
     }],
     "Items":[
-    {
+    { 
     "title": "WHY WE LOVE IT",
     "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
     },
-    {
+    { 
     "title": "SIZE & FIT INFORMATION ",
     "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
     }
@@ -39,7 +40,8 @@
     {	
     "id"	:2,
     "name"	:"Bag2",
-    "price"	:"20.000",
+    "orginalPrice":"20.000",
+    "offerPrice":"0",
     "available":false,
     "best_seller":false,
     "categories":[4],	
@@ -63,7 +65,8 @@
     {	
     "id":3,
     "name":"Pickles",
-    "price":"10.000",
+    "orginalPrice":"10.000",
+    "offerPrice":"3.25",
     "available":true,
     "best_seller":true,
     "categories":[4],	
@@ -88,7 +91,8 @@
     {	
     "id":4,
     "name":"Bag3",
-    "price":"35.000",
+    "orginalPrice":"35.000",
+    "offerPrice":"20.25",
     "available":false,
     "best_seller":false,
     "categories":[1],	
@@ -111,9 +115,10 @@
     "description":"Double-breasted silk-blend blazer"
     },
     {
-    "id":	5,
-    "name"	:"Bag4",
-    "price"	:"12.000",
+    "id":5,
+    "name":"Bag4",
+    "orginalPrice":"12.000",
+    "offerPrice":"10.25",
     "available":true,
     "best_seller":true,
     "categories":[1],
@@ -138,7 +143,8 @@
     {
     "id":6,
     "name":"Bag5",
-    "price":"120.000",
+    "orginalPrice":"120.000",
+    "offerPrice":"90.25",
     "available":true,
     "best_seller":false,
     "categories":[1],	
@@ -163,7 +169,8 @@
     {	
     "id":7,
     "name":"Bag6",
-    "price":"50.000",
+    "orginalPrice":"50.000",
+    "offerPrice":"30.250",
     "available":false,
     "best_seller":false,
     "categories":[1],	
@@ -188,7 +195,8 @@
     {	
     "id":8,
     "name":"Bag7",
-    "price":"29.500",
+    "orginalPrice":"29.500",
+    "offerPrice":"20.360",
     "available":true,
     "best_seller":false,
     "categories":[1],
@@ -213,7 +221,8 @@
     {	
     "id":9,
     "name":	"Bag8",
-    "price":"12.000",
+    "orginalPrice":"12.000",
+    "offerPrice":"0",
     "available":true,
     "best_seller":true,
     "categories":[2],	
@@ -238,7 +247,8 @@
     {	
     "id":10,
     "name":"cloth1",
-    "price":"16.000",
+    "orginalPrice":"16.000",
+    "offerPrice":"12.25",
     "available":false,
     "best_seller":true,
     "categories":[2],	
@@ -258,11 +268,12 @@
         },{
         "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
         }],
-    "description":"C/O Jimmy Choo Victoria 100 crystal-embellished satin and vinyl pumps"
+    "description":"C/O Jimmy Choo Victoria 100 crystal-embellished"
     }, {	
     "id":11,
     "name":"cloth2",
-    "price":"215.000",
+    "orginalPrice":"215.000",
+    "offerPrice":"185.25",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -286,7 +297,8 @@
     }, {	
     "id":12,
     "name":"cloth3",
-    "price":"153.000",
+    "orginalPrice":"153.000",
+    "offerPrice":"120.360",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -311,7 +323,8 @@
     }, {	
     "id":13,
     "name":"cloth4",
-    "price":"96.000",
+    "orginalPrice":"96.000",
+    "offerPrice":"50.00",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -336,7 +349,8 @@
     {	
     "id":14,
     "name":"cloth5",
-    "price":"25.000",
+    "orginalPrice":"25.000",
+    "offerPrice":"13.25",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -361,7 +375,8 @@
     {	
     "id":15,
     "name":"cloth6",
-    "price":"36.75",
+    "orginalPrice":"36.75",
+    "offerPrice":"15.25",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -386,7 +401,8 @@
     {	
     "id":16,
     "name":"cloth7",
-    "price":"82.65",
+    "orginalPrice":"82.65",
+    "offerPrice":"52.25",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -411,7 +427,8 @@
     {	
     "id":17,
     "name":"cloth8",
-    "price":"88.14",
+    "orginalPrice":"88.14",
+    "offerPrice":"82.65",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -436,7 +453,8 @@
     {	
     "id":18,
     "name":"shoe1",
-    "price":"74.16",
+    "orginalPrice":"74.16",
+    "offerPrice":"82.65",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -459,7 +477,8 @@
     },{	
     "id":19,
     "name":"shoe2",
-    "price":"72.25",
+    "orginalPrice":"72.25",
+    "offerPrice":"82.65",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -483,7 +502,8 @@
     },{	
     "id":20,
     "name":"shoe3",
-    "price":"45.20",
+    "orginalPrice":"45.20",
+    "offerPrice":"50.65",
     "available":false,
     "best_seller":true,
     "categories":[3],
@@ -507,7 +527,8 @@
     },{	
     "id":21,
     "name":"shoe4",
-    "price":"256.78",
+    "orginalPrice":"256.78",
+    "offerPrice":"175.65",
     "available":false,
     "best_seller":true,
     "categories":[2],	
@@ -531,7 +552,8 @@
     },{	
     "id":22,
     "name":"shoe5",
-    "price":"45.36",
+    "orginalPrice":"45.36",
+    "offerPrice":"40.65",
     "available":false,
     "best_seller":true,
     "categories":[3],	
@@ -555,7 +577,8 @@
     },{	
     "id":23,
     "name":"shoe6",
-    "price":"74.10",
+    "orginalPrice":"74.10",
+    "offerPrice":"0",
     "available":false,
     "best_seller":true,
     "categories":[2],
@@ -579,7 +602,8 @@
     },{	
     "id":24,
     "name":"shoe7",
-    "price":"30.000",
+    "orginalPrice":"30.000",
+    "offerPrice":"0",
     "available":false,
     "best_seller":true,
     "categories":[2],
@@ -603,7 +627,8 @@
     },{	
     "id":25,
     "name":"shoe8",
-    "price":"13.76",
+    "orginalPrice":"13.76",
+    "offerPrice":"0",
     "available":false,
     "best_seller":true,
     "categories":[3],	

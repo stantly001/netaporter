@@ -42,4 +42,8 @@ export class DefaultService {
     return this.http.get(this.BASE_URL+"country.json").map((res:Response)=>res);
   }
 
+  getAds():any {
+    return this.http.get(this.BASE_URL+"ads.json").map((res:Response)=>res);
+  }
+
 }

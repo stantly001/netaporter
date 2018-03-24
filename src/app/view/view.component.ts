@@ -21,6 +21,7 @@ export class ViewComponent implements OnInit {
   categoryProducts:Array<any>=[];
   products:Array<any>=[];
   sort:Array<any>=[];
+  ads:Array<any>=[];
   categoryId:number;
   subCategoryId:number;
   ln:string;
@@ -47,6 +48,10 @@ export class ViewComponent implements OnInit {
     
     this.defaultService.getSortData().subscribe(response=>{
       this.sort=response;
+    });
+
+    this.defaultService.getAds().subscribe(response=>{
+      this.ads=response;
     });
 
     this.activatedRoute.params.subscribe(response=>{
