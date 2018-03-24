@@ -30,7 +30,7 @@ export class ProductViewComponent implements OnInit {
 
   ngOnInit() {
     let result;
-    this.isOn = false;
+    this.isOn = true;
     this.defaultService.getProducts().subscribe(response => {
       this.productsArr = response.filter(product => product.id === this.productId)[0];
       this.images = this.productsArr.images.black;
@@ -60,7 +60,7 @@ export class ProductViewComponent implements OnInit {
   }
 
   toggleVideo(event: any) {
-    this.isOn = true;
+    this.isOn = false;
     this.videoplayer.nativeElement.play();
   }
 

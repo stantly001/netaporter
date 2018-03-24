@@ -15,7 +15,7 @@
                 <span class="glyphicon glyphicon-chevron-up"></span>
               </a> -->
               <ol class="carousel-indicators " *ngFor="let image of images;let i = index">
-                <li data-target="#carousel-custom" [attr.data-slide-to]="i" [class.active]="i == 0" (click)="isOn=false;">
+                <li data-target="#carousel-custom" [attr.data-slide-to]="i" [class.active]="i == 0" (click)="isOn=true;">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
                 <!-- <li data-target="#carousel-custom" data-slide-to="1">
@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="col-md-9">
-              <div class="carousel-outer" *ngIf="!isOn">
+              <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
                   <div class="item" *ngFor="let image of images;let i = index" [class.active]="i==0">
@@ -66,8 +66,8 @@
                   <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
               </div>
-              <div class="item" *ngIf="isOn">
-                <video width="320" height="450"  src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
+              <div class="item" [hidden]="isOn">
+                <video width="320" height="450"  [src]="productsArr?.video" controls (click)="toggleVideo()" #videoPlayer>
                   <!-- <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4" /> Browser not supported -->
                 </video>
               </div>
