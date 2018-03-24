@@ -11,33 +11,56 @@ declare var jQuery: any;
 })
 
 export class ProductViewComponent implements OnInit {
+  alternateCategories: any;
+  alternateProducts: any;
+  category: any;
+  sizes: any;
+  images: any;
   isOn: boolean;
   productId: number;
   productsArr: any;
   current: number = 0;
   items: Array<any>;
-  @ViewChild('videoPlayer') videoplayer: any;  
+
+  @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService) {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
 
   ngOnInit() {
-    $(document).ready(function(){
-			(<any>$('#ex1')).zoom();
-		
-		});
-    
-    this.isOn=false;
+    let result;
+    this.isOn = false;
     this.defaultService.getProducts().subscribe(response => {
       this.productsArr = response.filter(product => product.id === this.productId)[0];
-      console.log(this.productsArr);
+      this.images = this.productsArr.images.black;
+      // this.category=this.productsArr.categories[0];
+      console.log(this.category);
     });
-    
- }
-  
+    // this.defaultService.getProducts().subscribe(response => {
+    //   result=response.filter(res=>console.log(res)+res.categories[0]==this.category);
+    //   console.log(result);
+    // });
+    this.defaultService.getSizes().subscribe(response => {
+      this.sizes = response;
+      console.log(this.sizes)
+    })
+
+
+  }
+  imageColorSelection(color) {
+    if (color == "black") {
+      this.images = this.productsArr.images.black;
+    } else if (color == "blue") {
+      this.images = this.productsArr.images.blue;
+    }
+    else if (color == "red") {
+      this.images = this.productsArr.images.red;
+    }
+  }
+
   toggleVideo(event: any) {
-    this.isOn=true;
+    this.isOn = true;
     this.videoplayer.nativeElement.play();
   }
 

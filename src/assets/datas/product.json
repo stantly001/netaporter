@@ -1,7 +1,10 @@
 [{
     "id"	:1,
     "name"	:"Bag1",
-    "price"	:"10.500",
+    "code":"P00302677",
+    "message":"Inclusive of 5% VAT Excluding shipping",
+    "originalPrice"	:"10.500",
+    "offerPrice":"10.000",
     "available"	:true,
     "best_seller"	:false,
     "categories":[2],
@@ -15,8 +18,10 @@
     "productImg":"assets/img/bag1.jpg",
     "outFitImg":"assets/img/bag3.jpg",
     "video":"https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
-    "images":[{
-    "url":"https://cache.net-a-porter.com/images/products/10https://cache.net-a-porter.com/images/products/148377/1048377_ou_pp.jpg"
+    "images":{
+        "black":[
+        {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
     },
     {
     "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
@@ -24,7 +29,27 @@
     "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
     },{
     "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-    }],
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
     "Items":[
     {
     "title": "WHY WE LOVE IT",
@@ -40,56 +65,124 @@
     {	
     "id"	:2,
     "name"	:"Bag2",
-    "price"	:"20.000",
+    "originalPrice"	:"10.500",
+    "offerPrice":"10.000",
     "available":false,
     "best_seller":false,
-    "categories":[4],	
+    "categories":[2],	
     "subCategoryId":[8],
     "designerId":[1,5,6],
     "colorId":[1,2,3,4,5,6,7],
     "sizeId":[1,2],
     "img":"assets/img/bag2.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "video":"https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
+    "Items":[
+    {
+    "title": "WHY WE LOVE IT",
+    "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+    },
+    {
+    "title": "SIZE & FIT INFORMATION ",
+    "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+    }
+    ],
     "description":"Double-breasted silk-blend blazer"
     },
     {	
     "id":3,
     "name":"Pickles",
-    "price":"10.000",
+    "originalPrice"	:"10.500",
+    "offerPrice":"10.000",
     "available":true,
     "best_seller":true,
-    "categories":[4],	
+    "categories":[2],	
     "subCategoryId":[7],
     "designerId":[1,4,5,6],
     "colorId":[1,2,3,4],
     "sizeId":[1,3,4],
     "productImg":"assets/img/bag3.jpg",
     "outFitImg":"assets/img/bag1.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
+    "Items":[
+    {
+    "title": "WHY WE LOVE IT",
+    "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+    },
+    {
+    "title": "SIZE & FIT INFORMATION ",
+    "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+    }
+    ],
     "description":"Double-breasted silk-blend blazer"
     },
     {	
     "id":4,
     "name":"Bag3",
-    "price":"35.000",
+    "originalPrice"	:"10.500",
+    "offerPrice":"10.000",
     "available":false,
     "best_seller":false,
     "categories":[1],	
@@ -99,22 +192,55 @@
     "sizeId":[1,4],
     "productImg":"assets/img/bag3.jpg",
     "outFitImg":"assets/img/bag1.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
+    "Items":[
+    {
+    "title": "WHY WE LOVE IT",
+    "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+    },
+    {
+    "title": "SIZE & FIT INFORMATION ",
+    "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+    }
+    ],
     "description":"Double-breasted silk-blend blazer"
     },
     {
     "id":	5,
     "name"	:"Bag4",
-    "price"	:"12.000",
+    "originalPrice"	:"10.500",
+    "offerPrice":"10.000",
     "available":true,
     "best_seller":true,
     "categories":[1],
@@ -124,16 +250,48 @@
     "sizeId":[1,2,3,4],
     "productImg":"assets/img/bag4.jpg",
     "outFitImg":"assets/img/bag3.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
+    "Items":[
+    {
+    "title": "WHY WE LOVE IT",
+    "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+    },
+    {
+    "title": "SIZE & FIT INFORMATION ",
+    "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+    }
+    ],
     "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {
@@ -149,16 +307,38 @@
     "sizeId":[1,2,3,4,5,6],
     "productImg":"assets/img/bag5.jpg",
     "outFitImg":"assets/img/bag3.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
     "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	
@@ -174,16 +354,38 @@
     "sizeId":[1,4,5,6],
     "productImg":"assets/img/bag6.jpg",
     "outFitImg":"assets/img/bag3.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
     "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	
@@ -199,16 +401,38 @@
     "sizeId":[1,2,3,4,5,6],
     "productImg":"assets/img/bag7.jpg",
     "outFitImg":"assets/img/bag6.jpg",
-    "images":[{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },
+    "images":{
+        "black":[
         {
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        },{
-        "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-        }],
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"blue":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }],"red":[
+        {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },
+    {
+    "url":"http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+    },{
+    "url":"https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+    }]},
     "description":"Tarragona asymmetric ruffled silk-satin dress"
     },
     {	

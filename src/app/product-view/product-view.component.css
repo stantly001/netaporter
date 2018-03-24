@@ -404,19 +404,21 @@ section#description {
     width: 50%;
 }
 .size-guide {
-    width: 45%;
+    /* width: 45%;
     text-align: left;
     margin: 0px 20px;
-    line-height: 36px;
-    border-bottom: 1px solid #999;
-    color: #999;
+    line-height: 36px; */
+     color: #999;
+}
+.size-guide .fa{
+    transform: rotate(90deg) !important;
 }
 .btn-primary.nap-button {
     background: #000;
     color: #FFF;
     border: 1px solid #000;
     font-size:14px;
-    padding: 20px 30px;
+    padding: 20px 75px;
     text-transform:uppercase;
 }
 .shopping-cart {
@@ -537,7 +539,7 @@ section#description {
 span.fa.fa-play-circle {
     margin: 10px 0 0 40px;
 }
-.active .thumbnail-image{
+ .active .thumbnail-image{
     border: 1px solid #979797;
 }
 .thumbnail-prev-button a {
@@ -548,3 +550,68 @@ span.fa.fa-play-circle {
     color: #000000;
     text-decoration: none;
 }
+.actualPrice{
+    color:magenta;
+
+}
+.productSize{
+    color: #333;
+    font-weight: 500;
+}
+.icon-size_guide{
+    border-bottom: 1px solid #999;
+}
+.product-size-image{
+       line-height: 70px;
+    font-weight: 400;
+}
+
+  .product-size-btn{
+      border:none;
+
+  }
+  
+.zoom {
+    display:inline-block;
+    position: relative;
+}
+.btn-primary.submit-button {
+    background: #000;
+    color: #FFF;
+    border: 1px solid #000;
+    font-size:14px;
+    /* padding: 20px 75px; */
+    }
+    .product-name.actual-price{
+        color:magenta;
+    }
+    .product-shipment{
+        border: 1px solid #000; 
+            }
+            .color-image{
+                margin-bottom: 10px;
+            }
+            .panel-product{
+                margin-top: 33px
+            }
+
+/* magnifying glass icon */
+/* .zoom:after {
+    content:'';
+    display:block; 
+    width:33px; 
+    height:33px; 
+    position:absolute; 
+    top:0;
+    right:0;
+    background:url(icon.png);
+}
+
+.zoom img {
+    display: block;
+}
+
+.zoom img::selection { background-color: transparent; }
+
+#ex2 img:hover { cursor: url(grab.cur), default; }
+#ex2 img:active { cursor: url(grabbed.cur), default; } */
