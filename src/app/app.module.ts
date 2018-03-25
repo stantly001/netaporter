@@ -16,7 +16,8 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { DataService } from './services/data.service';
 import {DefaultService} from './services/default.service';
 import { UtilitiesService} from './services/utilities.service';
-
+import * as $ from 'jquery';
+import { ProductViewDirective } from './directives/product-view.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { UtilitiesService} from './services/utilities.service';
     FooterComponent,
     ProductsComponent,
     ViewComponent,
-    ProductViewComponent
+    ProductViewComponent,
+    ProductViewDirective,
   ],
   imports: [
     BrowserModule,

@@ -548,3 +548,6 @@ span.fa.fa-play-circle {
     color: #000000;
     text-decoration: none;
 }
+.zoom-arrow-index{
+    z-index: 999;
+}

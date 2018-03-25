@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DefaultService } from '../services/default.service';
 import * as $ from 'jquery';
-import 'jquery-zoom';
-declare var jQuery: any;
+// import * as zoom from 'jquery-zoom';
+// declare var jQuery: any;
 @Component({
   selector: 'app-product-view',
   templateUrl: './product-view.component.html',
@@ -22,13 +22,8 @@ export class ProductViewComponent implements OnInit {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
 
-  ngOnInit() {
-    $(document).ready(function(){
-			(<any>$('#ex1')).zoom();
-		
-		});
-    
-    this.isOn=false;
+  ngOnInit() {    
+    this.isOn=true;
     this.defaultService.getProducts().subscribe(response => {
       this.productsArr = response.filter(product => product.id === this.productId)[0];
       console.log(this.productsArr);
@@ -37,7 +32,7 @@ export class ProductViewComponent implements OnInit {
  }
   
   toggleVideo(event: any) {
-    this.isOn=true;
+    this.isOn=false;
     this.videoplayer.nativeElement.play();
   }
 
