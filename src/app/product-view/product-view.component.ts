@@ -28,11 +28,11 @@ export class ProductViewComponent implements OnInit {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
   ngAfterViewInit() {
-    (<any>$('.zoom'))
-    .wrap('<span style="display:inline-block"></span>')
-    .css('display', 'block')
-    .parent()
-    .zoom();
+       // (<any>$('.zoom'))
+    // .wrap('<span style="display:inline-block"></span>')
+    // .css('display', 'block')
+    // .parent()
+    // .zoom();
   }
 
   ngOnInit() {

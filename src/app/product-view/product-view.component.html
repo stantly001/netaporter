@@ -14,7 +14,7 @@
               <!-- <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-up"></span>
               </a> -->
-              <ol class="carousel-indicators " *ngFor="let image of images;let i = index">
+              <ol class="carousel-indicators " *ngFor="let image of images;let i = index">{{i}}
                 <li data-target="#carousel-custom" [attr.data-slide-to]="i" [class.active]="i == 0" (click)="isOn=true;">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
@@ -47,7 +47,7 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
-                  <div class="item" *ngFor="let image of images;let i = index" [class.active]="i==0">
+                  <div class="item" *ngFor="let image of images;let i = index" [ngClass]="{'active':i==0}">{{i}}
                     <span class='zoom' id='ex1'>
                       <img src='{{image?.url}}' width='555' height='320' alt='Daisy on the Ohoopee' />
                       <p>Hover</p>

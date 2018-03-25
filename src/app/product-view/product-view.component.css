@@ -615,3 +615,22 @@ span.fa.fa-play-circle {
 
 #ex2 img:hover { cursor: url(grab.cur), default; }
 #ex2 img:active { cursor: url(grabbed.cur), default; } */
+
+.carousel-inner .item.left.active {
+    transform: translateX(-33%);
+  }
+  .carousel-inner .item.right.active {
+    transform: translateX(33%);
+  }
+  
+  .carousel-inner .item.next {
+    transform: translateX(33%)
+  }
+  .carousel-inner .item.prev {
+    transform: translateX(-33%)
+  }
+  
+  .carousel-inner .item.right,
+  .carousel-inner .item.left { 
+    transform: translateX(0);
+  }
