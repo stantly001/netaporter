@@ -89,4 +89,56 @@ export class UtilitiesService {
     return arr.filter(data=>data[key]==value)[0];
   }
 
+  /**
+   * 
+   * @param arr 
+   * @param key 
+   * @param value
+   * Returns Array of objects by key & value 
+   */
+  filterArrayByKey(arr:Array<any>,key:string,value:any) {
+    let response:Array<any>=[];
+    arr.forEach(element=>{
+      let index:number;
+      index=element[key].indexOf(value);
+      if(index !==-1) {
+        response.push(element);
+      }
+    });
+    return response;
+  }
+
+  /**
+   * 
+   * @param obj 
+   * Build Routing Url rom Object
+   */
+  buildRoutingUrl(obj:Object){
+    let routeUrl:string;
+    routeUrl="shop/"+obj['cn']+"/"+obj['ln']+"/"+obj['menuId']+"/"+obj['categoryId'];
+    if(obj['subCategoryId']) {
+      routeUrl=routeUrl+"/"+obj['subCategoryId'];
+    }
+
+    if(obj['subLevelId']) {
+      routeUrl=routeUrl+"/"+obj['subLevelId'];
+    }
+    console.log(routeUrl);
+    return routeUrl;
+  }
+
+  /**
+   * 
+   * @param arr 
+   * @param value
+   * Search By Product Name & Description 
+   */
+  searchFilter(arr:Array<any>,value:string) {
+    let response:Array<any>=[];
+    arr.forEach(element=>{
+      ((element.name.search(value) !== -1) || (element.description.search(value)!==-1)) ? response.push(element) : '' 
+    });
+    return response;
+  }
+
 }

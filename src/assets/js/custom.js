@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    $('.dropdown-menu li').click(function () {
+        $('#menu1').text($(this).text());
+    });
+
     $("#menubar").mCustomScrollbar({
         theme: "minimal"
     });

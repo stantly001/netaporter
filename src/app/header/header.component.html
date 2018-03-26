@@ -12,8 +12,26 @@
       <div class="headerwp">
         <div class="headertopleft">
           <div class="address clearfix">
-          <span>United Arab Emirates <i class="fa fa-caret-down"></i></span>
-          <span>AED <i class="fa fa-caret-down"></i></span> 
+              <!-- Country -->
+              <div class="dropdown">
+                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+                  <span class="caret"></span></a>
+                  <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                      <a role="menuitem">{{country.countryName}}</a></li>
+                       
+                  </ul>
+                </div>
+                <!-- Language -->
+                <div class="dropdown">
+                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span></a>
+                    <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                      <li (click)="updateLanguage(language)" [value]="language.languageShortName" 
+                      *ngFor="let language of languages">
+                        <a role="menuitem">{{language.languageName}}</a></li>
+                    </ul>
+                  </div>
           <a href="#">Sign In | Register</a></div>
         </div>
         <div class="headertopright"> 
@@ -27,41 +45,31 @@
         <div class="smllogo"><a href="#"><img src="" alt=""/></a></div>
         <nav class="wsmenu clearfix">
           <ul class="mobile-sub wsmenu-list">
-            <li *ngFor="let menu of menus"><a [routerLink]="['/shop',cn,ln,menu.id]" class="navtext">
+            <li *ngFor="let menu of menus"><a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
               <span>{{menu.menuName}}</span></a>
               <div class="wsshoptabing wtsbrandmenu clearfix">
                 <div class="wsshoptabingwp clearfix">
                   <ul class="wstabitem02 clearfix">
-                    <li class="wsshoplink-active" *ngFor="let category of menu.categories">
-                      <a href="#">{{category.categoryName}}</a>
+                    
+                    <li *ngFor="let category of menu.categories; let menuCategory = index" 
+                    [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}" 
+                    (mouseenter)="setClickedRow(menuCategory)">
+                      <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
                       <div class="wsshoptab-active wstbrandbottom clearfix">
                         <div class="container-fluid">
                           <div class="row">
-                            <div class="col-lg-3 col-md-12" *ngFor="let subCategory of category.subCategory">
+                            <div class="col-lg-3 col-md-4" *ngFor="let subCategory of category.subCategory">
                               <ul class="wstliststy02 clearfix">
-                                <li class="wstheading clearfix">{{subCategory.name}}</li>
-                                <li><a href="#">List Products 01 </a></li>
-                                <li><a href="#">List Products 02</a></li>
-                                <li><a href="#">List Products 03</a></li>
-                                <li><a href="#">List Products 04</a></li>
-                                <li><a href="#">List Products 05</a> </li>
-                                <li><a href="#">List Products 06</a></li>
+                                <li class="wstheading clearfix">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                    {{subCategory.name}}</a></li>
+                                 <li *ngFor="let subLevel of subCategory.subLevelCategory">
+                                   <a 
+                                   [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
+                                    {{subLevel.subLevelCategoryName}}</a>
+                                 </li>
                               </ul>
                             </div>
-
-                            <div class="col-lg-3 col-md-12">
-                              <ul class="wstliststy02 clearfix">
-                                <li class="wstheading clearfix">Apple More Products</li>
-                                <li><a href="#">List Products 19 </a></li>
-                                <li><a href="#">List Products 20</a></li>
-                                <li><a href="#">List Products 21</a></li>
-                                <li><a href="#">List Products 22</a> </li>
-                                <li><a href="#">List Products 23</a></li>
-                                <li><a href="#">List Products 24</a></li>
-                              </ul>
-                            </div>
-
-
                           </div>
                         </div>
                       </div>
@@ -70,12 +78,9 @@
                 </div>
               </div>
             </li>
-            
-          
-           
             <li class="wssearchbar clearfix">
               <form class="topmenusearch">
-                <input placeholder="Search Product, Category...">
+                <input name="searchItem" [ngModel]="searchItem" (keydown)="onSearchProduct($event,$event.target.value)" placeholder="Search Product, Category...">
                 <button class="btnstyle"><i class="searchicon fa fa-search" aria-hidden="true"></i></button>
               </form>
             </li>

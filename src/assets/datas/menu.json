@@ -1,7 +1,7 @@
 [
     {
         "menuId": "1",
-        "menuName": "MEN",
+        "menuName": "WoMen",
         "categories": [
             {
                 "categoryId": 1,
@@ -17,11 +17,11 @@
                                 "subLevelCategoryName": "BootCut"
                             },
                             {
-                                "id": 2,
+                                "subLevelCategoryId": 2,
                                 "subLevelCategoryName": "Flared"
                             },
                             {
-                                "id": 3,
+                                "subLevelCategoryId": 3,
                                 "subLevelCategoryName": "BoyFriend"
                             }
                         ]
@@ -123,15 +123,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 19,
-                                "name": "Low Top"
+                                "subLevelCategoryName": "Low Top"
                             },
                             {
                                 "subLevelCategoryId": 20,
-                                "name": "Slip-on"
+                                "subLevelCategoryName": "Slip-on"
                             },
                             {
                                 "subLevelCategoryId": 21,
-                                "name": "Sport"
+                                "subLevelCategoryName": "Sport"
                             }
                         ]
                     }
@@ -148,21 +148,86 @@
                         "subLevelCategory":[
                             {
                                 "subLevelCategoryId": 22,
-                                "name": "Low Top"
+                                "subLevelCategoryName": "Low Top"
                             },
                             {
                                 "subLevelCategoryId": 23,
-                                "name": "Slip-on"
+                                "subLevelCategoryName": "Slip-on"
                             },
                             {
                                 "subLevelCategoryId": 24,
-                                "name": "Sport"
+                                "subLevelCategoryName": "Sport"
                             }
                         ]
                     }
                 ]
                 
+            },
+            {
+                "categoryId":4,
+                "categoryName":"Accessories",
+                "categoryImg":"assets/img/accessories.jpg",
+                "subCategory":[
+                    {
+                        "id":8,
+                        "name":"Hats",
+                        "subLevelCategory":[
+                            {
+                                "subLevelCategoryId":25,
+                                "subLevelCategoryName":"Beanies"
+                            },
+                            {
+                                "subLevelCategoryId":26,
+                                "subLevelCategoryName":"Fedoras"
+                            },
+                            {
+                                "subLevelCategoryId":27,
+                                "subLevelCategoryName":"SunHats"
+                            },
+                            {
+                                "subLevelCategoryId":28,
+                                "subLevelCategoryName":"Cool Hats"
+                            },
+                            {
+                                "subLevelCategoryId":29,
+                                "subLevelCategoryName":"Baby Hats"
+                            },
+                            {
+                                "subLevelCategoryId":30,
+                                "subLevelCategoryName":"Cricket Hats"
+                            }
+                        ]
+                    },{
+                        "id":9,
+                        "name":"Books",
+                        "subLevelCategory":[
+                            {
+                                "subLevelCategoryId":31,
+                                "subLevelCategoryName":"Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId":32,
+                                "subLevelCategoryName":"Horror Comics"
+                            },
+                            {
+                                "subLevelCategoryId":33,
+                                "subLevelCategoryName":"Thirller Books"
+                            },
+                            {
+                                "subLevelCategoryId":34,
+                                "subLevelCategoryName":"Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId":35,
+                                "subLevelCategoryName":"Novels"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
+    },{
+        "menuId":2,
+        "menuName":"Men"
     }
 ]

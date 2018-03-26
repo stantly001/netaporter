@@ -3,7 +3,7 @@
     <div id="product-list-menu" class="product-list-menu ">
       <div class="col-md-3">
         <div class="breadcrumbs">
-          Home / Women / {{header?.name}}
+          Home / {{menuName}} / {{categoryName}}
         </div>
         <div class="w3ls_dresses_grid_left_grid2_left">
           <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='product'" value="outFit" class="btn btn-default">
@@ -12,7 +12,7 @@
           <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='outFit'" value="product" class="btn btn-default">
             Product View
           </button> -->
-          <h1>{{header?.name}}</h1>
+          <h1>{{categoryName}}</h1>
           <div class="product-total">{{products?.length}} Items Found</div>
         </div>
       </div>
@@ -36,7 +36,20 @@
               <div class="w3ls_dresses_grid_left_grid_sub filter-category">
                 <ul class="panel_bottom">
                   <li *ngFor="let subCategory of subCategories">
-                    <a class="filter-menu" (click)="subCategoryName=subCategory.name;" [routerLink]="['/shop/',categoryId,subCategory.id]" queryParamsHandling="merge">{{subCategory.name}}</a>
+                    <ul>
+                      <li *ngFor="let category of subCategory.subCategory">
+                        <a 
+                        class="filter-menu" (click)="subCategoryName=subCategory.name" 
+                        [routerLink]="['/shop/',cn,ln,categoryId,subCategory.categoryId]"
+                          queryParamsHandling="merge">{{category.name}}</a>
+                          <ul>
+                            <li *ngFor="let subLevel of category.subLevelCategory">
+                              <input type="checkbox" (click)="filter(subLevel,$event.target.checked,'subLevel')">
+                              <a>{{subLevel.subLevelCategoryName}}</a>
+                            </li>
+                          </ul>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
@@ -117,12 +130,12 @@
               <div class="w3ls_dresses_grid_left_grid">
                 <div class="w3ls_dresses_grid_left_grid_sub">
                   <ul class="panel_bottom">
-                    <li *ngFor="let color of colors">
+                    <li *ngFor="let price of prices">
                       <span>
-                        <input type="checkbox" class="checkbox-border" (click)="filter(color,$event.target.checked,'color')">
+                        <input type="checkbox" class="checkbox-border" (click)="filter(price,$event.target.checked,'price')">
                       </span>
                       <span class="checkbox-menu">
-                        {{color.colorName}}</span>
+                        {{price.rangeFrom}} - {{price.rangeTo}}</span>
                     </li>
                   </ul>
                 </div>
@@ -168,7 +181,7 @@
   <div class="row section-ads">
     <div *ngFor="let ad of ads">
       <div class="col-md-6">
-        <img class="ads" src="{{ad.imagePath}}" alt="" />
+        <img class="ads img-responsive" src="{{ad.imagePath}}" alt="" />
       </div>
     </div>
   </div>
