@@ -9,170 +9,170 @@
                 <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
                   <span class="fa fa-chevron-up thumb-arrow"></span>
                 </a>
-                
+
               </div>
-              
+
               <ol class="carousel-indicators " *ngFor="let image of images;let i = index">{{i}}
                 <li data-target="#carousel-custom" [attr.data-slide-to]="i" [class.active]="i == 0" (click)="isOn=true;">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
-              
+
               </ol>
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss              <div class="thumbnail-next-button swiper-button text-center">
+              <div
+                class="thumbnail-next-button swiper-button text-center">
                 <a class="thumbnail-next-button swiper-button text-center" href="#carousel-custom" data-slide="next">
                   <span class="fa fa-chevron-down thumb-arrow"></span>
                 </a>
-                
-              </div>
-              <div class="icon icon-video_play text-center" (click)="toggleVideo();">
-                <span class="fa fa-play-circle"></span>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="carousel-outer" *ngIf="isOn">
-                <!-- me art lab slider -->
-                <div class="carousel-inner " role="listbox">
-                  <div class="item" *ngFor="let image of images;let i = index" [ngClass]="{'active':i==0}">{{i}}
-                    <span class='zoom' id='ex1'>
-                      <img src='{{image?.url}}' width='555' height='320' alt='Daisy on the Ohoopee' />
-                      <p>Hover</p>
-                    </span>
-                                      </div>
 
+            </div>
+            <div class="icon icon-video_play text-center" (click)="toggleVideo();">
+              <span class="fa fa-play-circle"></span>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="carousel-outer" *ngIf="isOn">
+              <!-- me art lab slider -->
+              <div class="carousel-inner " role="listbox">
+                <div class="item" *ngFor="let image of images;let i = index" [ngClass]="{'active':i==0}">
+                  <span class='zoom' id='ex1'>
+                    <img src='{{image?.url}}' width='555' height='320' alt='Daisy on the Ohoopee' />
+                  </span>
                 </div>
 
-                <!-- sag sol -->
-                <a class="left carousel-control" href="#carousel-custom" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-custom" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
               </div>
-              <div class="item" [hidden]="isOn">
-                <video width="320" height="450"  [src]="productsArr?.video" controls (click)="toggleVideo()" #videoPlayer>
-                  
-                </video>
-              </div>
-                         </div>
-          </div>
 
-          <!-- thumb -->
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h3>
-          <span class="in_sport" [innerText]="productsArr?.name"></span>
-        </h3>
-        <span class="product-name" [innerText]="productsArr?.description"></span>
-        <div class="full-price style-scope nap-price" itemprop="price" content="861.61">
-          <span [ngClass]="{'actualPrice':productsArr?.available==true}">AED {{productsArr?.offerPrice}}</span>
-          <span *ngIf="productsArr?.available==true">
-            <del>AED {{productsArr?.originalPrice}}</del>
-          </span>
-        </div>
-        <div>
-          <span class="product-name">{{productsArr?.message}}</span>
-
-        </div>
-        <div>
-          <span class="product-name">product code: {{productsArr?.code}}</span>
-        </div>
-        <hr>
-        <div *ngIf="productsArr?.available==true">
-          <div class="product-name">
-            CHOOSE SIZE
-
-            <a class="size-guide pull-right" href="/intl/pssizechart.nap?productID=1045388&amp;tab=1" target="_blank">
-              <i class="rotate fa fa-align-right"></i>
-              <span class="icon-size_guide">View Size Guide</span>
-
-            </a>
-
-          </div>
-          <div class="product-name">
-            <span class="product-size-image" *ngFor="let size of sizes">
-              <button class="btn btn-default product-size-btn">{{size.sizeName}}</button>
-            </span>
-          </div>
-          <div class="color-image">
-            <a (click)="imageColorSelection('black')">
-              <img class="img-responsive" width="50" height="50" src="assets/img/blackcolor.png">
-            </a>
-            <a (click)="imageColorSelection('blue')">
-              <img class="img-resposive" width="50" height="50" src="assets/img/blueColor.png">
-            </a>
-            <a (click)="imageColorSelection('red')">
-              <img class="img-resposive" width="50" height="50" src="assets/img/RedColor.png">
-            </a>
-          </div>
-          <div>
-            <div class="product-shipment text-center">
-              Ship To:United Arabia Emirates
-              <span class="fa fa-chevron-down"></span>
-              <div>
-                Order Within 9 hours and 1 minute for garaunteed same day shipping
-              </div>
-            </div>
-          </div>
-
-          <div class="shopping-cart">
-            <button type="button" class="btn btn-primary btn-lg col-md-12 nap-button">Add to Basket</button>
-          </div>
-        </div>
-        <div *ngIf="productsArr?.available!=true">
-          <div class="product-name actual-price">
-            Out Of Stocks
-
-            <p>
-              Please Enter Your Email We'll Remind You When this Product Is Back in Stock Again.
-            </p>
-
-          </div>
-          <div>
-            <input type="text" class="form-control" placeholder="Your Email Adderss">
-          </div>
-          <div>
-            <button class="btn btn-primary submit-button">SUBMIT</button>
-          </div>
-        </div>
-        <div id="panel-group" class="panel-product">
-          <div class="panel panel-default" *ngFor="let item of productsArr?.Items; let i = index">
-            <div class="panel-heading" (click)="current = !current">
-              <h5 class="panel-title">
-                {{item.title}}
-                <div class="pull-right">
-                  <i class='fa' [class.fa-plus]="i != current" [class.fa-minus]="i == current" aria-hidden="true"></i>
-                </div>
-              </h5>
-            </div>
-            <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
-              <div class="panel-body">{{item.description}}</div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h5>SHARE ON</h5>
-          <a href="http://www.facebook.com">
-            <i class="fa fa-facebook-f"></i>
-          </a>
-          <a href="http://www.twitte.com">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="http://www.pinterest.com">
-            <i class="fa fa-pinterest"></i>
-          </a>
-          <a href="http://www.googleplus.com">
-              <i class="fa fa-google-plus"></i>
-            </a>
-            <a href="mailto:">
-                <i class="fa fa-envelope"></i>
+              <!-- sag sol -->
+              <a class="left carousel-control" href="#carousel-custom" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
               </a>
+              <a class="right carousel-control" href="#carousel-custom" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+            <div class="item" [hidden]="isOn">
+              <video width="320" height="450" [src]="productsArr?.video" controls (click)="toggleVideo()" #videoPlayer>
+
+              </video>
+            </div>
+          </div>
         </div>
+
+        <!-- thumb -->
 
       </div>
     </div>
+    <div class="col-md-4">
+      <h3>
+        <span class="in_sport" [innerText]="productsArr?.name"></span>
+      </h3>
+      <span class="product-name" [innerText]="productsArr?.description"></span>
+      <div class="full-price style-scope nap-price" itemprop="price" content="861.61">
+        <span [ngClass]="{'actualPrice':productsArr?.available==true}">AED {{productsArr?.offerPrice}}</span>
+        <span *ngIf="productsArr?.available==true">
+          <del>AED {{productsArr?.originalPrice}}</del>
+        </span>
+      </div>
+      <div>
+        <span class="product-name">{{productsArr?.message}}</span>
+
+      </div>
+      <div>
+        <span class="product-name">product code: {{productsArr?.code}}</span>
+      </div>
+      <hr>
+      <div *ngIf="productsArr?.available==true">
+        <div class="product-name">
+          CHOOSE SIZE
+
+          <a class="size-guide pull-right" href="/intl/pssizechart.nap?productID=1045388&amp;tab=1" target="_blank">
+            <i class="rotate fa fa-align-right"></i>
+            <span class="icon-size_guide">View Size Guide</span>
+
+          </a>
+
+        </div>
+        <div class="product-name">
+          <span class="product-size-image" *ngFor="let size of sizes">
+            <button class="btn btn-default product-size-btn">{{size.sizeName}}</button>
+          </span>
+        </div>
+        <div class="color-image">
+          <a (click)="imageColorSelection('black')">
+            <img class="img-responsive" width="50" height="50" src="assets/img/blackcolor.png">
+          </a>
+          <a (click)="imageColorSelection('blue')">
+            <img class="img-resposive" width="50" height="50" src="assets/img/blueColor.png">
+          </a>
+          <a (click)="imageColorSelection('red')">
+            <img class="img-resposive" width="50" height="50" src="assets/img/RedColor.png">
+          </a>
+        </div>
+        <div>
+          <div class="product-shipment text-center">
+            Ship To:United Arabia Emirates
+            <span class="fa fa-chevron-down"></span>
+            <div>
+              Order Within 9 hours and 1 minute for garaunteed same day shipping
+            </div>
+          </div>
+        </div>
+
+        <div class="shopping-cart">
+          <button type="button" class="btn btn-primary btn-lg col-md-12 nap-button">Add to Basket</button>
+        </div>
+      </div>
+      <div *ngIf="productsArr?.available!=true">
+        <div class="product-name actual-price">
+          Out Of Stocks
+
+          <p>
+            Please Enter Your Email We'll Remind You When this Product Is Back in Stock Again.
+          </p>
+
+        </div>
+        <div>
+          <input type="text" class="form-control" placeholder="Your Email Adderss">
+        </div>
+        <div>
+          <button class="btn btn-primary submit-button">SUBMIT</button>
+        </div>
+      </div>
+      <div id="panel-group" class="panel-product">
+        <div class="panel panel-default" *ngFor="let item of productsArr?.Items; let i = index">
+          <div class="panel-heading" (click)="current = !current">
+            <h5 class="panel-title">
+              {{item.title}}
+              <div class="pull-right">
+                <i class='fa' [class.fa-plus]="i != current" [class.fa-minus]="i == current" aria-hidden="true"></i>
+              </div>
+            </h5>
+          </div>
+          <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
+            <div class="panel-body">{{item.description}}</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>SHARE ON</h5>
+        <a href="http://www.facebook.com">
+          <i class="fa fa-facebook-f"></i>
+        </a>
+        <a href="http://www.twitte.com">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="http://www.pinterest.com">
+          <i class="fa fa-pinterest"></i>
+        </a>
+        <a href="http://www.googleplus.com">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a href="mailto:">
+          <i class="fa fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
   </div>
 </section>
 <section class="shop-all-gucci">
@@ -182,229 +182,89 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
   <div class="clearfix"> </div>
   <div class="container">
     <div class="w3ls_dresses_grid_right_grid3">
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
+      <!-- <div class="col-md-8 col-md-offset-3">
+            <div class="carousel slide" id="myCarousel">
+              <div class="carousel-inner">
+                <div class="item" [class.active]="i==0" *ngFor="let alternateProduct of alternateProducts;let i=index">
+                  
+                  <div class="col-md-4" ><a><img [src]="alternateProduct?.productImg" class="img-responsive"></a>
+                    <div class="description">
+                        <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
+                          <span class="designer">{{alternateProduct?.name}}</span>
+                        </a>
+                        <br>{{alternateProduct?.description}}
+                        <br>
+                        <span class="price ">
+            
+                         AED{{alternateProduct.originalPrice}}
+            
+                        </span>
+                        <br class="clearboth">
+                        <span class="slug">Runway</span>
+                      </div>
+                  </div>
+                  
+          
+          
+                </div>
+                <!-- <div class="item"> -->
+      <!-- <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/CCCCCC/fff&amp;text=2" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/eeeeee/fff&amp;text=3" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4/fff&amp;text=4" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&amp;text=5" class="img-responsive"></a></div>
+                </div>
+                <div class="item">
+                  <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a></div> -->
+      <!-- </div> -->
+      <!-- </div>
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
             </div>
-          </div>
-
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
-            <br class="clearboth">
-            <span class="slug">Runway</span>
-          </div>
+            </div> -->
 
 
-        </div>
-      </div>
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+      <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+
+            <div class="carousel-item col-md-3" [class.active]="i==0" *ngFor="let product of alternateProducts;let i=index;">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 1" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="{{product.productImg}}" alt="slide 1">
+                    
+                    <div class="product-price">
+                     <span [ngClass]="{strike:product.offerPrice!=='0'}">
+                       AED {{product.originalPrice}}
+                        </span>
+                        <span *ngIf="product.offerPrice!=='0'">
+                          AED {{product.offerPrice}}
+                        </span>
+                      </div>
+                    <div class="product-description">{{product.description}}</div>
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
+            
+            
+            
 
           </div>
-        </div>
-      </div>
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss9.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-2 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-        <div class="agile_ecommerce_tab_left dresses_grid">
-          <div class="hs-wrapper hs-wrapper2">
-            <img src="images/ss7.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss8.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss1.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss2.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss3.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss4.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss5.jpg" alt=" " class="img-responsive" />
-            <img src="images/ss6.jpg" alt=" " class="img-responsive" />
-            <div class="w3_hs_bottom w3_hs_bottom_sub1">
-              <ul>
-                <li>
-                  <a href="#" data-toggle="modal" data-target="#myModal6">
-                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="description">
-            <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-              <span class="designer">Marni</span>
-            </a>
-            <br>Printed satin dress
-            <br>
-            <span class="price ">
-
-              £1,414
-
-            </span>
-
-          </div>
-
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next text-faded" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
 

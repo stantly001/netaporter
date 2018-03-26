@@ -43,6 +43,7 @@ export class ViewComponent implements OnInit {
 
 
   ngOnInit() {    
+    console.log("1");
     this.productImageView="product";
     
     this.defaultService.getSortData().subscribe(response=>{

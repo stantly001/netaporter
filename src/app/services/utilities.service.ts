@@ -89,4 +89,19 @@ export class UtilitiesService {
     return arr.filter(data=>data[key]==value)[0];
   }
 
+  /**
+   * 
+   * @param arr 
+   * @param key 
+   * @param value
+   * Returns Array Objects By Key and value 
+   */
+  getArrayDataByKey(arr:Array<any>,key,value){
+    let response:Array<any>=[];
+    arr.forEach(element=>{
+      (element[key].indexOf(value) !==-1) ? response.push(element) : '';
+    });
+    return response;
+  }
+
 }

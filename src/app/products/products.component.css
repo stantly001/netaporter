@@ -35,4 +35,10 @@
     /* -webkit-transition: all 0.2s 0.4s ease-in-out; */
     /* transition: all 0.2s 0.4s ease-in-out; */
 }
-
+.pagination{
+    color:blue;
+    border:1px solid #000;
+}
+.pagination>li>a{
+    cursor: pointer;
+}

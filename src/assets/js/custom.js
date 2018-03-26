@@ -1,17 +1,32 @@
 $(document).ready(function () {
-    $("#menubar").mCustomScrollbar({
-        theme: "minimal"
-    });
-
-    $('#dismiss, .overlay').on('click', function () {
-        $('#menubar').removeClass('active');
-        $('.overlay').fadeOut();
-    });
-
-    $('#sidebarCollapse').on('click', function () {
-        $('#menubar').addClass('active');
-        $('.overlay').fadeIn();
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    });
+    $('a.thumb').click(function(event){
+        event.preventDefault();
+        var content = $('.modal-body');
+        content.empty();
+          var title = $(this).attr("title");
+          $('.modal-title').html(title);        
+          content.html($(this).html());
+          $(".modal-profile").modal({show:true});
+      });
+    $('#myCarousel').on('slide.bs.carousel', function (e) {
+        console.log(e)
+          
+          var $e = $(e.relatedTarget);
+          var idx = $e.index();
+          var itemsPerSlide = 4;
+          var totalItems = $('.carousel-item').length;
+          
+          if (idx >= totalItems-(itemsPerSlide-1)) {
+              var it = itemsPerSlide - (totalItems - idx);
+              for (var i=0; i<it; i++) {
+                  // append slides to end
+                  if (e.direction=="left") {
+                      $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                  }
+                  else {
+                      $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                  }
+              }
+          }
+        });
 });

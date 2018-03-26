@@ -4,7 +4,7 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {Approute} from './app.routes';
 import {RouterModule} from '@angular/router';
-import {NgxPaginationModule} from 'ngx-pagination';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,7 +16,7 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { DataService } from './services/data.service';
 import {DefaultService} from './services/default.service';
 import { UtilitiesService} from './services/utilities.service';
-
+import { PaginationService } from './services/index';
 
 @NgModule({
   declarations: [
@@ -31,10 +31,9 @@ import { UtilitiesService} from './services/utilities.service';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule,
     RouterModule.forRoot(Approute)
   ],
-  providers: [DataService,DefaultService,UtilitiesService],
+  providers: [DataService,DefaultService,UtilitiesService,PaginationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
