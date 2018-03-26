@@ -22,6 +22,7 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
+
   @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService) {
@@ -29,6 +30,9 @@ export class ProductViewComponent implements OnInit {
   }
 
   ngOnInit() {
+
+   
+
     let result;
     this.isOn = true;
     this.defaultService.getProducts().subscribe(response => {

@@ -1,107 +1,96 @@
-<div class="promo-bar hidden-xs">
-  <div class="col-md-3">
-    <div class="customer-care-wrapper promo-block">
-      <div class="customer-care" style="padding-top: 11px; padding-bottom: 11px;"> Contact us 24/7: +44 330 022 5700 </div>
+<!-- updated header -->
+<div class="wsmenucontainer clearfix">
+    <div id="overlapblackbg"></div>
+    <div class="wsmobileheader clearfix"> 
+      <a id="wsnavtoggle" class="animated-arrow"><span></span></a> 
+      <a class="smallogo">
+        <img src="https://nap-assets.nap-live.ext.net-a-porter.com/girdle/images/header/logo-net-a-porter.80097ad030588586.svg" 
+        data-wide-src="/images/header/logo-net-a-porter.80097ad030588586.svg" data-narrow-src="/images/header/logo-net-a-porter.80097ad030588586.svg" alt="" /></a> 
+      <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a> 
     </div>
-  </div>
-  <div class="col-md-7">
-    <div class="service-message-wrapper promo-block" style="height: 26px;">
-      <div class="service-messages-extended" style="display: block; z-index: 1; height: 26px;">
-
-        <div class="service-banner service-message-1" style="margin-top: 0px;">
-          <p id="middle-east-message-eid" class="caption">Free shipping worldwide on all orders over £200</p>
+    <div class="headtoppart clearfix">
+      <div class="headerwp">
+        <div class="headertopleft">
+          <div class="address clearfix">
+              <!-- Country -->
+              <div class="dropdown">
+                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+                  <span class="caret"></span></a>
+                  <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                      <a role="menuitem">{{country.countryName}}</a></li>
+                       
+                  </ul>
+                </div>
+                <!-- Language -->
+                <div class="dropdown">
+                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+                    <span class="caret"></span></a>
+                    <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                      <li (click)="updateLanguage(language)" [value]="language.languageShortName" 
+                      *ngFor="let language of languages">
+                        <a role="menuitem">{{language.languageName}}</a></li>
+                    </ul>
+                  </div>
+          <a href="#">Sign In | Register</a></div>
+        </div>
+        <div class="headertopright"> 
+        <a><i class="fa fa-truck" aria-hidden="true"></i> Free delivery in United Arab Emirates over AED 200</a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-2">
-    <div class="shop-for-him-wrapper promo-block">
-      <div class="shop-for-him">
-        <a href="#" target="_blank" title="Mr Porter">
-          <span class="trigger" style="padding-top: 11px; padding-bottom: 11px;">Shop for him</span>
-          <span class="trigger-icon" style="padding-top: 11px; padding-bottom: 11px;"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-</div>
-<div class="header">
-  <div class="container">
-    <div class="w3l_login">
-      <div class="currency-language">
-        <div class="currency-code">
-            <!-- country -->
-            <select (change)="updateCountry($event.target.value)">
-                 <option  [value]="country.countryShortName" 
-                 *ngFor="let country of countries">{{country.countryName}}</option>
-              </select>
-
-              <!-- language -->
-              <select (change)="updateLanguage($event.target.value)">
-                  <option [selected]="ln==language.languageShortName"  
-                  [value]="language.languageShortName" 
-                  *ngFor="let language of languages">{{language.languageName}}</option>
-               </select>
-        </div>
-        
-      </div>
-    </div>
-    <div class="w3l_logo">
-      <h1>
-        <a href="index.html">
-          <img class="logo" src="https://nap-assets.nap-live.ext.net-a-porter.com/girdle/images/header/logo-net-a-porter.80097ad030588586.svg"
-            data-wide-src="/images/header/logo-net-a-porter.80097ad030588586.svg" data-narrow-src="/images/header/logo-net-a-porter.80097ad030588586.svg">
-        </a>
-      </h1>
-    </div>
-    <div class="cart box_1">
-
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <i class="fa fa-shopping-bag"></i>
-      <span class="reg"> Register</span>
-      <span>Signin</span>
-      <div class="clearfix"> </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
-</div>
-<div class="navigation">
-  <div class="container">
-    <nav id="menubar" class="navbar navbar-default">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <!--<div class="navbar-header nav_2">
-          <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>-->
-      <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-        <ul class="nav navbar-nav">
-          <li class="dropdown dropdown-shop" *ngFor="let menu of menus">
-           
-            <a [routerLink]="['/shop',cn,ln,menu.id]" class="dropdown" data-toggle="dropdown">
-              {{menu.name}}
-              <b class="caret"></b>
-            </a>
-            <ul *ngIf="menu.subCategory.length>0" class="dropdown-menu multi-column columns-3">
-              <div class="row">
-                <div class="col-sm-3">
-                  <ul class="multi-column-dropdown">
-                    <h6>{{menu.name}}</h6>
-                    <li *ngFor="let subCategory of menu.subCategory">
-                      <a 
-                      [routerLink]="['/shop',cn,ln,menu.id,subCategory.id]">
-                        {{subCategory.name}}</a>
+    <div class="headerfull"> 
+      <!--Main Menu HTML Code-->
+      <div class="wsmain">
+        <div class="smllogo"><a href="#"><img src="" alt=""/></a></div>
+        <nav class="wsmenu clearfix">
+          <ul class="mobile-sub wsmenu-list">
+            <li *ngFor="let menu of menus"><a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
+              <span>{{menu.menuName}}</span></a>
+              <div class="wsshoptabing wtsbrandmenu clearfix">
+                <div class="wsshoptabingwp clearfix">
+                  <ul class="wstabitem02 clearfix">
+                    
+                    <li *ngFor="let category of menu.categories; let menuCategory = index" 
+                    [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}" 
+                    (mouseenter)="setClickedRow(menuCategory)">
+                      <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
+                      <div class="wsshoptab-active wstbrandbottom clearfix">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-lg-3 col-md-4" *ngFor="let subCategory of category.subCategory">
+                              <ul class="wstliststy02 clearfix">
+                                <li class="wstheading clearfix">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                    {{subCategory.name}}</a></li>
+                                 <li *ngFor="let subLevel of subCategory.subLevelCategory">
+                                   <a 
+                                   [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
+                                    {{subLevel.subLevelCategoryName}}</a>
+                                 </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                   </ul>
                 </div>
-                <div class="col-sm-3">
-                  <img src="{{menu.img}}" />
-                </div>
-                <div class="clearfix"></div>
               </div>
-            </ul>
-          </li>
-        </ul>
+            </li>
+            <li class="wssearchbar clearfix">
+              <form class="topmenusearch">
+                <input name="searchItem" [ngModel]="searchItem" (keydown)="onSearchProduct($event,$event.target.value)" placeholder="Search Product, Category...">
+                <button class="btnstyle"><i class="searchicon fa fa-search" aria-hidden="true"></i></button>
+              </form>
+            </li>
+            <li class="wscarticon clearfix"> <a href="#"><i class="fa fa-shopping-basket"></i> <em class="roundpoint">8</em>
+        <span class="mobiletext">Shopping Cart</span></a> </li>
+           
+          </ul>
+        </nav>
       </div>
-    </nav>
+      <!--Menu HTML Code--> 
+    </div>
+  
   </div>
-</div>

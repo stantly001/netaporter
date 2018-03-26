@@ -1,21 +1,22 @@
 [{
         "id": 1,
         "name": "Bag1",
-        "originalPrice": "10.500",
-        "offerPrice": "10.500",
-        "code": "FD2003JG",
-        "available": true,
+        "orginalPrice": "150.500",
+        "offerPrice": "100.652",
+        "available": true, 
         "best_seller": false,
         "categories": [2],
-        "subCategoryId": [3, 4],
+        "subCategoryId": [5, 6],
+        "subLevelId": [16, 20],
         "designerId": [5, 6],
         "colorId": [1],
         "sizeId": [1, 2, 3, 4],
         "subCategoryDesignerId": [4],
         "subCategoryColorId": [1],
         "subCategorySizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/bag1.jpg",
+        "productImg": "assets/img/bag1.jpg",  
         "outFitImg": "assets/img/bag3.jpg",
+        "code": "FD2003JG",
         "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
         "availableColors": [{
                 "id": 1,
@@ -84,16 +85,16 @@
     {	
         "id": 2,
         "name": "Bag2",
-        "price": "20.000",
+        "orginalPrice": "20.000",
+        "offerPrice": "0",
         "available": false,
         "best_seller": false,
         "categories": [4],	
         "subCategoryId": [8],
+        "subLevelId": [27],
         "designerId": [1, 5, 6],
         "colorId": [1, 2, 3, 4, 5, 6, 7],
         "sizeId": [1, 2],
-        "originalPrice": "10.00",
-        "offerPrice": "15:00",
         "code": "V2000CR23",
         "img": "assets/img/bag2.jpg",
         "images": {
@@ -146,19 +147,19 @@
     {	
         "id": 3,
         "name": "Pickles",
-        "price": "10.000",
+        "orginalPrice": "10.000",
+        "offerPrice": "3.25",
         "available": true,
         "best_seller": true,
         "categories": [4],	
-        "subCategoryId": [7],
+        "subCategoryId": [9],
+        "subLevelId": [34],
         "designerId": [1, 4, 5, 6],
         "colorId": [1, 2, 3, 4],
         "sizeId": [1, 3, 4],
-        "originalPrice": "10.00",
-        "offerPrice": "13:00",
-        "Code": "V3000CF23",
         "productImg": "assets/img/bag3.jpg",
         "outFitImg": "assets/img/bag1.jpg",
+        "code": "V3000CF23",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -174,16 +175,19 @@
     {	
         "id": 4,
         "name": "Bag3",
-        "price": "35.000",
+        "orginalPrice": "35.000",
+        "offerPrice": "20.25",
         "available": false,
         "best_seller": false,
         "categories": [1],	
         "subCategoryId": [2],
+        "subLevelId": [5],
         "designerId": [1, 2, 3, 5, 6],
         "colorId": [1],
         "sizeId": [1, 4],
         "productImg": "assets/img/bag3.jpg",
         "outFitImg": "assets/img/bag1.jpg",
+        "code": "V3000CF24",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -199,16 +203,19 @@
     {
         "id": 5,
         "name": "Bag4",
-        "price": "12.000",
+        "orginalPrice": "12.000",
+        "offerPrice": "10.25",
         "available": true,
         "best_seller": true,
         "categories": [1],
-        "subCategoryId": [1],
+        "subCategoryId": [2],
+        "subLevelId": [5],
         "designerId": [1, 4, 5, 6, 7, 10],
         "colorId": [1, 2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/bag4.jpg",
         "outFitImg": "assets/img/bag3.jpg",
+        "code": "V3000CF25",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -224,16 +231,19 @@
     {
         "id": 6,
         "name": "Bag5",
-        "price": "120.000",
+        "orginalPrice": "120.000",
+        "offerPrice": "90.25",
         "available": true,
         "best_seller": false,
         "categories": [1],	
         "subCategoryId": [1, 2],
+        "subLevelId": [3, 5],
         "designerId": [1, 2, 4, 5, 6, 7, 8, 9, 10],
         "colorId": [1, 2, 3, 7],
         "sizeId": [1, 2, 3, 4, 5, 6],
         "productImg": "assets/img/bag5.jpg",
         "outFitImg": "assets/img/bag3.jpg",
+        "code": "V3000CF26",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -249,16 +259,19 @@
     {	
         "id": 7,
         "name": "Bag6",
-        "price": "50.000",
+        "orginalPrice": "50.000",
+        "offerPrice": "30.250",
         "available": false,
         "best_seller": false,
         "categories": [1],	
         "subCategoryId": [1, 2],
+        "subLevelId": [2, 6],
         "designerId": [1, 4],
         "colorId": [1, 3, 7],
         "sizeId": [1, 4, 5, 6],
         "productImg": "assets/img/bag6.jpg",
         "outFitImg": "assets/img/bag3.jpg",
+        "code": "V3000CF27",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -271,19 +284,22 @@
             }],
         "description": "Tarragona asymmetric ruffled silk-satin dress"
     },
-    {	
+    {
         "id": 8,
         "name": "Bag7",
-        "price": "29.500",
+        "orginalPrice": "29.500",
+        "offerPrice": "20.360",
         "available": true,
         "best_seller": false,
         "categories": [1],
         "subCategoryId": [2],
+        "subLevelId": [4],
         "designerId": [1, 5, 6],
         "colorId": [1, 2, 3, 4, 5, 6, 7],
         "sizeId": [1, 2, 3, 4, 5, 6],
         "productImg": "assets/img/bag7.jpg",
         "outFitImg": "assets/img/bag6.jpg",
+        "code": "V3000CF28",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -299,16 +315,19 @@
     {	
         "id": 9,
         "name": "Bag8",
-        "price": "12.000",
+        "orginalPrice": "12.000",
+        "offerPrice": "0",
         "available": true,
         "best_seller": true,
         "categories": [2],	
-        "subCategoryId": [3, 4],
+        "subCategoryId": [5],
+        "subLevelId": [17],
         "designerId": [1, 4, 5, 6, 8, 10],
         "colorId": [7],
         "sizeId": [5, 6],
         "productImg": "assets/img/bag8.jpg",
         "outFitImg": "assets/img/bag5.jpg",
+        "code": "V3000CF29",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -324,16 +343,19 @@
     {	
         "id": 10,
         "name": "cloth1",
-        "price": "16.000",
+        "orginalPrice": "16.000",
+        "offerPrice": "12.25",
         "available": false,
         "best_seller": true,
         "categories": [2],	
-        "subCategoryId": [3],
+        "subCategoryId": [5],
+        "subLevelId": [17],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [3],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth1.jpg",
         "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF30",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -348,16 +370,19 @@
     }, {	
         "id": 11,
         "name": "cloth2",
-        "price": "215.000",
+        "orginalPrice": "215.000",
+        "offerPrice": "185.25",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5],
+        "subCategoryId": [7],
+        "subLevelId": [23],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth2.jpg",
         "outFitImg": "assets/img/cloth1.jpg",
+        "code": "V3000CF31",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -372,17 +397,20 @@
     }, {	
         "id": 12,
         "name": "cloth3",
-        "price": "153.000",
+        "orginalPrice": "153.000",
+        "offerPrice": "120.360",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [6],
+        "subCategoryId": [7],
+        "subLevelId": [23],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
         "productImg": "assets/img/cloth3.jpg",
         "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF32",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -397,16 +425,19 @@
     }, {	
         "id": 13,
         "name": "cloth4",
-        "price": "96.000",
+        "orginalPrice": "96.000",
+        "offerPrice": "50.00",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5, 6],
+        "subCategoryId": [7],
+        "subLevelId": [22],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth4.jpg",
         "outFitImg": "assets/img/cloth3.jpg",
+        "code": "V3000CF33",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -422,16 +453,19 @@
     {	
         "id": 14,
         "name": "cloth5",
-        "price": "25.000",
+        "orginalPrice": "25.000",
+        "offerPrice": "13.25",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5, 6],
+        "subCategoryId": [7],
+        "subLevelId": [22],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth5.jpg",
         "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF34",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -447,16 +481,19 @@
     {	
         "id": 15,
         "name": "cloth6",
-        "price": "36.75",
+        "orginalPrice": "36.75",
+        "offerPrice": "15.25",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [6],
+        "subCategoryId": [7],
+        "subLevelId": [22],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth6.jpg",
         "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF35",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -472,16 +509,19 @@
     {	
         "id": 16,
         "name": "cloth7",
-        "price": "82.65",
+        "orginalPrice": "82.65",
+        "offerPrice": "52.25",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5],
+        "subCategoryId": [7],
+        "subLevelId": [24],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth7.jpg",
         "outFitImg": "assets/img/cloth3.jpg",
+        "code": "V3000CF36",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -497,16 +537,19 @@
     {	
         "id": 17,
         "name": "cloth8",
-        "price": "88.14",
+        "orginalPrice": "88.14",
+        "offerPrice": "82.65",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5, 6],
+        "subCategoryId": [7],
+        "subLevelId": [22],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/cloth8.jpg",
         "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF37",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -522,15 +565,19 @@
     {	
         "id": 18,
         "name": "shoe1",
-        "price": "74.16",
+        "orginalPrice": "74.16",
+        "offerPrice": "82.65",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [6],
+        "subCategoryId": [7],
+        "subLevelId": [24],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
-        "img": "assets/img/shoe1.jpg",
+        "productImg": "assets/img/cloth8.jpg",
+        "outFitImg": "assets/img/cloth2.jpg",
+        "code": "V3000CF38",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -545,16 +592,19 @@
     }, {	
         "id": 19,
         "name": "shoe2",
-        "price": "72.25",
+        "orginalPrice": "72.25",
+        "offerPrice": "82.65",
         "available": false,
         "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [6],
+        "categories": [4],	
+        "subCategoryId": [8, 9],
+        "subLevelId": [26, 32],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe2.jpg",
         "outFitImg": "assets/img/shoe3.jpg",
+        "code": "V3000CF39",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -569,16 +619,19 @@
     }, {	
         "id": 20,
         "name": "shoe3",
-        "price": "45.20",
+        "orginalPrice": "45.20",
+        "offerPrice": "50.65",
         "available": false,
         "best_seller": true,
-        "categories": [3],
-        "subCategoryId": [6],	
+        "categories": [4],
+        "subCategoryId": [9],
+        "subLevelId": [32],	
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe3.jpg",
         "outFitImg": "assets/img/shoe2.jpg",
+        "code": "V3000CF40",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -593,16 +646,19 @@
     }, {	
         "id": 21,
         "name": "shoe4",
-        "price": "256.78",
+        "orginalPrice": "256.78",
+        "offerPrice": "175.65",
         "available": false,
         "best_seller": true,
-        "categories": [2],	
-        "subCategoryId": [3, 4],
+        "categories": [4],	
+        "subCategoryId": [8],
+        "subLevelId": [29],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe4.jpg",
         "outFitImg": "assets/img/shoe3.jpg",
+        "code": "V3000CF41",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -617,16 +673,19 @@
     }, {	
         "id": 22,
         "name": "shoe5",
-        "price": "45.36",
+        "orginalPrice": "45.36",
+        "offerPrice": "40.65",
         "available": false,
         "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [4],
+        "categories": [4],	
+        "subCategoryId": [9],
+        "subLevelId": [33],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe5.jpg",
         "outFitImg": "assets/img/shoe3.jpg",
+        "code": "V3000CF42",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -641,16 +700,19 @@
     }, {	
         "id": 23,
         "name": "shoe6",
-        "price": "74.10",
+        "orginalPrice": "74.10",
+        "offerPrice": "0",
         "available": false,
         "best_seller": true,
-        "categories": [2],
-        "subCategoryId": [4],	
+        "categories": [4],
+        "subCategoryId": [8],	
+        "subLevelId": [25],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe6.jpg",
         "outFitImg": "assets/img/shoe5.jpg",
+        "code": "V3000CF43",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -665,16 +727,19 @@
     }, {	
         "id": 24,
         "name": "shoe7",
-        "price": "30.000",
+        "orginalPrice": "30.000",
+        "offerPrice": "0",
         "available": false,
         "best_seller": true,
         "categories": [2],
-        "subCategoryId": [4],	
+        "subCategoryId": [5],
+        "subLevelId": [17],	
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe7.jpg",
         "outFitImg": "assets/img/shoe6.jpg",
+        "code": "V3000CF44",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {
@@ -689,16 +754,19 @@
     }, {	
         "id": 25,
         "name": "shoe8",
-        "price": "13.76",
+        "orginalPrice": "13.76",
+        "offerPrice": "0",
         "available": false,
         "best_seller": true,
         "categories": [3],	
-        "subCategoryId": [5],
+        "subCategoryId": [7],
+        "subLevelId": [22],
         "designerId": [1, 3, 4, 5, 6],
         "colorId": [2, 3, 7],
         "sizeId": [1, 2, 3, 4],
         "productImg": "assets/img/shoe8.jpg",
         "outFitImg": "assets/img/shoe3.jpg",
+        "code": "V3000CF55",
         "images": [{
                 "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
             }, {

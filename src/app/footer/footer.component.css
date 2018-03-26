@@ -1,7 +1,7 @@
 .footer {
     padding: 1em 0;
     overflow: hidden;
-    background: #eee;
+    background: #000;
     border-bottom: 10px solid #000;
 }
 .w3_footer_grid ul.info li a {
@@ -17,7 +17,7 @@ background: none;
 }
 
 .w3_footer_grid ul.info li a {
-    color:#000;
+    color:#fff;
     }
 ul.info {
     padding-left: 0px;

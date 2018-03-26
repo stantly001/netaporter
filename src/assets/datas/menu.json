@@ -1,189 +1,232 @@
 [
     {
-         "id":1,
-         "name":"Clothing",
-         "img":"assets/img/cloting.jpg",
-         "subCategory":[{
-                     "id":1,
-                     "name":"Jeans",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"BootCut"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Flared"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"BoyFriend"
-                             }]
-                 },
-                 {
-                     "id":2,
-                     "name":"Jackets",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Bomber"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Capes"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Denim"
-                             }]
-                 }]
-     },
-     {
-         "id":2,
-         "name":"Shoes",
-         "img":"assets/img/accessories.jpg",
-         "subCategory":[{
-                     "id":3,
-                     "name":"Boots",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"High heel"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Mid heel"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Ankle"
-                             }]
+        "menuId": "1",
+        "menuName": "WoMen",
+        "categories": [
+            {
+                "categoryId": 1,
+                "categoryName": "Clothing",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 1,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 1,
+                                "subLevelCategoryName": "BootCut"
+                            },
+                            {
+                                "subLevelCategoryId": 2,
+                                "subLevelCategoryName": "Flared"
+                            },
+                            {
+                                "subLevelCategoryId": 3,
+                                "subLevelCategoryName": "BoyFriend"
+                            }
+                        ]
                     },
-                 {
-                     "id":4,
-                     "name":"Sneakers",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Low Top"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Slip-on"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Sport"
-                             }]
-                 }]
-     },
-     {
-         "id":3,
-         "name":"Bags",
-         "img":"assets/img/jewllery.jpg",
-         "subCategory":[{
-                     "id":5,
-                     "name":"BackPacks"
-                 },
-                 {
-                     "id":6,
-                     "name":"Mini-Bags",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Shoulder-Bags"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Tote-Bags"
-                             }]
-                 }]
-     },{
-         "id":4,
-         "name":"Salwar",
-         "img":"assets/img/cloting.jpg",
-         "subCategory":[{
-                     "id":7,
-                     "name":"Boots",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"High heel"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Mid heel"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Ankle"
-                             }]
-                 },
-                 {
-                     "id":8,
-                     "name":"Sneakers",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Low Top"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Slip-on"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Sport"
-                             }]
-                 }]
-     },{
-         "id":5,
-         "name":"Sarees",
-         "subCategory":[{
-            "img":"assets/img/jewellery.jpg",
-                     "id":9,
-                     "name":"Jeans",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"BootCut"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Flared"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"BoyFriend"
-                             }]
-                 },
-                 {
-                     "id":10,
-                     "name":"Jackets",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Bomber"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Capes"
-                             },
-                             {
-                                 "id":3,
-                                 "name":"Denim"
-                             }]
-                 }]
-     },{
-         "id":6,
-         "name":"Kurtas",
-         "img":"assets/img/cloting.jpg",
-         "subCategory":[{
-                     "id":11,
-                     "name":"BackPacks"
-                 },
-                 {
-                     "id":12,
-                     "name":"Mini-Bags",
-                     "subLevelCategory":[{
-                                 "id":1,
-                                 "name":"Shoulder-Bags"
-                             },
-                             {
-                                 "id":2,
-                                 "name":"Tote-Bags"
-                             }]
-                 }]
-     }
-  ]
+                    {
+                        "id": 2,
+                        "name": "Jackets & Coats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 4,
+                                "subLevelCategoryName": "Bomber"
+                            },
+                            {
+                                "subLevelCategoryId": 5,
+                                "subLevelCategoryName": "Capes"
+                            },
+                            {
+                                "subLevelCategoryId": 6,
+                                "subLevelCategoryName": "Denim"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 3,
+                        "name": "PANTS & LEGGINGS",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 7,
+                                "subLevelCategoryName": "Jeans"
+                            },
+                            {
+                                "subLevelCategoryId": 8,
+                                "subLevelCategoryName": "3-4 Leggings"
+                            },
+                            {
+                                "subLevelCategoryId": 9,
+                                "subLevelCategoryName": "Pants"
+                            },
+                            {
+                                "subLevelCategoryId": 10,
+                                "subLevelCategoryName": "Shorts"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "DRESSES",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 11,
+                                "subLevelCategoryName": "Evening Dresses"
+                            },
+                            {
+                                "subLevelCategoryId": 12,
+                                "subLevelCategoryName": "Formal"
+                            },
+                            {
+                                "subLevelCategoryId": 13,
+                                "subLevelCategoryName": "Wedding"
+                            },
+                            {
+                                "subLevelCategoryId": 14,
+                                "subLevelCategoryName": "Clubbing"
+                            },
+                            {
+                                "subLevelCategoryId": 15,
+                                "subLevelCategoryName": "Casual"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 2,
+                "categoryName": "SHOES",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 5,
+                        "name": "Boots",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 16,
+                                "subLevelCategoryName": "High heel"
+                            },
+                            {
+                                "subLevelCategoryId": 17,
+                                "subLevelCategoryName": "Mid heel"
+                            },
+                            {
+                                "subLevelCategoryId": 18,
+                                "subLevelCategoryName": "Ankle"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 6,
+                        "name": "Sneakers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 19,
+                                "subLevelCategoryName": "Low Top"
+                            },
+                            {
+                                "subLevelCategoryId": 20,
+                                "subLevelCategoryName": "Slip-on"
+                            },
+                            {
+                                "subLevelCategoryId": 21,
+                                "subLevelCategoryName": "Sport"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 3,
+                "categoryName": "Bags",
+                "categoryImg": "assets/img/jewllery.jpg",
+                "subCategory": [
+                    {
+                        "id": 7,
+                        "name": "Belt Bags",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 22,
+                                "subLevelCategoryName": "Low Top"
+                            },
+                            {
+                                "subLevelCategoryId": 23,
+                                "subLevelCategoryName": "Slip-on"
+                            },
+                            {
+                                "subLevelCategoryId": 24,
+                                "subLevelCategoryName": "Sport"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 4,
+                "categoryName": "Accessories",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 8,
+                        "name": "Hats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 25,
+                                "subLevelCategoryName": "Beanies"
+                            },
+                            {
+                                "subLevelCategoryId": 26,
+                                "subLevelCategoryName": "Fedoras"
+                            },
+                            {
+                                "subLevelCategoryId": 27,
+                                "subLevelCategoryName": "SunHats"
+                            },
+                            {
+                                "subLevelCategoryId": 28,
+                                "subLevelCategoryName": "Cool Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 29,
+                                "subLevelCategoryName": "Baby Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 30,
+                                "subLevelCategoryName": "Cricket Hats"
+                            }
+                        ]
+                    }, {
+                        "id": 9,
+                        "name": "Books",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 31,
+                                "subLevelCategoryName": "Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId": 32,
+                                "subLevelCategoryName": "Horror Comics"
+                            },
+                            {
+                                "subLevelCategoryId": 33,
+                                "subLevelCategoryName": "Thirller Books"
+                            },
+                            {
+                                "subLevelCategoryId": 34,
+                                "subLevelCategoryName": "Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId": 35,
+                                "subLevelCategoryName": "Novels"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }, {
+        "menuId": 2,
+        "menuName": "Men"
+    }
+]

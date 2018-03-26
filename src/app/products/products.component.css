@@ -36,3 +36,12 @@
     /* transition: all 0.2s 0.4s ease-in-out; */
 }
 
+.offer-price {
+    color:#b72929;
+}
+.strike {
+    text-decoration: line-through;
+}
+.product-display-filter {
+    margin-bottom: 2%;
+}

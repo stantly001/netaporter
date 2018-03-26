@@ -26,6 +26,7 @@
 }
 .category-banner {
     margin: 16px 0px;
+    border-bottom: 1px dotted #ccc;
 }
 .product-list-menu hr {
     border-top: 0;
@@ -54,8 +55,10 @@
     word-wrap: break-word;
 }
 .product-list-menu h1 {
-    text-align: center;
+    text-align: left;
     line-height: 21px;
+    font-size:39px;
+    margin-bottom: 6%;
 }
 .product-list-results {
     text-align: center;
@@ -100,3 +103,47 @@ select.select_item {
 /*
 *   checkbox highligh code
 */
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-body {
+    padding:0px !important;
+}
+.panel-body ul li, .ecommerce_size ul li {
+    padding-left: 14px !important;
+    margin-bottom: 3px !important;
+}
+.panel-title, .panel_bottom li a {
+    color:#000;
+}
+.product-total {
+    margin-left:2%;
+}
+.breadcrumbs {
+    margin-bottom: 9%;
+    font-size: 13px;
+    margin-left: 2%;
+}
+.container.product-view {
+    margin-bottom: 2%;
+}
+.grid-size-filter {
+    border-bottom: none !important;
+}
+.ads {
+    padding-left:5%;
+    padding-top:5%;
+}
+.section-view {
+    border-bottom: 1px dotted #ccc;
+}
+a:focus {
+    outline: none !important;
+  }
