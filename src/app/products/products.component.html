@@ -7,13 +7,16 @@
         <div class="col-md-3">
             <input type="checkbox" class="on-sale"> On Sale Items
         </div>
-        <div class="col-md-3">
+        <div class="col-md-5">
+        <div class="btn-group">
             <select name="select_item" (change)="sortProduct($event.target.value)" class="select_item">
                 <option value="all">Select</option>
                 <option *ngFor="let sortProduct of sort" [value]="sortProduct.sortTypeName">
                     {{sortProduct.sortDisplayName}}
             </option>
         </select>
+    </div>
+    <div class="btn-group">
         <select name="select_item" (change)="selectPageSize($event.target.value)" class="select_item">
             <option value="all">Select</option>
             <option value="5">5/pages</option>
@@ -22,6 +25,7 @@
             <option value="50">50/pages</option>
         </select>
     </div>
+</div>
     <!-- pagination code -->
     <ul *ngIf="pager.pages && pager.pages.length" class="pagination pull-right">
         <li [ngClass]="{disabled:pager.currentPage === 1}">

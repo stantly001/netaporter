@@ -45,3 +45,15 @@
 .product-display-filter {
     margin-bottom: 2%;
 }
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0px 0 !important;
+    border-radius: 4px;
+}
+
+.agile_ecommerce_tab_left {
+    text-align:left;
+}
+

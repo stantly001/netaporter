@@ -25,8 +25,8 @@
     <div class="col-md-3">
       <!-- subCategory code starts -->
       <div class="panel-group" id="categoryaccordation" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+        <div>
+          <div role="tab" id="headingOne">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#categoryaccordation" href="#categoryfilter" aria-expanded="true" aria-controls="collapseOne">CATEGORY</a>
             </h4>
@@ -37,17 +37,19 @@
                 <ul class="panel_bottom">
                   <li *ngFor="let subCategory of subCategories">
                     <ul>
-                      <li *ngFor="let category of subCategory.subCategory">
-                        <a 
-                        class="filter-menu" (click)="subCategoryName=subCategory.name" 
-                        [routerLink]="['/shop/',cn,ln,categoryId,subCategory.categoryId]"
-                          queryParamsHandling="merge">{{category.name}}</a>
-                          <ul>
-                            <li *ngFor="let subLevel of category.subLevelCategory">
-                              <input type="checkbox" (click)="filter(subLevel,$event.target.checked,'subLevel')">
-                              <a>{{subLevel.subLevelCategoryName}}</a>
-                            </li>
-                          </ul>
+                      <li *ngFor="let category of subCategory.subCategory; let subCollapse=index;">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{subCollapse}}">
+                          <a class="filter-menu" (click)="subCategoryName=subCategory.name" [routerLink]="['/shop/',cn,ln,categoryId,subCategory.categoryId]"
+                            queryParamsHandling="merge">
+                            <i class="fa" [ngClass]="{'fa-caret-down':subCollapse == 0, 'fa-caret-right': subCollapse != 0}"></i> {{category.name}}
+                          </a>
+                        </a>
+                        <ul id="collapse{{subCollapse}}" class="panel-collapse collapse" [ngClass]="{'in':subCollapse == 0}">
+                          <li *ngFor="let subLevel of category.subLevelCategory">
+                            <input type="checkbox" class="inside-check" (click)="filter(subLevel,$event.target.checked,'subLevel')">
+                            <a>{{subLevel.subLevelCategoryName}}</a>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
                   </li>
@@ -61,8 +63,8 @@
 
       <!-- Designer code starts -->
       <div class="panel-group" id="designfilteraccordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+        <div>
+          <div role="tab" id="headingOne">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#designfilteraccordion" href="#designerfilter" aria-expanded="true" aria-controls="collapseOne">DESIGNERS</a>
             </h4>
@@ -91,8 +93,8 @@
 
       <!-- color -->
       <div class="panel-group" id="colorfilteraccordation" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+        <div>
+          <div role="tab" id="headingOne">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#colorfilteraccordation" href="#colorfilter" aria-expanded="true" aria-controls="collapseOne">COLORS</a>
             </h4>
@@ -119,8 +121,8 @@
 
       <!-- price -->
       <div class="panel-group" id="pricefilteraccordation" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+        <div>
+          <div role="tab" id="headingOne">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#pricefilteraccordation" href="#pricefilter" aria-expanded="true" aria-controls="collapseOne">PRICE</a>
             </h4>
@@ -146,8 +148,8 @@
       </div>
       <!-- size-->
       <div class="panel-group" id="sizefilteraccordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+        <div>
+          <div role="tab" id="headingOne">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#sizefilteraccordion" href="#sizefilter" aria-expanded="true" aria-controls="collapseOne">SIZE</a>
             </h4>

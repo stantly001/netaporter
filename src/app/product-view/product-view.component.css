@@ -137,6 +137,32 @@
     color: #ffffff;
 }
 
+.carousel-control.left {
+    background-image:none !important;
+}
+
+.js-popup.enabled.help-link {
+    color: #be181c !important;
+    border-right: none;
+}
+
+.product-price span {
+    color: #000;
+}
+
+.product-description {
+    color: #747474;
+}
+
+.like-gucci span {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+    right: 12% !important;
+}
+
 .navbar {
     min-height: auto;
 }
@@ -275,6 +301,64 @@ ul.multi-column-dropdown h6 {
     padding-bottom: 5px;
     border-bottom: none;
     text-transform: capitalize;
+}
+
+.carousel-control.right {
+    right: -54px;
+    left: auto;
+    background-image:none !important;
+}
+
+.product-shipment{
+    border: 1px solid #e5e5e5 !important;
+    padding: 10px;
+}
+
+.shopping-cart {
+    clear: both;
+    position: relative;
+    margin-top: 0px !important;
+    padding-top: 1px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 6px !important;
+}
+.size-guide {
+    border-bottom: none !important;
+    text-align: right !important;
+    margin: -9px 0px 0px 20px !important;
+}
+
+.btn-primary.nap-button {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #bbb !important;
+}
+
+.full-price {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+.actualPrice {
+    color: #be181c !important;
+}
+
+.product-name.actual-price {
+    color: #be181c !important;
+}
+
+.carousel-inner > .active {
+    left:100px !important;
+}
+
+.product-name {
+    color: #747474;
+}
+
+.form-control {
+    margin-bottom: 5px;
 }
 
 img {

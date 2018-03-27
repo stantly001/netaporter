@@ -26,6 +26,7 @@
                 "../node_modules/jquery/dist/jquery.min.js",
                 "assets/js/bootstrap.min.js",
                 "assets/js/menuscroll.js",
+                "assets/js/webslidermenu.js",
                 "assets/js/custom.js",
                 "assets/js/jquery.zoom.js"],
             "environmentSource": "environments/environment.ts",

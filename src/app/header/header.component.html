@@ -4,8 +4,8 @@
     <div class="wsmobileheader clearfix"> 
       <a id="wsnavtoggle" class="animated-arrow"><span></span></a> 
       <a class="smallogo">
-        <img src="https://nap-assets.nap-live.ext.net-a-porter.com/girdle/images/header/logo-net-a-porter.80097ad030588586.svg" 
-        data-wide-src="/images/header/logo-net-a-porter.80097ad030588586.svg" data-narrow-src="/images/header/logo-net-a-porter.80097ad030588586.svg" alt="" /></a> 
+      </a>
+      
       <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a> 
     </div>
     <div class="headtoppart clearfix">
@@ -13,25 +13,25 @@
         <div class="headertopleft">
           <div class="address clearfix">
               <!-- Country -->
-              <div class="dropdown">
-                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+              <span class="dropdown">
+                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">United Arab Emirates
                   <span class="caret"></span></a>
                   <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
                     <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
                       <a role="menuitem">{{country.countryName}}</a></li>
                        
                   </ul>
-                </div>
+                </span>
                 <!-- Language -->
-                <div class="dropdown">
-                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">Dropdown Example
+                <span class="dropdown">
+                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">AED
                     <span class="caret"></span></a>
                     <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
                       <li (click)="updateLanguage(language)" [value]="language.languageShortName" 
                       *ngFor="let language of languages">
                         <a role="menuitem">{{language.languageName}}</a></li>
                     </ul>
-                  </div>
+                  </span>
           <a href="#">Sign In | Register</a></div>
         </div>
         <div class="headertopright"> 
@@ -42,7 +42,9 @@
     <div class="headerfull"> 
       <!--Main Menu HTML Code-->
       <div class="wsmain">
-        <div class="smllogo"><a href="#"><img src="" alt=""/></a></div>
+        <div class="smllogo">
+          <!-- <img src="../assets/images/shop-logo.png"> -->
+        </div>
         <nav class="wsmenu clearfix">
           <ul class="mobile-sub wsmenu-list">
             <li *ngFor="let menu of menus"><a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
@@ -56,19 +58,24 @@
                     (mouseenter)="setClickedRow(menuCategory)">
                       <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
                       <div class="wsshoptab-active wstbrandbottom clearfix">
-                        <div class="container-fluid">
+                        <div class="container">
                           <div class="row">
-                            <div class="col-lg-3 col-md-4" *ngFor="let subCategory of category.subCategory">
+                            <div class="col-md-8">
+                            <div class="col-lg-4 col-md-4" *ngFor="let subCategory of category.subCategory">
                               <ul class="wstliststy02 clearfix">
                                 <li class="wstheading clearfix">
                                   <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
-                                    {{subCategory.name}}</a></li>
+                                    {{subCategory.name}} <i class="fa fa-caret-right"></i></a></li>
                                  <li *ngFor="let subLevel of subCategory.subLevelCategory">
                                    <a 
                                    [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
                                     {{subLevel.subLevelCategoryName}}</a>
                                  </li>
                               </ul>
+                            </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                              <img src="https://qph.fs.quoracdn.net/main-qimg-be11ba5cb1572b4b0051e9930325cbd9"/>
                             </div>
                           </div>
                         </div>

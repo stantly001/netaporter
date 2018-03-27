@@ -1,781 +1,3865 @@
 [{
-        "id": 1,
-        "name": "Bag1",
-        "orginalPrice": "150.500",
-        "offerPrice": "100.652",
-        "available": true, 
-        "best_seller": false,
-        "categories": [2],
-        "subCategoryId": [5, 6],
-        "subLevelId": [16, 20],
-        "designerId": [5, 6],
-        "colorId": [1],
-        "sizeId": [1, 2, 3, 4],
-        "subCategoryDesignerId": [4],
-        "subCategoryColorId": [1],
-        "subCategorySizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/bag1.jpg",  
-        "outFitImg": "assets/img/bag3.jpg",
-        "code": "FD2003JG",
-        "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
-        "availableColors": [{
-                "id": 1,
-                "url": "assets/img/blackcolor.png"
-            }, {
-                "id": 2,
-                "url": "assets/img/blueColor.png"
-            }, {
-                "id": 3,
-                "url": "assets/img/RedColor.png"
-            }],
-        "images": [
-            {
-                "id": 1,
-                "image": [
-                    {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                    },
-                    {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-                    }]
-            },
-            {
-                "id": 2,
-                "image": [
-                    {
-                        "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-                    },
-                    {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-                    }]
-            }, {
-                "id": 3,
-                "image": [
-                    {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                    },
-                    {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
-                    }, {
-                        "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-                    }]
-            }],
-        "Items": [
-            {
-                "title": "WHY WE LOVE IT",
-                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
-            },
-            {
-                "title": "SIZE & FIT INFORMATION ",
-                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
-            }
-        ],
-        "description": "Portofino 85 PVC-trimmed leather sandals"
-    },
-    {	
-        "id": 2,
-        "name": "Bag2",
-        "orginalPrice": "20.000",
-        "offerPrice": "0",
-        "available": false,
-        "best_seller": false,
-        "categories": [4],	
-        "subCategoryId": [8],
-        "subLevelId": [27],
-        "designerId": [1, 5, 6],
-        "colorId": [1, 2, 3, 4, 5, 6, 7],
-        "sizeId": [1, 2],
-        "code": "V2000CR23",
-        "img": "assets/img/bag2.jpg",
-        "images": {
-            "black": [
+    "id": 1,
+    "name": "Bag1",
+    "orginalPrice": "150.500",
+    "offerPrice": "100.652",
+    "available": true, 
+    "best_seller": false,
+    "categories": [2],
+    "subCategoryId": [5, 6],
+    "subLevelId": [16, 20],
+    "designerId": [5,6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
                 {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
                 },
                 {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                }, {
-                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
-                }, {
-                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-                }],
-            "blue": [
-                {
-                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-                },
-                {
-                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
-                }, {
-                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
-                }, {
-                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
-                }],
-            "red": [
-                {
-                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-                },
-                {
-                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
         },
-        "Items": [
-            {
-                "title": "WHY WE LOVE IT",
-                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
-            },
-            {
-                "title": "SIZE & FIT INFORMATION ",
-                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
-            }
-        ],
-        "description": "Double-breasted silk-blend blazer"
-    },
-    {	
-        "id": 3,
-        "name": "Pickles",
-        "orginalPrice": "10.000",
-        "offerPrice": "3.25",
-        "available": true,
-        "best_seller": true,
-        "categories": [4],	
-        "subCategoryId": [9],
-        "subLevelId": [34],
-        "designerId": [1, 4, 5, 6],
-        "colorId": [1, 2, 3, 4],
-        "sizeId": [1, 3, 4],
-        "productImg": "assets/img/bag3.jpg",
-        "outFitImg": "assets/img/bag1.jpg",
-        "code": "V3000CF23",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Double-breasted silk-blend blazer"
-    },
-    {	
-        "id": 4,
-        "name": "Bag3",
-        "orginalPrice": "35.000",
-        "offerPrice": "20.25",
-        "available": false,
-        "best_seller": false,
-        "categories": [1],	
-        "subCategoryId": [2],
-        "subLevelId": [5],
-        "designerId": [1, 2, 3, 5, 6],
-        "colorId": [1],
-        "sizeId": [1, 4],
-        "productImg": "assets/img/bag3.jpg",
-        "outFitImg": "assets/img/bag1.jpg",
-        "code": "V3000CF24",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Double-breasted silk-blend blazer"
-    },
-    {
-        "id": 5,
-        "name": "Bag4",
-        "orginalPrice": "12.000",
-        "offerPrice": "10.25",
-        "available": true,
-        "best_seller": true,
-        "categories": [1],
-        "subCategoryId": [2],
-        "subLevelId": [5],
-        "designerId": [1, 4, 5, 6, 7, 10],
-        "colorId": [1, 2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/bag4.jpg",
-        "outFitImg": "assets/img/bag3.jpg",
-        "code": "V3000CF25",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Tarragona asymmetric ruffled silk-satin dress"
-    },
-    {
-        "id": 6,
-        "name": "Bag5",
-        "orginalPrice": "120.000",
-        "offerPrice": "90.25",
-        "available": true,
-        "best_seller": false,
-        "categories": [1],	
-        "subCategoryId": [1, 2],
-        "subLevelId": [3, 5],
-        "designerId": [1, 2, 4, 5, 6, 7, 8, 9, 10],
-        "colorId": [1, 2, 3, 7],
-        "sizeId": [1, 2, 3, 4, 5, 6],
-        "productImg": "assets/img/bag5.jpg",
-        "outFitImg": "assets/img/bag3.jpg",
-        "code": "V3000CF26",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Tarragona asymmetric ruffled silk-satin dress"
-    },
-    {	
-        "id": 7,
-        "name": "Bag6",
-        "orginalPrice": "50.000",
-        "offerPrice": "30.250",
-        "available": false,
-        "best_seller": false,
-        "categories": [1],	
-        "subCategoryId": [1, 2],
-        "subLevelId": [2, 6],
-        "designerId": [1, 4],
-        "colorId": [1, 3, 7],
-        "sizeId": [1, 4, 5, 6],
-        "productImg": "assets/img/bag6.jpg",
-        "outFitImg": "assets/img/bag3.jpg",
-        "code": "V3000CF27",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Tarragona asymmetric ruffled silk-satin dress"
-    },
-    {
-        "id": 8,
-        "name": "Bag7",
-        "orginalPrice": "29.500",
-        "offerPrice": "20.360",
-        "available": true,
-        "best_seller": false,
-        "categories": [1],
-        "subCategoryId": [2],
-        "subLevelId": [4],
-        "designerId": [1, 5, 6],
-        "colorId": [1, 2, 3, 4, 5, 6, 7],
-        "sizeId": [1, 2, 3, 4, 5, 6],
-        "productImg": "assets/img/bag7.jpg",
-        "outFitImg": "assets/img/bag6.jpg",
-        "code": "V3000CF28",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Tarragona asymmetric ruffled silk-satin dress"
-    },
-    {	
-        "id": 9,
-        "name": "Bag8",
-        "orginalPrice": "12.000",
-        "offerPrice": "0",
-        "available": true,
-        "best_seller": true,
-        "categories": [2],	
-        "subCategoryId": [5],
-        "subLevelId": [17],
-        "designerId": [1, 4, 5, 6, 8, 10],
-        "colorId": [7],
-        "sizeId": [5, 6],
-        "productImg": "assets/img/bag8.jpg",
-        "outFitImg": "assets/img/bag5.jpg",
-        "code": "V3000CF29",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Jase crinkled patent-leather mules"
-    },
-    {	
-        "id": 10,
-        "name": "cloth1",
-        "orginalPrice": "16.000",
-        "offerPrice": "12.25",
-        "available": false,
-        "best_seller": true,
-        "categories": [2],	
-        "subCategoryId": [5],
-        "subLevelId": [17],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [3],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth1.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF30",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "C/O Jimmy Choo Victoria 100 crystal-embellished satin and vinyl pumps"
-    }, {	
-        "id": 11,
-        "name": "cloth2",
-        "orginalPrice": "215.000",
-        "offerPrice": "185.25",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [23],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth2.jpg",
-        "outFitImg": "assets/img/cloth1.jpg",
-        "code": "V3000CF31",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Drew Bijou quilted leather shoulder bag"
-    }, {	
-        "id": 12,
-        "name": "cloth3",
-        "orginalPrice": "153.000",
-        "offerPrice": "120.360",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [23],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
-        "productImg": "assets/img/cloth3.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF32",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Biggy color-block textured-leather"
-    }, {	
-        "id": 13,
-        "name": "cloth4",
-        "orginalPrice": "96.000",
-        "offerPrice": "50.00",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [22],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth4.jpg",
-        "outFitImg": "assets/img/cloth3.jpg",
-        "code": "V3000CF33",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Hortensia smooth and textured"
-    },
-    {	
-        "id": 14,
-        "name": "cloth5",
-        "orginalPrice": "25.000",
-        "offerPrice": "13.25",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [22],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth5.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF34",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Pionnière leather shoulder bag"
-    },
-    {	
-        "id": 15,
-        "name": "cloth6",
-        "orginalPrice": "36.75",
-        "offerPrice": "15.25",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [22],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth6.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF35",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Amphora leather tote"
-    },
-    {	
-        "id": 16,
-        "name": "cloth7",
-        "orginalPrice": "82.65",
-        "offerPrice": "52.25",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [24],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth7.jpg",
-        "outFitImg": "assets/img/cloth3.jpg",
-        "code": "V3000CF36",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Ophidia patent leather-trimmed suede shoulder bag"
-    },
-    {	
-        "id": 17,
-        "name": "cloth8",
-        "orginalPrice": "88.14",
-        "offerPrice": "82.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [22],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth8.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF37",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Medium printed textured-leather tote"
-    },
-    {	
-        "id": 18,
-        "name": "shoe1",
-        "orginalPrice": "74.16",
-        "offerPrice": "82.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [24],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/cloth8.jpg",
-        "outFitImg": "assets/img/cloth2.jpg",
-        "code": "V3000CF38",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Walker Sling suede and leather bucket bag"
-    }, {	
-        "id": 19,
-        "name": "shoe2",
-        "orginalPrice": "72.25",
-        "offerPrice": "82.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [4],	
-        "subCategoryId": [8, 9],
-        "subLevelId": [26, 32],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe2.jpg",
-        "outFitImg": "assets/img/shoe3.jpg",
-        "code": "V3000CF39",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Fringed printed leather tote"
-    }, {	
-        "id": 20,
-        "name": "shoe3",
-        "orginalPrice": "45.20",
-        "offerPrice": "50.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [4],
-        "subCategoryId": [9],
-        "subLevelId": [32],	
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe3.jpg",
-        "outFitImg": "assets/img/shoe2.jpg",
-        "code": "V3000CF40",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Amberley mini lizard-effect leather shoulder bag"
-    }, {	
-        "id": 21,
-        "name": "shoe4",
-        "orginalPrice": "256.78",
-        "offerPrice": "175.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [4],	
-        "subCategoryId": [8],
-        "subLevelId": [29],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe4.jpg",
-        "outFitImg": "assets/img/shoe3.jpg",
-        "code": "V3000CF41",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Barbara suede pumps"
-    }, {	
-        "id": 22,
-        "name": "shoe5",
-        "orginalPrice": "45.36",
-        "offerPrice": "40.65",
-        "available": false,
-        "best_seller": true,
-        "categories": [4],	
-        "subCategoryId": [9],
-        "subLevelId": [33],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe5.jpg",
-        "outFitImg": "assets/img/shoe3.jpg",
-        "code": "V3000CF42",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Leather bucket bag"
-    }, {	
-        "id": 23,
-        "name": "shoe6",
-        "orginalPrice": "74.10",
-        "offerPrice": "0",
-        "available": false,
-        "best_seller": true,
-        "categories": [4],
-        "subCategoryId": [8],	
-        "subLevelId": [25],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe6.jpg",
-        "outFitImg": "assets/img/shoe5.jpg",
-        "code": "V3000CF43",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Jase leather mules"
-    }, {	
-        "id": 24,
-        "name": "shoe7",
-        "orginalPrice": "30.000",
-        "offerPrice": "0",
-        "available": false,
-        "best_seller": true,
-        "categories": [2],
-        "subCategoryId": [5],
-        "subLevelId": [17],	
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe7.jpg",
-        "outFitImg": "assets/img/shoe6.jpg",
-        "code": "V3000CF44",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Margot leather slingback pumps"
-    }, {	
-        "id": 25,
-        "name": "shoe8",
-        "orginalPrice": "13.76",
-        "offerPrice": "0",
-        "available": false,
-        "best_seller": true,
-        "categories": [3],	
-        "subCategoryId": [7],
-        "subLevelId": [22],
-        "designerId": [1, 3, 4, 5, 6],
-        "colorId": [2, 3, 7],
-        "sizeId": [1, 2, 3, 4],
-        "productImg": "assets/img/shoe8.jpg",
-        "outFitImg": "assets/img/shoe3.jpg",
-        "code": "V3000CF55",
-        "images": [{
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            },
-            {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }, {
-                "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
-            }],
-        "description": "Bonsai 20 nubuck bucket bag"
-    }]
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{	
+    "id": 2,
+    "name": "Bag2",
+    "orginalPrice": "20.000",
+    "offerPrice": "0",
+    "available": false,
+    "best_seller": false,
+    "categories": [4],	
+    "subCategoryId": [8],
+    "subLevelId": [27],
+    "designerId": [1, 5, 6],
+    "colorId": [1, 2, 3, 4, 5, 6, 7],
+    "sizeId": [1, 2],
+    "code": "V2000CR23",
+    "img": "assets/img/bag2.jpg",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Double-breasted silk-blend blazer"
+},
+{	
+    "id": 3,
+    "name": "Pickles",
+    "orginalPrice": "10.000",
+    "offerPrice": "3.25",
+    "available": true,
+    "best_seller": true,
+    "categories": [4],	
+    "subCategoryId": [9],
+    "subLevelId": [34],
+    "designerId": [1, 4, 5, 6],
+    "colorId": [1, 2, 3, 4],
+    "sizeId": [1, 3, 4],
+    "productImg": "assets/img/bag3.jpg",
+    "outFitImg": "assets/img/bag1.jpg",
+    "code": "V3000CF23",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Double-breasted silk-blend blazer"
+},
+{	
+    "id": 4,
+    "name": "Bag3",
+    "orginalPrice": "35.000",
+    "offerPrice": "20.25",
+    "available": false,
+    "best_seller": false,
+    "categories": [1],	
+    "subCategoryId": [2],
+    "subLevelId": [5],
+    "designerId": [1, 2, 3, 5, 6],
+    "colorId": [1],
+    "sizeId": [1, 4],
+    "productImg": "assets/img/bag3.jpg",
+    "outFitImg": "assets/img/bag1.jpg",
+    "code": "V3000CF24",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Double-breasted silk-blend blazer"
+},
+{
+    "id": 5,
+    "name": "Bag4",
+    "orginalPrice": "12.000",
+    "offerPrice": "10.25",
+    "available": true,
+    "best_seller": true,
+    "categories": [1],
+    "subCategoryId": [2],
+    "subLevelId": [5],
+    "designerId": [1, 4, 5, 6, 7, 10],
+    "colorId": [1, 2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag4.jpg",
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "V3000CF25",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Tarragona asymmetric ruffled silk-satin dress"
+},
+{
+    "id": 6,
+    "name": "Bag5",
+    "orginalPrice": "120.000",
+    "offerPrice": "90.25",
+    "available": true,
+    "best_seller": false,
+    "categories": [1],	
+    "subCategoryId": [1, 2],
+    "subLevelId": [3, 5],
+    "designerId": [1, 2, 4, 5, 6, 7, 8, 9, 10],
+    "colorId": [1, 2, 3, 7],
+    "sizeId": [1, 2, 3, 4, 5, 6],
+    "productImg": "assets/img/bag5.jpg",
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "V3000CF26",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Tarragona asymmetric ruffled silk-satin dress"
+},
+{	
+    "id": 7,
+    "name": "Bag6",
+    "orginalPrice": "50.000",
+    "offerPrice": "30.250",
+    "available": false,
+    "best_seller": false,
+    "categories": [1],	
+    "subCategoryId": [1, 2],
+    "subLevelId": [2, 6],
+    "designerId": [1, 4],
+    "colorId": [1, 3, 7],
+    "sizeId": [1, 4, 5, 6],
+    "productImg": "assets/img/bag6.jpg",
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "V3000CF27",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Tarragona asymmetric ruffled silk-satin dress"
+},
+{
+    "id": 8,
+    "name": "Bag7",
+    "orginalPrice": "29.500",
+    "offerPrice": "20.360",
+    "available": true,
+    "best_seller": false,
+    "categories": [1],
+    "subCategoryId": [2],
+    "subLevelId": [4],
+    "designerId": [1, 5, 6],
+    "colorId": [1, 2, 3, 4, 5, 6, 7],
+    "sizeId": [1, 2, 3, 4, 5, 6],
+    "productImg": "assets/img/bag7.jpg",
+    "outFitImg": "assets/img/bag6.jpg",
+    "code": "V3000CF28",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Tarragona asymmetric ruffled silk-satin dress"
+},
+{	
+    "id": 9,
+    "name": "Bag8",
+    "orginalPrice": "12.000",
+    "offerPrice": "0",
+    "available": true,
+    "best_seller": true,
+    "categories": [2],	
+    "subCategoryId": [5],
+    "subLevelId": [17],
+    "designerId": [1, 4, 5, 6, 8, 10],
+    "colorId": [7],
+    "sizeId": [5, 6],
+    "productImg": "assets/img/bag8.jpg",
+    "outFitImg": "assets/img/bag5.jpg",
+    "code": "V3000CF29",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Jase crinkled patent-leather mules"
+},
+{	
+    "id": 10,
+    "name": "cloth1",
+    "orginalPrice": "16.000",
+    "offerPrice": "12.25",
+    "available": false,
+    "best_seller": true,
+    "categories": [2],	
+    "subCategoryId": [5],
+    "subLevelId": [17],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [3],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth1.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF30",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "C/O Jimmy Choo Victoria 100 crystal-embellished satin and vinyl pumps"
+}, {	
+    "id": 11,
+    "name": "cloth2",
+    "orginalPrice": "215.000",
+    "offerPrice": "185.25",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [23],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth2.jpg",
+    "outFitImg": "assets/img/cloth1.jpg",
+    "code": "V3000CF31",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Drew Bijou quilted leather shoulder bag"
+}, {	
+    "id": 12,
+    "name": "cloth3",
+    "orginalPrice": "153.000",
+    "offerPrice": "120.360",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [23],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "productImg": "assets/img/cloth3.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF32",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Biggy color-block textured-leather"
+}, {	
+    "id": 13,
+    "name": "cloth4",
+    "orginalPrice": "96.000",
+    "offerPrice": "50.00",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [22],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth4.jpg",
+    "outFitImg": "assets/img/cloth3.jpg",
+    "code": "V3000CF33",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Hortensia smooth and textured"
+},
+{	
+    "id": 14,
+    "name": "cloth5",
+    "orginalPrice": "25.000",
+    "offerPrice": "13.25",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [22],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth5.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF34",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Pionnière leather shoulder bag"
+},
+{	
+    "id": 15,
+    "name": "cloth6",
+    "orginalPrice": "36.75",
+    "offerPrice": "15.25",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [22],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth6.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF35",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Amphora leather tote"
+},
+{	
+    "id": 16,
+    "name": "cloth7",
+    "orginalPrice": "82.65",
+    "offerPrice": "52.25",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [24],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth7.jpg",
+    "outFitImg": "assets/img/cloth3.jpg",
+    "code": "V3000CF36",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Ophidia patent leather-trimmed suede shoulder bag"
+},
+{	
+    "id": 17,
+    "name": "cloth8",
+    "orginalPrice": "88.14",
+    "offerPrice": "82.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [22],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth8.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF37",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Medium printed textured-leather tote"
+},
+{	
+    "id": 18,
+    "name": "shoe1",
+    "orginalPrice": "74.16",
+    "offerPrice": "82.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [24],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/cloth8.jpg",
+    "outFitImg": "assets/img/cloth2.jpg",
+    "code": "V3000CF38",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Walker Sling suede and leather bucket bag"
+}, {	
+    "id": 19,
+    "name": "shoe2",
+    "orginalPrice": "72.25",
+    "offerPrice": "82.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [4],	
+    "subCategoryId": [8, 9],
+    "subLevelId": [26, 32],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe2.jpg",
+    "outFitImg": "assets/img/shoe3.jpg",
+    "code": "V3000CF39",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Fringed printed leather tote"
+}, {	
+    "id": 20,
+    "name": "shoe3",
+    "orginalPrice": "45.20",
+    "offerPrice": "50.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [4],
+    "subCategoryId": [9],
+    "subLevelId": [32],	
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe3.jpg",
+    "outFitImg": "assets/img/shoe2.jpg",
+    "code": "V3000CF40",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Amberley mini lizard-effect leather shoulder bag"
+}, {	
+    "id": 21,
+    "name": "shoe4",
+    "orginalPrice": "256.78",
+    "offerPrice": "175.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [4],	
+    "subCategoryId": [8],
+    "subLevelId": [29],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe4.jpg",
+    "outFitImg": "assets/img/shoe3.jpg",
+    "code": "V3000CF41",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Barbara suede pumps"
+}, {	
+    "id": 22,
+    "name": "shoe5",
+    "orginalPrice": "45.36",
+    "offerPrice": "40.65",
+    "available": false,
+    "best_seller": true,
+    "categories": [4],	
+    "subCategoryId": [9],
+    "subLevelId": [33],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe5.jpg",
+    "outFitImg": "assets/img/shoe3.jpg",
+    "code": "V3000CF42",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Leather bucket bag"
+}, {	
+    "id": 23,
+    "name": "shoe6",
+    "orginalPrice": "74.10",
+    "offerPrice": "0",
+    "available": false,
+    "best_seller": true,
+    "categories": [4],
+    "subCategoryId": [8],	
+    "subLevelId": [25],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe6.jpg",
+    "outFitImg": "assets/img/shoe5.jpg",
+    "code": "V3000CF43",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Jase leather mules"
+}, {	
+    "id": 24,
+    "name": "shoe7",
+    "orginalPrice": "30.000",
+    "offerPrice": "0",
+    "available": false,
+    "best_seller": true,
+    "categories": [2],
+    "subCategoryId": [5],
+    "subLevelId": [17],	
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe7.jpg",
+    "outFitImg": "assets/img/shoe6.jpg",
+    "code": "V3000CF44",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Margot leather slingback pumps"
+}, {	
+    "id": 25,
+    "name": "shoe8",
+    "orginalPrice": "13.76",
+    "offerPrice": "0",
+    "available": false,
+    "best_seller": true,
+    "categories": [3],	
+    "subCategoryId": [7],
+    "subLevelId": [22],
+    "designerId": [1, 3, 4, 5, 6],
+    "colorId": [2, 3, 7],
+    "sizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/shoe8.jpg",
+    "outFitImg": "assets/img/shoe3.jpg",
+    "code": "V3000CF55",
+   "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "description": "Bonsai 20 nubuck bucket bag"
+},
+{
+    "id": 26,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [5],
+    "subCategoryId": [10,11],
+    "subLevelId": [36,40,45],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 27,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [9],
+    "subCategoryId": [21],
+    "subLevelId": [86],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 28,
+    "name": "Jeans5",
+    "orginalPrice": "150.500",
+    "offerPrice": "0",
+    "available": false, 
+    "best_seller": false,
+    "categories": [10],
+    "subCategoryId": [25],
+    "subLevelId": [102],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2DFE003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 29,
+    "name": "Product 4",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [10],
+    "subCategoryId": [25],
+    "subLevelId": [101],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 30,
+    "name": "Product 45",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [9],
+    "subCategoryId": [23],
+    "subLevelId": [94],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1,3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 31,
+    "name": "Product 7",
+    "orginalPrice": "150.500",
+    "offerPrice": "80.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [10],
+    "subCategoryId": [25],
+    "subLevelId": [103],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003DDASDFJG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 32,
+    "name": "Product 14",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [10],
+    "subCategoryId": [25],
+    "subLevelId": [103],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2,4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 33,
+    "name": "Blazer Watches",
+    "orginalPrice": "150.500",
+    "offerPrice": "110.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [11],
+    "subCategoryId": [29],
+    "subLevelId": [119],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2 ,4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 34,
+    "name": "Product 21",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [11],
+    "subCategoryId": [30],
+    "subLevelId": [125],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2 ,4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 35,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [11],
+    "subCategoryId": [31],
+    "subLevelId": [126],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 36,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [11],
+    "subCategoryId": [31],
+    "subLevelId": [126],
+    "designerId": [5,6,8,10],
+    "colorId": [1,5],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 37,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [12],
+    "subCategoryId": [32,33],
+    "subLevelId": [129,133],
+    "designerId": [1,2,3,5],
+    "colorId": [1,4,6,7],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1,3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 38,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [12],
+    "subCategoryId": [34],
+    "subLevelId": [134],
+    "designerId": [6],
+    "colorId": [1,5,6],
+    "sizeId": [1, 2],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 39,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [13],
+    "subCategoryId": [35,36,37],
+    "subLevelId": [136,141,145],
+    "designerId": [6],
+    "colorId": [1,5,6],
+    "sizeId": [1, 2, 4],
+    "subCategoryDesignerId": [4,5],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 40,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [14],
+    "subCategoryId": [38],
+    "subLevelId": [147],
+    "designerId": [5,6],
+    "colorId": [1,2,3],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 41,
+    "name": "Product 48",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [14],
+    "subCategoryId": [39,40],
+    "subLevelId": [150,153],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003DFJG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 42,
+    "name": "Product56",
+    "orginalPrice": "150.500",
+    "offerPrice": "120.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [14],
+    "subCategoryId": [156],
+    "subLevelId": [36,40,45],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 43,
+    "name": "Jeans",
+    "orginalPrice": "150.500",
+    "offerPrice": "80.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [14],
+    "subCategoryId": [157],
+    "subLevelId": [36,40,45],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 44,
+    "name": "Product12",
+    "orginalPrice": "150.500",
+    "offerPrice": "0",
+    "available": false, 
+    "best_seller": false,
+    "categories": [15],
+    "subCategoryId": [42],
+    "subLevelId": [161],
+    "designerId": [5,6],
+    "colorId": [1,2,3],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4,5],
+    "subCategoryColorId": [1,3],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 45,
+    "name": "Product78",
+    "orginalPrice": "150.500",
+    "offerPrice": "0",
+    "available": false, 
+    "best_seller": false,
+    "categories": [15],
+    "subCategoryId": [43],
+    "subLevelId": [164],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 46,
+    "name": "Product12",
+    "orginalPrice": "110.500",
+    "offerPrice": "90.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [15],
+    "subCategoryId": [42],
+    "subLevelId": [161],
+    "designerId": [6,7,8],
+    "colorId": [5],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4,5,6],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003FWJG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 47,
+    "name": "Product20",
+    "orginalPrice": "30.500",
+    "offerPrice": "0",
+    "available": false, 
+    "best_seller": false,
+    "categories": [16],
+    "subCategoryId": [44],
+    "subLevelId": [168],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 5, 4],
+    "subCategoryDesignerId": [4,1],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2DLKJ003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 48,
+    "name": "Product48",
+    "orginalPrice": "50.500",
+    "offerPrice": "30.000",
+    "available": true, 
+    "best_seller": false,
+    "categories": [16],
+    "subCategoryId": [44],
+    "subLevelId": [169],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2,4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1,2],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD200CVX3JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 49,
+    "name": "Vintage Watches",
+    "orginalPrice": "530.500",
+    "offerPrice": "200.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [18],
+    "subCategoryId": [48],
+    "subLevelId": [184,185],
+    "designerId": [1,5,6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2005FF6",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+},
+{
+    "id": 50,
+    "name": "Womens Wedding Party",
+    "orginalPrice": "35.500",
+    "offerPrice": "23.000",
+    "available": false, 
+    "best_seller": false,
+    "categories": [19],
+    "subCategoryId": [51],
+    "subLevelId": [36,40,45],
+    "designerId": [6],
+    "colorId": [1],
+    "sizeId": [1, 2, 3, 4],
+    "subCategoryDesignerId": [4],
+    "subCategoryColorId": [1],
+    "subCategorySizeId": [1, 2, 3, 4],
+    "productImg": "assets/img/bag1.jpg",  
+    "outFitImg": "assets/img/bag3.jpg",
+    "code": "FD2003JG",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
+    "availableColors": [{
+            "id": 1,
+            "url": "assets/img/blackcolor.png"
+        }, {
+            "id": 2,
+            "url": "assets/img/blueColor.png"
+        }, {
+            "id": 3,
+            "url": "assets/img/RedColor.png"
+        }],
+    "images": [
+        {
+            "id": 1,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        },
+        {
+            "id": 2,
+            "image": [
+                {
+                    "url": "http://static.robertocavalli.com/media/catalog/product/cache/0/image/480x720/9df78eab33525d08d6e5fb8d27136e95/G/Q/GQM545BMG80D5127_D5127_2.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }, {
+            "id": 3,
+            "image": [
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                },
+                {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_fr_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou_pp.jpg"
+                }, {
+                    "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
+                }]
+        }],
+    "Items": [
+        {
+            "title": "WHY WE LOVE IT",
+            "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+        },
+        {
+            "title": "SIZE & FIT INFORMATION ",
+            "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+        }
+    ],
+    "description": "Portofino 85 PVC-trimmed leather sandals"
+}
+]
