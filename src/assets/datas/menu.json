@@ -141,11 +141,11 @@
                 "categoryId": 3,
                 "categoryName": "Bags",
                 "categoryImg": "assets/img/jewllery.jpg",
-                "subCategory":[
+                "subCategory": [
                     {
-                        "id":7,
-                        "name":"Belt Bags",
-                        "subLevelCategory":[
+                        "id": 7,
+                        "name": "Belt Bags",
+                        "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 22,
                                 "subLevelCategoryName": "Low Top"
@@ -161,73 +161,1209 @@
                         ]
                     }
                 ]
-                
             },
             {
-                "categoryId":4,
-                "categoryName":"Accessories",
-                "categoryImg":"assets/img/accessories.jpg",
-                "subCategory":[
+                "categoryId": 4,
+                "categoryName": "Accessories",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
                     {
-                        "id":8,
-                        "name":"Hats",
-                        "subLevelCategory":[
+                        "id": 8,
+                        "name": "Hats",
+                        "subLevelCategory": [
                             {
-                                "subLevelCategoryId":25,
-                                "subLevelCategoryName":"Beanies"
+                                "subLevelCategoryId": 25,
+                                "subLevelCategoryName": "Beanies"
                             },
                             {
-                                "subLevelCategoryId":26,
-                                "subLevelCategoryName":"Fedoras"
+                                "subLevelCategoryId": 26,
+                                "subLevelCategoryName": "Fedoras"
                             },
                             {
-                                "subLevelCategoryId":27,
-                                "subLevelCategoryName":"SunHats"
+                                "subLevelCategoryId": 27,
+                                "subLevelCategoryName": "SunHats"
                             },
                             {
-                                "subLevelCategoryId":28,
-                                "subLevelCategoryName":"Cool Hats"
+                                "subLevelCategoryId": 28,
+                                "subLevelCategoryName": "Cool Hats"
                             },
                             {
-                                "subLevelCategoryId":29,
-                                "subLevelCategoryName":"Baby Hats"
+                                "subLevelCategoryId": 29,
+                                "subLevelCategoryName": "Baby Hats"
                             },
                             {
-                                "subLevelCategoryId":30,
-                                "subLevelCategoryName":"Cricket Hats"
+                                "subLevelCategoryId": 30,
+                                "subLevelCategoryName": "Cricket Hats"
                             }
                         ]
-                    },{
-                        "id":9,
-                        "name":"Books",
-                        "subLevelCategory":[
+                    },
+                    {
+                        "id": 9,
+                        "name": "Books",
+                        "subLevelCategory": [
                             {
-                                "subLevelCategoryId":31,
-                                "subLevelCategoryName":"Comic Books"
+                                "subLevelCategoryId": 31,
+                                "subLevelCategoryName": "Comic Books"
                             },
                             {
-                                "subLevelCategoryId":32,
-                                "subLevelCategoryName":"Horror Comics"
+                                "subLevelCategoryId": 32,
+                                "subLevelCategoryName": "Horror Comics"
                             },
                             {
-                                "subLevelCategoryId":33,
-                                "subLevelCategoryName":"Thirller Books"
+                                "subLevelCategoryId": 33,
+                                "subLevelCategoryName": "Thirller Books"
                             },
                             {
-                                "subLevelCategoryId":34,
-                                "subLevelCategoryName":"Comic Books"
+                                "subLevelCategoryId": 34,
+                                "subLevelCategoryName": "Comic Books"
                             },
                             {
-                                "subLevelCategoryId":35,
-                                "subLevelCategoryName":"Novels"
+                                "subLevelCategoryId": 35,
+                                "subLevelCategoryName": "Novels"
                             }
                         ]
                     }
                 ]
             }
         ]
-    },{
-        "menuId":2,
-        "menuName":"Men"
+    },
+    {
+        "menuId": "2",
+        "menuName": "Men",
+        "categories": [
+            {
+                "categoryId": 5,
+                "categoryName": "Clothing",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 10,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 36,
+                                "subLevelCategoryName": "Relaxed"
+                            },
+                            {
+                                "subLevelCategoryId": 37,
+                                "subLevelCategoryName": "Skinny"
+                            },
+                            {
+                                "subLevelCategoryId": 38,
+                                "subLevelCategoryName": "Slim Fit"
+                            },
+                            {
+                                "subLevelCategoryId": 39,
+                                "subLevelCategoryName": "Straight Arrow"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 11,
+                        "name": "Jackets & Coats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 40,
+                                "subLevelCategoryName": "Bomber"
+                            },
+                            {
+                                "subLevelCategoryId": 41,
+                                "subLevelCategoryName": "Biker"
+                            },
+                            {
+                                "subLevelCategoryId": 42,
+                                "subLevelCategoryName": "Denim"
+                            },
+                            {
+                                "subLevelCategoryId": 43,
+                                "subLevelCategoryName": "Leather"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 12,
+                        "name": "Shorts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 44,
+                                "subLevelCategoryName": "Bermuda Shorts"
+                            },
+                            {
+                                "subLevelCategoryId": 45,
+                                "subLevelCategoryName": "Cargo Shorts"
+                            },
+                            {
+                                "subLevelCategoryId": 46,
+                                "subLevelCategoryName": "Deck Shorts"
+                            },
+                            {
+                                "subLevelCategoryId": 47,
+                                "subLevelCategoryName": "Denim Shorts"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 13,
+                        "name": "sweaters&knitwear",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 48,
+                                "subLevelCategoryName": "Cardigans"
+                            },
+                            {
+                                "subLevelCategoryId": 49,
+                                "subLevelCategoryName": "Hoodies"
+                            },
+                            {
+                                "subLevelCategoryId": 50,
+                                "subLevelCategoryName": "knitted Sweaters"
+                            },
+                            {
+                                "subLevelCategoryId": 51,
+                                "subLevelCategoryName": "SweatShirts"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 6,
+                "categoryName": "SHOES",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 14,
+                        "name": "Boots",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 52,
+                                "subLevelCategoryName": "lace-up Boots"
+                            },
+                            {
+                                "subLevelCategoryId": 53,
+                                "subLevelCategoryName": "low-cut Boots"
+                            },
+                            {
+                                "subLevelCategoryId": 54,
+                                "subLevelCategoryName": "Ankle Boots"
+                            },
+                            {
+                                "subLevelCategoryId": 55,
+                                "subLevelCategoryName": "buckled Boots"
+                            },
+                            {
+                                "subLevelCategoryId": 56,
+                                "subLevelCategoryName": "military Boots"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 15,
+                        "name": "Sneakers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 57,
+                                "subLevelCategoryName": "Low Top Sneakers"
+                            },
+                            {
+                                "subLevelCategoryId": 58,
+                                "subLevelCategoryName": "High Top Sneakers"
+                            },
+                            {
+                                "subLevelCategoryId": 59,
+                                "subLevelCategoryName": "Sport Sneakers"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 7,
+                "categoryName": "Bags",
+                "categoryImg": "assets/img/jewllery.jpg",
+                "subCategory": [
+                    {
+                        "id": 16,
+                        "name": "Backpacks",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 60,
+                                "subLevelCategoryName": "Draw-string Backpacks"
+                            },
+                            {
+                                "subLevelCategoryId": 61,
+                                "subLevelCategoryName": "Waxy Backpacks"
+                            },
+                            {
+                                "subLevelCategoryId": 62,
+                                "subLevelCategoryName": "Denim Backpacks"
+                            },
+                            {
+                                "subLevelCategoryId": 63,
+                                "subLevelCategoryName": "Multi-pocket Backpacks"
+                            },
+                            {
+                                "subLevelCategoryId": 64,
+                                "subLevelCategoryName": "Clip-top Backpacks"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 17,
+                        "name": "Belt Bags",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 65,
+                                "subLevelCategoryName": "Zipped Belt Bag"
+                            },
+                            {
+                                "subLevelCategoryId": 66,
+                                "subLevelCategoryName": "Embroidered Belt Bag"
+                            },
+                            {
+                                "subLevelCategoryId": 67,
+                                "subLevelCategoryName": "multi-pocket Belt Bag"
+                            },
+                            {
+                                "subLevelCategoryId": 68,
+                                "subLevelCategoryName": "hip Belt Bag"
+                            },
+                            {
+                                "subLevelCategoryId": 69,
+                                "subLevelCategoryName": "Cross Body Belt Bag"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 8,
+                "categoryName": "Accessories",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 18,
+                        "name": "Belts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 70,
+                                "subLevelCategoryName": "Leather"
+                            },
+                            {
+                                "subLevelCategoryId": 71,
+                                "subLevelCategoryName": "Striped"
+                            },
+                            {
+                                "subLevelCategoryId": 72,
+                                "subLevelCategoryName": "Fibre"
+                            },
+                            {
+                                "subLevelCategoryId": 73,
+                                "subLevelCategoryName": "Buckle Strap"
+                            },
+                            {
+                                "subLevelCategoryId": 74,
+                                "subLevelCategoryName": "Adjustable Strap"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 19,
+                        "name": "Hats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 75,
+                                "subLevelCategoryName": "Logo Cap"
+                            },
+                            {
+                                "subLevelCategoryId": 76,
+                                "subLevelCategoryName": "Embroidered Cap"
+                            },
+                            {
+                                "subLevelCategoryId": 77,
+                                "subLevelCategoryName": "Baseball Cap"
+                            },
+                            {
+                                "subLevelCategoryId": 78,
+                                "subLevelCategoryName": "Woven Fedora Hat"
+                            },
+                            {
+                                "subLevelCategoryId": 79,
+                                "subLevelCategoryName": "Flat Cap"
+                            },
+                            {
+                                "subLevelCategoryId": 80,
+                                "subLevelCategoryName": "Rain Hat"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 20,
+                        "name": "Gloves",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 81,
+                                "subLevelCategoryName": "Bicolor Gloves"
+                            },
+                            {
+                                "subLevelCategoryId": 82,
+                                "subLevelCategoryName": "Fingerless Gloves"
+                            },
+                            {
+                                "subLevelCategoryId": 83,
+                                "subLevelCategoryName": "Lace-up Leg Warmers"
+                            },
+                            {
+                                "subLevelCategoryId": 84,
+                                "subLevelCategoryName": "Driving Gloves"
+                            },
+                            {
+                                "subLevelCategoryId": 85,
+                                "subLevelCategoryName": "Padded Gloves"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "menuId": "3",
+        "menuName": "Brands",
+        "categories": [
+            {
+                "categoryId": 9,
+                "categoryName": "Abercrombie & Fitch",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 21,
+                        "name": "T-Shirts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 86,
+                                "subLevelCategoryName": "Dip Dye T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 87,
+                                "subLevelCategoryName": "Patch Work T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 88,
+                                "subLevelCategoryName": "Classic T-Shirt"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 22,
+                        "name": "Shirts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 89,
+                                "subLevelCategoryName": "Oxford Shirts"
+                            },
+                            {
+                                "subLevelCategoryId": 90,
+                                "subLevelCategoryName": "Embroidered Blouse"
+                            },
+                            {
+                                "subLevelCategoryId": 91,
+                                "subLevelCategoryName": "Pinstripe Shirt"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 23,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 92,
+                                "subLevelCategoryName": "Hem Detail Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 93,
+                                "subLevelCategoryName": "Mid Wash Skinny Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 94,
+                                "subLevelCategoryName": "Slim Fit Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 95,
+                                "subLevelCategoryName": "Embroidered Skinny Jean"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 24,
+                        "name": "Jackets",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 96,
+                                "subLevelCategoryName": "Windbreaker Jacket"
+                            },
+                            {
+                                "subLevelCategoryId": 97,
+                                "subLevelCategoryName": "Navy Bomber Jacket"
+                            },
+                            {
+                                "subLevelCategoryId": 98,
+                                "subLevelCategoryName": "Padded Jacket"
+                            },
+                            {
+                                "subLevelCategoryId": 99,
+                                "subLevelCategoryName": "Flamingo Jacket"
+                            },
+                            {
+                                "subLevelCategoryId": 100,
+                                "subLevelCategoryName": "Denim Jacket"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 10,
+                "categoryName": "Addidas",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 25,
+                        "name": "Trainers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 101,
+                                "subLevelCategoryName": "Sport Velcro"
+                            },
+                            {
+                                "subLevelCategoryId": 102,
+                                "subLevelCategoryName": "Fortarun Velcro"
+                            },
+                            {
+                                "subLevelCategoryId": 103,
+                                "subLevelCategoryName": "Pink Floral Flux"
+                            },
+                            {
+                                "subLevelCategoryId": 104,
+                                "subLevelCategoryName": "Navy XPLR"
+                            },
+                            {
+                                "subLevelCategoryId": 105,
+                                "subLevelCategoryName": "Galaxy 4"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 26,
+                        "name": "Shorts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 106,
+                                "subLevelCategoryName": "Stripe Short"
+                            },
+                            {
+                                "subLevelCategoryId": 107,
+                                "subLevelCategoryName": "Woven Short"
+                            },
+                            {
+                                "subLevelCategoryId": 108,
+                                "subLevelCategoryName": "Chelsea Short"
+                            },
+                            {
+                                "subLevelCategoryId": 109,
+                                "subLevelCategoryName": "Swim Short"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 27,
+                        "name": "Joggers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 110,
+                                "subLevelCategoryName": "3-Stripe Joggers"
+                            },
+                            {
+                                "subLevelCategoryId": 111,
+                                "subLevelCategoryName": "Logo Jogger"
+                            },
+                            {
+                                "subLevelCategoryId": 112,
+                                "subLevelCategoryName": "Essential Solid Pant"
+                            },
+                            {
+                                "subLevelCategoryId": 113,
+                                "subLevelCategoryName": "Tango Jogger"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 28,
+                        "name": "Jackets",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 114,
+                                "subLevelCategoryName": "Overhead Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 115,
+                                "subLevelCategoryName": "Zip through Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 116,
+                                "subLevelCategoryName": "Full Zip Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 117,
+                                "subLevelCategoryName": "Navy Linear Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 118,
+                                "subLevelCategoryName": "stripe Hoody"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 11,
+                "categoryName": "Carvela",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 29,
+                        "name": "Shoes",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 119,
+                                "subLevelCategoryName": "Lulu Loafer"
+                            },
+                            {
+                                "subLevelCategoryId": 120,
+                                "subLevelCategoryName": "Alison Court Shoe"
+                            },
+                            {
+                                "subLevelCategoryId": 121,
+                                "subLevelCategoryName": "Aron Black Slingback"
+                            },
+                            {
+                                "subLevelCategoryId": 122,
+                                "subLevelCategoryName": "Pearl Trim Loafer"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 30,
+                        "name": "Sandals",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 123,
+                                "subLevelCategoryName": "Kable Corge Wedge"
+                            },
+                            {
+                                "subLevelCategoryId": 124,
+                                "subLevelCategoryName": "Toe Thong sandal"
+                            },
+                            {
+                                "subLevelCategoryId": 125,
+                                "subLevelCategoryName": "Asymmetric Strap Sandal"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 31,
+                        "name": "Boots",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 126,
+                                "subLevelCategoryName": "Argon MJ Shoe"
+                            },
+                            {
+                                "subLevelCategoryId": 127,
+                                "subLevelCategoryName": "Heel Ankle Boot"
+                            },
+                            {
+                                "subLevelCategoryId": 128,
+                                "subLevelCategoryName": "tall Riding Boot"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 12,
+                "categoryName": "Diesel",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 32,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 129,
+                                "subLevelCategoryName": "Waykee Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 130,
+                                "subLevelCategoryName": "tepphar Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 131,
+                                "subLevelCategoryName": "Thommer Jean"
+                            },
+                            {
+                                "subLevelCategoryId": 132,
+                                "subLevelCategoryName": "Sleenker Jean"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 33,
+                        "name": "T-Shirts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 133,
+                                "subLevelCategoryName": "Slogan T-Shirt"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 34,
+                        "name": "Shorts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 134,
+                                "subLevelCategoryName": "Swim Shorts"
+                            },
+                            {
+                                "subLevelCategoryId": 135,
+                                "subLevelCategoryName": "Denim Shorts"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 13,
+                "categoryName": "Hollister",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 35,
+                        "name": "T-Shirts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 136,
+                                "subLevelCategoryName": "acid Wash Logo T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 137,
+                                "subLevelCategoryName": "Classic Logo T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 138,
+                                "subLevelCategoryName": "Stripe T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 139,
+                                "subLevelCategoryName": "Flooral Cropped T-Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 140,
+                                "subLevelCategoryName": "Long sleeve T-Shirt"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 36,
+                        "name": "Shorts",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 141,
+                                "subLevelCategoryName": "Classic Fleece Short"
+                            },
+                            {
+                                "subLevelCategoryId": 142,
+                                "subLevelCategoryName": "Chino Short"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 37,
+                        "name": "Hoodies",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 143,
+                                "subLevelCategoryName": "Lined Zip Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 144,
+                                "subLevelCategoryName": "Oversized Hoody"
+                            },
+                            {
+                                "subLevelCategoryId": 145,
+                                "subLevelCategoryName": "Oversized Hoody"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "menuId": "4",
+        "menuName": "Collection",
+        "categories": [
+            {
+                "categoryId": 14,
+                "categoryName": "Clothing",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 38,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 146,
+                                "subLevelCategoryName": "BootCut"
+                            },
+                            {
+                                "subLevelCategoryId": 147,
+                                "subLevelCategoryName": "Flared"
+                            },
+                            {
+                                "subLevelCategoryId": 148,
+                                "subLevelCategoryName": "BoyFriend"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39,
+                        "name": "Jackets & Coats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 149,
+                                "subLevelCategoryName": "Bomber"
+                            },
+                            {
+                                "subLevelCategoryId": 150,
+                                "subLevelCategoryName": "Capes"
+                            },
+                            {
+                                "subLevelCategoryId": 151,
+                                "subLevelCategoryName": "Denim"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 40,
+                        "name": "PANTS & LEGGINGS",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 152,
+                                "subLevelCategoryName": "Jeans"
+                            },
+                            {
+                                "subLevelCategoryId": 153,
+                                "subLevelCategoryName": "3-4 Leggings"
+                            },
+                            {
+                                "subLevelCategoryId": 154,
+                                "subLevelCategoryName": "Pants"
+                            },
+                            {
+                                "subLevelCategoryId": 155,
+                                "subLevelCategoryName": "Shorts"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 41,
+                        "name": "DRESSES",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 156,
+                                "subLevelCategoryName": "Evening Dresses"
+                            },
+                            {
+                                "subLevelCategoryId": 157,
+                                "subLevelCategoryName": "Formal"
+                            },
+                            {
+                                "subLevelCategoryId": 158,
+                                "subLevelCategoryName": "Wedding"
+                            },
+                            {
+                                "subLevelCategoryId": 159,
+                                "subLevelCategoryName": "Clubbing"
+                            },
+                            {
+                                "subLevelCategoryId": 160,
+                                "subLevelCategoryName": "Casual"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 15,
+                "categoryName": "SHOES",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 42,
+                        "name": "Boots",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 161,
+                                "subLevelCategoryName": "High heel"
+                            },
+                            {
+                                "subLevelCategoryId": 162,
+                                "subLevelCategoryName": "Mid heel"
+                            },
+                            {
+                                "subLevelCategoryId": 163,
+                                "subLevelCategoryName": "Ankle"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 43,
+                        "name": "Sneakers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 164,
+                                "subLevelCategoryName": "Low Top"
+                            },
+                            {
+                                "subLevelCategoryId": 165,
+                                "subLevelCategoryName": "Slip-on"
+                            },
+                            {
+                                "subLevelCategoryId": 166,
+                                "subLevelCategoryName": "Sport"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 16,
+                "categoryName": "Bags",
+                "categoryImg": "assets/img/jewllery.jpg",
+                "subCategory": [
+                    {
+                        "id": 44,
+                        "name": "Belt Bags",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 167,
+                                "subLevelCategoryName": "Low Top"
+                            },
+                            {
+                                "subLevelCategoryId": 168,
+                                "subLevelCategoryName": "Slip-on"
+                            },
+                            {
+                                "subLevelCategoryId": 169,
+                                "subLevelCategoryName": "Sport"
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            {
+                "categoryId": 17,
+                "categoryName": "Accessories",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 45,
+                        "name": "Hats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 170,
+                                "subLevelCategoryName": "Beanies"
+                            },
+                            {
+                                "subLevelCategoryId": 171,
+                                "subLevelCategoryName": "Fedoras"
+                            },
+                            {
+                                "subLevelCategoryId": 172,
+                                "subLevelCategoryName": "SunHats"
+                            },
+                            {
+                                "subLevelCategoryId": 173,
+                                "subLevelCategoryName": "Cool Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 174,
+                                "subLevelCategoryName": "Baby Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 175,
+                                "subLevelCategoryName": "Cricket Hats"
+                            }
+                        ]
+                    }, {
+                        "id": 46,
+                        "name": "Books",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 176,
+                                "subLevelCategoryName": "Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId": 177,
+                                "subLevelCategoryName": "Horror Comics"
+                            },
+                            {
+                                "subLevelCategoryId": 178,
+                                "subLevelCategoryName": "Thirller Books"
+                            },
+                            {
+                                "subLevelCategoryId": 178,
+                                "subLevelCategoryName": "Comic Books"
+                            },
+                            {
+                                "subLevelCategoryId": 179,
+                                "subLevelCategoryName": "Novels"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "menuId": "5",
+        "menuName": "Vintage",
+        "categories": [
+            {
+                "categoryId": 18,
+                "categoryName": "Clothing",
+                "categoryImg": "assets/img/cloting.jpg",
+                "subCategory": [
+                    {
+                        "id": 47,
+                        "name": "Cotten",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 180,
+                                "subLevelCategoryName": "Hooded Top"
+                            },
+                            {
+                                "subLevelCategoryId": 181,
+                                "subLevelCategoryName": "Terry Top"
+                            },
+                            {
+                                "subLevelCategoryId": 182,
+                                "subLevelCategoryName": "Shirt"
+                            },
+                            {
+                                "subLevelCategoryId": 183,
+                                "subLevelCategoryName": "T-Shirt"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 48,
+                        "name": "Jeans",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 184,
+                                "subLevelCategoryName": "Straight Leg Jeans"
+                            },
+                            {
+                                "subLevelCategoryId": 185,
+                                "subLevelCategoryName": "Flared Jeans"
+                            },
+                            {
+                                "subLevelCategoryId": 186,
+                                "subLevelCategoryName": "Bootcut"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 49,
+                        "name": "PANTS & LEGGINGS",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 187,
+                                "subLevelCategoryName": "Jeans"
+                            },
+                            {
+                                "subLevelCategoryId": 188,
+                                "subLevelCategoryName": "3-4 Leggings"
+                            },
+                            {
+                                "subLevelCategoryId": 189,
+                                "subLevelCategoryName": "Pants"
+                            },
+                            {
+                                "subLevelCategoryId": 190,
+                                "subLevelCategoryName": "Shorts"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 50,
+                        "name": "DRESSES",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 191,
+                                "subLevelCategoryName": "Evening Dresses"
+                            },
+                            {
+                                "subLevelCategoryId": 192,
+                                "subLevelCategoryName": "Formal"
+                            },
+                            {
+                                "subLevelCategoryId": 193,
+                                "subLevelCategoryName": "Wedding"
+                            },
+                            {
+                                "subLevelCategoryId": 194,
+                                "subLevelCategoryName": "Clubbing"
+                            },
+                            {
+                                "subLevelCategoryId": 195,
+                                "subLevelCategoryName": "Casual"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 19,
+                "categoryName": "SHOES",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 51,
+                        "name": "Sandals",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 196,
+                                "subLevelCategoryName": "Slingback"
+                            },
+                            {
+                                "subLevelCategoryId": 197,
+                                "subLevelCategoryName": "Leather"
+                            },
+                            {
+                                "subLevelCategoryId": 198,
+                                "subLevelCategoryName": "Leather and Suede"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 52,
+                        "name": "Sneakers",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 199,
+                                "subLevelCategoryName": "Glittered Leather"
+                            },
+                            {
+                                "subLevelCategoryId": 200,
+                                "subLevelCategoryName": "Leather and Suede"
+                            },
+                            {
+                                "subLevelCategoryId": 201,
+                                "subLevelCategoryName": "Metallic Leather"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "categoryId": 20,
+                "categoryName": "Bags",
+                "categoryImg": "assets/img/jewllery.jpg",
+                "subCategory": [
+                    {
+                        "id": 53,
+                        "name": "Belt Bags",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 202,
+                                "subLevelCategoryName": "Low Top"
+                            },
+                            {
+                                "subLevelCategoryId": 203,
+                                "subLevelCategoryName": "Slip-on"
+                            },
+                            {
+                                "subLevelCategoryId": 204,
+                                "subLevelCategoryName": "Sport"
+                            }
+                        ]
+                    }
+                ]
+
+            },
+            {
+                "categoryId": 21,
+                "categoryName": "Accessories",
+                "categoryImg": "assets/img/accessories.jpg",
+                "subCategory": [
+                    {
+                        "id": 54,
+                        "name": "Hats",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 205,
+                                "subLevelCategoryName": "Beanies"
+                            },
+                            {
+                                "subLevelCategoryId": 206,
+                                "subLevelCategoryName": "Fedoras"
+                            },
+                            {
+                                "subLevelCategoryId": 207,
+                                "subLevelCategoryName": "SunHats"
+                            },
+                            {
+                                "subLevelCategoryId": 208,
+                                "subLevelCategoryName": "Cool Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 209,
+                                "subLevelCategoryName": "Baby Hats"
+                            },
+                            {
+                                "subLevelCategoryId": 210,
+                                "subLevelCategoryName": "Cricket Hats"
+                            }
+                        ]
+                    }, {
+                        "id": 55,
+                        "name": "Sun Glasses",
+                        "subLevelCategory": [
+                            {
+                                "subLevelCategoryId": 211,
+                                "subLevelCategoryName": "Glittered acetate Sunglasses"
+                            },
+                            {
+                                "subLevelCategoryId": 212,
+                                "subLevelCategoryName": "Tortoise Shell acetate Sunglasses"
+                            },
+                            {
+                                "subLevelCategoryId": 213,
+                                "subLevelCategoryName": "Cat Eye acetate Sunglasses"
+                            },
+                            {
+                                "subLevelCategoryId": 214,
+                                "subLevelCategoryName": "Gold Tone Sunglasses"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -15,7 +15,6 @@
         </option>
       </select>
       <select name="select_item" (change)="selectPageSize($event.target.value)" class="select_item">
-          <option value="all">Select</option>
            <option value="5">5/pages</option>
            <option value="10">10/pages</option>
            <option value="25">25/pages</option>
@@ -31,7 +30,7 @@
         <a (click)="setPage(pager.currentPage - 1)">Previous</a>
       </li>
       <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-        <a (click)="setPage(page)">{{page}}</a>
+        <a (click)="setPage(page, pageSize)">{{page}}</a>
       </li>
       <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
         <a (click)="setPage(pager.currentPage + 1)">Next</a>
@@ -44,7 +43,7 @@
   </div>
   <div class="row">
     <div *ngIf="products.length===0">
-      Sorry! No Matching Products
+      <h3>Unfortunately there were no items matching for your request.</h3>
     </div>
     <div *ngFor="let product of products;let i = index" class="col-md-3 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
       <div class="row">

@@ -50,9 +50,7 @@ export class ViewComponent implements OnInit {
     private defaultService: DefaultService, private dataService: DataService,
     private router: Router, private utilitiesService: UtilitiesService,
     private location: Location, private paramsService: ParamsService) {
-
   }
-
 
   ngOnInit() {
 
