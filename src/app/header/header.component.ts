@@ -7,23 +7,19 @@ import { DefaultService } from '../services/default.service';
 import { ParamsService } from '../services/params.service';
 import { UtilitiesService } from '../services/utilities.service';
 
-import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  page: number;
-  sub: Subscription;
+
   menus: any;
   ln: string;
   cn: string;
   countries: Array<any> = [];
   languages: Array<any> = [];
-  filteredProducts: Array<any> = [];
-  tempFilteredProducts: Array<any> = [];
-  setClickedRow: Function;
+
   selectedRow: Number;
   searchItems: string;
   tempParams:Object;
@@ -33,17 +29,9 @@ export class HeaderComponent implements OnInit {
     private http: HttpClient,
     private activatedRoute: ActivatedRoute,
     private router: Router, private defaultService: DefaultService, private paramsService: ParamsService,
-    private utilitiesService: UtilitiesService) {
-    this.setClickedRow = function (index) {
-      this.selectedRow = index;
-    }
-  }
+    private utilitiesService: UtilitiesService) {}
 
   ngOnInit() {
-
-    this.defaultService.getCategories().subscribe(response => {
-      this.menus = response;
-    });
 
     this.defaultService.getCountry().subscribe(response => {
       this.countries = response;
@@ -53,33 +41,6 @@ export class HeaderComponent implements OnInit {
       this.languages = response;
     });
 
-    this.defaultService.getProducts().subscribe(response => {
-      this.filteredProducts = response;
-      this.tempFilteredProducts = response;
-    });
-    //this.buildUrl('','');
-
-    let params: { [k: string]: any } = {};
-    let qParams: { [k: string]: any } = {};
-    this.paramsService.urlQueryParameters.subscribe(response => {
-      qParams = response;
-    });
-
-    this.paramsService.urlParameters.subscribe(response => {
-      params = response;
-    });
-
-    let paramsObj = JSON.parse(JSON.stringify(params));
-
-    console.log("parmsObj ==>", paramsObj);
-
-    this.router.events.subscribe((data) => {
-      if (data instanceof RoutesRecognized) {
-        let tempParams= data.state.root.firstChild.params;
-        this.ln = tempParams.ln;
-        this.cn = tempParams.cn; 
-      }
-    });
   }
 
   /**
@@ -129,17 +90,4 @@ export class HeaderComponent implements OnInit {
     this.buildUrl('language', lang.languageShortName);
   }
 
-  /**
-   * 
-   * @param event 
-   * @param value 
-   * Product Search Filter 
-   */
-  onSearchProduct(event, value) {
-    if (event.key == 'Enter') {
-      console.log("value -->", value);
-      let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
-      this.paramsService.setFilteredProducts(arr);
-    }
-  }
 }

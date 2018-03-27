@@ -1,24 +1,120 @@
 .footer {
-    padding: 1em 0;
-    overflow: hidden;
-    background: #000;
-    border-bottom: 10px solid #000;
+    padding: 4em 0;
+    background: #282828;
+}
+.w3_footer_grid ul li a:hover {
+    color: #999;
+}
+.w3_footer_grid ul li {
+    list-style-type: none;
+    margin-bottom: 0.5em;
+    color: #999;
+    font-size: 11px;
 }
 .w3_footer_grid ul.info li a {
+background: none;
 padding-left:0px;
+}
+.w3_footer_grid h3 {
+    color: #bcbcbc;
+    font-size: 13px;
+    margin-bottom: 0.8em;
+    padding-bottom: .5em;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+	text-transform:capitalize;
+}
+.w3_footer_grid h3:after {
 background: none;
 }
-.w3_footer_grid h4 {
-    margin: 1em 0em 2em;
-    font-size: 1em;
+input[type="submit"] {
+    outline: none;
+    border: none;
+    background: #212121;
+    padding: 10px 0;
+    color: #fff;
+    width: 23%;
+    font-size: 12px;
     text-transform: uppercase;
-    color: #000;
-    font-weight: normal;
+    margin: 0;
 }
-
-.w3_footer_grid ul.info li a {
-    color:#fff;
-    }
-ul.info {
-    padding-left: 0px;
+input[type="text"], input[type="email"]{
+    outline: none;
+    border: 1px solid #DFDFDF;
+    background: #f5f5f5;
+    padding: 9px;
+    color: #212121;
+    width: 100%;
+	    min-width: 249px;
+    font-size: 11px;
+}
+.agileits_social_button ul li a.facebook {
+    background: url(../../assets/images/img-sp.png) no-repeat -1px -130px transparent;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+.agileits_social_button ul li a.twitter {
+    background: url(../../assets/images/img-sp.png) no-repeat -41px -130px transparent;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+.agileits_social_button ul li a.google {
+    background: url(../../assets/images/img-sp.png) no-repeat -80px -130px transparent;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+.agileits_social_button ul li a.pinterest {
+    background: url(../../assets/images/img-sp.png) no-repeat -123px -130px transparent;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+.w3_footer_grid h4 {
+    margin: 1.2em 0 1em;
+    font-size: 12px;
+    color: #bcbcbc;
+    font-family: 'Open Sans', sans-serif;
+}
+.w3_footer_grid ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+.footer-copy p {
+    margin: 1em 0 0 0em;
+    color: #ddd;
+    line-height: 1.8em;
+    font-size: 12px;
+    text-align: left;
+}
+.payment .col-md-2 {
+padding:0px;
+}
+.payment .payee {
+    font-size: 11px;
+    color: #ddd;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 130px;
+}
+.footer-copy.container {
+    clear: both;
+    position: relative;
+    padding-top: 20px;
+}
+.text-center-ship {
+    text-align: center !important;
+    margin: 0 !important;
+    min-width: 200px;
+    padding: 12px;
+}
+.payment {
+    padding: 7px;
+}
+.footer-link {
+    border-bottom: 1px solid #4d4d4d;
+    padding-bottom: 20px;
 }

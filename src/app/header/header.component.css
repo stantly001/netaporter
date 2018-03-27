@@ -271,7 +271,7 @@ body {
   }
   
   .headerwp {
-    max-width: 1300px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0;
   }
@@ -281,9 +281,7 @@ body {
     background-color: #fff;
     height: 49px;
     position: relative;
-    -webkit-box-shadow: 0 0 4px rgba(17, 2, 2, 0.22);
-    -moz-box-shadow: 0 0 4px rgba(17, 2, 2, 0.22);
-    box-shadow:0 0 4px rgba(17, 2, 2, 0.22);
+    border-bottom: 2px solid #e5e5e5;
   }
   
   .posrlt {
@@ -293,11 +291,12 @@ body {
   .headtoppart {
     display: block;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #fff;
     height: 39px;
     margin: 0 auto;
     padding: 0;
     min-width: 320px;
+    border-bottom: 1px solid #e5e5e5;
   }
   
   .headertopleft {
@@ -781,16 +780,10 @@ body {
   }
   
   .smllogo {
-      padding: 9px 10px 0px 3px;
-      margin: 3px 10px 3px 10px;
-      float: left;
-      width: 13%;
   }
   
   .smllogo a {
-    display: block;
-    float: left;
-    padding: 0px 0px 0px 0px;
+
   }
   
   .topmenusearch {
@@ -897,28 +890,25 @@ body {
   
   .wsmain {
     width: 100%;
-    margin: 0 auto;
-    padding: 0px 0px;
-    max-width: 1300px;
   }
   
   .wsmenu {
       position: relative;
       font-family: Helvetica, sans-serif;
       font-size: 14px;
-      padding: 0px 0px 0px 60px;
+      padding: 0px 0px 0px 0px;
       margin: 0px 0px 0px 0px;
-      width: 85%;
+      width: 100%;
       float: left;
       height: 60px;
   }
   
   .wsmenu-list {
     text-align: left;
-    margin: 0 auto 0 auto;
-    width: 100%;
+    width: 1170px;
     display: block;
     padding: 0px;
+    margin: 0 auto;
   }
   
   .wsmenu-list>li {
@@ -1520,12 +1510,11 @@ body {
   .wstheading {
     width: 100%;
     display: block;
-    padding: 10px 0px 6px 0px;
+    padding: 10px 0px 0px 0px;
     font-size: 12px;
     font-weight: bold;
-    color: #333333;
-    border-bottom: solid 1px #d9d9d9;
-    margin-bottom: 12px;
+    color: #000;
+    margin-bottom: 5px;
     text-transform: uppercase;
   }
   
@@ -1582,7 +1571,7 @@ body {
   }
   
   .wstliststy02 li a {
-    color: #6e6e6e;
+    color: #000;
     font-size: 12px;
   }
   
@@ -1860,6 +1849,7 @@ body {
       background-color: transparent;
       border-bottom: none;
       position: relative;
+      text-transform: uppercase;
   }
   
   .wstabitem02>li:hover a {
@@ -2393,17 +2383,6 @@ body {
       display: none !important;
     }
     .smallogo {
-      width: 100%;
-      display: block;
-      text-align: center;
-      padding-top: 9px;
-      position: fixed;
-      z-index: 101;
-      width: 100%;
-      height: 52px;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
-      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
     }
     .smallogo>img {
       margin-top: 0px;
@@ -3536,3 +3515,47 @@ body {
     }
   }
   
+  .wsmenu-list li a span:hover {
+    color:#000;
+    font-weight: bold;
+  }
+
+  /* .smallogo {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 9px;
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+    height: 52px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+  }
+
+  .smallogo>img {
+    margin-top: 0px;
+    height: 32px;
+  }
+
+.smllogo {
+    padding: 9px 10px 0px 3px;
+    margin: 3px 10px 3px 10px;
+    float: left;
+    width: 13%;
+}
+
+ 
+
+.smllogo a {
+  display: block;
+  float: left;
+  padding: 0px 0px 0px 0px;
+
+} */
+
+
+.wsmenu-list > li.wssearchbar {
+  width: 48% !important;
+}

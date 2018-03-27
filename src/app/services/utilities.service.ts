@@ -11,7 +11,7 @@ export class UtilitiesService {
    * Join Array of Array structure
    */
   joinArrayOfArray(data) {
-    let arr = [].concat.apply([],data);
+    let arr = [].concat.apply([], data);
     return this.removeDuplicatesFromArray(arr);
   }
 
@@ -30,8 +30,8 @@ export class UtilitiesService {
     * i - index
     * a - array
   */
-  removeDuplicatesFromArrayMap(data:any) {
-    return data.filter((x,i,a)=>x && a.indexOf(x)===i);
+  removeDuplicatesFromArrayMap(data: any) {
+    return data.filter((x, i, a) => x && a.indexOf(x) === i);
   }
 
   /**
@@ -39,7 +39,7 @@ export class UtilitiesService {
    * @param arr 
    * Returns comma seperated Strings
    */
-  convertArrayToString(arr:Array<any>) {
+  convertArrayToString(arr: Array<any>) {
     return arr.join(",");
   }
 
@@ -56,10 +56,10 @@ export class UtilitiesService {
    * @param obj 
    * Sort Object by Array index as object keys
    */
-  sortObjectByArrayKeys(arr,obj) {
-    let sortedMap:{[k:string]:any}={};
-    for(let i=0;i<arr.length;i++) {
-      sortedMap[arr[i]]=obj[arr[i]];
+  sortObjectByArrayKeys(arr, obj) {
+    let sortedMap: { [k: string]: any } = {};
+    for (let i = 0; i < arr.length; i++) {
+      sortedMap[arr[i]] = obj[arr[i]];
     }
     return sortedMap;
   }
@@ -71,11 +71,11 @@ export class UtilitiesService {
    * @param key
    * key exist consider as array object else consider as array
    */
-  sortArrayByOrders(arr:Array<any>,type:string,key:string){
-    if(key) {
-      return (type=="asc") ? arr.sort((a,b)=>parseFloat(a[key])-parseFloat(b[key])) :arr.sort((a,b)=>parseFloat(b[key])-parseFloat(a[key]));
+  sortArrayByOrders(arr: Array<any>, type: string, key: string) {
+    if (key) {
+      return (type == "asc") ? arr.sort((a, b) => parseFloat(a[key]) - parseFloat(b[key])) : arr.sort((a, b) => parseFloat(b[key]) - parseFloat(a[key]));
     } else {
-      return (type=="asc") ? arr.sort((a,b)=>parseFloat(a)-parseFloat(b)) :arr.sort((a,b)=>parseFloat(b)-parseFloat(a));
+      return (type == "asc") ? arr.sort((a, b) => parseFloat(a) - parseFloat(b)) : arr.sort((a, b) => parseFloat(b) - parseFloat(a));
     }
   }
 
@@ -85,8 +85,22 @@ export class UtilitiesService {
    * @param key 
    * returns the map object from Array Object
    */
-  mapArrayData(arr:Array<any>,key,value){
-    return arr.filter(data=>data[key]==value)[0];
+  mapArrayData(arr: Array<any>, key, value) {
+    return arr.filter(data => data[key] == value)[0];
+  }
+  /**
+   *
+   * @param arr
+   * @param key
+   * @param value
+   * Returns Array Objects By Key and value
+   */
+  getArrayDataByKey(arr: Array<any>, key, value) {
+    let response: Array<any> = [];
+    arr.forEach(element => {
+      (element[key].indexOf(value) !== -1) ? response.push(element) : '';
+    });
+    return response;
   }
 
   /**

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
 
-import { ViewComponent } from '../view/view.component';
+import { UrlComponent } from '../url/url.component';
 
 import { ParamsService } from '../services/params.service';
 import { UtilitiesService } from '../services/utilities.service';
@@ -22,24 +22,21 @@ export class ProductsComponent implements OnInit {
   @Input() ImageView: string;
   pager: any = {};
   pagedProducts: any[];
-  sort: Array<any> = [];
-  params: Object;
+  sort:Array<any>=[];
+  params:Object;
+  cn:string;
+  ln:string;
 
   constructor(private paramsService: ParamsService, private paginationService: PaginationService,
     private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute,
-    private utilitiesService: UtilitiesService, private viewComponent: ViewComponent) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent) { }
 
   ngOnInit() {
 
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
-    });
-
-    /**
-     * Sorting Call 
-     */
-    this.defaultService.getSortData().subscribe(response => {
-      this.sort = response;
+      this.cn = response.cn;
+      this.ln = response.ln;
     });
 
     this.paramsService.getFilteredProducts().subscribe(response => {
@@ -52,27 +49,8 @@ export class ProductsComponent implements OnInit {
 
   /**
    * 
-   * @param type 
-   * Sort Method for Product
+   * @param number 
    */
-  sortProduct(type) {
-    let routeUrl = this.utilitiesService.buildRoutingUrl(this.params);
-    let sortOrder: string;
-    if (type == "priceLowToHigh") {
-      sortOrder = "asc";
-    }
-    if (type == "priceHighToLow") {
-      sortOrder = "desc";
-    }
-    Observable.combineLatest(this.activatedRoute.params, this.activatedRoute.queryParams,
-      (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
-        let obj = JSON.parse(JSON.stringify(allParams.qParams));
-        (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.viewComponent.loadUrl(routeUrl, obj);
-      });
-  }
-
-
   selectPageSize(number) {
     this.pageSize = number;
     console.log(number)
@@ -81,8 +59,6 @@ export class ProductsComponent implements OnInit {
     // get current page of items
     console.log(this.pager)
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-
-    console.log(this.pagedProducts)
   }
 
   /**

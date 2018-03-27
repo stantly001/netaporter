@@ -137,6 +137,32 @@
     color: #ffffff;
 }
 
+.carousel-control.left {
+    background-image:none !important;
+}
+
+.js-popup.enabled.help-link {
+    color: #be181c !important;
+    border-right: none;
+}
+
+.product-price span {
+    color: #000;
+}
+
+.product-description {
+    color: #747474;
+}
+
+.like-gucci span {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
+    right: 12% !important;
+}
+
 .navbar {
     min-height: auto;
 }
@@ -275,6 +301,64 @@ ul.multi-column-dropdown h6 {
     padding-bottom: 5px;
     border-bottom: none;
     text-transform: capitalize;
+}
+
+.carousel-control.right {
+    right: -54px;
+    left: auto;
+    background-image:none !important;
+}
+
+.product-shipment{
+    border: 1px solid #e5e5e5 !important;
+    padding: 10px;
+}
+
+.shopping-cart {
+    clear: both;
+    position: relative;
+    margin-top: 0px !important;
+    padding-top: 1px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 6px !important;
+}
+.size-guide {
+    border-bottom: none !important;
+    text-align: right !important;
+    margin: -9px 0px 0px 20px !important;
+}
+
+.btn-primary.nap-button {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #bbb !important;
+}
+
+.full-price {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+.actualPrice {
+    color: #be181c !important;
+}
+
+.product-name.actual-price {
+    color: #be181c !important;
+}
+
+.carousel-inner > .active {
+    left:100px !important;
+}
+
+.product-name {
+    color: #747474;
+}
+
+.form-control {
+    margin-bottom: 5px;
 }
 
 img {
@@ -548,3 +632,251 @@ span.fa.fa-play-circle {
     color: #000000;
     text-decoration: none;
 }
+.zoom-arrow-index{
+    z-index: 999;
+}
+
+
+
+.actualPrice{
+    color:magenta;
+
+}
+.productSize{
+    color: #333;
+    font-weight: 500;
+}
+.icon-size_guide{
+    border-bottom: 1px solid #999;
+}
+.product-size-image{
+       line-height: 70px;
+    font-weight: 400;
+}
+
+  .product-size-btn{
+      border:none;
+
+  }
+.btn-primary.submit-button {
+    background: #000;
+    color: #FFF;
+    border: 1px solid #000;
+    font-size:14px;
+    /* padding: 20px 75px; */
+    }
+    .product-name.actual-price{
+        color:magenta;
+    }
+    .product-shipment{
+        border: 1px solid #000;
+            }
+            .color-image{
+                margin-bottom: 10px;
+            }
+            .panel-product{
+                margin-top: 33px
+            }
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+    display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(50%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+    }
+   
+   }
+
+  /*jssor slider loading skin spin css*/
+  .jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*jssor slider bullet skin 057 css*/
+.jssorb057 .i {position:absolute;cursor:pointer;}
+.jssorb057 .i .b {fill:none;stroke:#fff;stroke-width:2000;stroke-miterlimit:10;stroke-opacity:0.4;}
+.jssorb057 .i:hover .b {stroke-opacity:.7;}
+.jssorb057 .iav .b {stroke-opacity: 1;}
+.jssorb057 .i.idn {opacity:.3;}
+
+/*jssor slider arrow skin 073 css*/
+.jssora073 {display:block;position:absolute;cursor:pointer;}
+.jssora073 .a {fill:#ddd;fill-opacity:.7;stroke:#000;stroke-width:160;stroke-miterlimit:10;stroke-opacity:.7;}
+.jssora073:hover {opacity:.8;}
+.jssora073.jssora073dn {opacity:.4;}
+.jssora073.jssora073ds {opacity:.3;pointer-events:none;}
+
+ 
+     
+
+   /* .wrap {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    left: -100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transform: translateX(100%);
+  }
+  
+  @media (min-width: 30em) {
+    .carousel {
+      left: -50%;
+      transform: translateX(50%);
+    }
+  }
+  
+  @media (min-width: 40em) {
+    .carousel {
+      left: -33.33333%;
+      transform: translateX(33.33333%);
+    }
+  }
+  
+  .carousel.is-reversing {
+    transform: translateX(-100%);
+  }
+  
+  @media (min-width: 30em) {
+    .carousel.is-reversing {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (min-width: 40em) {
+    .carousel.is-reversing {
+      transform: translateX(-33.33333%);
+    }
+  }
+  
+  .carousel.is-set {
+    transform: none;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-seat {
+    background: #ddd;
+    flex: 1 0 100%;
+    order: 2;
+  }
+  
+  .carousel-seat:nth-child(even) {
+    background: #d5d5d5;
+  }
+  
+  @media (min-width: 30em) {
+    .carousel-seat {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (min-width: 40em) {
+    .carousel-seat {
+      flex-basis: 33.33333%;
+    }
+  }
+  
+  .carousel-seat.is-ref {
+    order: 1;
+  }
+  
+  h2 {
+    color: #aaa;
+    font-size: 7em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.6em 0;
+    text-align: center;
+  }
+  
+  .controls {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .controls button {
+    background: #aaa;
+    border: 0;
+    border-radius: 0.25em;
+    color: #eee;
+    padding: 0.5em 1em;
+  }
+  
+  .controls button:hover,
+  .controls button:focus {
+    background: orange;
+  }
+  
+     */

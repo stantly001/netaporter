@@ -117,7 +117,7 @@ select.select_item {
     padding:0px !important;
 }
 .panel-body ul li, .ecommerce_size ul li {
-    padding-left: 14px !important;
+    padding-left: 0px !important;
     margin-bottom: 3px !important;
 }
 .panel-title, .panel_bottom li a {
@@ -147,3 +147,10 @@ select.select_item {
 a:focus {
     outline: none !important;
   }
+
+.inside-check {
+    margin: 4px 6px;
+vertical-align: middle;
+}
+ 
+
