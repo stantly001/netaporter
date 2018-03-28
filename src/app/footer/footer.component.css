@@ -106,10 +106,10 @@ padding:0px;
     padding-top: 20px;
 }
 .text-center-ship {
-    text-align: center !important;
+    text-align: left !important;
     margin: 0 !important;
     min-width: 200px;
-    padding: 12px;
+    padding: 12px 0px;
 }
 .payment {
     padding: 7px;

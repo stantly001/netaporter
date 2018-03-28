@@ -1,0 +1,18 @@
+.js-popup.enabled.help-link {
+    color: #be181c !important;
+    border-right: none;
+    font-size: 28px;
+}
+.address {
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.like-gucci {
+    padding-bottom:10px;
+}
+
+.alternate {
+	padding-bottom: 50px;
+	font-size:30px;
+	text-transform:uppercase;
+}

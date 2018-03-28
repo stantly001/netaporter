@@ -26,7 +26,9 @@ export class HeaderComponent implements OnInit {
   setClickedRow: Function;
   selectedRow: Number;
   searchItems: string;
-  tempParams:Object;
+  tempParams: Object;
+  countryName: string;
+  langName: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,46 +42,48 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.router.events.subscribe((data) => {
+      if (data instanceof RoutesRecognized) {
+        let tempParams = data.state.root.firstChild.params;
+        this.ln = tempParams.ln;
+        this.cn = tempParams.cn;
+      }
+    });
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
     });
-
     this.defaultService.getCountry().subscribe(response => {
       this.countries = response;
+      this.countryName = this.filterSelectedObj(response, this.cn, "countryShortName").countryName
     });
-
     this.defaultService.getLanuage().subscribe(response => {
       this.languages = response;
+      this.langName = this.filterSelectedObj(response, this.ln, "languageShortName").languageName;
     });
-
     this.defaultService.getProducts().subscribe(response => {
       this.filteredProducts = response;
       this.tempFilteredProducts = response;
     });
-    //this.buildUrl('','');
-
     let params: { [k: string]: any } = {};
     let qParams: { [k: string]: any } = {};
     this.paramsService.urlQueryParameters.subscribe(response => {
       qParams = response;
     });
-
     this.paramsService.urlParameters.subscribe(response => {
       params = response;
     });
-
     let paramsObj = JSON.parse(JSON.stringify(params));
+  }
 
-    console.log("parmsObj ==>", paramsObj);
-
-    this.router.events.subscribe((data) => {
-      if (data instanceof RoutesRecognized) {
-        let tempParams= data.state.root.firstChild.params;
-        this.ln = tempParams.ln;
-        this.cn = tempParams.cn; 
-      }
-    });
+/**
+ * 
+ * @param data 
+ * @param val 
+ * @param filterKey 
+ * filter by [] to {}
+ */
+  filterSelectedObj(data, val, filterKey) {
+    return data.filter(x => x[filterKey] == val)[0];
   }
 
   /**
@@ -94,11 +98,9 @@ export class HeaderComponent implements OnInit {
     this.paramsService.urlQueryParameters.subscribe(response => {
       qParams = response;
     });
-
     this.paramsService.urlParameters.subscribe(response => {
       params = response;
     });
-
     let paramsObj = JSON.parse(JSON.stringify(params));
     if (type == 'country') {
       paramsObj.cn = value;
@@ -116,6 +118,7 @@ export class HeaderComponent implements OnInit {
    */
   updateCountry(country) {
     this.cn = country.countryShortName;
+    this.countryName = country.countryName;
     this.buildUrl('country', country.countryShortName);
   }
 
@@ -126,6 +129,7 @@ export class HeaderComponent implements OnInit {
    */
   updateLanguage(lang) {
     this.ln = lang.languageShortName;
+    this.langName = lang.languageName
     this.buildUrl('language', lang.languageShortName);
   }
 
@@ -137,7 +141,6 @@ export class HeaderComponent implements OnInit {
    */
   onSearchProduct(event, value) {
     if (event.key == 'Enter') {
-      console.log("value -->", value);
       let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
       this.paramsService.setFilteredProducts(arr);
     }

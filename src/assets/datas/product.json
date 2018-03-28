@@ -97,6 +97,7 @@
     "sizeId": [1, 2],
     "code": "V2000CR23",
     "img": "assets/img/bag2.jpg",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -177,6 +178,7 @@
     "productImg": "assets/img/bag3.jpg",
     "outFitImg": "assets/img/bag1.jpg",
     "code": "V3000CF23",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -229,6 +231,16 @@
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
         }],
+        "Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Double-breasted silk-blend blazer"
 },
 {	
@@ -247,6 +259,7 @@
     "productImg": "assets/img/bag3.jpg",
     "outFitImg": "assets/img/bag1.jpg",
     "code": "V3000CF24",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -298,7 +311,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Double-breasted silk-blend blazer"
 },
 {
@@ -317,6 +339,7 @@
     "productImg": "assets/img/bag4.jpg",
     "outFitImg": "assets/img/bag3.jpg",
     "code": "V3000CF25",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -368,7 +391,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Tarragona asymmetric ruffled silk-satin dress"
 },
 {
@@ -387,6 +419,7 @@
     "productImg": "assets/img/bag5.jpg",
     "outFitImg": "assets/img/bag3.jpg",
     "code": "V3000CF26",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -438,7 +471,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Tarragona asymmetric ruffled silk-satin dress"
 },
 {	
@@ -457,6 +499,7 @@
     "productImg": "assets/img/bag6.jpg",
     "outFitImg": "assets/img/bag3.jpg",
     "code": "V3000CF27",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -508,7 +551,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Tarragona asymmetric ruffled silk-satin dress"
 },
 {
@@ -527,6 +579,7 @@
     "productImg": "assets/img/bag7.jpg",
     "outFitImg": "assets/img/bag6.jpg",
     "code": "V3000CF28",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -578,7 +631,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Tarragona asymmetric ruffled silk-satin dress"
 },
 {	
@@ -597,6 +659,7 @@
     "productImg": "assets/img/bag8.jpg",
     "outFitImg": "assets/img/bag5.jpg",
     "code": "V3000CF29",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -648,7 +711,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Jase crinkled patent-leather mules"
 },
 {	
@@ -667,6 +739,7 @@
     "productImg": "assets/img/cloth1.jpg",
     "outFitImg": "assets/img/cloth2.jpg",
     "code": "V3000CF30",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -718,7 +791,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "C/O Jimmy Choo Victoria 100 crystal-embellished satin and vinyl pumps"
 }, {	
     "id": 11,
@@ -787,7 +869,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Drew Bijou quilted leather shoulder bag"
 }, {	
     "id": 12,
@@ -806,6 +897,7 @@
     "productImg": "assets/img/cloth3.jpg",
     "outFitImg": "assets/img/cloth2.jpg",
     "code": "V3000CF32",
+    "video": "https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4",
     "availableColors": [{
             "id": 1,
             "url": "assets/img/blackcolor.png"
@@ -857,7 +949,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Biggy color-block textured-leather"
 }, {	
     "id": 13,
@@ -926,7 +1027,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Hortensia smooth and textured"
 },
 {	
@@ -996,7 +1106,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Pionnière leather shoulder bag"
 },
 {	
@@ -1066,7 +1185,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Amphora leather tote"
 },
 {	
@@ -1136,7 +1264,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Ophidia patent leather-trimmed suede shoulder bag"
 },
 {	
@@ -1206,7 +1343,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Medium printed textured-leather tote"
 },
 {	
@@ -1276,7 +1422,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Walker Sling suede and leather bucket bag"
 }, {	
     "id": 19,
@@ -1345,7 +1500,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Fringed printed leather tote"
 }, {	
     "id": 20,
@@ -1414,7 +1578,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Amberley mini lizard-effect leather shoulder bag"
 }, {	
     "id": 21,
@@ -1483,7 +1656,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Barbara suede pumps"
 }, {	
     "id": 22,
@@ -1552,7 +1734,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Leather bucket bag"
 }, {	
     "id": 23,
@@ -1621,7 +1812,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Jase leather mules"
 }, {	
     "id": 24,
@@ -1690,7 +1890,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Margot leather slingback pumps"
 }, {	
     "id": 25,
@@ -1759,7 +1968,16 @@
                 }, {
                     "url": "https://cache.net-a-porter.com/images/products/1048377/1048377_ou2_pp.jpg"
                 }]
-        }],
+        }],"Items": [
+            {
+                "title": "WHY WE LOVE IT",
+                "description": "Pushbutton's Spring '18 collection is full of '80s silhouettes and has a pastel color palette to match. This floral-print georgette midi dress has a gathered front that features two hip-high splits and cape-like sleeves that fall over the open back. It was styled with pants underneath on the runway, but looks just as cool worn solo."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size Cut to be slightly fitted at the bust and waist, loose at the hip Lightweight, non-stretchy fabric Model is 177cm/ 510 and is wearing a size Small"
+            }
+        ],
     "description": "Bonsai 20 nubuck bucket bag"
 },
 {

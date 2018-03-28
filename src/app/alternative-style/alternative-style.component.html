@@ -1,0 +1,68 @@
+<!-- <section class="shop-all-gucci">
+  <div class="text-center col-md-12 like-gucci">
+    <span>
+      <strong>Alternate Styles</strong>
+    </span>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="carousel slide" data-ride="carousel" data-type="multi" id="myCarousel">
+      <div class="carousel-inner">
+        <div class="item" [class.active]="i==0" *ngFor="let alternativeProduct of products;let i=index;">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="#">
+              <img [src]="alternativeProduct?.productImg" class="img-responsive">
+              <div class="product-price">
+                <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">
+                  AED {{alternativeProduct.originalPrice}}
+                </span>
+                <span *ngIf="alternativeProduct.offerPrice!=='0'">
+                  AED {{alternativeProduct.offerPrice}}
+                </span>
+              </div>
+              <div class="product-description">{{alternativeProduct.description}}</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <i class="glyphicon glyphicon-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</section> -->
+<!-- <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+  <ngx-item NgxCarouselItem *ngFor="let alternativeProduct of products;let i=index;">
+      <img [src]="alternativeProduct?.productImg" class="img-responsive">
+  </ngx-item>
+ 
+  <button NgxCarouselPrev class='leftRs'>&lt;</button>
+  <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel> -->
+<section class="shop-all-gucci">
+  <div class="text-center alternate">
+    <span>
+      <strong>Alternate Styles</strong>
+    </span>
+  </div>
+  <div class="container">
+  <ngx-carousel [inputs]="carouselOne">
+    <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
+      <img [src]="alternativeProduct?.productImg" class="img-responsive">
+      <div class="product-price">
+        <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">
+          AED {{alternativeProduct.originalPrice}}
+        </span>
+        <span *ngIf="alternativeProduct.offerPrice!=='0'">
+          AED {{alternativeProduct.offerPrice}}
+        </span>
+      </div>
+      <div class="product-description">{{alternativeProduct.description}}</div>
+    </ngx-item>
+    <button NgxCarouselPrev class="leftRs">&lt;</button>
+    <button NgxCarouselNext class="rightRs">&gt;</button>
+  </ngx-carousel>
+</div>
+</section>
