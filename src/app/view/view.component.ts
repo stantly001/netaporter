@@ -6,6 +6,7 @@ import { DataService } from '../services/data.service';
 import {ActivatedRoute,Params,Router} from '@angular/router';
 import {DefaultService} from '../services/default.service';
 import {UtilitiesService} from '../services/utilities.service';
+import {ParamsService} from '../services/params.service';
 import {Location} from '@angular/common';
 @Component({
   selector: 'app-view',
@@ -37,7 +38,7 @@ export class ViewComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute,private http:HttpClient,
     private defaultService:DefaultService,private dataService:DataService,
     private router:Router,private utilitiesService:UtilitiesService,
-    private location:Location) {
+    private location:Location,private paramsService:ParamsService) {
     
     }
 
@@ -76,6 +77,7 @@ export class ViewComponent implements OnInit {
           this.products=arr;
           this.productObj.products=arr;
           this.productObj.filterProduct=arr;
+          this.paramsService.setFilteredProducts(this.products)
         });
       }
       else {
@@ -94,6 +96,7 @@ export class ViewComponent implements OnInit {
 
           this.productObj.products=arr; //used for query string filters
           this.productObj.filterProduct=arr; //used for query string filters
+          this.paramsService.setFilteredProducts(this.products)
         });
       }
     });
@@ -187,6 +190,7 @@ export class ViewComponent implements OnInit {
       }
     }
     ("sortOrder" in params) ? this.utilitiesService.sortArrayByOrders(productObj.filterProduct,params.sortOrder,"price") : this.products;
+    this.paramsService.setFilteredProducts(this.products)
   }
 
   getData(products,key,value){ 

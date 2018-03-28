@@ -3,8 +3,7 @@
   <div *ngIf="products.length===0">
     Sorry! No Matching Products
   </div>
-  dvdhvbj
-  {{pager.pages}}
+
   <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
       <li [ngClass]="{disabled:pager.currentPage === 1}">
           <a (click)="setPage(1)">First</a>
@@ -22,7 +21,6 @@
           <a (click)="setPage(pager.totalPages)">Last</a>
       </li>
   </ul>
-shdf
   <div *ngFor="let product of products" class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
     
       <div class="agile_ecommerce_tab_left dresses_grid">

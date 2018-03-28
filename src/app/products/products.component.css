@@ -37,7 +37,7 @@
 }
 .pagination{
     color:blue;
-    border:1px solid #000;
+    /* border:1px solid #000; */
 }
 .pagination>li>a{
     cursor: pointer;

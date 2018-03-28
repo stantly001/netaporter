@@ -1,7 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Injector } from '@angular/core';
 import * as _ from 'underscore';
 import { PaginationService } from '../services/index';
 import {DefaultService} from '../services/default.service';
+import {ParamsService} from '../services/params.service';
+import { Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -10,7 +12,8 @@ import {DefaultService} from '../services/default.service';
 export class ProductsComponent implements OnInit {
   @Input() products: Array<any> = [];
   @Input() ImageView: string;
-  constructor(private pagerService: PaginationService,private defaultService:DefaultService ) { }
+  pageNum:any;
+  constructor(private pagerService: PaginationService,private defaultService:DefaultService,private router: Router,private route:ActivatedRoute,private paramsService:ParamsService) { }
   pager: any = {};
 
   // paged items
@@ -30,7 +33,15 @@ export class ProductsComponent implements OnInit {
   }
  
   setPage(page: number) {
-    
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        page: page
+      },
+      queryParamsHandling: 'merge', 
+      // preserve the existing query params in the route
+      // skipLocationChange: true
+    });
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }

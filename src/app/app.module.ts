@@ -17,6 +17,7 @@ import { DataService } from './services/data.service';
 import {DefaultService} from './services/default.service';
 import { UtilitiesService} from './services/utilities.service';
 import { PaginationService } from './services/index';
+import { ParamsService} from './services/params.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { PaginationService } from './services/index';
     FormsModule,
     RouterModule.forRoot(Approute)
   ],
-  providers: [DataService,DefaultService,UtilitiesService,PaginationService],
+  providers: [DataService,DefaultService,UtilitiesService,PaginationService,ParamsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
