@@ -50,7 +50,7 @@ export class BrandComponent implements OnInit {
       this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
       this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
       let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      this.brands = data.brands;
+      this.brands = data.brand;
     });
   }
 
@@ -63,7 +63,7 @@ export class BrandComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam);
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
   }
 
 }

@@ -33,7 +33,10 @@ export class NavigationComponent implements OnInit {
 
   menus:Array<any>=[];
 
+
   ngOnInit() {
+
+    console.log("navigaton called");
     
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;

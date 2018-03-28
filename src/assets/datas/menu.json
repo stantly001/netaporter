@@ -22,7 +22,7 @@
                             },
                             {
                                 "subLevelCategoryId": 3,
-                                "subLevelCategoryName": "BoyFriend"
+                                "subLevelCategoryName": "straight-leg"
                             }
                         ]
                     },
@@ -36,7 +36,7 @@
                             },
                             {
                                 "subLevelCategoryId": 5,
-                                "subLevelCategoryName": "Capes"
+                                "subLevelCategoryName": "Gowns"
                             },
                             {
                                 "subLevelCategoryId": 6,
@@ -76,7 +76,7 @@
                             },
                             {
                                 "subLevelCategoryId": 12,
-                                "subLevelCategoryName": "Formal"
+                                "subLevelCategoryName": "Shirt"
                             },
                             {
                                 "subLevelCategoryId": 13,
@@ -144,19 +144,19 @@
                 "subCategory": [
                     {
                         "id": 7,
-                        "name": "Belt Bags",
+                        "name": "Shoulder Bags",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 22,
-                                "subLevelCategoryName": "Low Top"
+                                "subLevelCategoryName": "Chain Strap"
                             },
                             {
                                 "subLevelCategoryId": 23,
-                                "subLevelCategoryName": "Slip-on"
+                                "subLevelCategoryName": "Cross Body"
                             },
                             {
                                 "subLevelCategoryId": 24,
-                                "subLevelCategoryName": "Sport"
+                                "subLevelCategoryName": "Satchels"
                             }
                         ]
                     }
@@ -185,7 +185,7 @@
                             },
                             {
                                 "subLevelCategoryId": 28,
-                                "subLevelCategoryName": "Cool Hats"
+                                "subLevelCategoryName": "Caps"
                             },
                             {
                                 "subLevelCategoryId": 29,
@@ -195,31 +195,30 @@
                                 "subLevelCategoryId": 30,
                                 "subLevelCategoryName": "Cricket Hats"
                             }
-                        ]
-                    },
-                    {
+                        ]   
+                    },{
                         "id": 9,
-                        "name": "Books",
+                        "name": "Sun Glasses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 31,
-                                "subLevelCategoryName": "Comic Books"
+                                "subLevelCategoryName": "Avaitor"
                             },
                             {
                                 "subLevelCategoryId": 32,
-                                "subLevelCategoryName": "Horror Comics"
+                                "subLevelCategoryName": "Cat-Eye"
                             },
                             {
                                 "subLevelCategoryId": 33,
-                                "subLevelCategoryName": "Thirller Books"
+                                "subLevelCategoryName": "Round Frame"
                             },
                             {
                                 "subLevelCategoryId": 34,
-                                "subLevelCategoryName": "Comic Books"
+                                "subLevelCategoryName": "Square Frame"
                             },
                             {
                                 "subLevelCategoryId": 35,
-                                "subLevelCategoryName": "Novels"
+                                "subLevelCategoryName": "D-Frame"
                             }
                         ]
                     }
@@ -242,19 +241,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 36,
-                                "subLevelCategoryName": "Relaxed"
+                                "subLevelCategoryName": "Selvedge denim"
                             },
                             {
                                 "subLevelCategoryId": 37,
-                                "subLevelCategoryName": "Skinny"
+                                "subLevelCategoryName": "Skinny jeans"
                             },
                             {
                                 "subLevelCategoryId": 38,
-                                "subLevelCategoryName": "Slim Fit"
+                                "subLevelCategoryName": "Slim jeans"
                             },
                             {
                                 "subLevelCategoryId": 39,
-                                "subLevelCategoryName": "Straight Arrow"
+                                "subLevelCategoryName": "Straight jeans"
                             }
                         ]
                     },
@@ -264,19 +263,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 40,
-                                "subLevelCategoryName": "Bomber"
+                                "subLevelCategoryName": "BOMBER JACKETS"
                             },
                             {
                                 "subLevelCategoryId": 41,
-                                "subLevelCategoryName": "Biker"
+                                "subLevelCategoryName": "DENIM JACKETS"
                             },
                             {
                                 "subLevelCategoryId": 42,
-                                "subLevelCategoryName": "Denim"
+                                "subLevelCategoryName": "DOWN JACKETS"
                             },
                             {
                                 "subLevelCategoryId": 43,
-                                "subLevelCategoryName": "Leather"
+                                "subLevelCategoryName": "GILETS"
                             }
                         ]
                     },
@@ -337,23 +336,23 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 52,
-                                "subLevelCategoryName": "lace-up Boots"
+                                "subLevelCategoryName": "LACE-UP BOOTS"
                             },
                             {
                                 "subLevelCategoryId": 53,
-                                "subLevelCategoryName": "low-cut Boots"
+                                "subLevelCategoryName": "HIKING BOOTS"
                             },
                             {
                                 "subLevelCategoryId": 54,
-                                "subLevelCategoryName": "Ankle Boots"
+                                "subLevelCategoryName": "DESERT BOOTS"
                             },
                             {
                                 "subLevelCategoryId": 55,
-                                "subLevelCategoryName": "buckled Boots"
+                                "subLevelCategoryName": "CHELSEA BOOTS"
                             },
                             {
                                 "subLevelCategoryId": 56,
-                                "subLevelCategoryName": "military Boots"
+                                "subLevelCategoryName": "BIKER BOOTS"
                             }
                         ]
                     },
@@ -363,21 +362,21 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 57,
-                                "subLevelCategoryName": "Low Top Sneakers"
+                                "subLevelCategoryName": "HIGH TOP SNEAKERS"
                             },
                             {
                                 "subLevelCategoryId": 58,
-                                "subLevelCategoryName": "High Top Sneakers"
+                                "subLevelCategoryName": "LOW TOP SNEAKERS"
                             },
                             {
                                 "subLevelCategoryId": 59,
-                                "subLevelCategoryName": "Sport Sneakers"
+                                "subLevelCategoryName": "SLIP-ON SNEAKERS"
                             }
                         ]
                     }
                 ]
             },
-            {
+                        {
                 "categoryId": 7,
                 "categoryName": "Bags",
                 "categoryImg": "assets/img/jewllery.jpg",
@@ -388,49 +387,49 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 60,
-                                "subLevelCategoryName": "Draw-string Backpacks"
+                                "subLevelCategoryName": "Saint Laurent"
                             },
                             {
                                 "subLevelCategoryId": 61,
-                                "subLevelCategoryName": "Waxy Backpacks"
+                                "subLevelCategoryName": "Givenchy"
                             },
                             {
                                 "subLevelCategoryId": 62,
-                                "subLevelCategoryName": "Denim Backpacks"
+                                "subLevelCategoryName": "Paul Smith"
                             },
                             {
                                 "subLevelCategoryId": 63,
-                                "subLevelCategoryName": "Multi-pocket Backpacks"
+                                "subLevelCategoryName": "Balenciaga"
                             },
                             {
                                 "subLevelCategoryId": 64,
-                                "subLevelCategoryName": "Clip-top Backpacks"
+                                "subLevelCategoryName": "Prada"
                             }
                         ]
                     },
                     {
                         "id": 17,
-                        "name": "Belt Bags",
+                        "name": "Brief cases",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 65,
-                                "subLevelCategoryName": "Zipped Belt Bag"
+                                "subLevelCategoryName": "Mulberry"
                             },
                             {
                                 "subLevelCategoryId": 66,
-                                "subLevelCategoryName": "Embroidered Belt Bag"
+                                "subLevelCategoryName": "Filson"
                             },
                             {
                                 "subLevelCategoryId": 67,
-                                "subLevelCategoryName": "multi-pocket Belt Bag"
+                                "subLevelCategoryName": "Shinola"
                             },
                             {
                                 "subLevelCategoryId": 68,
-                                "subLevelCategoryName": "hip Belt Bag"
+                                "subLevelCategoryName": "Montblanc"
                             },
                             {
                                 "subLevelCategoryId": 69,
-                                "subLevelCategoryName": "Cross Body Belt Bag"
+                                "subLevelCategoryName": "Gucci"
                             }
                         ]
                     }
@@ -447,23 +446,23 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 70,
-                                "subLevelCategoryName": "Leather"
+                                "subLevelCategoryName": "Fabric bells"
                             },
                             {
                                 "subLevelCategoryId": 71,
-                                "subLevelCategoryName": "Striped"
+                                "subLevelCategoryName": "Leather bells"
                             },
                             {
                                 "subLevelCategoryId": 72,
-                                "subLevelCategoryName": "Fibre"
+                                "subLevelCategoryName": "Woven bells"
                             },
                             {
                                 "subLevelCategoryId": 73,
-                                "subLevelCategoryName": "Buckle Strap"
+                                "subLevelCategoryName": "Buckle bells"
                             },
                             {
                                 "subLevelCategoryId": 74,
-                                "subLevelCategoryName": "Adjustable Strap"
+                                "subLevelCategoryName": "Adjustable bells"
                             }
                         ]
                     },
@@ -473,27 +472,27 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 75,
-                                "subLevelCategoryName": "Logo Cap"
+                                "subLevelCategoryName": "Bucket hats"
                             },
                             {
                                 "subLevelCategoryId": 76,
-                                "subLevelCategoryName": "Embroidered Cap"
+                                "subLevelCategoryName": "Caps"
                             },
                             {
                                 "subLevelCategoryId": 77,
-                                "subLevelCategoryName": "Baseball Cap"
-                            },
-                            {
-                                "subLevelCategoryId": 78,
-                                "subLevelCategoryName": "Woven Fedora Hat"
-                            },
-                            {
-                                "subLevelCategoryId": 79,
                                 "subLevelCategoryName": "Flat Cap"
                             },
                             {
+                                "subLevelCategoryId": 78,
+                                "subLevelCategoryName": "Panama hats"
+                            },
+                            {
+                                "subLevelCategoryId": 79,
+                                "subLevelCategoryName": "Trapper hats"
+                            },
+                            {
                                 "subLevelCategoryId": 80,
-                                "subLevelCategoryName": "Rain Hat"
+                                "subLevelCategoryName": "Beanies"
                             }
                         ]
                     },
@@ -503,23 +502,23 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 81,
-                                "subLevelCategoryName": "Bicolor Gloves"
+                                "subLevelCategoryName": "Willaim Lockie"
                             },
                             {
                                 "subLevelCategoryId": 82,
-                                "subLevelCategoryName": "Fingerless Gloves"
+                                "subLevelCategoryName": "Dents"
                             },
                             {
                                 "subLevelCategoryId": 83,
-                                "subLevelCategoryName": "Lace-up Leg Warmers"
+                                "subLevelCategoryName": "Filson"
                             },
                             {
                                 "subLevelCategoryId": 84,
-                                "subLevelCategoryName": "Driving Gloves"
+                                "subLevelCategoryName": "Hestra"
                             },
                             {
                                 "subLevelCategoryId": 85,
-                                "subLevelCategoryName": "Padded Gloves"
+                                "subLevelCategoryName": "Berluti"
                             }
                         ]
                     }

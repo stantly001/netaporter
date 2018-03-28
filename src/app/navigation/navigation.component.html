@@ -16,12 +16,14 @@
 
                 <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
                   (mouseenter)="setClickedRow(menuCategory)">
-                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
+                  <a 
+                  [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
                   <div class="wsshoptab-active wstbrandbottom clearfix">
                     <div class="container">
                       <div class="row">
                         <div class="col-md-8">
-                          <div class="col-lg-4 col-md-4" *ngFor="let subCategory of category.subCategory">
+                          <div class="col-lg-4 col-md-4" 
+                          *ngFor="let subCategory of category.subCategory">
                             <ul class="wstliststy02 clearfix">
                               <li class="wstheading clearfix">
                                 <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">

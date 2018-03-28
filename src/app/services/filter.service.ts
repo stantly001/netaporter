@@ -10,7 +10,7 @@ import { UtilitiesService } from '../services/utilities.service';
 export class FilterService {
 
   colorFilter: Array<any> = [];
-  designerFilter: Array<any> = [];
+  brandFilter: Array<any> = [];
   sizeFilter: Array<any> = [];
   pricesFilter: Array<any> = [];
   subLevelFilter: Array<any> = [];
@@ -28,15 +28,19 @@ export class FilterService {
   * 
   */
   public filter(filterObj, isChecked, type, urlParams) {
+    console.log(type);
+    console.log("filteredObj ==>?",filterObj);
+
     let sortedMap: { [k: string]: any } = {};
 
-    if (type == 'designer') {
-      isChecked ? this.designerFilter.push(filterObj.designerId) : this.designerFilter.splice(this.designerFilter.indexOf(filterObj.designerId))
-      if (this.queryStringArr.indexOf("designerFilter") == -1 && (this.designerFilter.length > 0)) {
-        this.queryStringArr.push("designerFilter");
+    if (type == 'brand') {
+      console.log("brandId ==>",filterObj.brandId);
+      isChecked ? this.brandFilter.push(filterObj.brandId) : this.brandFilter.splice(this.brandFilter.indexOf(filterObj.brandId))
+      if (this.queryStringArr.indexOf("brandFilter") == -1 && (this.brandFilter.length > 0)) {
+        this.queryStringArr.push("brandFilter");
       }
-      if (this.queryStringArr.indexOf("designerFilter") != -1 && (this.designerFilter.length == 0)) {
-        this.queryStringArr.splice(this.queryStringArr.indexOf("designerFilter"), 1);
+      if (this.queryStringArr.indexOf("brandFilter") != -1 && (this.brandFilter.length == 0)) {
+        this.queryStringArr.splice(this.queryStringArr.indexOf("brandFilter"), 1);
       }
     }
     if (type == 'color') {
@@ -81,16 +85,17 @@ export class FilterService {
 
     let filters: Object = {
       colorFilter: this.utilitiesService.convertArrayToString(this.colorFilter),
-      designerFilter: this.utilitiesService.convertArrayToString(this.designerFilter),
+      brandFilter: this.utilitiesService.convertArrayToString(this.brandFilter),
       sizeFilter: this.utilitiesService.convertArrayToString(this.sizeFilter),
       pricesFilter: this.utilitiesService.convertArrayToString(this.pricesFilter),
       subLevelFilter: this.utilitiesService.convertArrayToString(this.subLevelFilter)
     };
 
+    console.log("filters ==>",filters);
 
     sortedMap = this.utilitiesService.sortObjectByArrayKeys(this.queryStringArr, filters)
     let routeUrl = this.utilitiesService.buildRoutingUrl(urlParams);
-
+    console.log("sortedMap ==>",sortedMap);
     return {
       "queryParam": sortedMap,
       "url": routeUrl

@@ -20,10 +20,6 @@ import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
 })
 export class ViewComponent implements OnInit {
 
-  colors: Array<any> = [];
-  designers: Array<any> = [];
-  subCategories: Array<any> = [];
-  sizes: Array<any> = [];
   categoryProducts: Array<any> = [];
   products: Array<any> = [];
   sort: Array<any> = [];
@@ -57,6 +53,8 @@ export class ViewComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log("called")
 
     /**
      * Get BreadCrumb Details
@@ -93,10 +91,7 @@ export class ViewComponent implements OnInit {
 
         let data = this.dataService.getProductsByArrayMap(productResponse, params);
         this.products = data.products;
-        this.subCategories = data.subCategories;
-        this.designers = data.designers;
-        this.colors = data.colors;
-        this.sizes = data.sizes;
+
         // this.productObj.products = data.products;
         // this.productObj.filterProduct = data.products;
         this.paramsService.setOrginalProducts(data.products);
@@ -124,7 +119,7 @@ export class ViewComponent implements OnInit {
       (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
         let obj = JSON.parse(JSON.stringify(allParams.qParams));
         (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.urlComponent.loadUrl(routeUrl, obj);
+        this.urlComponent.loadUrl(routeUrl, obj,'');
       });
   }
 

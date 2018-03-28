@@ -49,6 +49,7 @@ export class SizeComponent implements OnInit {
       this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
       let data = this.dataService.getProductsByArrayMap(productResponse, params);
       this.sizes = data.sizes;
+      console.log(this.sizes);
     });
   }
 
@@ -61,7 +62,7 @@ export class SizeComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam);
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
   }
 
 }

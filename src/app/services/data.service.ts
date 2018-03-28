@@ -178,8 +178,8 @@ export class DataService {
   public stringKeyToArray(filters) {
     let Obj: { [k: string]: any } = {};
     for (var key in filters) {
-      if (key == "designerFilter") {
-        Obj.designerId = filters[key].split(",").map(Number);
+      if (key == "brandFilter") {
+        Obj.brandId = filters[key].split(",").map(Number);
       }
       if (key == "colorFilter") {
         Obj.colorId = filters[key].split(",").map(Number);
@@ -224,16 +224,17 @@ export class DataService {
   public getProductsByArrayMap(products: Array<any>, params: Object) {
     let arr: Array<any> = [];
     let response: { [k: string]: any } = {};
+    let subCategories: Array<any> = [];
     let brand: Array<any> = [];
     let colors: Array<any> = [];
     let sizes: Array<any> = [];
-    let subCategories: Array<any> = [];
+    
     let menuId = params['menuId'];
     let menus: Array<any> = [];
 
     if (params['categoryId']) {
       arr = this.getProductByCategory(products, params['categoryId']);
-      subCategories = this.getSubCategory(params);
+      
       brand = this.getBrandsByProduct(arr, 'brandId');
       colors = this.getColosByProductCategory(arr, "colorId");
       sizes = this.getSizeByProductCategory(arr, "sizeId");
@@ -247,8 +248,9 @@ export class DataService {
     if (params['subLevelId']) {
       arr = this.getProductBySubLevel(arr, params['subLevelId']);
     }
+    // subCategories = this.getSubCategory(params);
     response['products'] = arr;
-    response['subCategories'] = subCategories;
+    // response['subCategories'] = subCategories;
     response['brand'] = brand;
     response['colors'] = colors;
     response['sizes'] = sizes;
@@ -264,14 +266,17 @@ export class DataService {
         arr.push(element.rangeTo);
       }
     });
+
     arr = arr.map(parseFloat);
+
     let min = Math.min.apply(Math, arr);
     let max = Math.max.apply(Math, arr);
     arr = [];
     arr.push(min);
     arr.push(max);
+
     products.forEach(element => {
-      let productPrice = element.orginalPrice;
+      let productPrice = parseFloat(element.orginalPrice);
       if (productPrice >= min && productPrice <= max) {
         response.push(element);
       }
