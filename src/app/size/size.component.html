@@ -1,0 +1,26 @@
+<div class="panel-group" id="sizefilteraccordion" role="tablist" aria-multiselectable="true">
+    <div>
+      <div role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#sizefilteraccordion" href="#sizefilter" aria-expanded="true" aria-controls="collapseOne">SIZE</a>
+        </h4>
+      </div>
+      <div id="sizefilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <div class="w3ls_dresses_grid_left_grid grid-size-filter">
+            <div class="w3ls_dresses_grid_left_grid_sub">
+              <ul class="panel_bottom">
+                <li *ngFor="let size of sizes">
+                  <span>
+                    <input type="checkbox" class="checkbox-border" (click)="filter(size,$event.target.checked,'size')">
+                  </span>
+                  <span class="checkbox-menu">{{size.sizeName}}</span>
+                </li>
+              </ul>
+              <a class="size-guide" target="_blank" href="https://www.net-a-porter.com/intl/sizechart.nap">Size Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

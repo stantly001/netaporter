@@ -18,7 +18,7 @@ export class DataService {
     private defaultService: DefaultService, private activatedRoute: ActivatedRoute) { }
 
 
-  response: Array<any>=[];
+  response: Array<any> = [];
 
   /**
    * 
@@ -56,7 +56,7 @@ export class DataService {
    * @param products 
    * Returns subCategory filters By Product Category
    */
-  getSubCategoriesByProductCategory(products: Array<any>, key: string,menuId:number) {
+  getSubCategoriesByProductCategory(products: Array<any>, key: string, menuId: number) {
     let categories: Array<any> = [];
     let productCategories = products.map(response => response[key]);
     let categoriesArr = this.utilitiesService.joinArrayOfArray(productCategories);//final categories
@@ -70,6 +70,28 @@ export class DataService {
       });
     });
     return categories;
+  }
+
+  /**
+   * 
+   * @param products 
+   * @param key 
+   * Get Brands By Product
+   */
+  getBrandsByProduct(products: Array<any>, key: string) {
+    let brands: Array<any> = [];
+    let productBrand = products.map(response => response[key]);
+    let brand = this.utilitiesService.joinArrayOfArray(productBrand);
+    brand.forEach(parent => {
+      this.defaultService.getBrands().subscribe(response => {
+        response.forEach(children => {
+          if (parent == children[key]) {
+            brands.push(children);
+          }
+        });
+      });
+    });
+    return brands;
   }
 
   /**
@@ -165,10 +187,10 @@ export class DataService {
       if (key == "sizeFilter") {
         Obj.sizeId = filters[key].split(",").map(Number);
       }
-      if(key == "pricesFilter") {
+      if (key == "pricesFilter") {
         Obj.rangeId = filters[key].split(",").map(Number)
       }
-      if(key =="subLevelFilter"){
+      if (key == "subLevelFilter") {
         Obj.subLevelFilter = filters[key].split(",").map(Number);
       }
     }
@@ -186,10 +208,10 @@ export class DataService {
 
   public getSubCategory(params: Object) {
     let menuId = params['menuId'];
-    this.defaultService.getCategories().subscribe(response=>{
-      let menus = this.utilitiesService.mapArrayData(response,'menuId',menuId);
-       this.response.push(this.utilitiesService.mapArrayData(menus['categories'],'categoryId',params['categoryId']));
-      });
+    this.defaultService.getCategories().subscribe(response => {
+      let menus = this.utilitiesService.mapArrayData(response, 'menuId', menuId);
+      this.response.push(this.utilitiesService.mapArrayData(menus['categories'], 'categoryId', params['categoryId']));
+    });
     return this.response;
   }
 
@@ -202,55 +224,55 @@ export class DataService {
   public getProductsByArrayMap(products: Array<any>, params: Object) {
     let arr: Array<any> = [];
     let response: { [k: string]: any } = {};
-    let designer: Array<any> = [];
+    let brand: Array<any> = [];
     let colors: Array<any> = [];
     let sizes: Array<any> = [];
-    let subCategories:Array<any>=[];
+    let subCategories: Array<any> = [];
     let menuId = params['menuId'];
-    let menus:Array<any>=[];
-    
+    let menus: Array<any> = [];
+
     if (params['categoryId']) {
       arr = this.getProductByCategory(products, params['categoryId']);
       subCategories = this.getSubCategory(params);
-      designer=this.getDesignersByProductCategory(arr, 'designerId');
-      colors= this.getColosByProductCategory(arr, "colorId");
+      brand = this.getBrandsByProduct(arr, 'brandId');
+      colors = this.getColosByProductCategory(arr, "colorId");
       sizes = this.getSizeByProductCategory(arr, "sizeId");
     }
     if (params['subCategoryId']) {
       arr = this.getProductBySubCategory(arr, params['subCategoryId']);
-      designer=this.getDesignersByProductCategory(arr, 'subCategoryDesignerId');
-      colors= this.getColosByProductCategory(arr, "subCategoryColorId");
+      brand = this.getBrandsByProduct(arr, 'subCategoryBrandId');
+      colors = this.getColosByProductCategory(arr, "subCategoryColorId");
       sizes = this.getSizeByProductCategory(arr, "subCategorySizeId");
     }
     if (params['subLevelId']) {
       arr = this.getProductBySubLevel(arr, params['subLevelId']);
     }
     response['products'] = arr;
-    response['subCategories']=subCategories;
-    response['designers'] = designer;
+    response['subCategories'] = subCategories;
+    response['brand'] = brand;
     response['colors'] = colors;
     response['sizes'] = sizes;
     return response;
   }
 
-  public priceFilter(products:Array<any>,priceArr:Array<any>,key:string,value:Array<any>) {
-    let arr:Array<any>=[];
-    let response:Array<any>=[];
-    priceArr.forEach(element=>{
-      if(value.indexOf(element.rangeId)!==-1){
+  public priceFilter(products: Array<any>, priceArr: Array<any>, key: string, value: Array<any>) {
+    let arr: Array<any> = [];
+    let response: Array<any> = [];
+    priceArr.forEach(element => {
+      if (value.indexOf(element.rangeId) !== -1) {
         arr.push(element.rangeFrom);
         arr.push(element.rangeTo);
       }
     });
     arr = arr.map(parseFloat);
-    let min = Math.min.apply(Math,arr);
-    let max = Math.max.apply(Math,arr);
+    let min = Math.min.apply(Math, arr);
+    let max = Math.max.apply(Math, arr);
     arr = [];
     arr.push(min);
     arr.push(max);
-    products.forEach(element=>{
+    products.forEach(element => {
       let productPrice = element.orginalPrice;
-      if(productPrice >= min && productPrice <= max){
+      if (productPrice >= min && productPrice <= max) {
         response.push(element);
       }
     });

@@ -50,4 +50,8 @@ export class DefaultService {
     return this.http.get(this.BASE_URL+"price.json").map((res:Response)=>res);
   }
 
+  getBrands():any {
+    return this.http.get(this.BASE_URL+"brand.json").map((res:Response)=>res);
+  }
+
 }
