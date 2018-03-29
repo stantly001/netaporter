@@ -9,15 +9,15 @@
             </div>
         </h4> -->
       <h4 class="panel-title">
-        <a (click)="isCategory=!isCategory" data-parent="#brandfilteraccordion" data-toggle="collapse" data-target="#brandfilter"
-          aria-expanded="true">BRANDS
+        <a (click)="isCategory=!isCategory">BRANDS
+          <div class="pull-right">
+              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+            </div>
         </a>
-        <div class="pull-right">
-          <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-        </div>
+        
       </h4>
     </div>
-    <div id="brandfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="brandfilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
       <div class="">
         <div class="w3ls_dresses_grid_left_grid">
           <div class="w3ls_dresses_grid_left_grid_sub">

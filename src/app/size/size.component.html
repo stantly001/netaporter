@@ -8,16 +8,15 @@
             </div>
         </h4> -->
         <h4 class="panel-title">
-            <a (click)="isCategory=!isCategory" data-parent="#sizefilteraccordion" data-toggle="collapse"
-             data-target="#sizefilter"
-              aria-expanded="true">SIZE
+            <a (click)="isCategory=!isCategory">SIZE
+              <div class="pull-right">
+                  <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+                </div>
             </a>
-            <div class="pull-right">
-              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-            </div>
+           
           </h4>
       </div>
-      <div id="sizefilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div id="sizefilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
         <div class="">
           <div class="w3ls_dresses_grid_left_grid grid-size-filter">
             <div class="w3ls_dresses_grid_left_grid_sub">

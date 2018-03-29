@@ -3,14 +3,12 @@
   <div>
     <div role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a (click)="isCategory=!isCategory" data-parent="#colorfilteraccordation" data-toggle="collapse" 
-        data-target="#colorfilter"
-          aria-expanded="true">COLORS
-
+        <a (click)="isCategory=!isCategory">COLORS
+          <div class="pull-right">
+              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+            </div>
         </a>
-        <div class="pull-right">
-          <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-        </div>
+        
       </h4>
 
       <!-- <h4 class="panel-title">
@@ -20,7 +18,7 @@
           </div>
       </h4> -->
     </div>
-    <div id="colorfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="colorfilter" class="panel-collapse" [class.collapse]="isCategory==true">
       <div class="">
         <div class="w3ls_dresses_grid_left_grid">
           <div class="w3ls_dresses_grid_left_grid_sub">
