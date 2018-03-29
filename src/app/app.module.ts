@@ -54,7 +54,7 @@ import { SortComponent } from './sort/sort.component';
     BrowserModule, 
     HttpClientModule, 
     FormsModule,
-    RouterModule.forRoot(Approute)
+        RouterModule.forRoot(Approute)
   ],
   providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService],
   bootstrap: [AppComponent]

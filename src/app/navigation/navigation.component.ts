@@ -49,6 +49,14 @@ export class NavigationComponent implements OnInit {
 
   }
 
+  reloadproduct(menu, category, subCategory){
+    console.log(menu)
+    console.log(category)
+    console.log(subCategory)
+    // let obj = {}
+    this.router.navigate(['/shop/'+this.cn+"/"+this.ln+"/"+menu.menuId+"/"+category.categoryId+"/"+subCategory.id]);
+  }
+
    /**
    * 
    * @param event 

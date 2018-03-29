@@ -79,6 +79,8 @@ export class FilterService {
       }
     }
 
+    
+
     let filters: Object = {
       colorFilter: this.utilitiesService.convertArrayToString(this.colorFilter),
       designerFilter: this.utilitiesService.convertArrayToString(this.designerFilter),

@@ -1,38 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-
-import { UrlComponent} from '../url/url.component';
-
+import { UrlComponent } from '../url/url.component';
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
 import { UtilitiesService } from '../services/utilities.service';
 import { FilterService } from '../services/filter.service';
-
 @Component({
   selector: 'app-colors',
   templateUrl: './colors.component.html',
   styleUrls: ['./colors.component.css']
 })
-
 export class ColorsComponent implements OnInit {
 
   colors: Array<any> = [];
   colorFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
-
   menuId: number;
   categoryId: number;
   subCategoryId: number;
   subLevelId: number;
 
-  urlParams:Object;
+  paginationSize:string;
+  urlParams: Object;
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService,private urlComponent:UrlComponent,private filterService:FilterService) { }
-
-    
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
 
@@ -44,7 +38,7 @@ export class ColorsComponent implements OnInit {
       this.subLevelId = parseInt(response.subLevelId);
     });
 
-    
+
 
     this.defaultService.getProducts().subscribe(response => {
       let arr: Array<any> = [];
@@ -59,9 +53,6 @@ export class ColorsComponent implements OnInit {
       let data = this.dataService.getProductsByArrayMap(productResponse, params);
       this.colors = data.colors;
     });
-
-
-
   }
 
   /**
@@ -72,8 +63,14 @@ export class ColorsComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
-    let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
-    this.urlComponent.loadUrl(filterData.url,filterData.queryParam);
+    this.activatedRoute.queryParams.subscribe(response=>{
+      console.log(response);
+      this.paginationSize = response.pageSize;
+    });
+    
+    let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam);
   }
 
 }

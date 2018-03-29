@@ -3,10 +3,14 @@
     <div>
       <div role="tab" id="headingOne">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#categoryaccordation" href="#categoryfilter" aria-expanded="true" aria-controls="collapseOne">CATEGORY</a>
+          <a (click)="current = !current">CATEGORY
+              <div class="pull-right">
+                  <i class='fa' [class.fa-plus]="current==true" [class.fa-minus]="current==false" aria-hidden="true"></i>
+                </div>
+          </a>
         </h4>
       </div>
-      <div id="categoryfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div id="categoryfilter" class="panel-collapse" [class.collapse]='current==true'>
         <div class="panel-body">
           <div class="w3ls_dresses_grid_left_grid_sub filter-category">
             <ul class="panel_bottom">
@@ -35,3 +39,18 @@
     </div>
   </div>
   <!-- subCategory code ends -->
+  <!-- <div id="panel-group" class="panel-product">
+      <div class="panel panel-default">
+        <div class="panel-heading" (click)="current = !current">
+          <h5 class="panel-title">
+            head
+            <div class="pull-right">
+              <i class='fa' [class.fa-plus]="current==true" [class.fa-minus]="current==false" aria-hidden="true"></i>
+            </div>
+          </h5>
+        </div>
+        <div id="collapse1" class="panel-collapse" [class.collapse]='current==true'>
+          <div class="panel-body">ADvvvfvfvfvfvfdveveefthtyjyjuyjujuyjjcbvbjvhuihrgrdoijhrghh</div>
+        </div>
+      </div>
+    </div> -->

@@ -8,7 +8,7 @@
             <app-sort></app-sort>
             <div class="btn-group">
                 <select name="select_item" (change)="selectPageSize($event.target.value)" class="select_item">
-                    <option value="all">Select</option>
+                    <option value="" selected hidden>Select</option>
                     <option value="5">5/pages</option>
                     <option value="10">10/pages</option>
                     <option value="25">25/pages</option>
@@ -17,22 +17,22 @@
             </div>
         </div>
         <!-- pagination code -->
-        <ul *ngIf="pager.pages && pager.pages.length" class="pagination pull-right">
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <ul *ngIf="pager.pages && pager.pages.length>1" class="pagination pull-right">
+            <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(1)">First</a>
-            </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
-                <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+            </li> -->
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a (click)="setPage(pager.currentPage - 1,pageSize)">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                <a (click)="setPage(page)">{{page}}</a>
+                <a (click)="setPage(page,pageSize)">{{page}}</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                <a (click)="setPage(pager.currentPage + 1)">Next</a>
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a (click)="setPage(pager.currentPage + 1,pageSize)">Next</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.totalPages)">Last</a>
-            </li>
+            </li> -->
         </ul>
         <!-- pagination code -->
     </div>
@@ -40,8 +40,8 @@
         <div *ngIf="products.length===0">
             <h3>Unfortunately there were no items matching for your request.</h3>
         </div>
-        <div *ngFor="let product of products;let i = index" class="col-md-3 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-            <div class="row">
+        <div class="row" *ngFor="let row of rows">
+            <div *ngFor="let product of pagedProducts | slice:(row*itemsPerRow):(row+1)*itemsPerRow;let i = index" class="col-md-4 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
                 <div class="agile_ecommerce_tab_left dresses_grid">
                     <div class="hs-wrapper hs-wrapper2">
                         <a [routerLink]='["/product",cn,ln,product.id]'>
@@ -72,28 +72,28 @@
                         <span class="slug"></span>
                     </div>
                 </div>
+                <!-- row -->
             </div>
-            <!-- row -->
         </div>
     </div>
     <!-- pagination code -->
     <div class="pull-right">
-        <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <ul *ngIf="pager.pages && pager.pages.length>1" class="pagination pull-right">
+            <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(1)">First</a>
-            </li>
-            <li [ngClass]="{disabled:pager.currentPage === 1}">
-                <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+            </li> -->
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a (click)="setPage(pager.currentPage - 1,pageSize)">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                <a (click)="setPage(page)">{{page}}</a>
+                <a (click)="setPage(page,pageSize)">{{page}}</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                <a (click)="setPage(pager.currentPage + 1)">Next</a>
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a (click)="setPage(pager.currentPage + 1,pageSize)">Next</a>
             </li>
-            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+            <!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.totalPages)">Last</a>
-            </li>
+            </li> -->
         </ul>
     </div>
     <!-- pagination code -->
