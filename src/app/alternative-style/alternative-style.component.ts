@@ -7,12 +7,14 @@ import { NgxCarousel } from 'ngx-carousel';
   styleUrls: ['./alternative-style.component.css']
 })
 export class AlternativeStyleComponent implements OnInit {
+  isCategory: boolean;
   products: any; 
   public carouselOne: NgxCarousel;
   constructor() {     
   }
   
   ngOnInit():void{    
+    this.isCategory = false;
     this.carouselOne = {
       grid: {xs: 2, sm: 2, md: 2, lg: 4, all: 0},
       slide: 1,

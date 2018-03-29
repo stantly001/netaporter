@@ -1,0 +1,39 @@
+<!-- Designer code starts -->
+<div class="panel-group" id="brandfilteraccordion" role="tablist" aria-multiselectable="true">
+  <div>
+    <div role="tab" id="headingOne">
+      <!-- <h4 class="panel-title">
+          <a>BRANDS</a>
+          <div class="pull-right">
+              <i class="more-less fa fa-minus"></i>
+            </div>
+        </h4> -->
+      <h4 class="panel-title">
+        <a (click)="isCategory=!isCategory" data-parent="#brandfilteraccordion" data-toggle="collapse" data-target="#brandfilter"
+          aria-expanded="true">BRANDS
+        </a>
+        <div class="pull-right">
+          <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+        </div>
+      </h4>
+    </div>
+    <div id="brandfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="">
+        <div class="w3ls_dresses_grid_left_grid">
+          <div class="w3ls_dresses_grid_left_grid_sub">
+            <ul class="panel_bottom">
+              <li *ngFor="let brand of brands">
+                <span>
+                  <input (click)="filter(brand,$event.target.checked,'brand')" id="input-confidencial" class="input-assumpte checkbox-border"
+                    type="checkbox">
+                </span>
+                <span class="checkbox-menu">
+                  {{brand.brandName}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

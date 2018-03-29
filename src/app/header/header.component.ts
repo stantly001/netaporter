@@ -60,32 +60,18 @@ export class HeaderComponent implements OnInit {
       this.languages = response;
       this.langName = this.filterSelectedObj(response, this.ln, "languageShortName").languageName;
     });
-    this.defaultService.getProducts().subscribe(response => {
-      this.filteredProducts = response;
-      this.tempFilteredProducts = response;
-    });
-    let params: { [k: string]: any } = {};
-    let qParams: { [k: string]: any } = {};
-    this.paramsService.urlQueryParameters.subscribe(response => {
-      qParams = response;
-    });
-    this.paramsService.urlParameters.subscribe(response => {
-      params = response;
-    });
-    let paramsObj = JSON.parse(JSON.stringify(params));
-  }
 
-/**
- * 
- * @param data 
- * @param val 
- * @param filterKey 
- * filter by [] to {}
- */
+  }
+  /**
+   * 
+   * @param data 
+   * @param val 
+   * @param filterKey 
+   * filter by [] to {}
+   */
   filterSelectedObj(data, val, filterKey) {
     return data.filter(x => x[filterKey] == val)[0];
   }
-
   /**
    * 
    * @param type 
@@ -105,7 +91,7 @@ export class HeaderComponent implements OnInit {
     if (type == 'country') {
       paramsObj.cn = value;
     }
-    if (type == "langulage") {
+    if (type == "language") {
       paramsObj.ln = value;
     }
     let routeUrl = this.utilitiesService.buildRoutingUrl(paramsObj);
@@ -133,16 +119,4 @@ export class HeaderComponent implements OnInit {
     this.buildUrl('language', lang.languageShortName);
   }
 
-  /**
-   * 
-   * @param event 
-   * @param value 
-   * Product Search Filter 
-   */
-  onSearchProduct(event, value) {
-    if (event.key == 'Enter') {
-      let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
-      this.paramsService.setFilteredProducts(arr);
-    }
-  }
 }

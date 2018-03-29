@@ -83,7 +83,7 @@ input[type="text"], input[type="email"]{
     text-decoration: none;
 }
 .footer-copy p {
-    margin: 1em 0 0 0em;
+    margin: 0.7em 0 0 0em;
     color: #ddd;
     line-height: 1.8em;
     font-size: 12px;
@@ -97,7 +97,7 @@ padding:0px;
     color: #ddd;
     display: inline-block;
     padding: 0;
-    margin: 0;
+    margin: 0 -15px;
     width: 130px;
 }
 .footer-copy.container {
@@ -109,10 +109,10 @@ padding:0px;
     text-align: left !important;
     margin: 0 !important;
     min-width: 200px;
-    padding: 12px 0px;
+    padding: 7px 0px;
 }
 .payment {
-    padding: 7px;
+    padding: 0px;
 }
 .footer-link {
     border-bottom: 1px solid #4d4d4d;

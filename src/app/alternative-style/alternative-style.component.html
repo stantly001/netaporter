@@ -51,9 +51,10 @@
   <ngx-carousel [inputs]="carouselOne">
     <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
       <img [src]="alternativeProduct?.productImg" class="img-responsive">
+      <div class="product-name">{{alternativeProduct.name}}</div>
       <div class="product-price">
         <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">
-          AED {{alternativeProduct.originalPrice}}
+          AED {{alternativeProduct.orginalPrice}}
         </span>
         <span *ngIf="alternativeProduct.offerPrice!=='0'">
           AED {{alternativeProduct.offerPrice}}

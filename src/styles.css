@@ -1534,12 +1534,11 @@ h3.other-nw {
 }
 .panel-title,.panel_bottom li a{
     font-size: 1em;
-    color:#FF9B05;
+    color:#000;
     text-transform: capitalize;
 	text-decoration: none;
 }
 .panel_bottom li a{
-	font-family: 'Glegoo', serif;
 	font-size: .96em !important;
 }
 .panel_bottom li a:hover,.panel-title a:hover{	
@@ -3550,9 +3549,6 @@ td.invert-image a img {
 	}
 }
 @media (max-width:568px){
-	.rightRs {
-		right: 78% !important;
-	}
 	.item img {
 		width: 568px;
 	}
@@ -3585,9 +3581,7 @@ td.invert-image a img {
 	}
 }
 @media (max-width:480px){
-	.rightRs {
-		right: 78% !important;
-	}
+
 	.item img {
 		width: 480px;
 	}
@@ -3879,9 +3873,7 @@ td.invert-image a img {
 	}
 }
 @media (max-width: 414px){
-	.rightRs {
-		right: 78% !important;
-	}
+
 	.item img {
 		width:414px;
 	}
@@ -3983,9 +3975,7 @@ td.invert-image a img {
 	}
 }
 @media (max-width:384px){
-	.rightRs {
-		right: 78% !important;
-	}
+
 	.item img {
 		width: 384px;
 	}
@@ -4106,9 +4096,6 @@ td.invert-image a img {
 	.wthree_banner_bottom_left,.w3ls_about_grid_left,.wthree_banner_bottom_right,.w3agile_special_deals_grid_left,.w3agile_special_deals_grid_right,.w3agile_newsletter_right,.w3agile_newsletter_left {
 		padding: 0;
 	}
-	.rightRs {
-		right: 78% !important;
-	}
 	.item img {
 		width: 375px;
 	}
@@ -4145,9 +4132,6 @@ td.invert-image a img {
 	}
 }
 @media (max-width:320px){
-	.rightRs {
-		right: 78% !important;
-	}
 	.item img {
 		width: 320px;
 	}
@@ -4377,15 +4361,23 @@ h1, h2, h3, h4, h5, h6 {
     color: #291abd !important;
     cursor: default;
 }
-.w3ls_dresses_grid_left_grid_sub.filter-category {
 
-    border-bottom: 1px dotted #000 !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 10px !important;
-
+ul.panel_bottom {
+    padding: 1em 0 1em 0em;
+    border-bottom: 1px solid #e5e5e5;
 }
+
+#headingOne {
+    padding-top: 20px;
+}
+
 a:focus {
     outline: none !important;
+}
+
+span.checkbox-menu {
+	vertical-align: top;
+	color:#000;
 }
 
 i.wsmenu-arrow.fa.fa-angle-down {
@@ -4398,4 +4390,21 @@ i.wsmenu-arrow.fa.fa-angle-down {
   #carousel-custom .carousel-indicators {
 	margin: 0 -15px !important;
   }
- 
+  .pagination > li > a, .pagination > li > span {
+	color: #333 !important;
+	padding: 2px 8px !important;
+  }
+
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+	color: #000 !important;
+	background-color: #fff !important;
+	border-color: #ddd !important;
+  }
+
+  .section-ads {
+	padding-top: 30px;
+	clear: both;
+}
+input[type="radio"], input[type="checkbox"] {
+	vertical-align: sub;
+}

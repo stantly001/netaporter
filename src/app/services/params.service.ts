@@ -1,31 +1,60 @@
 import { Injectable, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { ActivatedRoute, Params, Router, NavigationEnd } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class ParamsService {
   
-  constructor() { }
+  constructor(private activatedRoute:ActivatedRoute,private router:Router) { 
+    
+  }
   
   private urlQueryParams = new BehaviorSubject<Object>('');
   private urlParams = new BehaviorSubject<Object>('');
-  private products = new BehaviorSubject<Array<any>>([]);
+  private filteredProducts = new BehaviorSubject<Array<any>>([]);
+  private orginalProducts = new BehaviorSubject<Array<any>>([]);
 
   urlParameters = this.urlParams.asObservable();
   urlQueryParameters = this.urlQueryParams.asObservable();
-  fp = this.products.asObservable();
+  fp = this.filteredProducts.asObservable();
+  oProducts = this.orginalProducts.asObservable();
+
   
   private categoryIdStr:string;
   private params:Object;
   private queryParams:Object;
 
+
+  /**
+   * 
+   * @param arr 
+   * This Collection is based on Category / SubCategory / SubLevel
+   */
+  @Input()
+  public setOrginalProducts(arr:Array<any>) {
+    this.orginalProducts.next(arr);
+  }
+
+  public getOrginalProducts() {
+    return this.orginalProducts;
+  }
+
+  /**
+   * 
+   * @param arr 
+   * This is a filtered product based on user filter selection
+   */
   @Input()
   public setFilteredProducts(arr:Array<any>) {
-    this.products.next(arr);
+    this.filteredProducts.next(arr);
   }
 
   public getFilteredProducts() {
-    return this.products.asObservable();
+    return this.filteredProducts.asObservable();
   }
+
+  
 
   public setCategoryId(categoryId:string){
     this.categoryIdStr=categoryId;
@@ -54,5 +83,7 @@ export class ParamsService {
   public getQueryParams() {
     return this.queryParams;
   }
+
+
 
 }

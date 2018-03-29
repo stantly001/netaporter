@@ -16,9 +16,20 @@ import { DataService } from './services/data.service';
 import { DefaultService } from './services/default.service';
 import { UtilitiesService } from './services/utilities.service';
 import { ParamsService } from './services/params.service';
+import { FilterService } from './services/filter.service';
 import { PaginationService } from './services/index';
 import * as $ from 'jquery';
 import { ProductViewDirective } from './directives/product-view.directive';
+import { ColorsComponent } from './colors/colors.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { RelativesComponent } from './relatives/relatives.component';
+import { BrandComponent } from './brand/brand.component';
+import { SizeComponent } from './size/size.component';
+import { PriceComponent } from './price/price.component';
+import { CategoryComponent } from './category/category.component';
+import { UrlComponent } from './url/url.component';
+import { ProductAdsComponent } from './product-ads/product-ads.component';
+import { SortComponent } from './sort/sort.component';
 import { AlternativeStyleComponent } from './alternative-style/alternative-style.component';
 import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
@@ -33,6 +44,16 @@ import 'hammerjs';
     ViewComponent,
     ProductViewComponent,
     ProductViewDirective,
+    ColorsComponent,
+    NavigationComponent,
+    RelativesComponent,
+    BrandComponent,
+    SizeComponent,
+    PriceComponent,
+    CategoryComponent,
+    UrlComponent,
+    ProductAdsComponent,
+    SortComponent,
     AlternativeStyleComponent,
     WaysToShopComponent,
   ],
@@ -43,7 +64,8 @@ import 'hammerjs';
     RouterModule.forRoot(Approute),
     NgxCarouselModule
   ],
-  providers: [DataService, DefaultService, UtilitiesService, ParamsService, PaginationService],
+  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+  
