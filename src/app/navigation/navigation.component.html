@@ -15,7 +15,7 @@
               <ul class="wstabitem02 clearfix">
 
                 <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
-                  (mouseenter)="setClickedRow(menuCategory)">
+                  >
                   <a 
                   [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
                   <div class="wsshoptab-active wstbrandbottom clearfix">

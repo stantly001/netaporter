@@ -64,7 +64,7 @@ export class HeaderComponent implements OnInit {
     if (type == 'country') {
       paramsObj.cn = value;
     }
-    if (type == "langulage") {
+    if (type == "language") {
       paramsObj.ln = value;
     }
     let routeUrl = this.utilitiesService.buildRoutingUrl(paramsObj);
@@ -86,6 +86,7 @@ export class HeaderComponent implements OnInit {
    * update Country Language
    */
   updateLanguage(lang) {
+    console.log(lang);
     this.ln = lang.languageShortName;
     this.buildUrl('language', lang.languageShortName);
   }

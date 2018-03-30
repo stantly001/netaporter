@@ -6,6 +6,38 @@
     {
         "languageName":"French",
         "languageShortName":"fr"
+    },
+    {
+        "languageName":"Dutch",
+        "languageShortName":"du"
+    },
+    {
+        "languageName":"Japanese",
+        "languageShortName":"jp"
+    },
+    {
+        "languageName":"Chinese",
+        "languageShortName":"ch"
+    },
+    {
+        "languageName":"Spanish",
+        "languageShortName":"sp"
+    },
+    {
+        "languageName":"Albanian",
+        "languageShortName":"alb"
+    },
+    {
+        "languageName":"Korean",
+        "languageShortName":"ko"
+    },
+    {
+        "languageName":"Portuguese",
+        "languageShortName":"por"
+    },
+    {
+        "languageName":"German",
+        "languageShortName":"ger"
     }
 
 ]

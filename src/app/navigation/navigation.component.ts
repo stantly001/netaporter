@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
+import { RouterModule,ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
 
 import { UtilitiesService } from '../services/utilities.service';
 import { ParamsService } from '../services/params.service';

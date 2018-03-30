@@ -1,13 +1,21 @@
  <!-- subCategory code starts -->
- <div class="panel-group" id="categoryaccordation" role="tablist" aria-multiselectable="true">
+ <div class="panel-group" id="categoryaccordation" role="tablist" aria-multiselectable="true" >
     <div>
       <div role="tab" id="headingOne">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#categoryaccordation" href="#categoryfilter" 
-          aria-expanded="true" aria-controls="collapseOne">CATEGORY</a>
+          <a (click)="isCategory=!isCategory" data-parent="#categoryaccordation" data-toggle="collapse"  data-target="#categoryfilter" 
+          aria-expanded="true"  >CATEGORY
+       
+          
+
+          </a>
+          <div class="pull-right">
+              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i> 
+            </div>
+          
         </h4>
       </div>
-      <div id="categoryfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div id="categoryfilter" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
           <div class="w3ls_dresses_grid_left_grid_sub filter-category">
             <ul class="panel_bottom">
