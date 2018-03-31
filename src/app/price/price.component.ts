@@ -16,6 +16,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class PriceComponent implements OnInit {
 
+  isCategory: boolean;
   prices: Array<any> = [];
   menuId: number;
   categoryId: number;
@@ -29,7 +30,7 @@ export class PriceComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
-    
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);

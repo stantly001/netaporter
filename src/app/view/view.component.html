@@ -3,16 +3,14 @@
     <div id="product-list-menu" class="product-list-menu ">
       <div class="col-md-3">
         <div class="breadcrumbs">
-          Home / {{menuName}} / {{categoryName}}
+          Home / {{breadCrumbMenuName}} 
+          <span *ngIf="breadCrumbSubCategoryName">/ {{breadCrumbCategoryName}}</span> 
         </div>
         <div class="w3ls_dresses_grid_left_grid2_left">
-          <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='product'" value="outFit" class="btn btn-default">
-            Outfit View
-          </button> -->
-          <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='outFit'" value="product" class="btn btn-default">
-            Product View
-          </button> -->
-          <h1>{{categoryName}}</h1>
+            <h1 *ngIf="breadCrumbCategoryName && !(breadCrumbSubCategoryName || breadCrumnSubLevelName)">
+              {{breadCrumbCategoryName}}
+            </h1>
+          <h1 *ngIf="breadCrumbSubCategoryName">{{breadCrumbSubCategoryName}}</h1>
           <div class="product-total">{{products?.length}} Items Found</div>
         </div>
       </div>
@@ -21,7 +19,7 @@
     </div>
   </div>
 
-  <div class="col-md-12 section-view">
+  <div class="row col-md-12 section-view">
     <div class="col-md-3">
       <app-category></app-category>
       <app-brand></app-brand>

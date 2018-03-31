@@ -17,6 +17,8 @@ import { FilterService } from '../services/filter.service';
 
 export class ColorsComponent implements OnInit {
 
+  isCategory: boolean;
+  paginationSize: any;
   colors: Array<any> = [];
   colorFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
@@ -35,7 +37,7 @@ export class ColorsComponent implements OnInit {
     
 
   ngOnInit() {
-
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -70,8 +72,17 @@ export class ColorsComponent implements OnInit {
   * @param type 
   * 
   */
+
+
+
+
   public filter(filterObj, isChecked, type) {
+    this.activatedRoute.queryParams.subscribe(response=>{
+      console.log(response);
+      this.paginationSize = response.pageSize;
+    });
     let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url,filterData.queryParam,'');
   }
 

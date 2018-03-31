@@ -16,6 +16,8 @@ import { FilterService } from '../services/filter.service';
 })
 export class BrandComponent implements OnInit {
 
+  isCategory: boolean;
+  paginationSize: any;
   brands:Array<any>=[];
 
   menuId: number;
@@ -31,6 +33,7 @@ export class BrandComponent implements OnInit {
 
 
   ngOnInit() {
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -62,7 +65,12 @@ export class BrandComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
+    this.activatedRoute.queryParams.subscribe(response=>{
+      console.log(response);
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
   }
 

@@ -17,7 +17,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class CategoryComponent implements OnInit {
 
-  isCategory: boolean;
+  paginationSize: any;
   queryStringArr: Array<any> = [];
 
   subCategories: Array<any> = [];
@@ -25,7 +25,7 @@ export class CategoryComponent implements OnInit {
   categoryId: number;
   subCategoryId: number;
   subLevelId: number;
-
+  isCategory: boolean;
   urlParams: Object;
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
@@ -33,7 +33,7 @@ export class CategoryComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
-this.isCategory=true;
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -53,6 +53,7 @@ this.isCategory=true;
       this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
       this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
       let data = this.dataService.getProductsByArrayMap(productResponse, params);
+      
       this.subCategories = this.dataService.getSubCategory(params);
       console.log(this.subCategories);
     });
@@ -66,7 +67,12 @@ this.isCategory=true;
   * 
   */
   public filter(filterObj, isChecked, type) {
+    this.activatedRoute.queryParams.subscribe(response => {
+      console.log(response);
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 

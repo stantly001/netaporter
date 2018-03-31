@@ -13,6 +13,7 @@ import { UtilitiesService } from '../services/utilities.service';
 })
 export class UrlComponent implements OnInit {
 
+  
   orginalProduct: Array<any> = [];
   filteredProducts: Array<any> = [];
   prices: Array<any> = [];

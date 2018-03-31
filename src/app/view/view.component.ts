@@ -9,6 +9,7 @@ import { UrlComponent} from '../url/url.component';
 import { DataService } from '../services/data.service';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
+import { BreadcrumbService } from  '../services/breadcrumb.service';
 
 import { Location } from '@angular/common';
 import { ParamsService } from '../services/params.service';
@@ -40,8 +41,11 @@ export class ViewComponent implements OnInit {
   ln: string;
   cn: string;
   subCategoryName: string
-  menuName:string;
-  categoryName:string;
+
+  breadCrumbMenuName:string;
+  breadCrumbCategoryName:string;
+  breadCrumbSubCategoryName:string;
+  breadCrumnSubLevelName:string;
 
   productObj: { [k: string]: any } = {};
   params:Object;
@@ -49,27 +53,25 @@ export class ViewComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient,
     private defaultService: DefaultService, private dataService: DataService,
     private router: Router, private utilitiesService: UtilitiesService,
-    private location: Location, private paramsService: ParamsService,private urlComponent:UrlComponent) {
+    private location: Location, private paramsService: ParamsService,private urlComponent:UrlComponent,
+    private breadCrumbService:BreadcrumbService) {
   }
+
+  menus:Array<any>=[];
 
   ngOnInit() {
 
-    console.log("called")
-
-    /**
-     * Get BreadCrumb Details
-     */
-
-    this.defaultService.getCategories().subscribe(response => {
-      let urlObj= this.utilitiesService.mapArrayData(response,'menuId',this.activatedRoute.snapshot.params['menuId']);
-      this.menuName = urlObj['menuName'];
-      let categoryObj = this.utilitiesService.mapArrayData(urlObj.categories,'categoryId',this.activatedRoute.snapshot.params['categoryId']);
-      this.categoryName =categoryObj.categoryName;
-    });
-
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
-      this.paramsService.setParams(response);
+
+      this.breadCrumbService.generateBreadCrumb(response).subscribe(response=>{
+        this.breadCrumbMenuName=response.menuName;
+        this.breadCrumbCategoryName = response.categoryName;
+        this.breadCrumbSubCategoryName = response.subCategory;
+        this.breadCrumnSubLevelName = response.subLevel;
+      });
+      
+
       this.menuId = parseInt(response.menuId);
       this.categoryId = parseInt(response.categoryId);
       this.subCategoryId = parseInt(response.subCategoryId);
@@ -91,9 +93,6 @@ export class ViewComponent implements OnInit {
 
         let data = this.dataService.getProductsByArrayMap(productResponse, params);
         this.products = data.products;
-
-        // this.productObj.products = data.products;
-        // this.productObj.filterProduct = data.products;
         this.paramsService.setOrginalProducts(data.products);
         this.paramsService.setFilteredProducts(this.products);
       });
@@ -122,20 +121,5 @@ export class ViewComponent implements OnInit {
         this.urlComponent.loadUrl(routeUrl, obj,'');
       });
   }
-
-  /**
-   * 
-   * @param imageType 
-   * Display product based on Image Type
-   * This functionality is currently disabled in this release as per client requirement.
-   */
-  /*
-   imageView(imageType) {
-    this.productImageView = imageType;
-  }
-  */
-
-
-
 
 }

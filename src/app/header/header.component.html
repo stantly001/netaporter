@@ -1,44 +1,194 @@
 <!-- updated header -->
 <div class="wsmenucontainer clearfix">
-    <div id="overlapblackbg"></div>
-    <div class="wsmobileheader clearfix"> 
-      <a id="wsnavtoggle" class="animated-arrow"><span></span></a> 
-      <a class="smallogo">
-      </a>
-      
-      <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a> 
-    </div>
-    <div class="headtoppart clearfix">
-      <div class="headerwp">
-        <div class="headertopleft">
-          <div class="address clearfix">
-              <!-- Country -->
-              <span class="dropdown">
-                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">United Arab Emirates
-                  <span class="caret"></span></a>
-                  <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
-                      <a role="menuitem">{{country.countryName}}</a></li>
-                       
-                  </ul>
-                </span>
-                <!-- Language -->
-                <span class="dropdown">
-                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">AED
-                    <span class="caret"></span></a>
-                    <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li (click)="updateLanguage(language)" [value]="language.languageShortName" 
-                      *ngFor="let language of languages">
-                        <a role="menuitem">{{language.languageName}}</a></li>
-                    </ul>
-                  </span>
-          <a href="#">Sign In | Register</a></div>
-        </div>
-        <div class="headertopright"> 
-        <a><i class="fa fa-truck" aria-hidden="true"></i> Free delivery in United Arab Emirates over AED 200</a>
+  <div id="overlapblackbg"></div>
+  <div class="wsmobileheader clearfix">
+    <a id="wsnavtoggle" class="animated-arrow">
+      <span></span>
+    </a>
+    <a class="smallogo">
+      <img src="../assets/images/shop-logo.png">
+    </a>
+
+    <a class="callusicon" href="">
+      <span class="fa fa-shopping-basket"></span>
+      <em class="roundpoint-mobile">8</em>
+    </a>
+  </div>
+  <div class="headtoppart clearfix">
+    <div class="headerwp">
+      <div class="headertopleft">
+        <div class="address clearfix">
+          <!-- Country -->
+          <span class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              {{countryName}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                <a>{{country.countryName}}</a>
+              </li>
+            </ul>
+          </span>
+          <!-- Language -->
+          <span class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">{{langName}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="updateLanguage(language)" [value]="language.languageShortName" *ngFor="let language of languages">
+                <a>{{language.languageName}}</a>
+              </li>
+            </ul>
+          </span>
+          <a href="#">Sign In | Register</a>
         </div>
       </div>
+      <div class="headertopright">
+        <a>
+          <i class="fa fa-truck" aria-hidden="true"></i> Free delivery in United Arab Emirates over AED 200</a>
+      </div>
     </div>
-    <app-navigation></app-navigation>
-  
   </div>
+  <!-- <app-navigation></app-navigation> -->
+  <div class="headerfull">
+    <!--Main Menu HTML Code-->
+    <div class="wsmain">
+      <div class="smllogo">
+        <img src="../assets/images/shop-logo.png">
+      </div>
+      <nav class="wsmenu clearfix">
+        <ul class="mobile-sub wsmenu-list">
+          <li *ngFor="let menu of menus">
+            <a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
+              <span>{{menu.menuName}}</span>
+            </a>
+            <div class="wsshoptabing wtsbrandmenu clearfix">
+              <div class="wsshoptabingwp clearfix">
+                <ul class="wstabitem02 clearfix">
+  
+                  <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
+                    (mouseenter)="setClickedRow(menuCategory)">
+                    <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
+                    <div class="wsshoptab-active wstbrandbottom clearfix">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="col-lg-4 col-md-4" *ngFor="let subCategory of category.subCategory">
+                              <ul class="wstliststy02 clearfix">
+                                <li class="wstheading clearfix">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                    {{subCategory.name}}
+                                    <i class="fa fa-caret-right"></i>
+                                  </a>
+                                </li>
+                                <li *ngFor="let subLevel of subCategory.subLevelCategory">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
+                                    {{subLevel.subLevelCategoryName}}</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-4">
+                            <img src="https://qph.fs.quoracdn.net/main-qimg-be11ba5cb1572b4b0051e9930325cbd9" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="wssearchbar clearfix">
+            <form class="topmenusearch">
+              <input name="searchItem" [ngModel]="searchItem" (keydown)="onSearchProduct($event,$event.target.value)" placeholder="Search Product, Category...">
+              <button class="btnstyle">
+                <i class="searchicon fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </li>
+          <li class="wscarticon clearfix">
+            <a href="#">
+              <i class="fa fa-shopping-basket"></i>
+              <em class="roundpoint">8</em>
+              <span class="mobiletext">Shopping Cart</span>
+            </a>
+          </li>
+  
+        </ul>
+      </nav>
+    </div>
+    <!--Menu HTML Code-->
+  </div>
+  
+  <!-- <div class="headerfull">
+    <div class="wsmain">
+      <div class="smllogo">
+      </div>
+      <nav class="wsmenu clearfix">
+        <ul class="mobile-sub wsmenu-list">
+          <li *ngFor="let menu of menus">
+            <a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
+              <span>{{menu.menuName}}</span>
+            </a>
+            <div class="wsshoptabing wtsbrandmenu clearfix">
+              <div class="wsshoptabingwp clearfix">
+                <ul class="wstabitem02 clearfix">
+  
+                  <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
+                    >
+                    <a 
+                    [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
+                    <div class="wsshoptab-active wstbrandbottom clearfix">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <div class="col-lg-4 col-md-4" 
+                            *ngFor="let subCategory of category.subCategory">
+                              <ul class="wstliststy02 clearfix">
+                                <li class="wstheading clearfix">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                    {{subCategory.name}}
+                                    <i class="fa fa-caret-right"></i>
+                                  </a>
+                                </li>
+                                <li *ngFor="let subLevel of subCategory.subLevelCategory">
+                                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
+                                    {{subLevel.subLevelCategoryName}}</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-4">
+                            <img src="https://qph.fs.quoracdn.net/main-qimg-be11ba5cb1572b4b0051e9930325cbd9" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="wssearchbar clearfix">
+            <form class="topmenusearch">
+              <input name="searchItem" [ngModel]="searchItem" (keydown)="onSearchProduct($event,$event.target.value)" placeholder="Search Product, Category...">
+              <button class="btnstyle">
+                <i class="searchicon fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </li>
+          <li class="wscarticon clearfix">
+            <a href="#">
+              <i class="fa fa-shopping-basket"></i>
+              <em class="roundpoint">8</em>
+              <span class="mobiletext">Shopping Cart</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div> -->
+  
+</div>

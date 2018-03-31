@@ -16,6 +16,8 @@ import { FilterService } from '../services/filter.service';
 })
 export class SizeComponent implements OnInit {
 
+  isCategory: boolean;
+  paginationSize: any;
   sizes: Array<any> = [];
   menuId: number;
   categoryId: number;
@@ -29,6 +31,7 @@ export class SizeComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -61,7 +64,12 @@ export class SizeComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
+    this.activatedRoute.queryParams.subscribe(response=>{
+      console.log(response);
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
   }
 
