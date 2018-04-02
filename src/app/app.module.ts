@@ -33,6 +33,8 @@ import { SortComponent } from './sort/sort.component';
 import { AlternativeStyleComponent } from './alternative-style/alternative-style.component';
 import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
+import { PopoverModule } from "ngx-popover";
+
 import 'hammerjs';
 
 @NgModule({
@@ -62,7 +64,8 @@ import 'hammerjs';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(Approute),
-    NgxCarouselModule
+    NgxCarouselModule,
+    PopoverModule
   ],
   providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService],
   bootstrap: [AppComponent]

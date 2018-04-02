@@ -114,7 +114,7 @@ export class ProductsComponent implements OnInit {
     this.pager = this.paginationService.getPager(this.products.length, page, len);
     // get current page of items
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    this.paramsService.setFilteredProducts(this.pagedProducts);
+    // this.paramsService.setFilteredProducts(this.pagedProducts);
   }
 
 

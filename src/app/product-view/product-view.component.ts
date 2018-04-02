@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
+import 'ngx-popover';
 
 declare var jQuery: any;
 
