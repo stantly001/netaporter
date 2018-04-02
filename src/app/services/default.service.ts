@@ -54,4 +54,8 @@ export class DefaultService {
     return this.http.get(this.BASE_URL+"brand.json").map((res:Response)=>res);
   }
 
+  getMappingFilters():any {
+    return this.http.get(this.BASE_URL+"filters.json").map((res:Response)=>res);
+  }
+
 }

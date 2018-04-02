@@ -24,10 +24,21 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
+  cn:string;
+  ln:string;
+
   breadCrumbMenuName: string;
+  breadCrumbMenuId:number;
+
   breadCrumbCategoryName: string;
+  breadCrumbCategoryId:number;
+
   breadCrumbSubCategoryName: string;
+  breadCrumbSubCategoryId:number;
+
   breadCrumbSubLevelName: string;
+  breadCrumbSubLevelId:number;
+  
   breadCrumbProductName: string;
 
   @ViewChild('videoPlayer') videoplayer: any;
@@ -54,11 +65,19 @@ export class ProductViewComponent implements OnInit {
     });
 
     this.activatedRoute.params.subscribe(params => {
+
+      this.ln = params.ln;
+      this.cn = params.cn;
+
       this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
         this.breadCrumbMenuName = response.menuName;
+        this.breadCrumbMenuId = response.menuId;
         this.breadCrumbCategoryName = response.categoryName;
+        this.breadCrumbCategoryId = response.categoryId;
         this.breadCrumbSubCategoryName = response.subCategory;
+        this.breadCrumbSubCategoryId=response.subCategoryId;
         this.breadCrumbSubLevelName = response.subLevel;
+        this.breadCrumbSubLevelId = response.subLevelId;
         this.breadCrumbProductName = this.productsArr.name;
       });
     });

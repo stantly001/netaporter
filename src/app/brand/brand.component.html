@@ -11,26 +11,28 @@
       <h4 class="panel-title">
         <a (click)="isCategory=!isCategory">BRANDS
           <div class="pull-right">
-              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-            </div>
+            <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+          </div>
         </a>
-        
+
       </h4>
     </div>
     <div id="brandfilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
       <div class="">
         <div class="w3ls_dresses_grid_left_grid">
           <div class="w3ls_dresses_grid_left_grid_sub">
-            <ul class="panel_bottom">
-              <li *ngFor="let brand of brands">
-                <span>
-                  <input (click)="filter(brand,$event.target.checked,'brand')" id="input-confidencial" class="input-assumpte checkbox-border"
-                    type="checkbox">
-                </span>
-                <span class="checkbox-menu">
-                  {{brand.brandName}}</span>
-              </li>
-            </ul>
+            <div class="styled-input-container styled-input--square">
+              <ul class="panel_bottom">
+                <li *ngFor="let brand of brands">
+                  <div class="styled-input-single">
+                    <input (click)="filter(brand,$event.target.checked,'brand')" id="product-filter-b{{brand.brandId}}" class="input-assumpte checkbox-border"
+                      type="checkbox">
+                    <label for="product-filter-b{{brand.brandId}}" class="checkbox-menu">
+                      {{brand.brandName}}</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

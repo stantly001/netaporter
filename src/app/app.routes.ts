@@ -4,6 +4,11 @@ import {ProductViewComponent} from './product-view/product-view.component';
 import { NavigationComponent } from './navigation/navigation.component';
 export const Approute:Routes=[
     {
+        path:"shop/:cn/:ln/:menuId",
+        redirectTo:'shop/us/en/1/1',
+        pathMatch:"full"
+    },
+    {
         path:"shop/:cn/:ln/:menuId/:categoryId",
         component:ViewComponent,
         data : {

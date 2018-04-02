@@ -2,10 +2,25 @@
   <div class="container">
     <div class="row">
       <div class="breadcrumbs">
-        Home / {{breadCrumbMenuName}}
-        <span *ngIf="breadCrumbCategoryName">/ {{breadCrumbCategoryName}}</span>
-        <span *ngIf="breadCrumbSubCategoryName"> / {{breadCrumbSubCategoryName}}</span>
-        <span *ngIf="breadCrumnSubLevelName">/ {{breadCrumnSubLevelName}}</span>
+        Home
+        <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId]">
+          / {{breadCrumbMenuName}}
+        </a>
+        <span *ngIf="breadCrumbCategoryName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId]">
+            / {{breadCrumbCategoryName}}
+          </a>
+        </span>
+        <span *ngIf="breadCrumbSubCategoryName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId]">
+            / {{breadCrumbSubCategoryName}}
+          </a>
+        </span>
+        <span *ngIf="breadCrumnSubLevelName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId,breadCrumbSubLevelId]">
+            / {{breadCrumnSubLevelName}}
+          </a>
+        </span>
         <span>/ {{breadCrumbProductName}}</span>
       </div>
       <div class="col-md-8">

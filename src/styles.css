@@ -7208,3 +7208,58 @@ input[type="radio"], input[type="checkbox"] {
       color: #fff;
     }
   }
+
+  /*
+    * - Checkbox code
+  */
+
+ .styled-input-single {
+  position: relative;
+  padding: 5px 10px 5px 24px;
+  text-align: left;
+}
+.styled-input-single label {
+  cursor: pointer;
+}
+.styled-input-single label:before, .styled-input-single label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+}
+.styled-input-single label:before {
+  left: 1.5px;
+  width: 17px;
+  height: 17px;
+  margin: -9.5px 0px 0;
+  background: #fff;
+  border: 2px solid #000;
+}
+.styled-input-single label:after {
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  margin: -6px 0 0;
+  opacity: 0;
+  background: #000;
+  -webkit-transform: translate3d(-40px, 0, 0) scale(0.5);
+  transform: translate3d(-40px, 0, 0) scale(0.5);
+}
+.styled-input-single input[type="radio"], .styled-input-single input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  visibility: hidden;
+}
+.styled-input-single input[type="radio"]:checked + label:after, .styled-input-single input[type="checkbox"]:checked + label:after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.styled-input--square label:before, .styled-input--square label:after {
+  border-radius: 0;
+}
+
+select.form-control.select_item {
+  height: 28px !important;
+}

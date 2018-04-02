@@ -5,10 +5,10 @@
       <h4 class="panel-title">
         <a (click)="isCategory=!isCategory">COLORS
           <div class="pull-right">
-              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-            </div>
+            <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+          </div>
         </a>
-        
+
       </h4>
 
       <!-- <h4 class="panel-title">
@@ -22,15 +22,18 @@
       <div class="">
         <div class="w3ls_dresses_grid_left_grid">
           <div class="w3ls_dresses_grid_left_grid_sub">
-            <ul class="panel_bottom">
-              <li *ngFor="let color of colors">
-                <span>
-                  <input type="checkbox" class="checkbox-border" (click)="filter(color,$event.target.checked,'color')">
-                </span>
-                <span class="checkbox-menu">
-                  {{color.colorName}}</span>
-              </li>
-            </ul>
+            <div class="styled-input-container styled-input--square">
+              <ul class="panel_bottom">
+                <li *ngFor="let color of colors">
+                  <div class="styled-input-single">
+                    <input type="checkbox" class="checkbox-border checkbox-border" id="product-filter-c{{color.colorId}}" (click)="filter(color,$event.target.checked,'color')">
+                    <label class="checkbox-menu" for="product-filter-c{{color.colorId}}">
+                      {{color.colorName}}
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

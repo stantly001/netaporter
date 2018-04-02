@@ -681,7 +681,9 @@ margin-top: 33px
 } 
 
 
-
+.breadcrumb-anchor {
+    color:#000 !important;
+}
 
 /* @media (min-width: 768px) {
 

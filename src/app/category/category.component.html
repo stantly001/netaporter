@@ -4,11 +4,11 @@
     <div role="tab" id="headingOne">
       <h4 class="panel-title">
         <a (click)="isCategory=!isCategory">CATEGORY
-            <div class="pull-right">
-                <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-              </div>
+          <div class="pull-right">
+            <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+          </div>
         </a>
-        
+
       </h4>
       <!-- <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#categoryaccordation" href="#categoryfilter" aria-expanded="true" aria-controls="collapseOne">CATEGORY</a>
@@ -20,25 +20,25 @@
           <ul class="panel_bottom">
             <li *ngFor="let subCategory of subCategories">
               <ul>
-                <li *ngFor="let category of subCategory.subCategory; let subCollapse=index; " 
-                (click)="category.accordion = !category.accordion">
-                  <a class="fa" data-toggle="collapse" data-parent="#accordion" 
-                  href="#collapse{{subCollapse}}" 
-                  [ngClass]="{'fa-caret-down':(( category.accordion?category.accordion: (subCollapse == 0 ? true : false) ) == true), 
+                <li *ngFor="let category of subCategory.subCategory; let subCollapse=index; " (click)="category.accordion = !category.accordion">
+                  <a class="fa" data-toggle="collapse" data-parent="#accordion" href="#collapse{{subCollapse}}" [ngClass]="{'fa-caret-down':(( category.accordion?category.accordion: (subCollapse == 0 ? true : false) ) == true), 
                   'fa-caret-right': (( category.accordion?category.accordion: (subCollapse == 0 ? true : false) ) != true) }">
-                </a>
-                  <a data-toggle="collapse" data-parent="#accordion" 
-                  href="#collapse{{subCollapse}}" (click)="subCategoryName=subCategory.name">
+                  </a>
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{subCollapse}}" (click)="subCategoryName=subCategory.name">
                     <a class="filter-menu" queryParamsHandling="merge">
                       {{category.name}}
                     </a>
                   </a>
-                  <ul id="collapse{{subCollapse}}" class="panel-collapse collapse" [ngClass]="{'in':subCollapse == 0}">
-                    <li *ngFor="let subLevel of category.subLevelCategory">
-                      <input type="checkbox" class="inside-check" (click)="filter(subLevel,$event.target.checked,'subLevel')">
-                      <a>{{subLevel.subLevelCategoryName}}</a>
-                    </li>
-                  </ul>
+                  <div class="styled-input-container styled-input--square">
+                    <ul id="collapse{{subCollapse}}" class="panel-collapse collapse" [ngClass]="{'in':subCollapse == 0}">
+                      <li *ngFor="let subLevel of category.subLevelCategory">
+                        <div class="styled-input-single">
+                          <input id="product-filter-slc{{subLevel.subLevelCategoryId}}" type="checkbox" class="inside-check" (click)="filter(subLevel,$event.target.checked,'subLevel')">
+                          <label for="product-filter-slc{{subLevel.subLevelCategoryId}}">{{subLevel.subLevelCategoryName}}</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </li>
