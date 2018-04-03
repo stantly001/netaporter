@@ -4,7 +4,8 @@
 html, body{
     font-size: 100%;
 	background:	#fff;
-	font-family:'Open Sans', sans-serif;
+  font-family:'Open Sans', sans-serif;
+  overflow-x:hidden;
 }
 p{
 	margin:0;
@@ -277,7 +278,7 @@ ul.multi-column-dropdown h6 {
     margin-left: 12em;
 }
 .dropdown-menu {
-    left: -130%;
+    left: -42%;
 }
 .w3ls_products_pos h4 {
     font-size: 2em;
@@ -1242,7 +1243,7 @@ ul.wmuSliderPagination {
 	line-height:1.8em;
 }
 .footer-copy p a{
-	color:#ff9b05;
+	color:#FFF;
 	text-decoration:none;
 }
 .footer-copy p a:hover{
@@ -2608,7 +2609,14 @@ td.invert-image a img {
 	}
 	.banner h3 {
 		width: 40%;
-	}
+  }
+  .smllogo {
+    padding: 5px 10px 0px 0px !important;
+    margin: 0px 10px 3px 108px !important;
+  }
+  .wsmenu-list {
+    margin: -45px 302px !important;
+  }
 	.banner h3 {
 		margin: 8em 0 0;
 	}
@@ -2655,7 +2663,10 @@ td.invert-image a img {
 	}
 	.banner-bottom, .team, .checkout, .additional_info, .team-bottom, .single, .mail, .special-deals, .about, .faq, .typo, .new-products, .banner-bottom1, .top-brands, .dresses, .w3l_related_products {
 		padding: 4em 0;
-	}
+  }
+  .wsmain {
+
+  }
 	.footer-copy-pos {
 		right: 5%;
 	}
@@ -2694,7 +2705,10 @@ td.invert-image a img {
 	.banner h3 {
 		width: 40%;
 		font-size: 1.5em;
-	}
+  }
+  .wsshoptabing {
+    margin:50px 0px !important;
+  }
 	.banner {
 		min-height: 500px;
 	}
@@ -2812,9 +2826,12 @@ td.invert-image a img {
 	.agile_ecommerce_tab_left h5 a {
 		font-size: 1.1em;
 	}
-	.wsmenu-list {
-		margin:0 !important;
-	}	
+	.wsshoptabing {
+    margin:50px 0px !important;
+  }
+  .wsmenu-list {
+    margin: 0px 0px !important;
+}	
 }
 @media (max-width:991px){
 	.wsmenu-list {
@@ -3195,7 +3212,7 @@ td.invert-image a img {
 		min-width: 735px;
 	}
 	.dropdown-menu {
-		left: -100%;
+		left: -8%;
 	}
 	ul.multi-column-dropdown h6 {
 		font-size: 1.2em;
@@ -4408,10 +4425,19 @@ i.wsmenu-arrow.fa.fa-angle-down {
 input[type="radio"], input[type="checkbox"] {
 	vertical-align: sub;
 }
+.zoomImg{
+    width: 390% !important;
+    height: 585% !important;
+}
+.popover.bottom .arrow {
+    left: 93% !important;
+}
+.popover{
+    left: 229px !important;
+}
 
 
-
-/*
+  /*
     * - Mega Menu Css
   */
   .wsmenu * {
@@ -4589,13 +4615,12 @@ input[type="radio"], input[type="checkbox"] {
   }
   
   .wsmenu-list {
-    text-align: right;
+    text-align: left;
     width: 1170px;
     display: block;
-    padding: 0 0 0 14%;
-    margin: -45px 0px;
-    float: right;
-}
+    padding: 0px;
+    margin: -45px 545px;
+  }
   
   .wsmenu-list>li {
     text-align: center;
@@ -5069,7 +5094,8 @@ input[type="radio"], input[type="checkbox"] {
     border-top: solid 0px;
     visibility: hidden;
     opacity: 0;
-    z-index: 101;
+    z-index: 10000;
+    
   }
   
   .btnlearn {
@@ -5516,8 +5542,8 @@ input[type="radio"], input[type="checkbox"] {
     position: absolute;
     right: 0;
     visibility: hidden;
-    padding: 9px 6px;
-    border-bottom: 5px solid #000;
+	padding: 9px 6px;
+	border-bottom: 5px solid #000;
   }
   
   .wsmenu-list>li:hover>.wtsbrandmenu>.wsshoptabingwp>.wstabitem02>li.wsshoplink-active>.wstbrandbottom {
@@ -5611,7 +5637,46 @@ input[type="radio"], input[type="checkbox"] {
   .brandcolor08 {
     color: #ef4056;
   }
-  
+
+
+
+
+  @media screen and (min-width: 1366px) {
+    .smllogo {
+      margin: 0px 10px 3px 66px !important;
+  }
+  .wsmenu-list {
+    margin: -36px 301px;
+}
+  }
+
+  @media screen and (min-width: 1400px) {
+    .smllogo {
+      margin: 0px 10px 3px 132px !important;
+  }
+  .wsmenu-list {
+    margin: -36px 370px;
+}
+  }
+  @media screen and (min-width: 1600px) {
+    .smllogo {
+      margin: 0px 10px 3px 309px !important;
+  }
+  .wsmenu-list {
+    margin: -45px 553px;
+}
+  }
+  @media screen and (min-width: 1900px) {
+    .smllogo {
+      margin: 0px 10px 3px 309px !important;
+  }
+  .wsmenu-list {
+    margin: -45px 553px;
+}
+  }
+
+
+
   /*--------------------------------------------------------------------------
   |  03 Tab CSS
   --------------------------------------------------------------------------*/
@@ -5630,10 +5695,41 @@ input[type="radio"], input[type="checkbox"] {
       padding-left: 0px !important;
       padding-right: 0px !important;
     }
-    .wsmenu {
-        padding: 0px 0px 0px 0px !important;
-        width: 83% !important;
+
+    body {
+      overflow-x:hidden;
     }
+
+    .smllogo {
+      padding: 5px 10px 0px 0px !important;
+      margin: 5px 10px 3px 20px !important;
+    }
+
+    .wsmain {
+      min-width: 1170px !important;
+      margin: 0 auto !important;
+    }
+
+    .wsmenu-list {
+      margin: 0px 15px !important;
+  }
+
+  .wsshoptabing {
+    margin:50px 0px !important;
+  }
+
+  .model-menu-img {
+    padding:20px;
+    width: 63%;
+    float: left;
+    clear: both;
+  }
+
+    .wsmenu {
+      padding: 0px 0px 0px 0px !important;
+      width: 83% !important;
+      float: right !important;
+  }
     .wsmain {
       width: 96%;
       margin-left: 2%;
@@ -5686,8 +5782,19 @@ input[type="radio"], input[type="checkbox"] {
       margin: 0px;
     }
     .smllogo {
-      padding: 13px 6px 0px 0px;
+      padding: 5px 10px 0px 0px !important;
+      margin: 5px 10px 3px 20px !important;
     }
+
+    .wsmain {
+      min-width: 1170px !important;
+      margin: 0 auto !important;
+    }
+
+    .wsshoptabing {
+      margin:50px 0px !important;
+    }
+
     .wsmenu-list li a .arrow:after {
       display: none;
     }
@@ -5699,6 +5806,7 @@ input[type="radio"], input[type="checkbox"] {
     .wsmenu {
       padding: 0px 0px 0px 0px !important;
       width: 83% !important;
+      float: right !important;
     }
     .wsmain {
       width: 96%;
@@ -5828,6 +5936,9 @@ input[type="radio"], input[type="checkbox"] {
     }
     .wstabitem>li {
       position: relative;
+    }
+    .wsshoptabing {
+      margin:50px 0px !important;
     }
     .wstabitem>li>a {
       width: 100%;
@@ -6148,7 +6259,7 @@ input[type="radio"], input[type="checkbox"] {
     .wsmenu-click {
       border-left: 1px solid #e0e0e0;
       cursor: pointer;
-      display: block;
+      display: block !important;
       height: 57px;
       position: absolute;
       right: 0;
@@ -6157,7 +6268,7 @@ input[type="radio"], input[type="checkbox"] {
       z-index: 10;
     }
     .wsmenu-click i {
-      display: block;
+      display: block !important;
       height: 23px;
       width: 25px;
       margin-top: 15px;
@@ -6171,7 +6282,7 @@ input[type="radio"], input[type="checkbox"] {
     .wsmenu-click02 {
       border-left: 1px solid #f3f3f3;
       cursor: pointer;
-      display: block;
+      display: block !important;
       height: 45px;
       position: absolute;
       right: 0;
@@ -6181,7 +6292,7 @@ input[type="radio"], input[type="checkbox"] {
       background-color: #f3f3f3;
     }
     .wsmenu-click02 i {
-      display: block;
+      display: block !important;
       height: 23px;
       width: 34px;
       margin-top: 11px;
@@ -6347,7 +6458,15 @@ input[type="radio"], input[type="checkbox"] {
     }
     .wsmenu-list li:hover .wsmenu-submenu {
       display: none;
-    }
+	}
+	/*added menu css*/
+	.wsmenu-list{
+		width:100%;
+	}
+	.wstabitem02>li>a{
+		color:#000 !important;
+	}
+	/*......*/
     .wsmenu-list li:hover .wsmenu-submenu .wsmenu-submenu-sub {
       display: none;
     }
@@ -7074,6 +7193,9 @@ input[type="radio"], input[type="checkbox"] {
     .tranbg {
       background-color: #fff !important;
     }
+    .wsshoptabing {
+      margin:50px 0px !important;
+    }
     .red-grdt>.wsmenu>.wsmenu-list>li>a>.fa {
       color: #fff !important;
     }
@@ -7262,4 +7384,17 @@ input[type="radio"], input[type="checkbox"] {
 
 select.form-control.select_item {
   height: 28px !important;
+}
+
+.icon.icon-video_play.text-center {
+  z-index: 2000;
+  position: relative;
+  }
+  
+  .ads.img-responsive {
+  margin-bottom: 10px;
+  }
+
+  .panel-collapse li {
+    padding-left: 7%;
 }

@@ -56,6 +56,6 @@ export class DefaultService {
 
   getMappingFilters():any {
     return this.http.get(this.BASE_URL+"filters.json").map((res:Response)=>res);
-  }
+}
 
 }

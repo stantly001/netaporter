@@ -57,3 +57,13 @@
     text-align:left;
 }
 
+.pagination > li > a, .pagination > li > span {
+    border:none;
+}
+.pagination > li > a:hover {
+    background: transparent !important;
+}
+
+.pagination >li:hover {
+    cursor: pointer;
+}

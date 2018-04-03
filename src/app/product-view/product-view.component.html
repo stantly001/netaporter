@@ -32,7 +32,6 @@
                   <span class="fa fa-chevron-up thumb-arrow"></span>
                 </a>
               </div>
-
               <ol class="carousel-indicators">
                 <li data-target="#carousel-custom" *ngFor="let image of images;let i = index" [attr.data-slide-to]="i" [class.active]="i == 0"
                   (click)="isOn=true;">
@@ -49,9 +48,18 @@
                 <span class="fa fa-play-circle"></span>
               </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9">             
+                <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
+                    <div class="text-center"><b>Like This Item?</b></div>               
+                    <div class="text-center">
+                      <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
+                      <p class="text-nowrap">if it goes on sale and more.</p>
+                    </div>                
+                  </popover-content>
+                  <i class="fa fa-heart-o wish-list-popover" [popover]="myPopover" 
+                   aria-hidden="true"></i>
               <div class="pull-right">
-                <i class="far fa-heart"></i>
+                  
               </div>
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
@@ -59,7 +67,7 @@
                   <div class="item text-center" *ngFor="let image of images;let i = index" [class.active]="i==0">
                     <span>
                       <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
-                      <img appProductView src='{{image?.url}}' width="350" height="400" alt='Daisy on the Ohoopee' class="img-responsive" />
+                      <img appProductView src='{{image?.url}}' alt='Daisy on the Ohoopee' class="img-responsive" />
                       <!-- <p>Hover</p> -->
                     </span>
                   </div>
@@ -74,7 +82,7 @@
                 </a>
               </div>
               <div class="item" [hidden]="isOn">
-                <video width="320" height="450" preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
+                <video preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer class="img-responsive">
                   <!-- <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4" /> Browser not supported -->
                 </video>
               </div>

@@ -35,7 +35,11 @@ import { SortComponent } from './sort/sort.component';
 import { AlternativeStyleComponent } from './alternative-style/alternative-style.component';
 import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
+import { PopoverModule } from "ngx-popover";
+
 import 'hammerjs';
+import { CountryComponent } from './country/country.component';
+import { LanguageComponent } from './language/language.component';
 
 @NgModule({
   declarations: [
@@ -58,15 +62,18 @@ import 'hammerjs';
     SortComponent,
     AlternativeStyleComponent,
     WaysToShopComponent,
+    CountryComponent,
+    LanguageComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(Approute),
-    NgxCarouselModule
+    NgxCarouselModule,
+    PopoverModule
   ],
-  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService,BreadcrumbService],
+  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

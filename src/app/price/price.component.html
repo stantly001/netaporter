@@ -1,38 +1,38 @@
 <div class="panel-group" id="pricefilteraccordation" role="tablist" aria-multiselectable="true">
-  <div>
-    <div role="tab" id="headingOne">
-      <!-- <h4 class="panel-title">
-          <a >PRICE</a>
-          <div class="pull-right">
-              <i class="more-less fa fa-minus"></i>
-            </div>
-        </h4> -->
-      <h4 class="panel-title">
-        <a (click)="isCategory=!isCategory">PRICE
-          <div class="pull-right">
-            <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-          </div>
-        </a>
+    <div>
+        <div role="tab" id="headingOne">
+            <!-- <h4 class="panel-title">
+              <a >PRICE</a>
+              <div class="pull-right">
+                  <i class="more-less fa fa-minus"></i>
+                </div>
+            </h4> -->
+            <h4 class="panel-title">
+                <a (click)="isCategory=!isCategory">PRICE
+                    <div class="pull-right">
+                        <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+                    </div>
+                </a>
 
-      </h4>
-    </div>
-    <div id="pricefilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
-      <div class="">
-        <div class="w3ls_dresses_grid_left_grid">
-          <div class="w3ls_dresses_grid_left_grid_sub">
-            <div class="styled-input-container styled-input--square">
-              <ul class="panel_bottom">
-                <li *ngFor="let price of prices">
-                  <div class="styled-input-single">
-                    <input id="product-filter-p{{price.rangeId}}" type="checkbox" class="checkbox-border" (click)="filter(price,$event.target.checked,'price')">
-                    <label for="product-filter-p{{price.rangeId}}" class="checkbox-menu">{{price.rangeFrom}} - {{price.rangeTo}}</label>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+            </h4>
         </div>
-      </div>
+        <div id="pricefilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
+            <div class="">
+                <div class="w3ls_dresses_grid_left_grid">
+                    <div class="w3ls_dresses_grid_left_grid_sub">
+                        <div class="styled-input-container styled-input--square">
+                            <ul class="panel_bottom">
+                                <li *ngFor="let price of prices">
+                                    <div class="styled-input-single">
+                                        <input id="product-filter-p{{price.rangeId}}" type="checkbox" class="checkbox-border" (click)="filter(price,$event.target.checked,'price')">
+                                        <label for="product-filter-p{{price.rangeId}}" class="checkbox-menu">{{price.rangeFrom}} - {{price.rangeTo}}</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

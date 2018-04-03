@@ -23,10 +23,9 @@
                 
             ],
             "scripts": [
-                "../node_modules/jquery/dist/jquery.min.js",
+                "../node_modules/jquery/dist/jquery.min.js",        
                 "assets/js/bootstrap.min.js",
                 "assets/js/webslidermenu.js",
-                "assets/js/font-awesome.js",
                 "assets/js/menuscroll.js",
                 "assets/js/custom.js",
                 "assets/js/jquery.zoom.js"],

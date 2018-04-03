@@ -86,7 +86,7 @@ export class UrlComponent implements OnInit {
     if (key !== "rangeId") {
       products.forEach(element => {
         (key == "subLevelFilter") ? (key = 'subLevelId') : key;
-        console.log("==> element[key]",element[key]);
+        // console.log("==> element[key]",element[key]);
         let length = this.dataService.findExist(element[key], value);
         (length > 0) ? arr.push(element) : '';
       });
