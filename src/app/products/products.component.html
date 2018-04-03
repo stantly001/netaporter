@@ -2,12 +2,17 @@
 <div class="w3ls_dresses_grid_right_grid3">
     <div class="row product-display-filter">
         <div class="col-md-3">
-            <input type="checkbox" class="on-sale"> On Sale Items
+            <div class="styled-input-container styled-input--square">
+                <div class="styled-input-single">
+                    <input type="checkbox" id="product-filter-onsale" class="on-sale">
+                    <label for="product-filter-onsale" class="checkbox-menu">On Sale Items</label>
+                </div>
+            </div>
         </div>
         <div class="col-md-5">
             <app-sort></app-sort>
             <div class="btn-group">
-                <select name="select_item" (change)="selectPageSize($event.target.value)" class="select_item">
+                <select name="select_item" (change)="selectPageSize($event.target.value)" class="form-control select_item">
                     <option value="all">Select</option>
                     <option value="5">5/pages</option>
                     <option value="10">10/pages</option>
@@ -44,18 +49,21 @@
         <div class="w31s_dresses_grid_right_grid3">
 
             <div class="row" *ngFor="let row of rows">
-                <div *ngFor="let product of pagedProducts | slice:(row*itemsPerRow):(row+1)*itemsPerRow;let i = index" class="col-md-4 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+                 <div *ngFor="let product of pagedProducts | slice:(row*itemsPerRow):(row+1)*itemsPerRow; let i = index" class="col-md-4 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
 
                     <div class="agile_ecommerce_tab_left dresses_grid">
                         <div class="hs-wrapper hs-wrapper2">
-                            <a [routerLink]='["/product",cn,ln,product.id]'>
+                            <div class="pull-right" *ngIf="product.wishList==true">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
                                 <img class="img-responsive" [src]="product[i] ? product.outFitImg : product.productImg" (mouseover)="product[i] = true" (mouseout)="product[i] = false">
-                                <!-- <img src="{{product.productImg}}" class="img-responsive" alt="">
-                            <img src="{{product.outFitImg}}" class="img-responsive" alt=""> -->
+                                 <!-- <img src="{{product.productImg}}" class="img-responsive" alt="">
+                             <img src="{{product.outFitImg}}" class="img-responsive" alt=""> -->
                             </a>
                         </div>
                         <div class="description">
-                            <a routerLink="/product/{{product.id}}" title="Printed satin dress" data-position="1">
+                            <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]' title="Printed satin dress" data-position="1">
                                 <span class="designer">{{product.name}}</span>
                             </a>
                             <br class="clearboth">

@@ -3,6 +3,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
 import 'ngx-popover';
+import { ParamsService } from '../services/params.service';
+import { BreadcrumbService } from '../services/breadcrumb.service';
 
 declare var jQuery: any;
 
@@ -23,9 +25,26 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
+  cn:string;
+  ln:string;
+
+  breadCrumbMenuName: string;
+  breadCrumbMenuId:number;
+
+  breadCrumbCategoryName: string;
+  breadCrumbCategoryId:number;
+
+  breadCrumbSubCategoryName: string;
+  breadCrumbSubCategoryId:number;
+
+  breadCrumbSubLevelName: string;
+  breadCrumbSubLevelId:number;
+  
+  breadCrumbProductName: string;
+
   @ViewChild('videoPlayer') videoplayer: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService) {
+  constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
 
@@ -38,13 +57,26 @@ export class ProductViewComponent implements OnInit {
       this.alternateProducts = this.utilitiesService.getArrayDataByKey(response, "categories", categoryId);
       this.images = this.productsArr.images[0].image;
       this.availableColors = this.productsArr.availableColors;
-    });
-    this.defaultService.getProducts().subscribe(response => {
-      this.productsArr = response.filter(product => product.id === this.productId)[0];
+      this.activatedRoute.params.subscribe(params => {
+        this.ln = params.ln;
+        this.cn = params.cn;  
+        this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
+          this.breadCrumbMenuName = response.menuName;
+          this.breadCrumbMenuId = response.menuId;
+          this.breadCrumbCategoryName = response.categoryName;
+          this.breadCrumbCategoryId = response.categoryId;
+          this.breadCrumbSubCategoryName = response.subCategory;
+          this.breadCrumbSubCategoryId=response.subCategoryId;
+          this.breadCrumbSubLevelName = response.subLevel;
+          this.breadCrumbSubLevelId = response.subLevelId;
+          this.breadCrumbProductName = this.productsArr.name;
+        });
+      });
+  
     });
     this.defaultService.getSizes().subscribe(response => {
       this.sizes = response;
-    })
+    });
   }
 
   imageColorSelection(color) {

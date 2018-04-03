@@ -18,6 +18,8 @@ import { UtilitiesService } from './services/utilities.service';
 import { ParamsService } from './services/params.service';
 import { FilterService } from './services/filter.service';
 import { PaginationService } from './services/index';
+import { BreadcrumbService } from './services/breadcrumb.service';
+
 import * as $ from 'jquery';
 import { ProductViewDirective } from './directives/product-view.directive';
 import { ColorsComponent } from './colors/colors.component';
@@ -67,7 +69,7 @@ import 'hammerjs';
     NgxCarouselModule,
     PopoverModule
   ],
-  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService],
+  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

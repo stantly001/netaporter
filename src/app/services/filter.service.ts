@@ -5,6 +5,7 @@ import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
 import { UtilitiesService } from '../services/utilities.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class FilterService {
@@ -20,21 +21,86 @@ export class FilterService {
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService) { }
 
+
+  private categoryFilterData = new BehaviorSubject<Array<any>>([]);
+  private brandFilterData = new BehaviorSubject<Array<any>>([]);
+  private colorFilterData = new BehaviorSubject<Array<any>>([]);
+  private sizeFiltersData = new BehaviorSubject<Array<any>>([]);
+
+  category = this.categoryFilterData.asObservable();
+  brand = this.brandFilterData.asObservable();
+  color = this.colorFilterData.asObservable();
+  size = this.sizeFiltersData.asObservable();
+
+
+  /**
+  * 
+   * @param arr 
+   * Set Category Filter By URL
+   */
+  public setCategoryFilter(arr: any) {
+    this.categoryFilterData.next(arr);
+  }
+
+  /**
+   * 
+   * @param arr 
+   * Set BrandFilter By URL
+   */
+  public setBrandFilter(arr: any) {
+    this.brandFilterData.next(arr);
+  }
+
+  /**
+   * 
+   * @param arr 
+   * Set ColorFilters By URL
+   */
+  public setColorFilter(arr: any) {
+    this.colorFilterData.next(arr);
+  }
+
+  /**
+   * 
+   * @param arr 
+   * Set SizeFilters By URL
+   */
+  public setSizeFilter(arr: any) {
+    this.sizeFiltersData.next(arr);
+  }
+
+  /**
+   * 
+   * @param params 
+   * Create Filters Based on URL / User Selection
+   */
+  public createFilters(params:Object) {
+    this.defaultService.getMappingFilters().subscribe(response=>{
+
+      let categoryArr = response.filter(data=>data['categoryId']==params['categoryId'])[0];
+      if(!(params['subCategoryId'] && params['subLevelId'])) {
+        this.defaultService.getBrands();
+        // this.utilitiesService.mapArrays(params['brandId']);
+      }
+
+
+      
+    });
+  }
+
+
   /**
   * 
   * @param filterObj 
   * @param isChecked 
   * @param type 
-  * 
+  * For QueryString filters
   */
   public filter(filterObj, isChecked, type, urlParams) {
-    console.log(type);
-    console.log("filteredObj ==>?",filterObj);
-
     let sortedMap: { [k: string]: any } = {};
 
     if (type == 'brand') {
-      console.log("brandId ==>",filterObj.brandId);
+      console.log("brandId ==>", filterObj.brandId);
       isChecked ? this.brandFilter.push(filterObj.brandId) : this.brandFilter.splice(this.brandFilter.indexOf(filterObj.brandId))
       if (this.queryStringArr.indexOf("brandFilter") == -1 && (this.brandFilter.length > 0)) {
         this.queryStringArr.push("brandFilter");
@@ -91,11 +157,9 @@ export class FilterService {
       subLevelFilter: this.utilitiesService.convertArrayToString(this.subLevelFilter)
     };
 
-    console.log("filters ==>",filters);
-
     sortedMap = this.utilitiesService.sortObjectByArrayKeys(this.queryStringArr, filters)
     let routeUrl = this.utilitiesService.buildRoutingUrl(urlParams);
-    console.log("sortedMap ==>",sortedMap);
+
     return {
       "queryParam": sortedMap,
       "url": routeUrl

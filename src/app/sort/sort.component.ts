@@ -19,8 +19,9 @@ export class SortComponent implements OnInit {
 
   sort: Array<any> = [];
   params: Object;
+  pagedProducts: Array<any> = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
@@ -41,7 +42,7 @@ export class SortComponent implements OnInit {
   /**
   * 
   * @param type 
-  * Sort Method for Product
+  * Sort Method for Product 
   */
   sortProduct(type) {
     let routeUrl = this.utilitiesService.buildRoutingUrl(this.params);
@@ -52,12 +53,22 @@ export class SortComponent implements OnInit {
     if (type == "priceHighToLow") {
       sortOrder = "desc";
     }
-    Observable.combineLatest(this.activatedRoute.params, this.activatedRoute.queryParams,
-      (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
-        let obj = JSON.parse(JSON.stringify(allParams.qParams));
-        (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.urlComponent.loadUrl(routeUrl, obj,'');
-      });
+    this.paramsService.pagination.subscribe(response => {
+      if (response.length !== 0) {
+        this.pagedProducts = response;
+        
+        Observable.combineLatest(this.activatedRoute.params, this.activatedRoute.queryParams,
+          (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
+            let obj = JSON.parse(JSON.stringify(allParams.qParams));
+            (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
+            //this.urlComponent.loadUrl(routeUrl, obj,'');
+
+            this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "orginalPrice");
+            this.router.navigate([routeUrl], { queryParams: obj });
+          });
+      }
+    });
+
   }
 
 }

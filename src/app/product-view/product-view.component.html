@@ -1,6 +1,28 @@
 <section id="description">
   <div class="container">
     <div class="row">
+      <div class="breadcrumbs">
+        Home
+        <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId]">
+          / {{breadCrumbMenuName}}
+        </a>
+        <span *ngIf="breadCrumbCategoryName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId]">
+            / {{breadCrumbCategoryName}}
+          </a>
+        </span>
+        <span *ngIf="breadCrumbSubCategoryName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId]">
+            / {{breadCrumbSubCategoryName}}
+          </a>
+        </span>
+        <span *ngIf="breadCrumnSubLevelName">
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId,breadCrumbSubLevelId]">
+            / {{breadCrumnSubLevelName}}
+          </a>
+        </span>
+        <span>/ {{breadCrumbProductName}}</span>
+      </div>
       <div class="col-md-8">
         <div id="carousel-custom" class="carousel slide " data-ride="carousel" data-interval="false">
           <div class="row">

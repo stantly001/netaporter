@@ -23,18 +23,20 @@ export class ProductsComponent implements OnInit {
   page: any;
   pageNumber: any;
   pageSize: any;
-  @Input() products: Array<any> = [];
-  @Input() ImageView: string;
+  products: Array<any> = [];
+  // @Input() ImageView: string;
   pager: any = {};
   pagedProducts: any[];
-  sort:Array<any>=[];
-  params:Object;
-  cn:string;
-  ln:string;
+  sort: Array<any> = [];
+  params: Object;
+  cn: string;
+  ln: string;
+  menuId: string;
+  categoryId: string;
 
   constructor(private paramsService: ParamsService,
     private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute,
-    private utilitiesService: UtilitiesService,private paginationService:PaginationService, private urlComponent: UrlComponent) { }
+    private utilitiesService: UtilitiesService, private paginationService: PaginationService, private urlComponent: UrlComponent) { }
 
   ngOnInit() {
 
@@ -42,43 +44,42 @@ export class ProductsComponent implements OnInit {
       this.params = response;
       this.cn = response.cn;
       this.ln = response.ln;
+      this.menuId = response.menuId;
+      this.categoryId = response.categoryId;
     });
     this.activatedRoute.queryParams.subscribe(response => {
-      console.log(response);
       this.pageNo = response.page;
       this.pageSize = response.pageSize;
     })
 
-    this.paramsService.getFilteredProducts().subscribe(response => {
-      this.products = response;
-
-      this.itemsPerRow = 3
-      this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
-
-      console.log(response);
-      let pageSize
-      if (this.pageSize) {
-        pageSize = this.pageSize;
-      } else {
-        pageSize = 10;
-      }
-      let pageNo = this.pageNo
-
-      if (response.length != 0 && !pageNo) {
-        // alert(1)
-        pageNo = 1;
-        this.setPage(pageNo, pageSize)
+    this.paramsService.fp.subscribe(response => {
+      if (response.length !== 0) {
+        console.log("fp=====>", response);
+        this.products = response;
+        this.itemsPerRow = 3
+        this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
+        let pageSize
+        if (this.pageSize) {
+          pageSize = this.pageSize;
+        } else {
+          pageSize = 10;
+        }
+        let pageNo = this.pageNo
+        if (!pageNo) {
+          pageNo = 1;
+          this.setPage(pageNo, pageSize)
+        }
       }
     });
   }
 
   selectPageSize(number) {
     this.pageSize = number;
-    console.log(number)
+    // console.log(number)
     // get pager object from service
     this.pager = this.paginationService.getPager(this.products.length, 1, this.pageSize);
     // get current page of items
-    console.log(this.pager)
+    // console.log(this.pager)
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
@@ -89,10 +90,13 @@ export class ProductsComponent implements OnInit {
       queryParamsHandling: 'merge',
       // preserve the existing query params in the route
       // skipLocationChange: true
+
     });
+    this.paramsService.setPaginationProducts(this.pagedProducts);
   }
 
   setPage(page: number, len: number) {
+    // alert();
     console.log(page)
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
@@ -109,12 +113,14 @@ export class ProductsComponent implements OnInit {
     }
 
     // get pager object from service
-    console.log(this.products.length)
-    console.log(len)
+    // console.log(this.products.length)
+    // console.log(len)
     this.pager = this.paginationService.getPager(this.products.length, page, len);
     // get current page of items
-    this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    // this.paramsService.setFilteredProducts(this.pagedProducts);
+    this.pagedProducts= this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
+    this.paramsService.setPaginationProducts(this.pagedProducts);
+    // this.utilitiesService.sortArrayByOrders(this.pagedProducts, 'asc', "orginalPrice");
+
   }
 
 

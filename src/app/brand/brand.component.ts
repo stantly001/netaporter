@@ -66,7 +66,6 @@ export class BrandComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     this.activatedRoute.queryParams.subscribe(response=>{
-      console.log(response);
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
