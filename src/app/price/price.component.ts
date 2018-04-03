@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
-import { UrlComponent} from '../url/url.component';
+import { UrlComponent } from '../url/url.component';
 
 import { UtilitiesService } from '../services/utilities.service';
 import { ParamsService } from '../services/params.service';
@@ -16,20 +16,21 @@ import { FilterService } from '../services/filter.service';
 })
 export class PriceComponent implements OnInit {
 
-  prices:Array<any>=[];
+  isCategory: boolean;
+  prices: Array<any> = [];
   menuId: number;
   categoryId: number;
   subCategoryId: number;
   subLevelId: number;
 
-  urlParams:Object;
-  
+  urlParams: Object;
+
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService,private urlComponent:UrlComponent,private filterService:FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
-
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -38,9 +39,9 @@ export class PriceComponent implements OnInit {
       this.subLevelId = parseInt(response.subLevelId);
     });
 
-     /**
-     * Price Option Call
-     */
+    /**
+    * Price Option Call
+    */
     this.defaultService.getPrice().subscribe(response => {
       this.prices = response;
     });
@@ -53,9 +54,9 @@ export class PriceComponent implements OnInit {
   * @param type 
   * 
   */
- public filter(filterObj, isChecked, type) {
-  let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
-  this.urlComponent.loadUrl(filterData.url,filterData.queryParam);
-}
+  public filter(filterObj, isChecked, type) {
+    let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, this.prices);
+  }
 
 }

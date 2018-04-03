@@ -3,11 +3,23 @@
   <div>
     <div role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#colorfilteraccordation" href="#colorfilter" aria-expanded="true" aria-controls="collapseOne">COLORS</a>
+        <a (click)="isCategory=!isCategory">COLORS
+          <div class="pull-right">
+              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+            </div>
+        </a>
+        
       </h4>
+
+      <!-- <h4 class="panel-title">
+        <a >COLORS</a>
+        <div class="pull-right">
+            <i class="more-less fa fa-minus"></i>
+          </div>
+      </h4> -->
     </div>
-    <div id="colorfilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
+    <div id="colorfilter" class="panel-collapse" [class.collapse]="isCategory==true">
+      <div class="">
         <div class="w3ls_dresses_grid_left_grid">
           <div class="w3ls_dresses_grid_left_grid_sub">
             <ul class="panel_bottom">

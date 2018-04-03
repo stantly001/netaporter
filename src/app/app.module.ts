@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {Approute} from './app.routes';
-import {RouterModule} from '@angular/router';
+import { Approute } from './app.routes';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,8 +13,8 @@ import { ViewComponent } from './view/view.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 
 import { DataService } from './services/data.service';
-import {DefaultService} from './services/default.service';
-import { UtilitiesService} from './services/utilities.service';
+import { DefaultService } from './services/default.service';
+import { UtilitiesService } from './services/utilities.service';
 import { ParamsService } from './services/params.service';
 import { FilterService } from './services/filter.service';
 import { PaginationService } from './services/index';
@@ -30,6 +30,11 @@ import { CategoryComponent } from './category/category.component';
 import { UrlComponent } from './url/url.component';
 import { ProductAdsComponent } from './product-ads/product-ads.component';
 import { SortComponent } from './sort/sort.component';
+import { AlternativeStyleComponent } from './alternative-style/alternative-style.component';
+import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,15 +53,19 @@ import { SortComponent } from './sort/sort.component';
     CategoryComponent,
     UrlComponent,
     ProductAdsComponent,
-    SortComponent
+    SortComponent,
+    AlternativeStyleComponent,
+    WaysToShopComponent,
   ],
   imports: [
-    BrowserModule, 
-    HttpClientModule, 
+    BrowserModule,
+    HttpClientModule,
     FormsModule,
-        RouterModule.forRoot(Approute)
+    RouterModule.forRoot(Approute),
+    NgxCarouselModule
   ],
   providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+  

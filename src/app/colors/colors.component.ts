@@ -13,6 +13,8 @@ import { FilterService } from '../services/filter.service';
 })
 export class ColorsComponent implements OnInit {
 
+  isCategory: boolean;
+  paginationSize: any;
   colors: Array<any> = [];
   colorFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
@@ -21,7 +23,7 @@ export class ColorsComponent implements OnInit {
   subCategoryId: number;
   subLevelId: number;
 
-  paginationSize:string;
+  // paginationSize:string;
   urlParams: Object;
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
@@ -29,7 +31,7 @@ export class ColorsComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
-
+    this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
       this.menuId = parseInt(response.menuId);
@@ -37,8 +39,6 @@ export class ColorsComponent implements OnInit {
       this.subCategoryId = parseInt(response.subCategoryId);
       this.subLevelId = parseInt(response.subLevelId);
     });
-
-
 
     this.defaultService.getProducts().subscribe(response => {
       let arr: Array<any> = [];
@@ -52,6 +52,7 @@ export class ColorsComponent implements OnInit {
       this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
       let data = this.dataService.getProductsByArrayMap(productResponse, params);
       this.colors = data.colors;
+      console.log(this.colors);
     });
   }
 
@@ -62,15 +63,18 @@ export class ColorsComponent implements OnInit {
   * @param type 
   * 
   */
+
+
+
+
   public filter(filterObj, isChecked, type) {
     this.activatedRoute.queryParams.subscribe(response=>{
       console.log(response);
       this.paginationSize = response.pageSize;
     });
-    
-    let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
     filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam);
+    this.urlComponent.loadUrl(filterData.url,filterData.queryParam,'');
   }
 
 }

@@ -1,44 +1,54 @@
 <!-- updated header -->
 <div class="wsmenucontainer clearfix">
-    <div id="overlapblackbg"></div>
-    <div class="wsmobileheader clearfix"> 
-      <a id="wsnavtoggle" class="animated-arrow"><span></span></a> 
-      <a class="smallogo">
-      </a>
-      
-      <a class="callusicon" href="tel:123456789"><span class="fa fa-phone"></span></a> 
-    </div>
-    <div class="headtoppart clearfix">
-      <div class="headerwp">
-        <div class="headertopleft">
-          <div class="address clearfix">
-              <!-- Country -->
-              <span class="dropdown">
-                  <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">United Arab Emirates
-                  <span class="caret"></span></a>
-                  <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
-                      <a role="menuitem">{{country.countryName}}</a></li>
-                       
-                  </ul>
-                </span>
-                <!-- Language -->
-                <span class="dropdown">
-                    <a class="dropdown-toggle" id="menu1" data-toggle="dropdown">AED
-                    <span class="caret"></span></a>
-                    <ul  class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                      <li (click)="updateLanguage(language)" [value]="language.languageShortName" 
-                      *ngFor="let language of languages">
-                        <a role="menuitem">{{language.languageName}}</a></li>
-                    </ul>
-                  </span>
-          <a href="#">Sign In | Register</a></div>
-        </div>
-        <div class="headertopright"> 
-        <a><i class="fa fa-truck" aria-hidden="true"></i> Free delivery in United Arab Emirates over AED 200</a>
+  <div id="overlapblackbg"></div>
+  <div class="wsmobileheader clearfix">
+    <a id="wsnavtoggle" class="animated-arrow">
+      <span></span>
+    </a>
+    <a class="smallogo">
+      <img src="../assets/images/shop-logo.png">
+    </a>
+
+    <a class="callusicon" href="">
+      <span class="fa fa-shopping-basket"></span>
+      <em class="roundpoint-mobile">8</em>
+    </a>
+  </div>
+  <div class="headtoppart clearfix">
+    <div class="headerwp">
+      <div class="headertopleft">
+        <div class="address clearfix">
+          <!-- Country -->
+          <span class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              {{countryName}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="updateCountry(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                <a>{{country.countryName}}</a>
+              </li>
+            </ul>
+          </span>
+          <!-- Language -->
+          <span class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">{{langName}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="updateLanguage(language)" [value]="language.languageShortName" *ngFor="let language of languages">
+                <a>{{language.languageName}}</a>
+              </li>
+            </ul>
+          </span>
+          <a href="#">Sign In | Register</a>
         </div>
       </div>
+      <div class="headertopright">
+        <a>
+          <i class="fa fa-truck" aria-hidden="true"></i> Free delivery in United Arab Emirates over AED 200</a>
+      </div>
     </div>
-    <app-navigation></app-navigation>
-  
   </div>
+  <app-navigation></app-navigation>
+</div>

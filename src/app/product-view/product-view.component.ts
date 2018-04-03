@@ -22,17 +22,13 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
-
   @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService) {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
 
-  ngOnInit() {
-
-   
-
+  ngOnInit() { 
     let result;
     this.isOn = true;
     this.defaultService.getProducts().subscribe(response => {
@@ -59,27 +55,7 @@ export class ProductViewComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit() {
-    setTimeout(() => {
-      (function () {
-        (<any>$('#carousel123')).carousel({ interval: 3600 });
-      }());
-      $('.carousel-showmanymoveone .item').each(function () {
-        var itemToClone = $(this);
-
-        for (var i = 1; i < 4; i++) {
-          itemToClone = itemToClone.next();
-          // wrap around if at end of item collection
-          if (!itemToClone.length) {
-            itemToClone = $(this).siblings(':first');
-          }
-          // grab item, clone, add marker class, add to collection
-          itemToClone.children(':first-child').clone()
-            .addClass("cloneditem-" + (i))
-            .appendTo($(this));
-        }
-      });
-    }, 300);
+  ngAfterViewInit() {   
   }
 
   toggleVideo(event: any) {

@@ -1,12 +1,23 @@
 <div class="panel-group" id="sizefilteraccordion" role="tablist" aria-multiselectable="true">
     <div>
       <div role="tab" id="headingOne">
+        <!-- <h4 class="panel-title">
+          <a>SIZE</a>
+          <div class="pull-right">
+              <i class="more-less fa fa-minus"></i>
+            </div>
+        </h4> -->
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#sizefilteraccordion" href="#sizefilter" aria-expanded="true" aria-controls="collapseOne">SIZE</a>
-        </h4>
+            <a (click)="isCategory=!isCategory">SIZE
+              <div class="pull-right">
+                  <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+                </div>
+            </a>
+           
+          </h4>
       </div>
-      <div id="sizefilter" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-        <div class="panel-body">
+      <div id="sizefilter" class="panel-collapse" [class.collapse]="isCategory==true" role="tabpanel" aria-labelledby="headingOne">
+        <div class="">
           <div class="w3ls_dresses_grid_left_grid grid-size-filter">
             <div class="w3ls_dresses_grid_left_grid_sub">
               <ul class="panel_bottom">

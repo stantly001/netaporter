@@ -33,7 +33,10 @@ export class NavigationComponent implements OnInit {
 
   menus:Array<any>=[];
 
+
   ngOnInit() {
+
+    console.log("navigaton called");
     
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
@@ -41,6 +44,7 @@ export class NavigationComponent implements OnInit {
 
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
+        console.log(data.state.root.firstChild.params);
         let tempParams= data.state.root.firstChild.params;
         this.ln = tempParams.ln;
         this.cn = tempParams.cn; 
@@ -64,6 +68,7 @@ export class NavigationComponent implements OnInit {
    * Product Search Filter 
    */
   onSearchProduct(event, value) {
+    console.log(value)
     if (event.key == 'Enter') {
       let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
       this.paramsService.setFilteredProducts(arr);

@@ -3,24 +3,32 @@ import {ViewComponent} from './view/view.component';
 import {ProductViewComponent} from './product-view/product-view.component';
 import { ParamsService } from './services/params.service';
 export const Approute:Routes=[
+    // {
+    //     path:"shop/:cn/:ln/:menuId/:categoryId",
+    //     component:ViewComponent,
+    //     children : [
+    //         {
+    //             path :":subCategoryId",
+    //             component:ViewComponent
+    //         }
+    //     ]
+    // },
     {
         path:"shop/:cn/:ln/:menuId/:categoryId",
         component:ViewComponent,
-        children : [
-            {
-                path :":subCategoryId",
-                component:ViewComponent
-            }
-        ]
+        // data: {
+            // Uses static text (Home)
+          //  breadcrumbs: McBreadcrumbsResolver
+        //   } 
     },
-    // {
-    //     path:"shop/:cn/:ln/:menuId/:categoryId/:subCategoryId",
-    //     component:ViewComponent,
-    //     data: {
-    //         // Uses static text (Home)
-    //       //  breadcrumbs: McBreadcrumbsResolver
-    //       } 
-    // },
+    {
+        path:"shop/:cn/:ln/:menuId/:categoryId/:subCategoryId",
+        component:ViewComponent,
+        // data: {
+            // Uses static text (Home)
+          //  breadcrumbs: McBreadcrumbsResolver
+        //   } 
+    },
     // {
     //     path:"shop/:cn/:ln/:menuId/:categoryId/:subCategoryId/:subLevelId",
     //     component:ViewComponent,

@@ -4,9 +4,9 @@
       <div class="col-md-8">
         <div id="carousel-custom" class="carousel slide " data-ride="carousel" data-interval="false">
           <div class="row">
-            <div class="col-md-3">
-              <div class="thumbnail-prev-button swiper-button text-center">
-                <a class="thumbnail-prev-button swiper-button text-center" href="#carousel-custom" data-slide="prev">
+            <div class="col-md-2">
+              <div class="thumbnail-prev-button swiper-button">
+                <a class="thumbnail-prev-button swiper-button" href="#carousel-custom" data-slide="prev">
                   <span class="fa fa-chevron-up thumb-arrow"></span>
                 </a>
               </div>
@@ -17,8 +17,8 @@
                 </li>
               </ol>
 
-              <div class="thumbnail-next-button swiper-button text-center">
-                <a class="thumbnail-next-button swiper-button text-center" href="#carousel-custom" data-slide="next">
+              <div class="thumbnail-next-button swiper-button">
+                <a class="thumbnail-next-button swiper-button" href="#carousel-custom" data-slide="next">
                   <span class="fa fa-chevron-down thumb-arrow"></span>
                 </a>
               </div>
@@ -27,25 +27,27 @@
               </div>
             </div>
             <div class="col-md-9">
+              <div class="pull-right"><i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
-                  <div class="item" *ngFor="let image of images;let i = index" [class.active]="i==0">
+                  <div class="item text-center" *ngFor="let image of images;let i = index" [class.active]="i==0">
                     <span>
                       <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
-                      <img appProductView src='{{image?.url}}' width='300' height='200' alt='Daisy on the Ohoopee' />
+                      <img appProductView src='{{image?.url}}' width="350" height="400" alt='Daisy on the Ohoopee' class="img-responsive" />
                       <!-- <p>Hover</p> -->
                     </span>
                   </div>
                 </div>
 
                 <!-- sag sol -->
-                <a class="left zoom-arrow-index carousel-control" href="#carousel-custom" data-slide="prev">
+                 <a class="left zoom-arrow-index carousel-control" href="#carousel-custom" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <a class="right zoom-arrow-index carousel-control" href="#carousel-custom" data-slide="next">
                   <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+                </a> 
               </div>
               <div class="item" [hidden]="isOn">
                 <video width="320" height="450" preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer>
@@ -128,9 +130,9 @@
             <button class="btn btn-primary submit-button">SUBMIT</button>
           </div>
         </div>
-        <div id="panel-group" class="panel-product">
-          <div class="panel panel-default" *ngFor="let item of productsArr?.Items; let i = index">
-            <div class="panel-heading" (click)="current = !current">
+        <div id="panel-group" class="panel-product accordion-container">
+          <div class="" *ngFor="let item of productsArr?.Items; let i = index">
+            <div class="" (click)="current = !current">
               <h5 class="panel-title">
                 {{item.title}}
                 <div class="pull-right">
@@ -139,11 +141,11 @@
               </h5>
             </div>
             <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
-              <div class="panel-body">{{item.description}}</div>
+              <p>{{item.description}}</p>
             </div>
           </div>
         </div>
-        <div>
+        <div class="share-icon">
           <h5>SHARE ON</h5>
           <a href="http://www.facebook.com">
             <i class="fa fa-facebook-f"></i>
@@ -165,71 +167,5 @@
     </div>
   </div>
 </section>
-<section class="shop-all-gucci">
-  <div class="text-center col-md-12 like-gucci">
-    <span><strong>Alternate Styles</strong></span>
-  </div>
-  <div class="clearfix"> </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="carousel carousel-showmanymoveone slide" id="carousel123">
-          <div class="carousel-inner">
-            <div class="item" [class.active]="i==0" *ngFor="let product of alternateProducts;let i=index;">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <a href="#">
-                  <img src="{{product?.productImg}}" class="img-responsive">
-                  <div class="product-price">
-                    <span [ngClass]="{strike:product.offerPrice!=='0'}">
-                      AED {{product.originalPrice}}
-                    </span>
-                    <span *ngIf="product.offerPrice!=='0'">
-                      AED {{product.offerPrice}}
-                    </span>
-                  </div>
-                  <div class="product-description">{{product.description}}</div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <a class="left carousel-control" href="#carousel123" data-slide="prev">
-            <i class="glyphicon glyphicon-chevron-left"></i>
-          </a>
-          <a class="right carousel-control" href="#carousel123" data-slide="next">
-            <i class="glyphicon glyphicon-chevron-right"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="address">
-  <div class="container">
-    <div class="col-xs-12">
-        <div class="text-center col-md-12 like-gucci">
-            <span><strong>More ways to shop</strong></span>
-          </div>
-      <div class="show-hide-content content row" style="transition: max-height 0.5s ease-in-out 0s; max-height: 0px;">
-        <div class="delivery col-xs-12 col-lg-4">
-         
-          
-          <div class="view-more">
-            <a href="/ae/en/Help/ShippingRatesAndPolicies" target="_blank" class="js-popup enabled help-link" data-link-name="delivery options">Roberto Cavalli</a>
-          </div>
-        </div>
-        <div class="returns col-xs-12 col-lg-4">
-          
-          <div class="view-more">
-            <a href="/ae/en/Help/ReturnsAndExchanges" target="_blank" class="js-popup enabled help-link" data-link-name="returns">Wedding Gowns</a>
-          </div>
-        </div>
-        <div class="returns col-xs-12 col-lg-4">
-          
-         
-          <div class="trigger-email help-link" data-link-name="help and advice">Long Dresses</div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-alternative-style *ngIf="alternateProducts" [Products]="alternateProducts"></app-alternative-style>
+<app-ways-to-shop></app-ways-to-shop>

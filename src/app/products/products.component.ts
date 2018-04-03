@@ -7,6 +7,7 @@ import { UrlComponent } from '../url/url.component';
 import { ParamsService } from '../services/params.service';
 import { UtilitiesService } from '../services/utilities.service';
 import { PaginationService } from '../services/index';
+// import { PaginationService } from '../services/index';
 import { DefaultService } from '../services/default.service';
 import { Observable } from 'rxjs/Rx';
 
@@ -19,9 +20,7 @@ export class ProductsComponent implements OnInit {
   rows: number[];
   itemsPerRow: number;
   pageNo: any;
-  page: number;
-  itemsPerPage: number;
-  totalItems: number;
+  page: any;
   pageNumber: any;
   pageSize: any;
   @Input() products: Array<any> = [];
@@ -33,9 +32,9 @@ export class ProductsComponent implements OnInit {
   cn: string;
   ln: string;
 
-  constructor(private paramsService: ParamsService, private paginationService: PaginationService,
+  constructor(private paramsService: ParamsService,
     private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent) { }
+    private utilitiesService: UtilitiesService, private paginationService: PaginationService, private urlComponent: UrlComponent) { }
 
   ngOnInit() {
 
@@ -56,8 +55,6 @@ export class ProductsComponent implements OnInit {
       this.itemsPerRow = 3
       this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
 
-      console.log("rows ==>",this.rows);
-
       console.log(response);
       let pageSize
       if (this.pageSize) {
@@ -66,7 +63,6 @@ export class ProductsComponent implements OnInit {
         pageSize = 10;
       }
       let pageNo = this.pageNo
-
       if (response.length != 0 && !pageNo) {
         // alert(1)
         pageNo = 1;
@@ -76,10 +72,6 @@ export class ProductsComponent implements OnInit {
   }
 
 
-  /**
-   * 
-   * @param number 
-   */
   selectPageSize(number) {
     this.pageSize = number;
     console.log(number)
@@ -100,11 +92,6 @@ export class ProductsComponent implements OnInit {
     });
   }
 
-  /**
-   * 
-   * @param page 
-   * Pagination code
-   */
   setPage(page: number, len: number) {
     console.log("page", page)
     console.log(this.products.length)
@@ -130,7 +117,11 @@ export class ProductsComponent implements OnInit {
     this.pager = this.paginationService.getPager(this.products.length, page, len);
     // get current page of items
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    return;
+    this.paramsService.setFilteredProducts(this.pagedProducts);
   }
+
+
+
+
 
 }

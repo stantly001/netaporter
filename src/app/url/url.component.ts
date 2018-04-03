@@ -21,7 +21,7 @@ export class UrlComponent implements OnInit {
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   /**
    * 
@@ -29,8 +29,8 @@ export class UrlComponent implements OnInit {
    * @param obj 
    * updates url and get products
    */
-  loadUrl(routeUrl, obj) {
-
+  loadUrl(routeUrl, obj, priceArr) {
+    this.prices = priceArr;
     /**
      * Products By Category / SubCategory / SubLevel
      */
@@ -45,7 +45,6 @@ export class UrlComponent implements OnInit {
       this.filteredProducts = response;
     });
 
-    console.log(this.orginalProduct)
     this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
       this.activatedRoute.queryParams.subscribe((params: Params) => {
         this.paramsService.setQueryParams(params);
@@ -65,7 +64,6 @@ export class UrlComponent implements OnInit {
   getProductByFilters(params) {
     let arr: Array<any> = [];
     let filters = this.dataService.stringKeyToArray(params);
-    console.log(Object.keys(filters).length);
     if (Object.keys(filters).length == 0) {
       this.filteredProducts = this.orginalProduct;
     }
@@ -83,9 +81,11 @@ export class UrlComponent implements OnInit {
 
   getData(products, key, value) {
     let arr: Array<any> = [];
+    let status: boolean;
     if (key !== "rangeId") {
       products.forEach(element => {
         (key == "subLevelFilter") ? (key = 'subLevelId') : key;
+        console.log("==> element[key]",element[key]);
         let length = this.dataService.findExist(element[key], value);
         (length > 0) ? arr.push(element) : '';
       });
@@ -94,6 +94,4 @@ export class UrlComponent implements OnInit {
     }
     return arr;
   }
-
-
 }

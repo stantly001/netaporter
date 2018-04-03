@@ -56,7 +56,7 @@ export class SortComponent implements OnInit {
       (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
         let obj = JSON.parse(JSON.stringify(allParams.qParams));
         (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.urlComponent.loadUrl(routeUrl, obj);
+        this.urlComponent.loadUrl(routeUrl, obj,'');
       });
   }
 
