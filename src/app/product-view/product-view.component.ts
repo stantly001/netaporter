@@ -24,21 +24,21 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
-  cn:string;
-  ln:string;
+  cn: string;
+  ln: string;
 
   breadCrumbMenuName: string;
-  breadCrumbMenuId:number;
+  breadCrumbMenuId: number;
 
   breadCrumbCategoryName: string;
-  breadCrumbCategoryId:number;
+  breadCrumbCategoryId: number;
 
   breadCrumbSubCategoryName: string;
-  breadCrumbSubCategoryId:number;
+  breadCrumbSubCategoryId: number;
 
   breadCrumbSubLevelName: string;
-  breadCrumbSubLevelId:number;
-  
+  breadCrumbSubLevelId: number;
+
   breadCrumbProductName: string;
 
   @ViewChild('videoPlayer') videoplayer: any;
@@ -56,31 +56,33 @@ export class ProductViewComponent implements OnInit {
       this.alternateProducts = this.utilitiesService.getArrayDataByKey(response, "categories", categoryId);
       this.images = this.productsArr.images[0].image;
       this.availableColors = this.productsArr.availableColors;
-    });
-    this.defaultService.getProducts().subscribe(response => {
-      this.productsArr = response.filter(product => product.id === this.productId)[0];
+
+      this.activatedRoute.params.subscribe(params => {
+
+        this.ln = params.ln;
+        this.cn = params.cn;
+
+        this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
+          this.breadCrumbMenuName = response.menuName;
+          this.breadCrumbMenuId = response.menuId;
+          this.breadCrumbCategoryName = response.categoryName;
+          this.breadCrumbCategoryId = response.categoryId;
+          this.breadCrumbSubCategoryName = response.subCategory;
+          this.breadCrumbSubCategoryId = response.subCategoryId;
+          this.breadCrumbSubLevelName = response.subLevel;
+          this.breadCrumbSubLevelId = response.subLevelId;
+          this.breadCrumbProductName = this.productsArr.name;
+        });
+      });
+
+
+
     });
     this.defaultService.getSizes().subscribe(response => {
       this.sizes = response;
     });
 
-    this.activatedRoute.params.subscribe(params => {
 
-      this.ln = params.ln;
-      this.cn = params.cn;
-
-      this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
-        this.breadCrumbMenuName = response.menuName;
-        this.breadCrumbMenuId = response.menuId;
-        this.breadCrumbCategoryName = response.categoryName;
-        this.breadCrumbCategoryId = response.categoryId;
-        this.breadCrumbSubCategoryName = response.subCategory;
-        this.breadCrumbSubCategoryId=response.subCategoryId;
-        this.breadCrumbSubLevelName = response.subLevel;
-        this.breadCrumbSubLevelId = response.subLevelId;
-        this.breadCrumbProductName = this.productsArr.name;
-      });
-    });
 
   }
 

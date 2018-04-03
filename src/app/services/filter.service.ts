@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router, CanLoad } from '@angular/router';
 
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
@@ -8,7 +8,7 @@ import { UtilitiesService } from '../services/utilities.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
-export class FilterService {
+export class FilterService implements CanLoad {
 
   colorFilter: Array<any> = [];
   brandFilter: Array<any> = [];
@@ -19,7 +19,10 @@ export class FilterService {
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService) { }
+    private utilitiesService: UtilitiesService) { 
+      
+      
+    }
 
 
   private categoryFilterData = new BehaviorSubject<Array<any>>([]);
@@ -32,6 +35,9 @@ export class FilterService {
   color = this.colorFilterData.asObservable();
   size = this.sizeFiltersData.asObservable();
 
+  canLoad():any {
+    console.log("called Filter Service");
+  }
 
   /**
    * 

@@ -164,9 +164,10 @@ export class UtilitiesService {
    * Search By Product Name & Description 
    */
   searchFilter(arr: Array<any>, value: string) {
+    console.log("arrdsf ==>",arr);
     let response: Array<any> = [];
     arr.forEach(element => {
-      ((element.name.search(value) !== -1) || (element.description.search(value) !== -1)) ? response.push(element) : ''
+      ((element.name.search(/value/i) !== -1) || (element.description.search(/value/i) !== -1)) ? response.push(element) : ''
     });
     return response;
   }
