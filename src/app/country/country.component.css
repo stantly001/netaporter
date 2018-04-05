@@ -1,0 +1,11 @@
+ul.bottom-dropdown {
+    bottom:100% !important;
+    top:auto !important;
+}
+
+ul.bottom-dropdown > li > a {
+    color: #504c4c !important;
+}
+.dropdown-toggle {
+    color: #727171;
+}

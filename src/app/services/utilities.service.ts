@@ -190,7 +190,7 @@ export class UtilitiesService {
   searchFilter(arr: Array<any>, value: string) {
     let response: Array<any> = [];
     arr.forEach(element => {
-      ((element.name.search(value) !== -1) || (element.description.search(value) !== -1)) ? response.push(element) : ''
+      ((element.name.toLowerCase().search(value) !== -1) || (element.description.toLowerCase().search(value) !== -1)) ? response.push(element) : ''
     });
     return response;
   }

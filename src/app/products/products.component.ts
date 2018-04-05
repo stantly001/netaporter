@@ -36,9 +36,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(private paramsService: ParamsService,
     private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute,
-    private utilitiesService: UtilitiesService, private paginationService: PaginationService, private urlComponent: UrlComponent) { }
-
-  ngOnInit() {
+    private utilitiesService: UtilitiesService, private paginationService: PaginationService, private urlComponent: UrlComponent) {
 
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
@@ -54,7 +52,6 @@ export class ProductsComponent implements OnInit {
 
     this.paramsService.fp.subscribe(response => {
       if (response.length !== 0) {
-        console.log("fp=====>", response);
         this.products = response;
         this.itemsPerRow = 3
         this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
@@ -68,16 +65,23 @@ export class ProductsComponent implements OnInit {
         if (!pageNo) {
           pageNo = 1;
           this.setPage(pageNo, pageSize)
+        } else {
+          this.setPage(pageNo, pageSize)
         }
       } else {
         this.products = response;
       }
     });
+
+  }
+
+  ngOnInit() {
+
+
   }
 
   selectPageSize(number) {
     this.pageSize = number;
-    // console.log(number)
     // get pager object from service
     this.pager = this.paginationService.getPager(this.products.length, 1, this.pageSize);
     // get current page of items
@@ -98,7 +102,6 @@ export class ProductsComponent implements OnInit {
   }
 
   setPage(page: number, len: number) {
-    // alert();
     console.log(page)
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
