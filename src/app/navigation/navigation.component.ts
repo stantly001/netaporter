@@ -62,9 +62,7 @@ export class NavigationComponent implements OnInit {
     if (event.key == 'Enter') {
       if (value) {
         this.defaultService.getProducts().subscribe(response => {
-          console.log("Orginal Products ===>",response);
           let arr = this.utilitiesService.searchFilter(response, value);
-          console.log("search Result ==>",arr);
           this.paramsService.setFilteredProducts(arr);
         });
       } else {

@@ -37,6 +37,8 @@ import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import { PopoverModule } from "ngx-popover";
 
+import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
+
 import 'hammerjs';
 import { CountryComponent } from './country/country.component';
 import { LanguageComponent } from './language/language.component';
@@ -71,7 +73,8 @@ import { LanguageComponent } from './language/language.component';
     FormsModule,
     RouterModule.forRoot(Approute),
     NgxCarouselModule,
-    PopoverModule
+    PopoverModule,
+    McBreadcrumbsModule.forRoot()
   ],
   providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService],
   bootstrap: [AppComponent]

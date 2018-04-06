@@ -50,7 +50,6 @@ export class ProductViewComponent implements OnInit {
     
     this.activatedRoute.params.subscribe(response => {
       this.productId = parseInt(response.productId);
-      console.log("sadfasdfasd ==>",response);
       let result;
       this.isOn = true;
       this.defaultService.getProducts().subscribe(response => {
@@ -58,7 +57,6 @@ export class ProductViewComponent implements OnInit {
         let categoryId = response.filter(product => product.id === this.productId)[0].categories[0];
         this.alternateProducts = this.utilitiesService.getArrayDataByKey(response, "categories", categoryId);
         this.images = this.productsArr.images[0].image;
-        console.log("this.images ===>",this.images);
         this.availableColors = this.productsArr.availableColors;
         this.activatedRoute.params.subscribe(params => {
           this.ln = params.ln;

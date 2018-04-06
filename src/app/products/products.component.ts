@@ -64,8 +64,10 @@ export class ProductsComponent implements OnInit {
         let pageNo = this.pageNo
         if (!pageNo) {
           pageNo = 1;
-          this.setPage(pageNo, pageSize)
+          this.setPage(pageNo, pageSize);
+          console.log("+++++++++++++++++");
         } else {
+          console.log("____________________________");
           this.setPage(pageNo, pageSize)
         }
       } else {
