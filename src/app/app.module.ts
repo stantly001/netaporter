@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Approute } from './app.routes';
 import { RouterModule } from '@angular/router';
 
@@ -37,7 +37,18 @@ import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import { PopoverModule } from "ngx-popover";
 
+import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
 import 'hammerjs';
+import { CountryComponent } from './country/country.component';
+import { LanguageComponent } from './language/language.component';
+
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function translateHttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -60,6 +71,8 @@ import 'hammerjs';
     SortComponent,
     AlternativeStyleComponent,
     WaysToShopComponent,
+    CountryComponent,
+    LanguageComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,10 +80,18 @@ import 'hammerjs';
     FormsModule,
     RouterModule.forRoot(Approute),
     NgxCarouselModule,
-    PopoverModule
+    PopoverModule,
+    McBreadcrumbsModule.forRoot(),  
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: translateHttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService],
+  providers: [DataService, DefaultService, UtilitiesService, ParamsService, PaginationService, UrlComponent, FilterService, BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-  
+

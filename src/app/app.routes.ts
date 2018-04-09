@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {ViewComponent} from './view/view.component';
 import {ProductViewComponent} from './product-view/product-view.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FilterService } from './services/filter.service';
 export const Approute:Routes=[
     {
         path:"shop/:cn/:ln/:menuId",
@@ -11,9 +12,7 @@ export const Approute:Routes=[
     {
         path:"shop/:cn/:ln/:menuId/:categoryId",
         component:ViewComponent,
-        data : {
-            breadCrumbs:":menuId/:categoryId"
-        }
+        canLoad:[FilterService]
     },
     {
         path:"shop/:cn/:ln/:menuId/:categoryId/:subCategoryId",

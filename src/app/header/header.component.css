@@ -132,7 +132,7 @@ margin-right: 5px;
     z-index: 2;
     width: 100%;
 	    height: 30px;
-}
+} 
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
@@ -749,8 +749,8 @@ body {
   }
 
 .smllogo {
-  padding: 5px 10px 0px 50px;
-  margin: 0px 10px 3px 310px;
+  padding: 5px 10px 0px 0px;
+  margin: 0px 10px 3px 169px;
   float: left;
   width: 11%;
 }

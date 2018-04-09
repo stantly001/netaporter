@@ -278,7 +278,7 @@ ul.multi-column-dropdown h6 {
     margin-left: 12em;
 }
 .dropdown-menu {
-    left: -130%;
+    left: -42%;
 }
 .w3ls_products_pos h4 {
     font-size: 2em;
@@ -1243,7 +1243,7 @@ ul.wmuSliderPagination {
 	line-height:1.8em;
 }
 .footer-copy p a{
-	color:#ff9b05;
+	color:#FFF;
 	text-decoration:none;
 }
 .footer-copy p a:hover{
@@ -3212,7 +3212,7 @@ td.invert-image a img {
 		min-width: 735px;
 	}
 	.dropdown-menu {
-		left: -100%;
+		left: -8%;
 	}
 	ul.multi-column-dropdown h6 {
 		font-size: 1.2em;
@@ -4350,7 +4350,7 @@ td.invert-image a img {
 	}
 	.faq {
 		padding: 2em 0 0;
-	}
+	} 
 	.grid_5 h3, .grid_5 h2, .grid_5 h1, .grid_5 h4, .grid_5 h5, h3.hdg, h3.bars {
 		font-size: 1.2em;
 	}
@@ -4426,16 +4426,22 @@ input[type="radio"], input[type="checkbox"] {
 	vertical-align: sub;
 }
 .zoomImg{
-    width: 390% !important;
-    height: 585% !important;
+  /* width: 175% !important;
+  height: 150% !important; */
+  z-index: 10000;
 }
 .popover.bottom .arrow {
     left: 93% !important;
 }
 .popover{
-    left: 229px !important;
+    /* left: 229px !important; */
+    left: 324px !important;
 }
-
+.popover.bottom {
+  margin-top: 10px;
+  width: 300px !important;
+  z-index: 10000 !important;
+}
 
   /*
     * - Mega Menu Css
@@ -4492,6 +4498,7 @@ input[type="radio"], input[type="checkbox"] {
   
   .wsmobileheader {
     display: none;
+    z-index:10000;
   }
   
   #overlapblackbg {
@@ -5094,7 +5101,7 @@ input[type="radio"], input[type="checkbox"] {
     border-top: solid 0px;
     visibility: hidden;
     opacity: 0;
-    z-index: 101;
+    z-index: 10000;
     
   }
   
@@ -6169,6 +6176,7 @@ input[type="radio"], input[type="checkbox"] {
       -o-transition: all 0.4s ease-in-out;
       -ms-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
+      z-index:10000;
     }
     .callusicon {
       color: #969696;
@@ -6215,6 +6223,7 @@ input[type="radio"], input[type="checkbox"] {
       -o-transition: all 0.4s ease-in-out;
       -ms-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
+      z-index: 10000;
     }
     .wstmegamenucolr {
       max-width: 240px;
@@ -7397,4 +7406,7 @@ select.form-control.select_item {
 
   .panel-collapse li {
     padding-left: 7%;
+}
+.ngxcarousel-inner {
+  margin: 48px;
 }

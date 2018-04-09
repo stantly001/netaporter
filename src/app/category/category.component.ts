@@ -28,11 +28,12 @@ export class CategoryComponent implements OnInit {
   isCategory: boolean;
   urlParams: Object;
 
+  categoryArr: Array<any> = [];
+
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
-  ngOnInit() {
     this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
@@ -40,24 +41,12 @@ export class CategoryComponent implements OnInit {
       this.categoryId = parseInt(response.categoryId);
       this.subCategoryId = parseInt(response.subCategoryId);
       this.subLevelId = parseInt(response.subLevelId);
+      this.subCategories = this.dataService.getSubCategory(response);
     });
 
-    this.defaultService.getProducts().subscribe(response => {
-      let arr: Array<any> = [];
-      let params: { [k: string]: any } = {};
-      let productResponse: any;
-      productResponse = response;
-
-      this.menuId ? (params['menuId'] = this.menuId) : (params["menuId"] = null)
-      this.categoryId ? (params['categoryId'] = this.categoryId) : (params["categoryId"] = null);
-      this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
-      this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
-      let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      
-      this.subCategories = this.dataService.getSubCategory(params);
-      console.log(this.subCategories);
-    });
   }
+
+  ngOnInit() {}
 
   /**
   * 
