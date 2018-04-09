@@ -3,8 +3,8 @@
     <div id="product-list-menu" class="product-list-menu ">
       <div class="col-md-3">
         <div class="breadcrumbs">
-          <mc-breadcrumbs></mc-breadcrumbs>
-          <!-- Home /
+          <!-- <mc-breadcrumbs></mc-breadcrumbs> -->
+          Home /
           <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId]">{{breadCrumbMenuName}} </a>
           <span *ngIf="breadCrumbSubCategoryName">
             <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">/ {{breadCrumbCategoryName}}</a>
@@ -22,7 +22,7 @@
             </a>
           </h1>
           <div class="product-total">{{products?.length}} Items Found</div>
-        </div> -->
+        </div>
         </div>
 
 

@@ -7,6 +7,7 @@ import { DefaultService } from '../services/default.service';
 import { ParamsService } from '../services/params.service';
 import { UtilitiesService } from '../services/utilities.service';
 
+
 import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-header',
@@ -29,7 +30,7 @@ export class HeaderComponent implements OnInit {
   tempParams: Object;
   countryName: string;
   langName: string;
-  type:string;
+  type: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -38,7 +39,7 @@ export class HeaderComponent implements OnInit {
     private router: Router, private defaultService: DefaultService, private paramsService: ParamsService,
     private utilitiesService: UtilitiesService) {
 
-    this.type="top";
+    this.type = "top";
 
     this.setClickedRow = function (index) {
       this.selectedRow = index;

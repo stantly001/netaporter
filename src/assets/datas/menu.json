@@ -1058,15 +1058,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 167,
-                                "subLevelCategoryName": "Low Top"
+                                "subLevelCategoryName": "leather-trimmed"
                             },
                             {
                                 "subLevelCategoryId": 168,
-                                "subLevelCategoryName": "Slip-on"
+                                "subLevelCategoryName": "Quilted leather"
                             },
                             {
                                 "subLevelCategoryId": 169,
-                                "subLevelCategoryName": "Sport"
+                                "subLevelCategoryName": "textured-leather"
                             }
                         ]
                     }
@@ -1104,7 +1104,7 @@
                             },
                             {
                                 "subLevelCategoryId": 175,
-                                "subLevelCategoryName": "Cricket Hats"
+                                "subLevelCategoryName": "baseball Hats"
                             }
                         ]
                     }, {
@@ -1148,23 +1148,23 @@
                 "subCategory": [
                     {
                         "id": 47,
-                        "name": "Cotten",
+                        "name": "Coats",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 181,
-                                "subLevelCategoryName": "Hooded Top"
+                                "subLevelCategoryName": "belted"
                             },
                             {
                                 "subLevelCategoryId": 182,
-                                "subLevelCategoryName": "Terry Top"
+                                "subLevelCategoryName": "hippy"
                             },
                             {
                                 "subLevelCategoryId": 183,
-                                "subLevelCategoryName": "Shirt"
+                                "subLevelCategoryName": "tweed"
                             },
                             {
                                 "subLevelCategoryId": 184,
-                                "subLevelCategoryName": "T-Shirt"
+                                "subLevelCategoryName": "coller"
                             }
                         ]
                     },
@@ -1174,37 +1174,37 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 185,
-                                "subLevelCategoryName": "Straight Leg Jeans"
+                                "subLevelCategoryName": "shirt"
                             },
                             {
                                 "subLevelCategoryId": 186,
-                                "subLevelCategoryName": "Flared Jeans"
+                                "subLevelCategoryName": "Jacket"
                             },
                             {
                                 "subLevelCategoryId": 187,
-                                "subLevelCategoryName": "Bootcut"
+                                "subLevelCategoryName": "Pants"
                             }
                         ]
                     },
                     {
                         "id": 49,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "PANTS",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 188,
-                                "subLevelCategoryName": "Jeans"
+                                "subLevelCategoryName": "Acid Washed"
                             },
                             {
                                 "subLevelCategoryId": 189,
-                                "subLevelCategoryName": "3-4 Leggings"
+                                "subLevelCategoryName": "Baggy"
                             },
                             {
                                 "subLevelCategoryId": 190,
-                                "subLevelCategoryName": "Pants"
+                                "subLevelCategoryName": "Bell Bottoms"
                             },
                             {
                                 "subLevelCategoryId": 191,
-                                "subLevelCategoryName": "Shorts"
+                                "subLevelCategoryName": "Flared"
                             }
                         ]
                     },
@@ -1214,19 +1214,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 192,
-                                "subLevelCategoryName": "Evening Dresses"
+                                "subLevelCategoryName": "Swing"
                             },
                             {
                                 "subLevelCategoryId": 193,
-                                "subLevelCategoryName": "Formal"
+                                "subLevelCategoryName": "Pencil"
                             },
                             {
                                 "subLevelCategoryId": 194,
-                                "subLevelCategoryName": "Wedding"
+                                "subLevelCategoryName": "Bridal"
                             },
                             {
                                 "subLevelCategoryId": 195,
-                                "subLevelCategoryName": "Clubbing"
+                                "subLevelCategoryName": "Fit and Flare"
                             },
                             {
                                 "subLevelCategoryId": 196,
@@ -1243,37 +1243,37 @@
                 "subCategory": [
                     {
                         "id": 51,
-                        "name": "Sandals",
+                        "name": "Heels",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 197,
-                                "subLevelCategoryName": "Slingback"
+                                "subLevelCategoryName": "T-Strap"
                             },
                             {
                                 "subLevelCategoryId": 198,
-                                "subLevelCategoryName": "Leather"
+                                "subLevelCategoryName": "Pumps"
                             },
                             {
                                 "subLevelCategoryId": 199,
-                                "subLevelCategoryName": "Leather and Suede"
+                                "subLevelCategoryName": "Wiggle"
                             }
                         ]
                     },
                     {
                         "id": 52,
-                        "name": "Sneakers",
+                        "name": "Boots",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 200,
-                                "subLevelCategoryName": "Glittered Leather"
+                                "subLevelCategoryName": "Ankle"
                             },
                             {
                                 "subLevelCategoryId": 201,
-                                "subLevelCategoryName": "Leather and Suede"
+                                "subLevelCategoryName": "Buckle"
                             },
                             {
                                 "subLevelCategoryId": 202,
-                                "subLevelCategoryName": "Metallic Leather"
+                                "subLevelCategoryName": "Knee High"
                             }
                         ]
                     }
@@ -1290,15 +1290,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 203,
-                                "subLevelCategoryName": "Low Top"
+                                "subLevelCategoryName": "Hand Bags"
                             },
                             {
                                 "subLevelCategoryId": 204,
-                                "subLevelCategoryName": "Slip-on"
+                                "subLevelCategoryName": "Clutch Bags"
                             },
                             {
                                 "subLevelCategoryId": 205,
-                                "subLevelCategoryName": "Sport"
+                                "subLevelCategoryName": "Back Packs"
                             }
                         ]
                     }
@@ -1316,27 +1316,27 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 206,
-                                "subLevelCategoryName": "Beanies"
+                                "subLevelCategoryName": "Cinch"
                             },
                             {
                                 "subLevelCategoryId": 207,
-                                "subLevelCategoryName": "Fedoras"
+                                "subLevelCategoryName": "Bella Bow"
                             },
                             {
                                 "subLevelCategoryId": 208,
-                                "subLevelCategoryName": "SunHats"
+                                "subLevelCategoryName": "Bridal Sash"
                             },
                             {
                                 "subLevelCategoryId": 209,
-                                "subLevelCategoryName": "Cool Hats"
+                                "subLevelCategoryName": "Leather Kailey"
                             },
                             {
                                 "subLevelCategoryId": 210,
-                                "subLevelCategoryName": "Baby Hats"
+                                "subLevelCategoryName": "Buckle"
                             },
                             {
                                 "subLevelCategoryId": 211,
-                                "subLevelCategoryName": "Cricket Hats"
+                                "subLevelCategoryName": "Bow Belt"
                             }
                         ]
                     }, {
@@ -1345,19 +1345,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 212,
-                                "subLevelCategoryName": "Glittered acetate Sunglasses"
+                                "subLevelCategoryName": "Cat Eye"
                             },
                             {
                                 "subLevelCategoryId": 213,
-                                "subLevelCategoryName": "Tortoise Shell acetate Sunglasses"
+                                "subLevelCategoryName": "Round Frame"
                             },
                             {
                                 "subLevelCategoryId": 214,
-                                "subLevelCategoryName": "Cat Eye acetate Sunglasses"
+                                "subLevelCategoryName": "Round LulU"
                             },
                             {
                                 "subLevelCategoryId": 215,
-                                "subLevelCategoryName": "Gold Tone Sunglasses"
+                                "subLevelCategoryName": "Butterfly"
                             }
                         ]
                     }

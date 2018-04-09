@@ -5,6 +5,8 @@ import { DefaultService } from '../services/default.service';
 import { ParamsService } from '../services/params.service';
 import { UtilitiesService } from '../services/utilities.service';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-language',
   templateUrl: './language.component.html',
@@ -18,7 +20,7 @@ export class LanguageComponent implements OnInit {
   tempParams: Object;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
-    private utilitiesService: UtilitiesService, private defaultService: DefaultService) {
+    private utilitiesService: UtilitiesService, private defaultService: DefaultService, private translateService: TranslateService) {
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
         let paramObj = data.state.root.firstChild.params;
@@ -26,7 +28,6 @@ export class LanguageComponent implements OnInit {
         this.ln = paramObj.ln;
       }
     });
-
   }
 
   ngOnInit() {
@@ -50,6 +51,8 @@ export class LanguageComponent implements OnInit {
     this.langName = lang.languageName
     let routeUrl =  this.utilitiesService.buildUrl('language', this.ln, this.tempParams);
     this.router.navigate([routeUrl], { queryParams: qParams });
+    this.translateService.use(this.ln);
   }
+
 
 }

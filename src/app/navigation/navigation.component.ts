@@ -7,6 +7,8 @@ import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -23,20 +25,26 @@ export class NavigationComponent implements OnInit {
 
   constructor(private dataService: DataService, private defaultService: DefaultService,
     private paramsService: ParamsService, private activatedRoute: ActivatedRoute, private router: Router,
-    private utilitiesService: UtilitiesService) {
-
+    private utilitiesService: UtilitiesService, private translateService: TranslateService) {
+      translateService.addLangs(["en", "fr"]);
+      translateService.setDefaultLang('en');
+      let browserLang = translateService.getBrowserLang();
+      translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
     this.setClickedRow = function (index) {
       this.selectedRow = index;
     }
-
+    this.activatedRoute.params.subscribe(routingUrl => {
+      console.log("====>",routingUrl.ln);
+      
+    });
+    console.log("navigaton called");
   }
 
   menus: Array<any> = [];
 
-
   ngOnInit() {
 
-    console.log("navigaton called");
+    
 
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
@@ -50,6 +58,9 @@ export class NavigationComponent implements OnInit {
       }
     });
 
+  }
+  switchLanguage(language: string) {
+    
   }
 
   /**
@@ -66,7 +77,7 @@ export class NavigationComponent implements OnInit {
           this.paramsService.setFilteredProducts(arr);
         });
       } else {
-        this.paramsService.oProducts.subscribe(response=>{
+        this.paramsService.oProducts.subscribe(response => {
           this.paramsService.setFilteredProducts(response);
         });
       }
