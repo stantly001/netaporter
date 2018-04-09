@@ -19,7 +19,7 @@ export class AlternativeStyleComponent implements OnInit {
       grid: {xs: 2, sm: 2, md: 2, lg: 4, all: 0},
       slide: 1,
       speed:900,
-      interval: 4000,
+      interval: 2000,
        // animation: 'lazy',
       point: {
         visible: false
@@ -41,23 +41,23 @@ export class AlternativeStyleComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    (<any>$('#myCarousel')).carousel({
-        interval: 7000
-      });
-    $('.carousel[data-type="multi"] .item').each(function(){
-      var next = $(this).next();
-      if (!next.length) {
-        next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-            for (var i=0;i<2;i++) {
-        next=next.next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }        
-        next.children(':first-child').clone().appendTo($(this));
-      }
-    });
+    // (<any>$('#myCarousel')).carousel({
+    //     interval: 7000
+    //   });
+    // $('.carousel[data-type="multi"] .item').each(function(){
+    //   var next = $(this).next();
+    //   if (!next.length) {
+    //     next = $(this).siblings(':first');
+    //   }
+    //   next.children(':first-child').clone().appendTo($(this));
+    //         for (var i=0;i<2;i++) {
+    //     next=next.next();
+    //     if (!next.length) {
+    //       next = $(this).siblings(':first');
+    //     }        
+    //     next.children(':first-child').clone().appendTo($(this));
+    //   }
+    // });
   }
 
   public myfunc(event: Event) {

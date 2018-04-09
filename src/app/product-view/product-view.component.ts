@@ -25,21 +25,21 @@ export class ProductViewComponent implements OnInit {
   current: number = 0;
   items: Array<any>;
 
-  cn:string;
-  ln:string;
+  cn: string;
+  ln: string;
 
   breadCrumbMenuName: string;
-  breadCrumbMenuId:number;
+  breadCrumbMenuId: number;
 
   breadCrumbCategoryName: string;
-  breadCrumbCategoryId:number;
+  breadCrumbCategoryId: number;
 
   breadCrumbSubCategoryName: string;
-  breadCrumbSubCategoryId:number;
+  breadCrumbSubCategoryId: number;
 
   breadCrumbSubLevelName: string;
-  breadCrumbSubLevelId:number;
-  
+  breadCrumbSubLevelId: number;
+
   breadCrumbProductName: string;
 
   @ViewChild('videoPlayer') videoplayer: any;
@@ -48,7 +48,7 @@ export class ProductViewComponent implements OnInit {
     this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     let result;
     this.isOn = true;
     this.defaultService.getProducts().subscribe(response => {
@@ -59,20 +59,19 @@ export class ProductViewComponent implements OnInit {
       this.availableColors = this.productsArr.availableColors;
       this.activatedRoute.params.subscribe(params => {
         this.ln = params.ln;
-        this.cn = params.cn;  
+        this.cn = params.cn;
         this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
           this.breadCrumbMenuName = response.menuName;
           this.breadCrumbMenuId = response.menuId;
           this.breadCrumbCategoryName = response.categoryName;
           this.breadCrumbCategoryId = response.categoryId;
           this.breadCrumbSubCategoryName = response.subCategory;
-          this.breadCrumbSubCategoryId=response.subCategoryId;
+          this.breadCrumbSubCategoryId = response.subCategoryId;
           this.breadCrumbSubLevelName = response.subLevel;
           this.breadCrumbSubLevelId = response.subLevelId;
           this.breadCrumbProductName = this.productsArr.name;
         });
       });
-  
     });
     this.defaultService.getSizes().subscribe(response => {
       this.sizes = response;
@@ -84,16 +83,11 @@ export class ProductViewComponent implements OnInit {
       if (element.id == color.id) {
         this.images = element.image;
       }
-      console.log(element);
     });
-  }
-
-  ngAfterViewInit() {   
   }
 
   toggleVideo(event: any) {
     this.isOn = false;
     this.videoplayer.nativeElement.play();
   }
-
 }
