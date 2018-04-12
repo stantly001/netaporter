@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit {
         this.cn = paramObj.cn;
       }
     });
+    console.log("hedear loaded okay");
   }
 
   ngOnInit() {
