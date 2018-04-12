@@ -421,6 +421,13 @@ img {
 div#carousel-custom {
     margin: 0 0 50px;
 } 
+.wish-list-popover{
+    font-size:34px !important;
+    cursor: pointer;
+    padding-left: 75% !important;
+    position: absolute !important;
+    z-index: 9999;
+}
 
 
 
@@ -681,8 +688,12 @@ margin-top: 33px
 } 
 
 
-
-
+.breadcrumb-anchor {
+    color:#000 !important;
+}
+.disabled{
+    pointer-events: none;
+}
 /* @media (min-width: 768px) {
 
     /* show 3 items */

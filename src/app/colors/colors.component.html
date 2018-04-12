@@ -1,39 +1,42 @@
 <!-- color -->
 <div class="panel-group" id="colorfilteraccordation" role="tablist" aria-multiselectable="true">
-  <div>
-    <div role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a (click)="isCategory=!isCategory">COLORS
-          <div class="pull-right">
-              <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
-            </div>
-        </a>
-        
-      </h4>
+    <div>
+        <div role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a (click)="isCategory=!isCategory">COLORS
+                    <div class="pull-right">
+                        <i class="fa" [class.fa-plus]="isCategory==true" [class.fa-minus]="isCategory==false"></i>
+                    </div>
+                </a>
 
-      <!-- <h4 class="panel-title">
-        <a >COLORS</a>
-        <div class="pull-right">
-            <i class="more-less fa fa-minus"></i>
-          </div>
-      </h4> -->
-    </div>
-    <div id="colorfilter" class="panel-collapse" [class.collapse]="isCategory==true">
-      <div class="">
-        <div class="w3ls_dresses_grid_left_grid">
-          <div class="w3ls_dresses_grid_left_grid_sub">
-            <ul class="panel_bottom">
-              <li *ngFor="let color of colors">
-                <span>
-                  <input type="checkbox" class="checkbox-border" (click)="filter(color,$event.target.checked,'color')">
-                </span>
-                <span class="checkbox-menu">
-                  {{color.colorName}}</span>
-              </li>
-            </ul>
-          </div>
+            </h4>
+
+            <!-- <h4 class="panel-title">
+              <a >COLORS</a>
+              <div class="pull-right">
+                  <i class="more-less fa fa-minus"></i>
+                </div>
+            </h4> -->
         </div>
-      </div>
+        <div id="colorfilter" class="panel-collapse" [class.collapse]="isCategory==true">
+            <div class="">
+                <div class="w3ls_dresses_grid_left_grid">
+                    <div class="w3ls_dresses_grid_left_grid_sub">
+                        <div class="styled-input-container styled-input--square">
+                            <ul class="panel_bottom">
+                                <li *ngFor="let color of colors">
+                                    <div class="styled-input-single">
+                                        <input type="checkbox" class="checkbox-border checkbox-border" id="product-filter-c{{color.colorId}}" (click)="filter(color,$event.target.checked,'color')">
+                                        <label class="checkbox-menu" for="product-filter-c{{color.colorId}}">
+                                            {{color.colorName}}
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

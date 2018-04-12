@@ -28,7 +28,8 @@
                 "id": 1,
                 "image": [
                     {
-                        "url": "https://cache.net-a-porter.com/images/products/1006936/1006936_in_pp.jpg"
+                        "url": "https://cache.net-a-porter.com/images/products/1001362/1001362_in_pp.jpg",
+                        "zoomUrl":"https://cache.net-a-porter.com/images/products/1001362/1001362_in_xl.jpg"
                     },
                     {
                         "url": "https://cache.net-a-porter.com/images/products/1006936/1006936_ou_pp.jpg"
@@ -42,6 +43,13 @@
             }],
         "Items": [
             {
+                "title": "WHY WE LOVE IT",
+                "description": "In his early twenties, Demna Gvasalia owned a vintage Mac that he wore all the time until someone stole it at a party. Designed in collaboration with outerwear experts Mackintosh, this gabardine trench is based on that exact same coat, but it's been given a Vetements makeover with volume and oversized proportions. Some of the collective's staff visited the co-creator's factory in Scotland to ensure the most authentic craftsmanship."
+            },
+            {
+                "title": "SIZE & FIT INFORMATION ",
+                "description": "Fits true to size, take your normal size, Intended for a loose fit, with oversized sleeve, Use the belt to cinch in at the waist, Mid-weight, non-stretchy fabric"
+            },{
                 "title": "WHY WE LOVE IT",
                 "description": "In his early twenties, Demna Gvasalia owned a vintage Mac that he wore all the time until someone stole it at a party. Designed in collaboration with outerwear experts Mackintosh, this gabardine trench is based on that exact same coat, but it's been given a Vetements makeover with volume and oversized proportions. Some of the collective's staff visited the co-creator's factory in Scotland to ensure the most authentic craftsmanship."
             },
@@ -4925,10 +4933,12 @@
                 "id": 1,
                 "image": [
                     {
-                        "url": "https://cache.net-a-porter.com/images/products/934450/934450_in_pp.jpg"
+                        "url": "https://cache.net-a-porter.com/images/products/934450/934450_in_pp.jpg",
+                        "zoomUrl":"/assets/img/dormateyur1.jpg"
                     },
                     {
-                        "url": "https://cache.net-a-porter.com/images/products/934450/934450_fr_pp.jpg"
+                        "url": "https://cache.net-a-porter.com/images/products/934450/934450_fr_pp.jpg",
+                        "zoomUrl":"/assets/img/domateyur2.jpg"
                     }, {
                         "url": "https://cache.net-a-porter.com/images/products/934450/934450_ou_pp.jpg"
                     }, {

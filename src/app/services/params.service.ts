@@ -12,20 +12,47 @@ export class ParamsService {
   }
 
   private urlQueryParams = new BehaviorSubject<Object>('');
-  private urlParams = new BehaviorSubject<Object>('');
+  public urlParams = new BehaviorSubject<Object>('');
   private filteredProducts = new BehaviorSubject<Array<any>>([]);
   private orginalProducts = new BehaviorSubject<Array<any>>([]);
- 
+  private paginationProducts = new BehaviorSubject<Array<any>>([]);
+  private menus = new BehaviorSubject<Array<any>>([]);
 
   urlParameters = this.urlParams.asObservable();
   urlQueryParameters = this.urlQueryParams.asObservable();
   fp = this.filteredProducts.asObservable();
   oProducts = this.orginalProducts.asObservable();
- 
+  pagination = this.paginationProducts.asObservable();
+  menu = this.menus.asObservable();
 
-  private categoryIdStr: string;
-  private params: Object;
-  private queryParams: Object;
+  
+  private categoryIdStr:string;
+  private params:Object;
+  private queryParams:Object;
+
+
+  /**
+   * 
+   * @param arr 
+   * Pagination products collection will be set here
+   */
+  public setPaginationProducts(arr:Array<any>){
+    this.paginationProducts.next(arr);
+  }
+
+
+  /**
+   * 
+   * @param arr 
+   * Set Menu Initial
+   */
+  public setMenus(arr:Array<any>){
+    this.menus.next(arr);
+  }
+
+  public getMenus() {
+    return this.menus;
+  }
 
 
   /**
@@ -86,6 +113,5 @@ export class ParamsService {
     return this.queryParams;
   }
 
- 
 
 }

@@ -31,13 +31,15 @@ export class ProductViewDirective implements OnInit {
     // });
     // }
 
-
+console.log(this.el);
 
       (<any>$(this.el.nativeElement))
+      
       .wrap('<span style="display:inline-block"></span>')
       .css('display', 'block')
       .parent()
-      .zoom();
+      .zoom({url:this.el.nativeElement.dataset.zoomImage});
+      // .zoom();
   }
 
 }

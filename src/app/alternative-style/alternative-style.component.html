@@ -50,6 +50,7 @@
   <div class="container">
   <ngx-carousel [inputs]="carouselOne">
     <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
+      <a (click)="selectAlternateProduct(alternativeProduct)">
       <img [src]="alternativeProduct?.productImg" class="img-responsive">
       <div class="product-name">{{alternativeProduct.name}}</div>
       <div class="product-price">
@@ -61,6 +62,7 @@
         </span>
       </div>
       <div class="product-description">{{alternativeProduct.description}}</div>
+      </a>
     </ngx-item>
     <button NgxCarouselPrev class="leftRs">&lt;</button>
     <button NgxCarouselNext class="rightRs">&gt;</button>

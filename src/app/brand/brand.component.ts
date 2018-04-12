@@ -29,7 +29,7 @@ export class BrandComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService,private router: Router) { }
 
 
   ngOnInit() {
@@ -66,11 +66,11 @@ export class BrandComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     this.activatedRoute.queryParams.subscribe(response=>{
-      console.log(response);
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
     filterData.queryParam.pageSize = this.paginationSize;
+    console.log(filterData);
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
   }
 

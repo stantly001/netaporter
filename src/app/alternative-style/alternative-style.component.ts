@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { NgxCarousel } from 'ngx-carousel';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-alternative-style',
@@ -7,11 +8,16 @@ import { NgxCarousel } from 'ngx-carousel';
   styleUrls: ['./alternative-style.component.css']
 })
 export class AlternativeStyleComponent implements OnInit {
+  categoryId: any;
+  menuId: any;
+  ln: any;
+  cn: any;
   isCategory: boolean;
   products: any; 
   public carouselOne: NgxCarousel;
-  constructor() {     
-  }
+  constructor(private activatedRoute:ActivatedRoute,private route:Router) {     
+    console.log("dyfgdyfgdf")
+      }
   
   ngOnInit():void{    
     this.isCategory = false;
@@ -59,7 +65,9 @@ export class AlternativeStyleComponent implements OnInit {
       }
     });
   }
-
+  selectAlternateProduct(alternativeProduct){
+    this.route.navigate(['../',alternativeProduct.id], {relativeTo: this.activatedRoute});
+  }
   public myfunc(event: Event) {
     console.log(event)
     // carouselLoad will trigger this funnction when your load value reaches

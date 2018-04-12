@@ -69,9 +69,21 @@ export class NavigationComponent implements OnInit {
    */
   onSearchProduct(event, value) {
     console.log(value)
+    console.log("filteredProd",this.filteredProducts)
+    this.paramsService.fp.subscribe(response => {
+      this.filteredProducts=response;
+    })
     if (event.key == 'Enter') {
       let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
+      console.log(this.utilitiesService.searchFilter(this.filteredProducts, value));
+      console.log(this.tempFilteredProducts)
+      console.log(arr)
       this.paramsService.setFilteredProducts(arr);
+      this.router.navigate([], {relativeTo: this.activatedRoute,queryParams: {
+        srchKey:value
+      },
+      queryParamsHandling: 'merge',});
+      // this.paramsService.setFilteredProducts(arr);
     }
   }
 

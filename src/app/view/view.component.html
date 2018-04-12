@@ -2,18 +2,27 @@
   <div class="col-md-12 category-banner">
     <div id="product-list-menu" class="product-list-menu ">
       <div class="col-md-3">
+          <!-- <mc-breadcrumbs></mc-breadcrumbs>
+          <router-outlet></router-outlet> -->
         <div class="breadcrumbs">
-          Home / {{menuName}} / {{categoryName}}
+          Home /
+          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId]">{{breadCrumbMenuName}} </a>
+          <span *ngIf="breadCrumbSubCategoryName">
+            <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">/ {{breadCrumbCategoryName}}</a>
+          </span>
         </div>
         
         <div class="w3ls_dresses_grid_left_grid2_left">
-          <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='product'" value="outFit" class="btn btn-default">
-            Outfit View
-          </button> -->
-          <!-- <button (click)="imageView($event.target.value)" *ngIf="productImageView=='outFit'" value="product" class="btn btn-default">
-            Product View
-          </button> -->
-          <h1>{{categoryName}}</h1>
+          <h1 *ngIf="breadCrumbCategoryName && !(breadCrumbSubCategoryName || breadCrumnSubLevelName)">
+            <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">
+              {{breadCrumbCategoryName}}
+            </a>
+          </h1>
+          <h1 *ngIf="breadCrumbSubCategoryName">
+            <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId,subCategoryId]">
+              {{breadCrumbSubCategoryName}}
+            </a>
+          </h1>
           <div class="product-total">{{products?.length}} Items Found</div>
         </div>
       </div>
@@ -31,7 +40,8 @@
       <app-size></app-size>
     </div>
     <div class="col-md-9">
-      <app-products [ImageView]="productImageView" [products]="products"></app-products>
+      <app-products></app-products>
+      <!-- <app-products [ImageView]="productImageView" [products]="products"></app-products> -->
     </div>
   </div>
 
