@@ -6,9 +6,10 @@
     </div>
     <nav class="wsmenu clearfix">
       <ul class="mobile-sub wsmenu-list">
-        <li *ngFor="let menu of menus">
+
+        <li *ngFor="let menu of menus;let i = index;">
           <a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
-            <span>{{menu.menuName}}</span>
+            <span>{{menu.menuName | translate}}</span>
           </a>
           <div class="wsshoptabing wtsbrandmenu clearfix">
             <div class="wsshoptabingwp clearfix">
@@ -16,22 +17,22 @@
 
                 <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
                   (mouseenter)="setClickedRow(menuCategory)">
-                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
+                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName | translate}}</a>
                   <div class="wsshoptab-active wstbrandbottom clearfix">
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-8 col-md-6">
                           <div class="col-lg-4 col-md-3" *ngFor="let subCategory of category.subCategory">
                             <ul class="wstliststy02 clearfix">
-                              <li  class="wstheading clearfix">
-                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]" [queryParams]="{prop: i}">
-                                  {{subCategory.name}}
+                              <li class="wstheading clearfix">
+                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                  {{subCategory.name | translate}}
                                   <i class="fa fa-caret-right"></i>
                                 </a>
                               </li>
                               <li *ngFor="let subLevel of subCategory.subLevelCategory">
                                 <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
-                                  {{subLevel.subLevelCategoryName}}</a>
+                                  {{subLevel.subLevelCategoryName | translate}}</a>
                               </li>
                             </ul>
                           </div>
@@ -68,72 +69,3 @@
   </div>
   <!--Menu HTML Code-->
 </div>
-
-<!-- <div class="headerfull">
-  <div class="wsmain">
-    <div class="smllogo">
-    </div>
-    <nav class="wsmenu clearfix">
-      <ul class="mobile-sub wsmenu-list">
-        <li *ngFor="let menu of menus">
-          <a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
-            <span>{{menu.menuName}}</span>
-          </a>
-          <div class="wsshoptabing wtsbrandmenu clearfix">
-            <div class="wsshoptabingwp clearfix">
-              <ul class="wstabitem02 clearfix">
-
-                <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
-                  (mouseenter)="setClickedRow(menuCategory)">
-                  <a 
-                  [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName}}</a>
-                  <div class="wsshoptab-active wstbrandbottom clearfix">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-8">
-                          <div class="col-lg-4 col-md-4" 
-                          *ngFor="let subCategory of category.subCategory">
-                            <ul class="wstliststy02 clearfix">
-                              <li class="wstheading clearfix">
-                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
-                                  {{subCategory.name}}
-                                  <i class="fa fa-caret-right"></i>
-                                </a>
-                              </li>
-                              <li *ngFor="let subLevel of subCategory.subLevelCategory">
-                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
-                                  {{subLevel.subLevelCategoryName}}</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                          <img src="https://qph.fs.quoracdn.net/main-qimg-be11ba5cb1572b4b0051e9930325cbd9" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="wssearchbar clearfix">
-          <form class="topmenusearch">
-            <input name="searchItem" [ngModel]="searchItem" (keydown)="onSearchProduct($event,$event.target.value)" placeholder="Search Product, Category...">
-            <button class="btnstyle">
-              <i class="searchicon fa fa-search" aria-hidden="true"></i>
-            </button>
-          </form>
-        </li>
-        <li class="wscarticon clearfix">
-          <a href="#">
-            <i class="fa fa-shopping-basket"></i>
-            <em class="roundpoint">8</em>
-            <span class="mobiletext">Shopping Cart</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div> -->

@@ -49,14 +49,14 @@
               </div>
             </div>
             <div class="col-md-9">             
-                <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
+                <popover-content #myPopover [closeOnMouseOutside]="false"  [closeOnClickOutside]="true">
                     <div class="text-center"><b>Like This Item?</b></div>               
                     <div class="text-center">
                       <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
                       <p class="text-nowrap">if it goes on sale and more.</p>
                     </div>                
                   </popover-content>
-                  <i class="fa fa-heart-o wish-list-popover" [popover]="myPopover" 
+                  <i class="fa fa-heart-o wish-list-popover" [popoverOnHover]="true" [popover]="myPopover" 
                    aria-hidden="true"></i>
               <div class="pull-right">
                   
@@ -66,15 +66,16 @@
                 <div class="carousel-inner " role="listbox">
                   <div class="item text-center" *ngFor="let image of images;let i = index"  [class.active]="i==0">
                     <span>
+                        <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}"  alt='Daisy on the Ohoopee' class="img-responsive" />
                       <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
-                      <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}"  alt='Daisy on the Ohoopee' class="img-responsive" />
+                      <!-- <img appProductView src='{{image?.url}}' alt='Daisy on the Ohoopee' class="img-responsive" /> -->
                       <!-- <p>Hover</p> -->
                     </span>
                   </div>
                 </div>
 
                 <!-- sag sol -->
-                <a  class="left zoom-arrow-index carousel-control" data-target="#carousel-custom" data-slide="prev">
+                <a class="left zoom-arrow-index carousel-control" data-target="#carousel-custom" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
                 <a class="right zoom-arrow-index carousel-control" data-target="#carousel-custom" data-slide="next">
@@ -119,14 +120,14 @@
               <span class="icon-size_guide">View Size Guide</span>
             </a>
           </div>
-          <div class="row col-md-12">
-            <span class="product-size-image" *ngFor="let size of sizes">
+          <div class="row col-md-12 product-sizes">
+            <span class="product-size-image" [class.active]="currentIndex==sizeIndex" (click)="currentIndex=sizeIndex" *ngFor="let size of sizes;let sizeIndex=index;">
               <button class="btn btn-default product-size-btn">{{size.sizeName}}</button>
             </span>
           </div>
           <div class="color-image">
-            <a *ngFor="let color of availableColors" (click)="imageColorSelection(color)">
-              <img class="img-responsive" width="50" height="50" [src]="color.url">
+            <a *ngFor="let color of availableColors;let colorIndex=index" (click)="imageColorSelection(color);currentColIndex=colorIndex;">
+              <img class="img-responsive" [class.active]="currentColIndex==colorIndex"  width="50" height="50" [src]="color.url">
             </a>
             <!-- <a (click)="imageColorSelection('blue')">
               <img class="img-resposive" width="50" height="50" src="assets/img/blueColor.png">

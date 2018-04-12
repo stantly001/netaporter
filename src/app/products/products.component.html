@@ -9,7 +9,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <app-sort></app-sort>
             <div class="btn-group">
                 <select name="select_item" (change)="selectPageSize($event.target.value)" class="form-control select_item">
@@ -22,7 +22,7 @@
             </div>
         </div>
         <!-- pagination code -->
-        <ul *ngIf="pager.pages && pager.pages.length>1" class="pagination pull-right">
+        <ul *ngIf="pager.pages && pager.pages.length > 1" class="pagination pull-right">
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(1)">First</a>
             </li> -->
@@ -46,15 +46,15 @@
         <div *ngIf="products.length===0">
             <h3>Unfortunately there were no items matching for your request.</h3>
         </div>
-        <div class="w31s_dresses_grid_right_grid3">
+        <div *ngIf="products.length!==0" class="w31s_dresses_grid_right_grid3">
 
-            <div class="row" *ngFor="let row of rows">
+            <div class="row product-row" *ngFor="let row of rows">
                  <div *ngFor="let product of pagedProducts | slice:(row*itemsPerRow):(row+1)*itemsPerRow; let i = index" class="col-md-4 col-sm-6 col-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
 
                     <div class="agile_ecommerce_tab_left dresses_grid">
                         <div class="hs-wrapper hs-wrapper2">
                             <div class="pull-right" *ngIf="product.wishList==true">
-                                <i class="far fa-heart"></i>
+                                <i class="fa fa-heart-o"></i>
                             </div>
                             <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
                                 <img class="img-responsive" [src]="product[i] ? product.outFitImg : product.productImg" (mouseover)="product[i] = true" (mouseout)="product[i] = false">
@@ -94,7 +94,7 @@
     </div>
     <!-- pagination code -->
     <div class="pull-right">
-        <ul *ngIf="pager.pages && pager.pages.length>1" class="pagination pull-right">
+        <ul *ngIf="pager.pages && pager.pages.length > 1" class="pagination pull-right">
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                         <a (click)="setPage(1)">First</a>
                     </li> -->

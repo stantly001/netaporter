@@ -9,7 +9,7 @@ import { UrlComponent } from '../url/url.component';
 import { DataService } from '../services/data.service';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
-import { BreadcrumbService } from  '../services/breadcrumb.service';
+import { BreadcrumbService } from '../services/breadcrumb.service';
 
 import { Location } from '@angular/common';
 import { ParamsService } from '../services/params.service';
@@ -42,10 +42,10 @@ export class ViewComponent implements OnInit {
   cn: string;
   subCategoryName: string
 
-  breadCrumbMenuName:string;
-  breadCrumbCategoryName:string;
-  breadCrumbSubCategoryName:string;
-  breadCrumnSubLevelName:string;
+  breadCrumbMenuName: string;
+  breadCrumbCategoryName: string;
+  breadCrumbSubCategoryName: string;
+  breadCrumnSubLevelName: string;
 
   productObj: { [k: string]: any } = {};
   params: Object;
@@ -53,23 +53,23 @@ export class ViewComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient,
     private defaultService: DefaultService, private dataService: DataService,
     private router: Router, private utilitiesService: UtilitiesService,
-    private location: Location, private paramsService: ParamsService,private urlComponent:UrlComponent,
-    private breadCrumbService:BreadcrumbService) {
+    private location: Location, private paramsService: ParamsService, private urlComponent: UrlComponent,
+    private breadCrumbService: BreadcrumbService) {
   }
 
-  menus:Array<any>=[];
+  menus: Array<any> = [];
 
   ngOnInit() {
 
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
 
-      this.breadCrumbService.generateBreadCrumb(response).subscribe(response=>{
-        this.breadCrumbMenuName=response.menuName;
+      this.breadCrumbService.generateBreadCrumb(response).subscribe(response => {
+        this.breadCrumbMenuName = response.menuName;
         this.breadCrumbCategoryName = response.categoryName;
         this.breadCrumbSubCategoryName = response.subCategory;
         this.breadCrumnSubLevelName = response.subLevel;
-    });
+      });
 
 
       this.menuId = parseInt(response.menuId);
@@ -92,6 +92,7 @@ export class ViewComponent implements OnInit {
         this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
 
         let data = this.dataService.getProductsByArrayMap(productResponse, params);
+        console.log("product Response ==>",data);
         this.products = data.products;
         this.paramsService.setOrginalProducts(data.products);
         this.paramsService.setFilteredProducts(this.products);
@@ -118,8 +119,8 @@ export class ViewComponent implements OnInit {
       (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
         let obj = JSON.parse(JSON.stringify(allParams.qParams));
         (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.urlComponent.loadUrl(routeUrl, obj,'');
+        this.urlComponent.loadUrl(routeUrl, obj, '');
       });
   }
 
-  }
+}

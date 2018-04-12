@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
+import { RouterModule, ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
 
 import { UtilitiesService } from '../services/utilities.service';
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
+
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
@@ -18,36 +20,41 @@ export class NavigationComponent implements OnInit {
   tempFilteredProducts: Array<any> = [];
   setClickedRow: Function;
   selectedRow: Number;
-  ln:string;
-  cn:string;
+  ln: string;
+  cn: string;
 
-  constructor(private dataService:DataService,private defaultService:DefaultService,
-    private paramsService:ParamsService,private activatedRoute:ActivatedRoute,private router:Router,
-    private utilitiesService:UtilitiesService) {
-
+  constructor(private dataService: DataService, private defaultService: DefaultService,
+    private paramsService: ParamsService, private activatedRoute: ActivatedRoute, private router: Router,
+    private utilitiesService: UtilitiesService, private translateService: TranslateService) {
+      translateService.addLangs(["en", "fr"]);
+      translateService.setDefaultLang('en');
+      let browserLang = translateService.getBrowserLang();
+      translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
     this.setClickedRow = function (index) {
       this.selectedRow = index;
     }
-
+    this.activatedRoute.params.subscribe(routingUrl => {
+      console.log("====>",routingUrl.ln);
+      
+    });
+    console.log("navigaton called");
   }
 
-  menus:Array<any>=[];
-
+  menus: Array<any> = [];
 
   ngOnInit() {
 
-    console.log("navigaton called");
     
+
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
     });
 
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
-        console.log(data.state.root.firstChild.params);
-        let tempParams= data.state.root.firstChild.params;
+        let tempParams = data.state.root.firstChild.params;
         this.ln = tempParams.ln;
-        this.cn = tempParams.cn; 
+        this.cn = tempParams.cn;
       }
     });
 
@@ -60,13 +67,16 @@ export class NavigationComponent implements OnInit {
     // let obj = {}
     this.router.navigate(['/shop/'+this.cn+"/"+this.ln+"/"+menu.menuId+"/"+category.categoryId+"/"+subCategory.id]);
   }
+  switchLanguage(language: string) {
+    
+  }
 
-   /**
-   * 
-   * @param event 
-   * @param value 
-   * Product Search Filter 
-   */
+  /**
+  * 
+  * @param event 
+  * @param value 
+  * Product Search Filter 
+  */
   onSearchProduct(event, value) {
     console.log(value)
     console.log("filteredProd",this.filteredProducts)
@@ -74,16 +84,16 @@ export class NavigationComponent implements OnInit {
       this.filteredProducts=response;
     })
     if (event.key == 'Enter') {
-      let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
-      console.log(this.utilitiesService.searchFilter(this.filteredProducts, value));
-      console.log(this.tempFilteredProducts)
-      console.log(arr)
-      this.paramsService.setFilteredProducts(arr);
-      this.router.navigate([], {relativeTo: this.activatedRoute,queryParams: {
-        srchKey:value
-      },
-      queryParamsHandling: 'merge',});
-      // this.paramsService.setFilteredProducts(arr);
+      if (value) {
+        this.defaultService.getProducts().subscribe(response => {
+          let arr = this.utilitiesService.searchFilter(response, value);
+          this.paramsService.setFilteredProducts(arr);
+        });
+      } else {
+        this.paramsService.oProducts.subscribe(response => {
+          this.paramsService.setFilteredProducts(response);
+        });
+      }
     }
   }
 

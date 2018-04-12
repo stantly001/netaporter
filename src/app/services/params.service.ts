@@ -50,10 +50,6 @@ export class ParamsService {
     this.menus.next(arr);
   }
 
-  public getMenus() {
-    return this.menus;
-  }
-
 
   /**
    * 
@@ -63,10 +59,6 @@ export class ParamsService {
   @Input()
   public setOrginalProducts(arr: Array<any>) {
     this.orginalProducts.next(arr);
-  }
-
-  public getOrginalProducts() {
-    return this.orginalProducts;
   }
 
   /**
@@ -79,28 +71,14 @@ export class ParamsService {
     this.filteredProducts.next(arr);
   }
 
-  public getFilteredProducts() {
-    return this.filteredProducts.asObservable();
-  }
-
-
-
-  public setCategoryId(categoryId: string) {
-    this.categoryIdStr = categoryId;
-  }
-
-  public getCategoryId() {
-    return this.categoryIdStr;
+  public setCategoryId(categoryId:string){
+    this.categoryIdStr=categoryId;
   }
 
   @Input()
   public setParams(paramsStr: Object) {
     this.params = paramsStr;
     this.urlParams.next(paramsStr);
-  }
-
-  public getParams() {
-    return this.params;
   }
 
   @Input()

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { UrlComponent } from '../url/url.component';
+
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
@@ -23,38 +25,38 @@ export class ColorsComponent implements OnInit {
   subCategoryId: number;
   subLevelId: number;
 
-  // paginationSize:string;
   urlParams: Object;
+  colorArr:Array<any>=[];
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
-  ngOnInit() {
     this.isCategory = false;
-    this.activatedRoute.params.subscribe(response => {
-      this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
+    this.defaultService.getColors().subscribe(response => {
+      if (response.length != 0) {
+        this.colorArr = response;
+      }
     });
 
-    this.defaultService.getProducts().subscribe(response => {
-      let arr: Array<any> = [];
-      let params: { [k: string]: any } = {};
-      let productResponse: any;
-      productResponse = response;
+    this.activatedRoute.params.subscribe(routingUrl => {
+      this.urlParams = routingUrl;
+      this.menuId = parseInt(routingUrl.menuId);
+      this.categoryId = parseInt(routingUrl.categoryId);
+      this.subCategoryId = parseInt(routingUrl.subCategoryId);
+      this.subLevelId = parseInt(routingUrl.subLevelId);
 
-      this.menuId ? (params['menuId'] = this.menuId) : (params["menuId"] = null)
-      this.categoryId ? (params['categoryId'] = this.categoryId) : (params["categoryId"] = null);
-      this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
-      this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
-      let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      this.colors = data.colors;
-      console.log(this.colors);
+      this.defaultService.getMappingFilters().subscribe(response => {
+        let arr = this.dataService.getFilterComponentsData(response, routingUrl,'colorId');
+        this.colors = this.utilitiesService.mapArrays(arr, this.colorArr, 'colorId');
+      });
     });
+
   }
+
+
+
+  ngOnInit() {}
 
   /**
   * 
@@ -68,13 +70,13 @@ export class ColorsComponent implements OnInit {
 
 
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response=>{
+    this.activatedRoute.queryParams.subscribe(response => {
       console.log(response);
       this.paginationSize = response.pageSize;
     });
-    let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
+    let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
     filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url,filterData.queryParam,'');
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router, CanLoad, NavigationEnd } from '@angular/router';
 
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
@@ -8,7 +8,7 @@ import { UtilitiesService } from '../services/utilities.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
-export class FilterService {
+export class FilterService  {
 
   colorFilter: Array<any> = [];
   brandFilter: Array<any> = [];
@@ -17,77 +17,11 @@ export class FilterService {
   subLevelFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService) { }
+    private utilitiesService: UtilitiesService) {
 
-
-  private categoryFilterData = new BehaviorSubject<Array<any>>([]);
-  private brandFilterData = new BehaviorSubject<Array<any>>([]);
-  private colorFilterData = new BehaviorSubject<Array<any>>([]);
-  private sizeFiltersData = new BehaviorSubject<Array<any>>([]);
-
-  category = this.categoryFilterData.asObservable();
-  brand = this.brandFilterData.asObservable();
-  color = this.colorFilterData.asObservable();
-  size = this.sizeFiltersData.asObservable();
-
-
-  /**
-  * 
-   * @param arr 
-   * Set Category Filter By URL
-   */
-  public setCategoryFilter(arr: any) {
-    this.categoryFilterData.next(arr);
   }
-
-  /**
-   * 
-   * @param arr 
-   * Set BrandFilter By URL
-   */
-  public setBrandFilter(arr: any) {
-    this.brandFilterData.next(arr);
-  }
-
-  /**
-   * 
-   * @param arr 
-   * Set ColorFilters By URL
-   */
-  public setColorFilter(arr: any) {
-    this.colorFilterData.next(arr);
-  }
-
-  /**
-   * 
-   * @param arr 
-   * Set SizeFilters By URL
-   */
-  public setSizeFilter(arr: any) {
-    this.sizeFiltersData.next(arr);
-  }
-
-  /**
-   * 
-   * @param params 
-   * Create Filters Based on URL / User Selection
-   */
-  public createFilters(params:Object) {
-    this.defaultService.getMappingFilters().subscribe(response=>{
-
-      let categoryArr = response.filter(data=>data['categoryId']==params['categoryId'])[0];
-      if(!(params['subCategoryId'] && params['subLevelId'])) {
-        this.defaultService.getBrands();
-        // this.utilitiesService.mapArrays(params['brandId']);
-      }
-
-
-      
-    });
-  }
-
 
   /**
   * 
@@ -167,6 +101,6 @@ export class FilterService {
       "url": routeUrl
     }
 
-  }
+  } 
 
 }

@@ -96,10 +96,15 @@ export class UtilitiesService {
    * @param key 
    * Compare Arrays with Array of Objects & Returns Matched Array objects by Mapping key
    */
-  mapArrays(fromarr: Array<any>, toArr: Array<any>,key:string) {
-    let arr:Array<any>=[];
-    fromarr.map(response=>{
-      arr.push(toArr.filter(data=>data[key]==response[key])[0]);
+  mapArrays(fromarr: Array<any>, toArr: Array<any>, key: string) {
+    console.log("toArr ==>", toArr);
+    let arr: Array<any> = [];
+    fromarr.forEach(element => {
+      toArr.forEach(ele => {
+        if (ele[key] == element) {
+          arr.push(ele);
+        }
+      })
     });
     return arr;
   }
@@ -159,6 +164,25 @@ export class UtilitiesService {
 
   /**
    * 
+   * @param type 
+   * @param value
+   * Build url on Page load. For Country & Language
+   */
+  buildUrl(type: string, value: string,params) {
+
+    let paramsObj = JSON.parse(JSON.stringify(params));
+    if (type == 'country') {
+      paramsObj.cn = value;
+    }
+    if (type == "language") {
+      paramsObj.ln = value;
+    }
+    let routeUrl = this.buildRoutingUrl(paramsObj);
+    return routeUrl;
+  }
+
+  /**
+   * 
    * @param arr 
    * @param value
    * Search By Product Name & Description 
@@ -167,11 +191,21 @@ export class UtilitiesService {
     console.log("filterProd",arr)
     let response: Array<any> = [];
     arr.forEach(element => {
-      console.log(element.name.search(value));
-      ((element.name.toLowerCase().search(value.toLowerCase()) !== -1) || (element.description.toLowerCase().search(value.toLowerCase()) !== -1)) ? response.push(element) : ''
+      ((element.name.toLowerCase().search(value) !== -1) || (element.description.toLowerCase().search(value) !== -1)) ? response.push(element) : ''
     });
     console.log("searchfilter",response)
     return response;
+  }
+
+  /**
+  * 
+  * @param data 
+  * @param val 
+  * @param filterKey 
+  * filter by [] to {}
+  */
+  filterSelectedObj(data, val, filterKey) {
+    return data.filter(x => x[filterKey] == val)[0];
   }
 
 }

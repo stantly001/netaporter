@@ -23,61 +23,66 @@ export class ProductViewComponent implements OnInit {
   productId: number;
   productsArr: any;
   current: number = 0;
+  currentIndex: number = 0;
+  currentColIndex: number = 0;
   items: Array<any>;
 
-  cn:string;
-  ln:string;
+  cn: string;
+  ln: string;
 
   breadCrumbMenuName: string;
-  breadCrumbMenuId:number;
+  breadCrumbMenuId: number;
 
   breadCrumbCategoryName: string;
-  breadCrumbCategoryId:number;
+  breadCrumbCategoryId: number;
 
   breadCrumbSubCategoryName: string;
-  breadCrumbSubCategoryId:number;
+  breadCrumbSubCategoryId: number;
 
   breadCrumbSubLevelName: string;
-  breadCrumbSubLevelId:number;
-  
+  breadCrumbSubLevelId: number;
+
   breadCrumbProductName: string;
 
   @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
-    this.productId = parseInt(this.activatedRoute.snapshot.params["productId"]);
+    
+    this.activatedRoute.params.subscribe(response => {
+      this.productId = parseInt(response.productId);
+      let result;
+      this.isOn = true;
+      this.defaultService.getProducts().subscribe(response => {
+        this.productsArr = response.filter(product => product.id === this.productId)[0];
+        let categoryId = response.filter(product => product.id === this.productId)[0].categories[0];
+        this.alternateProducts = this.utilitiesService.getArrayDataByKey(response, "categories", categoryId);
+        this.images = this.productsArr.images[0].image;
+        this.availableColors = this.productsArr.availableColors;
+        this.activatedRoute.params.subscribe(params => {
+          this.ln = params.ln;
+          this.cn = params.cn;
+
+          this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
+            this.breadCrumbMenuName = response.menuName;
+            this.breadCrumbMenuId = response.menuId;
+            this.breadCrumbCategoryName = response.categoryName;
+            this.breadCrumbCategoryId = response.categoryId;
+            this.breadCrumbSubCategoryName = response.subCategory;
+            this.breadCrumbSubCategoryId = response.subCategoryId;
+            this.breadCrumbSubLevelName = response.subLevel;
+            this.breadCrumbSubLevelId = response.subLevelId;
+            this.breadCrumbProductName = this.productsArr.name;
+          });
+        });
+
+      });
+      this.defaultService.getSizes().subscribe(response => {
+        this.sizes = response;
+      });
+    });
   }
 
-  ngOnInit() { 
-    let result;
-    this.isOn = true;
-    this.defaultService.getProducts().subscribe(response => {
-      this.productsArr = response.filter(product => product.id === this.productId)[0];
-      let categoryId = response.filter(product => product.id === this.productId)[0].categories[0];
-      this.alternateProducts = this.utilitiesService.getArrayDataByKey(response, "categories", categoryId);
-      this.images = this.productsArr.images[0].image;
-      this.availableColors = this.productsArr.availableColors;
-      this.activatedRoute.params.subscribe(params => {
-        this.ln = params.ln;
-        this.cn = params.cn;  
-        this.breadCrumbService.generateBreadCrumb(params).subscribe(response => {
-          this.breadCrumbMenuName = response.menuName;
-          this.breadCrumbMenuId = response.menuId;
-          this.breadCrumbCategoryName = response.categoryName;
-          this.breadCrumbCategoryId = response.categoryId;
-          this.breadCrumbSubCategoryName = response.subCategory;
-          this.breadCrumbSubCategoryId=response.subCategoryId;
-          this.breadCrumbSubLevelName = response.subLevel;
-          this.breadCrumbSubLevelId = response.subLevelId;
-          this.breadCrumbProductName = this.productsArr.name;
-        });
-      });
-  
-    });
-    this.defaultService.getSizes().subscribe(response => {
-      this.sizes = response;
-    });
-  }
+  ngOnInit() {}
 
   imageColorSelection(color) {
     this.productsArr.images.forEach(element => {
@@ -88,12 +93,14 @@ export class ProductViewComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit() {   
+  ngAfterViewInit() {
   }
 
   toggleVideo(event: any) {
     this.isOn = false;
     this.videoplayer.nativeElement.play();
   }
+
+
 
 }
