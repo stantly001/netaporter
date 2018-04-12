@@ -34,7 +34,7 @@
               </div>
               <ol class="carousel-indicators">
                 <li data-target="#carousel-custom" *ngFor="let image of images;let i = index;" [attr.data-slide-to]="i" [class.active]="first==true"
-                  (click)="isOn=true">{{first}}--{{i}}
+                  (click)="isOn=true">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
               </ol>

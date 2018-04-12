@@ -64,7 +64,11 @@ export class FilterService  {
     }
 
     if (type == "price") {
+      console.log(isChecked)
+      console.log(this.pricesFilter);
       isChecked ? this.pricesFilter.push(filterObj.rangeId) : this.pricesFilter.splice(this.pricesFilter.indexOf(filterObj.rangeId, 1));
+      console.log("1t",this.pricesFilter.push(filterObj.rangeId))
+      console.log("gh",this.pricesFilter.splice(this.pricesFilter.indexOf(filterObj.rangeId, 1)));
       if (this.queryStringArr.indexOf("pricesFilter") == -1 && (this.pricesFilter.length > 0)) {
         this.queryStringArr.push("pricesFilter");
       }

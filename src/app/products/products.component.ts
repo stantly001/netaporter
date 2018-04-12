@@ -54,7 +54,7 @@ export class ProductsComponent implements OnInit {
       if (response.length !== 0) {
         this.products = response;
         console.log(this.products);
-        this.itemsPerRow = 3
+        this.itemsPerRow = 4
         this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
         let pageSize
         if (this.pageSize) {

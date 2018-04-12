@@ -45,13 +45,21 @@ export class SortComponent implements OnInit {
   * Sort Method for Product 
   */
   sortProduct(type) {
+    console.log("type",type)
     let routeUrl = this.utilitiesService.buildRoutingUrl(this.params);
+    console.log("routeUrl",routeUrl)
     let sortOrder: string;
     if (type == "priceLowToHigh") {
       sortOrder = "asc";
     }
     if (type == "priceHighToLow") {
       sortOrder = "desc";
+    }
+    if (type == "suggested") {
+      sortOrder = "sug";
+    }
+    if (type == "mostPopularity") {
+      sortOrder = "pop";
     }
     this.paramsService.pagination.subscribe(response => {
       if (response.length !== 0) {
@@ -62,8 +70,15 @@ export class SortComponent implements OnInit {
             let obj = JSON.parse(JSON.stringify(allParams.qParams));
             (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
             //this.urlComponent.loadUrl(routeUrl, obj,'');
-
-            this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "orginalPrice");
+            if(type=="priceLowToHigh"||type=="priceHighToLow"){
+              this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "orginalPrice");
+            }else if(type=="suggested"){
+              this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "suggested");
+              console.log(this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "suggested"))
+            }else if(type=="mostPopularity"){
+              this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "mostPopularity");
+            }
+            
             this.router.navigate([routeUrl], { queryParams: obj });
           });
       }

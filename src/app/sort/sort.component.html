@@ -1,6 +1,5 @@
 <div class="btn-group">
   <select name="select_item" (change)="sortProduct($event.target.value)" class="form-control select_item">
-      <option value="all">Select</option>
       <option *ngFor="let sortProduct of sort" [value]="sortProduct.sortTypeName">
           {{sortProduct.sortDisplayName}}
       </option>

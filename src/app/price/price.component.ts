@@ -16,6 +16,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class PriceComponent implements OnInit {
 
+  paginationSize: any;
   isCategory: boolean;
   prices: Array<any> = [];
   menuId: number;
@@ -55,7 +56,11 @@ export class PriceComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
+    this.activatedRoute.queryParams.subscribe(response => {
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, this.prices);
   }
 
