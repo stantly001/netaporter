@@ -33,7 +33,7 @@
                 </a>
               </div>
               <ol class="carousel-indicators">
-                <li data-target="#carousel-custom" *ngFor="let image of images;let i = index;" [attr.data-slide-to]="i" [class.active]="first==true"
+                <li data-target="#carousel-custom" *ngFor="let image of images;let i = index;" [attr.data-slide-to]="i" [ngClass]="{'active':i==0}"
                   (click)="isOn=true">
                   <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
                 </li>
@@ -44,7 +44,7 @@
                   <span class="fa fa-chevron-down thumb-arrow"></span>
                 </a>
               </div>
-              <div class="icon icon-video_play text-center" (click)="toggleVideo();">
+              <div *ngIf="productsArr?.video" class="icon icon-video_play text-center" (click)="toggleVideo();">
                 <span class="fa fa-play-circle"></span>
               </div>
             </div>
@@ -56,7 +56,7 @@
                       <p class="text-nowrap">if it goes on sale and more.</p>
                     </div>                
                   </popover-content>
-                  <i class="fa fa-heart-o wish-list-popover" [popoverOnHover]="true" [popover]="myPopover" 
+                  <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}" [popoverOnHover]="true" [popover]="myPopover" 
                    aria-hidden="true"></i>
               <div class="pull-right">
                   
@@ -64,8 +64,8 @@
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
-                  <div class="item text-center" *ngFor="let image of images;let i = index"  [class.active]="i==0">
-                    <span>
+                  <div class="item text-center" *ngFor="let image of images;let i = index"  [ngClass]="{'active':i==0}">
+                    <span>-->
                         <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}"  alt='Daisy on the Ohoopee' class="img-responsive" />
                       <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
                       <!-- <img appProductView src='{{image?.url}}' alt='Daisy on the Ohoopee' class="img-responsive" /> -->
@@ -138,7 +138,7 @@
           </div>
           <div>
             <div class="product-shipment text-center">
-              Ship To:United Arabia Emirates
+              Ship To:{{shipping}}
               <span class="fa fa-chevron-down"></span>
               <div>
                 Order Within 9 hours and 1 minute for garaunteed same day shipping

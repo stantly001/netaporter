@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
 import 'ngx-popover';
@@ -15,6 +16,8 @@ declare var jQuery: any;
 })
 
 export class ProductViewComponent implements OnInit {
+  favourite: boolean;
+  shipping: any;
   availableColors: any;
   sizes: any;
   images: any;
@@ -46,7 +49,7 @@ export class ProductViewComponent implements OnInit {
 
   @ViewChild('videoPlayer') videoplayer: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
+  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
     
     this.activatedRoute.params.subscribe(response => {
       this.productId = parseInt(response.productId);
@@ -82,7 +85,10 @@ export class ProductViewComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.favourite=false;
+    this.shipping=this.storage.get("shipping");
+  }
 
   imageColorSelection(color) {
     this.productsArr.images.forEach(element => {

@@ -121,7 +121,18 @@
 		</div>
 		<div class="col-md-2">
 			<p class="text-center-ship">Ship to
-				<app-country [displayType]="type"></app-country>
+					<span class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">
+							  {{countryName}}
+							  <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
+							  <li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+								<a>{{country.countryName}}</a>
+							  </li>
+							</ul>
+						  </span>
+				<!-- <app-country [displayType]="type"></app-country> -->
 			</p>
 		</div>
 		<div class="col-md-6">

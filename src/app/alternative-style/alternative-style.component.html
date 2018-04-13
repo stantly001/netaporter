@@ -51,7 +51,7 @@
   <ngx-carousel [inputs]="carouselOne">
     <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
       <a (click)="viewAlternateProduct(alternativeProduct)">
-      <img [src]="alternativeProduct?.productImg" class="img-responsive">
+      <img [src]="alternativeProduct[i] ? alternativeProduct.outFitImg : alternativeProduct.productImg" (mouseover)="alternativeProduct[i] = true" (mouseout)="alternativeProduct[i] = false" class="img-responsive">
       <div class="product-name">{{alternativeProduct.name}}</div>
       <div class="product-price">
         <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">

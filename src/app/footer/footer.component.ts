@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute, Params, Router, RoutesRecognized } from '@angular/router';
+import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
@@ -14,9 +15,9 @@ export class FooterComponent implements OnInit {
   countryName:string;
   countries:Array<any>=[];
   cn:string;
-  type:string;
+  displayType:string;
 
-  constructor(private router:Router,private defaultService:DefaultService,private utilitiesService:UtilitiesService) { 
+  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,private router:Router,private defaultService:DefaultService,private utilitiesService:UtilitiesService) { 
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
         let paramObj = data.state.root.firstChild.params;
@@ -26,11 +27,20 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.type="bottom";
+    this.displayType="bottom";
     this.defaultService.getCountry().subscribe(response => {
       this.countries = response;
-      this.countryName = this.utilitiesService.filterSelectedObj(response, this.cn, "countryShortName").countryName
-    });
+      let countryName=this.storage.get("shipping")
+      if(countryName){
+        this.countryName=countryName;
+      }else{
+      this.countryName=response[0].countryName;
+      this.storage.set("shipping",this.countryName);
+      }
+    })
   }
-
+  shipTo(country){
+    this.countryName=country.countryName;
+    this.storage.set("shipping",this.countryName);
+  }
 }

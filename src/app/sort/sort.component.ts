@@ -61,7 +61,7 @@ export class SortComponent implements OnInit {
     if (type == "mostPopularity") {
       sortOrder = "pop";
     }
-    this.paramsService.pagination.subscribe(response => {
+    this.paramsService.fp.subscribe(response => {
       if (response.length !== 0) {
         this.pagedProducts = response;
         
@@ -69,7 +69,6 @@ export class SortComponent implements OnInit {
           (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
             let obj = JSON.parse(JSON.stringify(allParams.qParams));
             (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-            //this.urlComponent.loadUrl(routeUrl, obj,'');
             if(type=="priceLowToHigh"||type=="priceHighToLow"){
               this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "orginalPrice");
             }else if(type=="suggested"){

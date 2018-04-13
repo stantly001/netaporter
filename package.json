@@ -26,6 +26,7 @@
     "@types/c3": "^0.5.0",
     "@zeitiger/elevatezoom": "^2.5.4",
     "angular-ez-plus": "^1.2.1",
+    "angular-webstorage-service": "^1.0.2",
     "c3": "^0.5.2",
     "c3-angular": "^1.4.0",
     "core-js": "^2.4.1",

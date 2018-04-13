@@ -63,13 +63,12 @@ export class ViewComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
-
       this.breadCrumbService.generateBreadCrumb(response).subscribe(response => {
-        this.breadCrumbMenuName = response.menuName;
-        this.breadCrumbCategoryName = response.categoryName;
-        this.breadCrumbSubCategoryName = response.subCategory;
-        this.breadCrumnSubLevelName = response.subLevel;
-      });
+          this.breadCrumbMenuName = response.menuName;
+          this.breadCrumbCategoryName = response.categoryName;
+          this.breadCrumbSubCategoryName = response.subCategory;
+          this.breadCrumnSubLevelName = response.subLevel;
+        });
 
 
       this.menuId = parseInt(response.menuId);
@@ -92,7 +91,7 @@ export class ViewComponent implements OnInit {
         this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
 
         let data = this.dataService.getProductsByArrayMap(productResponse, params);
-        console.log("product Response ==>",data);
+        console.log("product Response ==>", data);
         this.products = data.products;
         this.paramsService.setOrginalProducts(data.products);
         this.paramsService.setFilteredProducts(this.products);

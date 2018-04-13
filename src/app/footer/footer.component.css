@@ -118,3 +118,16 @@ padding:0px;
     border-bottom: 1px solid #4d4d4d;
     padding-bottom: 20px;
 }
+
+
+ul.bottom-dropdown {
+    bottom:100% !important;
+    top:auto !important;
+}
+
+ul.bottom-dropdown > li > a {
+    color: #504c4c !important;
+}
+.dropdown-toggle {
+    color: #727171;
+}

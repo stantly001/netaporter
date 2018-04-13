@@ -76,12 +76,10 @@ export class AlternativeStyleComponent implements OnInit {
   public viewAlternateProduct(alternativeProduct) {
     let routingUrl = 'product/'+this.cn+"/"+this.ln+"/"+this.menuId+"/"+this.categoryId+"/"+alternativeProduct.id;
     console.log("routing url ==>",routingUrl);
-    // window.location.href=routingUrl;
-    this.router.navigate(["../",alternativeProduct.id],{relativeTo:this.activatedRoute});
+    window.location.href=routingUrl;
+    // this.router.navigate(["../",alternativeProduct.id],{relativeTo:this.activatedRoute,skipLocationChange: false});
   }
-  selectAlternateProduct(alternativeProduct){
-    this.router.navigate(['../',alternativeProduct.id], {relativeTo: this.activatedRoute});
-  }
+  
   public myfunc(event: Event) {
     console.log(event)
     // carouselLoad will trigger this funnction when your load value reaches

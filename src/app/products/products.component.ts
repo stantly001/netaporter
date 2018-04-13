@@ -103,7 +103,7 @@ export class ProductsComponent implements OnInit {
       // skipLocationChange: true
 
     });
-    this.paramsService.setPaginationProducts(this.pagedProducts);
+    // this.paramsService.setPaginationProducts(this.pagedProducts);
   }
 
   setPage(page: number, len: number) {
@@ -128,7 +128,7 @@ export class ProductsComponent implements OnInit {
    
     // get current page of items
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    this.paramsService.setPaginationProducts(this.pagedProducts);
+    // this.paramsService.setPaginationProducts(this.pagedProducts);
     // this.utilitiesService.sortArrayByOrders(this.pagedProducts, 'asc', "orginalPrice");
 
   }

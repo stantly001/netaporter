@@ -38,6 +38,7 @@ import { AlternativeStyleComponent } from './alternative-style/alternative-style
 import { WaysToShopComponent } from './ways-to-shop/ways-to-shop.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import { PopoverModule } from "ngx-popover";
+import { StorageServiceModule} from 'angular-webstorage-service';
 
 
 import 'hammerjs';
@@ -83,6 +84,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     RouterModule.forRoot(Approute),
     NgxCarouselModule,
     PopoverModule,
+    StorageServiceModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

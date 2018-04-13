@@ -7405,3 +7405,8 @@ select.form-control.select_item {
 .ngxcarousel-inner {
   margin: 48px;
 }
+@media only screen and (min-width:1100px) {
+  .container.product-view {
+    width:1330px;
+  }
+}
