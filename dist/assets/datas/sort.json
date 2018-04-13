@@ -1,0 +1,18 @@
+[
+    {
+        "sortDisplayName":"Suggested",
+        "sortTypeName":"suggested"
+    },
+    {
+        "sortDisplayName":"Price High To Low",
+        "sortTypeName":"priceHighToLow"
+    },
+    {
+        "sortDisplayName":"Price Low To High",
+        "sortTypeName":"priceLowToHigh"
+    },
+    {
+        "sortDisplayName":"Most Popularity",
+        "sortTypeName":"mostPopularity"
+    }
+]
