@@ -60,7 +60,7 @@ export class ProductsComponent implements OnInit {
         if (this.pageSize) {
           pageSize = this.pageSize;
         } else {
-          this.pageSize=10;
+          this.pageSize=5;
           pageSize = this.pageSize;
         }
         let pageNo = this.pageNo
@@ -111,8 +111,8 @@ export class ProductsComponent implements OnInit {
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
       queryParams: {
-        // page: page,
-        // pageSize: len
+        page: page,
+        pageSize: len
       },
       queryParamsHandling: 'merge',
       // preserve the existing query params in the route
