@@ -26,7 +26,7 @@
                             <ul class="panel_bottom">
                                 <li *ngFor="let color of colors">
                                     <div class="styled-input-single">
-                                        <input type="checkbox" class="checkbox-border checkbox-border" id="product-filter-c{{color.colorId}}" (click)="filter(color,$event.target.checked,'color')">
+                                        <input [(ngModel)]="color.checked" type="checkbox" class="checkbox-border checkbox-border" id="product-filter-c{{color.colorId}}" (click)="filter(color,$event.target.checked,'color')">
                                         <label class="checkbox-menu" for="product-filter-c{{color.colorId}}">
                                             {{color.colorName}}
                                         </label>

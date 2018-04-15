@@ -168,7 +168,7 @@ export class UtilitiesService {
    * @param value
    * Build url on Page load. For Country & Language
    */
-  buildUrl(type: string, value: string,params) {
+  buildUrl(type: string, value: string, params) {
 
     let paramsObj = JSON.parse(JSON.stringify(params));
     if (type == 'country') {
@@ -188,12 +188,12 @@ export class UtilitiesService {
    * Search By Product Name & Description 
    */
   searchFilter(arr: Array<any>, value: string) {
-    console.log("filterProd",arr)
+    console.log("filterProd", arr)
     let response: Array<any> = [];
     arr.forEach(element => {
       ((element.name.toLowerCase().search(value) !== -1) || (element.description.toLowerCase().search(value) !== -1)) ? response.push(element) : ''
     });
-    console.log("searchfilter",response)
+    console.log("searchfilter", response)
     return response;
   }
 
@@ -206,6 +206,25 @@ export class UtilitiesService {
   */
   filterSelectedObj(data, val, filterKey) {
     return data.filter(x => x[filterKey] == val)[0];
+  }
+
+  /**
+   * 
+   * @param columnName 
+   * @param fromArr 
+   * @param toArr 
+   * @param searchKey 
+   */
+  updateArrayObjectByURLKey(columnName, fromArr, toArr, searchKey, value) {
+    console.log("columnName -->",columnName);
+    fromArr.forEach(element => {
+      toArr.forEach(ele => {
+        if (ele[searchKey] == element) {
+          element[columnName] = true;
+        }
+      });
+    });
+    return fromArr;
   }
 
 }

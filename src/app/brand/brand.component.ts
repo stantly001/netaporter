@@ -34,24 +34,37 @@ export class BrandComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
     this.isCategory = false;
+
+    let url = window.location.href;
+
     this.defaultService.getBrands().subscribe(response => {
       if (response.length != 0) {
         this.brandArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+
+          this.defaultService.getMappingFilters().subscribe(response => {
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'brandId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.brandArr, 'brandId');
+
+            if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
+              let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);
+              // this.brands = this.utilitiesService.updateArrayObjectByURLKey('checked', brandFilterIds, tempArr, 'brandId', true);
+              brandFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['brandId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.brands = tempArr;
+
+
+
+          }); //end of getMappingFilter
+        }); // End of Params Subscribe
       }
-    });
-
-    this.activatedRoute.params.subscribe(routingUrl => {
-      this.urlParams = routingUrl;
-      this.menuId = parseInt(routingUrl.menuId);
-      this.categoryId = parseInt(routingUrl.categoryId);
-      this.subCategoryId = parseInt(routingUrl.subCategoryId);
-      this.subLevelId = parseInt(routingUrl.subLevelId);
-
-      this.defaultService.getMappingFilters().subscribe(response => {
-        let arr = this.dataService.getFilterComponentsData(response,routingUrl,'brandId');
-        console.log("brand Arr ==>",arr);
-        this.brands = this.utilitiesService.mapArrays(arr, this.brandArr, 'brandId');
-      });
     });
   }
 
@@ -65,12 +78,14 @@ export class BrandComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response => {
-      this.paginationSize = response.pageSize;
-    });
+    filterObj.checked = isChecked;
+    // this.activatedRoute.queryParams.subscribe(response => {
+    //   this.paginationSize = response.pageSize;
+    // });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
+    console.log(filterData)
+    // filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
-}
+} 

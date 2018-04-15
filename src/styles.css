@@ -7405,3 +7405,7 @@ select.form-control.select_item {
 .ngxcarousel-inner {
   margin: 48px;
 }
+
+.container.product-view {
+  width:1330px;
+}

@@ -98,7 +98,7 @@ export class DataService {
   }
 
   public getSubCategory(params: Object) {
-    let arr:Array<any>=[];
+    let arr: Array<any> = [];
     let menuId = params['menuId'];
     this.defaultService.getCategories().subscribe(response => {
       let menus = this.utilitiesService.mapArrayData(response, 'menuId', menuId);
@@ -111,7 +111,7 @@ export class DataService {
    * 
    * @param products 
    * @param params 
-   * Returns Products By Query Params
+   * Returns Products By  Params
    */
   public getProductsByArrayMap(products: Array<any>, params: Object) {
     let arr: Array<any> = [];
@@ -120,7 +120,7 @@ export class DataService {
     let brand: Array<any> = [];
     let colors: Array<any> = [];
     let sizes: Array<any> = [];
-    
+
     let menuId = params['menuId'];
     let menus: Array<any> = [];
 
@@ -163,6 +163,9 @@ export class DataService {
     arr = [];
     arr.push(min);
     arr.push(max);
+    console.log("min value -->", min);
+    console.log("max -->", max);
+
 
     products.forEach(element => {
       let productPrice = parseFloat(element.orginalPrice);
@@ -178,12 +181,14 @@ export class DataService {
    * @param response 
    * @param routingUrl 
    */
-  getFilterComponentsData(response: Array<any>,routingUrl:Object,key:string) {
+  getFilterComponentsData(response: Array<any>, routingUrl: Object, key: string) {
     let arr = response.filter(data => data['categoryId'] == routingUrl['categoryId'])[0];
-    if (routingUrl['subCategoryId'] && !routingUrl['subLevelId']) { console.log("cond1");
+    if (routingUrl['subCategoryId'] && !routingUrl['subLevelId']) {
+      console.log("cond1");
       arr = arr['subCategory'].filter(data => data['subCategoryId'] == parseInt(routingUrl['subCategoryId']))[0];
     }
-    if (routingUrl['subCategoryId'] && routingUrl['subLevelId']) { console.log("cond2");
+    if (routingUrl['subCategoryId'] && routingUrl['subLevelId']) {
+      console.log("cond2");
       arr = arr['subCategory'].filter(data => data['subCategoryId'] == parseInt(routingUrl['subCategoryId']))[0];
       arr = arr['subLevelCategory'].filter(data => data['subLevelId'] == parseInt(routingUrl['subLevelId']))[0];
     }

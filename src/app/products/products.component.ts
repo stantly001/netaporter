@@ -77,7 +77,7 @@ export class ProductsComponent implements OnInit {
       }
     });
 
-  }
+  } 
 
   ngOnInit() {
 
@@ -111,8 +111,8 @@ export class ProductsComponent implements OnInit {
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
       queryParams: {
-        page: page,
-        pageSize: len
+        // page: page,
+        // pageSize: len
       },
       queryParamsHandling: 'merge',
       // preserve the existing query params in the route

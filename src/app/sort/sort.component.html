@@ -1,5 +1,5 @@
 <div class="btn-group">
-  <select name="select_item" (change)="sortProduct($event.target.value)" class="form-control select_item">
+  <select name="select_item"  [(ngModel)]="sortTypeName" (change)="sortProduct($event.target.value)" class="form-control select_item">
       <option *ngFor="let sortProduct of sort" [value]="sortProduct.sortTypeName">
           {{sortProduct.sortDisplayName}}
       </option>
