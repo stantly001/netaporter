@@ -16,6 +16,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
 
+  categoryId: any;
   filteredProducts: Array<any> = [];
   tempFilteredProducts: Array<any> = [];
   setClickedRow: Function;
@@ -26,16 +27,16 @@ export class NavigationComponent implements OnInit {
   constructor(private dataService: DataService, private defaultService: DefaultService,
     private paramsService: ParamsService, private activatedRoute: ActivatedRoute, private router: Router,
     private utilitiesService: UtilitiesService, private translateService: TranslateService) {
-      translateService.addLangs(["en", "fr"]);
-      translateService.setDefaultLang('en');
-      let browserLang = translateService.getBrowserLang();
-      translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    translateService.addLangs(["en", "fr"]);
+    translateService.setDefaultLang('en');
+    let browserLang = translateService.getBrowserLang();
+    translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
     this.setClickedRow = function (index) {
       this.selectedRow = index;
     }
     this.activatedRoute.params.subscribe(routingUrl => {
-      console.log("====>",routingUrl.ln);
-      
+      console.log("====>", routingUrl.ln);
+
     });
     console.log("navigaton called");
   }
@@ -44,7 +45,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
 
-    
+
 
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
@@ -60,15 +61,15 @@ export class NavigationComponent implements OnInit {
 
   }
 
-  reloadproduct(menu, category, subCategory){
+  reloadproduct(menu, category, subCategory) {
     console.log(menu)
     console.log(category)
     console.log(subCategory)
     // let obj = {}
-    this.router.navigate(['/shop/'+this.cn+"/"+this.ln+"/"+menu.menuId+"/"+category.categoryId+"/"+subCategory.id]);
+    this.router.navigate(['/shop/' + this.cn + "/" + this.ln + "/" + menu.menuId + "/" + category.categoryId + "/" + subCategory.id]);
   }
   switchLanguage(language: string) {
-    
+
   }
 
   /**
@@ -79,9 +80,9 @@ export class NavigationComponent implements OnInit {
   */
   onSearchProduct(event, value) {
     console.log(value)
-    console.log("filteredProd",this.filteredProducts)
+    console.log("filteredProd", this.filteredProducts)
     this.paramsService.fp.subscribe(response => {
-      this.filteredProducts=response;
+      this.filteredProducts = response;
     })
     if (event.key == 'Enter') {
       if (value) {
@@ -95,6 +96,12 @@ export class NavigationComponent implements OnInit {
         });
       }
     }
+  }
+  selectMenu(menu) {
+    this.defaultService.getCategories().subscribe(response => {
+      this.categoryId = response.filter(res => res.menuId == menu.menuId)[0].categories[0]
+      this.router.navigate(["/shop", this.cn, this.ln, menu.menuId, this.categoryId.categoryId])
+    })
   }
 
 }

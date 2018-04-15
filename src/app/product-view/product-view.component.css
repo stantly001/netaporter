@@ -424,7 +424,7 @@ div#carousel-custom {
 .wish-list-popover{
     font-size:34px !important;
     cursor: pointer;
-    padding-left: 93% !important;
+    margin-left: 93% !important;
     position: absolute !important;
     z-index: 9999;
 }
@@ -450,8 +450,9 @@ div#carousel-custom {
         padding-left:0%;
     }
 }
-
-
+.item .image-width{
+    width:432px !important
+}
 
 
 

@@ -16,3 +16,11 @@
 	font-size:30px;
 	text-transform:uppercase;
 }
+.view-more {
+    float: left !important;
+    padding: 15px 39px !important;
+}
+
+.delivery.col-xs-12.col-lg-3 {
+    width: 100% !important;
+}

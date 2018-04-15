@@ -8,7 +8,7 @@
       <ul class="mobile-sub wsmenu-list">
 
         <li *ngFor="let menu of menus;let i = index;">
-          <a [routerLink]="['/shop',cn,ln,menu.menuId]" class="navtext">
+          <a (click)="selectMenu(menu)" class="navtext">
             <span>{{menu.menuName | translate}}</span>
           </a>
           <div class="wsshoptabing wtsbrandmenu clearfix">

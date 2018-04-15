@@ -50,7 +50,7 @@ export class ProductViewComponent implements OnInit {
   @ViewChild('videoPlayer') videoplayer: any;
 
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
-    
+    this.shipping=this.storage.get("shipping");
     this.activatedRoute.params.subscribe(response => {
       this.productId = parseInt(response.productId);
       let result;
@@ -87,7 +87,7 @@ export class ProductViewComponent implements OnInit {
 
   ngOnInit() {
     this.favourite=false;
-    this.shipping=this.storage.get("shipping");
+    
   }
 
   imageColorSelection(color) {

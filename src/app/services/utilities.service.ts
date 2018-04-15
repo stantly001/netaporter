@@ -97,6 +97,7 @@ export class UtilitiesService {
    * Compare Arrays with Array of Objects & Returns Matched Array objects by Mapping key
    */
   mapArrays(fromarr: Array<any>, toArr: Array<any>, key: string) {
+    console.log("fromarr ==>", fromarr);
     console.log("toArr ==>", toArr);
     let arr: Array<any> = [];
     fromarr.forEach(element => {

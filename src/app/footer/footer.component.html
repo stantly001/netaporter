@@ -24,44 +24,19 @@
 			<div class="col-md-2 w3_footer_grid">
 				<h3>Top Brands</h3>
 				<ul class="info">
-					<li>
-						<a href="about.html">Roberto Cavalli</a>
+					<li *ngFor="let topBrand of topBrands">
+						<a href="about.html">{{topBrand.brandName}}</a>
 					</li>
-					<li>
-						<a href="mail.html">Just Cavalli</a>
-					</li>
-					<li>
-						<a href="short-codes.html">Dirk Bikkembergs</a>
-					</li>
-					<li>
-						<a href="faq.html">Iceberg</a>
-					</li>
-					<li>
-						<a href="products.html">Escales</a>
-					</li>
-					<li>
-						<a href="products.html">Versus</a>
-					</li>
+					
 				</ul>
 			</div>
 			<div class="col-md-2 w3_footer_grid">
 				<h3>Top Categories</h3>
 				<ul class="info">
-					<li>
-						<a href="dresses.html">Clothing</a>
+					<li *ngFor="let topCategory of topCategories">
+						<a href="/shop/{{cn}}/{{ln}}/{{menuId}}/{{topCategory.categoryId}}">{{topCategory.categoryName}}</a>
 					</li>
-					<li>
-						<a href="sweaters.html">Shoes</a>
-					</li>
-					<li>
-						<a href="shirts.html">Bags</a>
-					</li>
-					<li>
-						<a href="sarees.html">Accessories</a>
-					</li>
-					<li>
-						<a href="skirts.html">Christmas Sale</a>
-					</li>
+					
 				</ul>
 			</div>
 			<div class="col-md-2 w3_footer_grid">
