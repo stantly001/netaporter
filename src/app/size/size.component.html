@@ -24,7 +24,7 @@
               <ul class="panel_bottom">
                 <li *ngFor="let size of sizes">
                   <div class="styled-input-single">
-                    <input id="product-filter-s{{size.sizeId}}" type="checkbox" class="input-assumpte checkbox-border" (click)="filter(size,$event.target.checked,'size')">
+                    <input id="product-filter-s{{size.sizeId}}" type="checkbox" class="input-assumpte checkbox-border" [(ngModel)]="size.checked" (click)="filter(size,$event.target.checked,'size')">
                     <label for="product-filter-s{{size.sizeId}}" class="checkbox-menu">{{size.sizeName}}</label>
                   </div>
                 </li>

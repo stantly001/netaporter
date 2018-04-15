@@ -32,25 +32,33 @@ export class SizeComponent implements OnInit {
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
     this.isCategory = false;
+    let url = window.location.href;
+
     this.defaultService.getSizes().subscribe(response => {
       if (response.length != 0) {
         this.sizeArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+          this.defaultService.getMappingFilters().subscribe(response => {
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'sizeId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.sizeArr, 'sizeId');
+
+            if ((url.indexOf('?' + 'sizeFilter' + '=') != -1) || (url.indexOf('&' + 'sizeFilter' + '=') != -1)) {
+              let sizeFilterIds = this.activatedRoute.snapshot.queryParams['sizeFilter'].split(",").map(Number);
+              sizeFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['sizeId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.sizes = tempArr;
+
+          });
+        });
       }
     });
-
-    this.activatedRoute.params.subscribe(routingUrl => {
-      this.urlParams = routingUrl;
-      this.menuId = parseInt(routingUrl.menuId);
-      this.categoryId = parseInt(routingUrl.categoryId);
-      this.subCategoryId = parseInt(routingUrl.subCategoryId);
-      this.subLevelId = parseInt(routingUrl.subLevelId);
-
-      this.defaultService.getMappingFilters().subscribe(response => {
-        let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'sizeId');
-        this.sizes = this.utilitiesService.mapArrays(arr, this.sizeArr, 'sizeId');
-      });
-    });
-
   }
 
   ngOnInit() { }
@@ -67,7 +75,7 @@ export class SizeComponent implements OnInit {
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
+    // filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 

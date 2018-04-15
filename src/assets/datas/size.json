@@ -1,26 +1,32 @@
 [
     {
         "sizeId":1,
-        "sizeName":"XXS"
+        "sizeName":"XXS",
+        "checked":false
     },
     {
         "sizeId":2,
-        "sizeName":"XS"
+        "sizeName":"XS",
+        "checked":false
     },
     {
         "sizeId":3,
-        "sizeName":"S"
+        "sizeName":"S",
+        "checked":false
     },
     {
         "sizeId":4,
-        "sizeName":"M"
+        "sizeName":"M",
+        "checked":false
     },
     {
         "sizeId":5,
-        "sizeName":"L"
+        "sizeName":"L",
+        "checked":false
     },
     {
         "sizeId":6,
-        "sizeName":"XL"
+        "sizeName":"XL",
+        "checked":false
     }
 ]

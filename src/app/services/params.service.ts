@@ -15,6 +15,7 @@ export class ParamsService {
   public urlParams = new BehaviorSubject<Object>('');
   private filteredProducts = new BehaviorSubject<Array<any>>([]);
   private orginalProducts = new BehaviorSubject<Array<any>>([]);
+  private tempProducts = new BehaviorSubject<Array<any>>([]);
   private paginationProducts = new BehaviorSubject<Array<any>>([]);
   private menus = new BehaviorSubject<Array<any>>([]);
 
@@ -22,6 +23,7 @@ export class ParamsService {
   urlQueryParameters = this.urlQueryParams.asObservable();
   fp = this.filteredProducts.asObservable();
   oProducts = this.orginalProducts.asObservable();
+  tProducts = this.tempProducts.asObservable();
   pagination = this.paginationProducts.asObservable();
   menu = this.menus.asObservable();
 
@@ -30,6 +32,10 @@ export class ParamsService {
   private params:Object;
   private queryParams:Object;
 
+
+  public setTempProductData(arr:Array<any>){
+    this.tempProducts.next(arr);
+  }
 
   /**
    * 

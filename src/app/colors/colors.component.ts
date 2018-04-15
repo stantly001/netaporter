@@ -20,43 +20,49 @@ export class ColorsComponent implements OnInit {
   colors: Array<any> = [];
   colorFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
-  menuId: number;
-  categoryId: number;
-  subCategoryId: number;
-  subLevelId: number;
 
   urlParams: Object;
-  colorArr:Array<any>=[];
+  colorArr: Array<any> = [];
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
     this.isCategory = false;
+    let url = window.location.href;
+
     this.defaultService.getColors().subscribe(response => {
       if (response.length != 0) {
         this.colorArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+          this.defaultService.getMappingFilters().subscribe(response => {
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'colorId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.colorArr, 'colorId');
+            if ((url.indexOf('?' + 'colorFilter' + '=') != -1) || (url.indexOf('&' + 'colorFilter' + '=') != -1)) {
+              let colorFilterIds = this.activatedRoute.snapshot.queryParams['colorFilter'].split(",").map(Number);
+              colorFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['colorId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.colors = tempArr;
+
+          });
+        });
       }
     });
 
-    this.activatedRoute.params.subscribe(routingUrl => {
-      this.urlParams = routingUrl;
-      this.menuId = parseInt(routingUrl.menuId);
-      this.categoryId = parseInt(routingUrl.categoryId);
-      this.subCategoryId = parseInt(routingUrl.subCategoryId);
-      this.subLevelId = parseInt(routingUrl.subLevelId);
 
-      this.defaultService.getMappingFilters().subscribe(response => {
-        let arr = this.dataService.getFilterComponentsData(response, routingUrl,'colorId');
-        this.colors = this.utilitiesService.mapArrays(arr, this.colorArr, 'colorId');
-      });
-    });
 
   }
 
 
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   /**
   * 
@@ -65,17 +71,14 @@ export class ColorsComponent implements OnInit {
   * @param type 
   * 
   */
-
-
-
-
   public filter(filterObj, isChecked, type) {
+    filterObj.checked = isChecked;
     this.activatedRoute.queryParams.subscribe(response => {
-      console.log(response);
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
+    console.log("color filter data -->",filterData);
+    // filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 

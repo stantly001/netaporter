@@ -39,10 +39,6 @@ export class CategoryComponent implements OnInit {
     this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
       this.subCategories = this.dataService.getSubCategory(response);
     });
 

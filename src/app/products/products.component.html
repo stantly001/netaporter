@@ -21,14 +21,14 @@
             </div>
         </div>
         <!-- pagination code -->
-        <ul *ngIf="pager.pages && pager.pages.length > 1" class="pagination pull-right">
+        <ul *ngIf="(pager.pages && pager.pages.length > 1) && (products.length!==0)" class="pagination pull-right">
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(1)">First</a>
             </li> -->
             <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(pager.currentPage - 1,pageSize)">Previous</a>
             </li>
-            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage == page}">
                 <a (click)="setPage(page,pageSize)">{{page}}</a>
             </li>
             <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
@@ -59,7 +59,7 @@
                                 <img class="img-responsive" [src]="product[i] ? product.outFitImg : product.productImg" (mouseover)="product[i] = true" (mouseout)="product[i] = false">
                                  <!-- <img src="{{product.productImg}}" class="img-responsive" alt="">
                              <img src="{{product.outFitImg}}" class="img-responsive" alt=""> -->
-                            </a>
+                            </a> 
                         </div>
                         <div class="description">
                             <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]' title="Printed satin dress" data-position="1">
@@ -93,7 +93,7 @@
     </div>
     <!-- pagination code -->
     <div class="pull-right">
-        <ul *ngIf="pager.pages && pager.pages.length > 1" class="pagination pull-right">
+        <ul *ngIf="(pager.pages && pager.pages.length > 1) && (products.length!==0)" class="pagination pull-right">
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                         <a (click)="setPage(1)">First</a>
                     </li> -->
