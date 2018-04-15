@@ -25,13 +25,13 @@
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(1)">First</a>
             </li> -->
-            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage == 1}">
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(pager.currentPage - 1,pageSize)">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage == page}">
                 <a (click)="setPage(page,pageSize)">{{page}}</a>
             </li>
-            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage == pager.totalPages}">
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.currentPage + 1,pageSize)">Next</a>
             </li>
             <!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
@@ -97,13 +97,13 @@
             <!-- <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                         <a (click)="setPage(1)">First</a>
                     </li> -->
-            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage == 1}">
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
                 <a (click)="setPage(pager.currentPage - 1,pageSize)">Previous</a>
             </li>
             <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage == page}">
                 <a (click)="setPage(page,pageSize)">{{page}}</a>
             </li>
-            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage == pager.totalPages}">
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
                 <a (click)="setPage(pager.currentPage + 1,pageSize)">Next</a>
             </li>
             <!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
