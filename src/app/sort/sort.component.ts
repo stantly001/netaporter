@@ -27,7 +27,7 @@ export class SortComponent implements OnInit {
 
   ngOnInit() {
     let url = window.location.href;
-
+    this.sortTypeName = "suggested"
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
     });
