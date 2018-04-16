@@ -729,6 +729,37 @@ background: none !important;
   color:#000;
 }
 
+.wsmenu-list li a span:hover:after {
+position: absolute;
+content: '';
+top: 42px;
+right: 50%;
+width: 13px;
+height: 13px;
+transform: rotate(225deg);
+-webkit-transform: rotate(225deg);
+-moz-transform: rotate(225deg);
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+z-index: 100;
+background-color: #000;
+}
+.wsmenu-list li a span:hover:before {
+  position: absolute;
+  content: '';
+  top: 42px;
+  right: 50%;
+  width: 13px;
+  height: 13px;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  z-index: 100;
+  background-color: #000;
+  }
+
  .smallogo {
   width: 100%;
   display: block;
@@ -761,3 +792,9 @@ float: left;
 padding: 0px 0px 0px 0px;
 }
 
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+  left:0%;
+}
+span.glyphicon.glyphicon-chevron-right {
+  right:0%;
+}

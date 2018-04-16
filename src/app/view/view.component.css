@@ -55,13 +55,13 @@
     float: none;
     padding: 0;
     min-height: 20px;
-    word-wrap: break-word;
 }
 .product-list-menu h1 {
     text-align: left;
     line-height: 21px;
     font-size:39px;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
+    font-weight:bold;
 }
 .product-list-results {
     text-align: center;
@@ -127,12 +127,12 @@ select.select_item {
     color:#000;
 }
 .product-total {
-    margin-left:2%;
+    margin-left:2px;
 }
 .breadcrumbs {
-    margin-bottom: 9%;
+    margin-bottom: 15px;
     font-size: 13px;
-    margin-left: 2%;
+    margin-left: 2px;
 }
 .container.product-view {
     margin-bottom: 2%;

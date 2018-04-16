@@ -19,6 +19,7 @@
 .view-more {
     float: left !important;
     padding: 15px 39px !important;
+    text-align:left;
 }
 
 .delivery.col-xs-12.col-lg-3 {
