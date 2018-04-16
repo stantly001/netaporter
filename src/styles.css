@@ -4699,7 +4699,7 @@ input[type="radio"], input[type="checkbox"] {
     white-space: nowrap;
     width: 100%;
     line-height: 16px;
-    font-weight: normal;
+    /* font-weight: normal; */
     color: #000;
     text-transform: uppercase;
   }

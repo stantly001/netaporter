@@ -7,17 +7,17 @@
     <nav class="wsmenu clearfix">
       <ul class="mobile-sub wsmenu-list">
 
-        <li *ngFor="let menu of menus;let i = index;">
-          <a (click)="selectMenu(menu)" class="navtext">
+        <li *ngFor="let menu of menus;let i = index;" [ngClass]="{'wsmenu-actives':activeIndex==i}">
+          <a (click)="selectMenu(menu);activeIndex=i" class="navtext">
             <span>{{menu.menuName | translate}}</span>
           </a>
           <div class="wsshoptabing wtsbrandmenu clearfix">
             <div class="wsshoptabingwp clearfix">
               <ul class="wstabitem02 clearfix">
 
-                <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0)}"
+                <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0),'wscategoryactive':activeCategoryIndex==menuCategory}"
                   (mouseenter)="setClickedRow(menuCategory)">
-                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]">{{category.categoryName | translate}}</a>
+                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]" (click)="selectedCategoryIndex=menuCategory">{{category.categoryName | translate}}</a>
                   <div class="wsshoptab-active wstbrandbottom clearfix">
                     <div class="container">
                       <div class="row">
