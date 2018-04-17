@@ -20,6 +20,7 @@ export class FilterService {
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService) {
+    console.log(" CONSTRUCTOR IS CALLED .....");
     let url = window.location.href;
     if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
       let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);

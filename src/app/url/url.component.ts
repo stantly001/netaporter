@@ -24,6 +24,7 @@ export class UrlComponent implements OnInit {
     private utilitiesService: UtilitiesService) { }
 
   obj: { [key: string]: string } = {};
+  subscription:any;
   ngOnInit() { }
 
   /**
@@ -52,21 +53,23 @@ export class UrlComponent implements OnInit {
     this.paramsService.tProducts.subscribe(response => {
       this.tempProducts = response;
     })
-
-    this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
+    
+    this.subscription = this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
       this.activatedRoute.queryParams.subscribe((params: Params) => {
+        console.log("**************************************************")
         this.paramsService.setQueryParams(params);
         obj.orginalProduct = this.orginalProduct;
         obj.filteredProduct = this.filteredProducts;
         obj.tempProduct = this.tempProducts;
         obj.prices = this.prices;
         this.getProductByFilters(params, obj);
-      });
+      }).unsubscribe();
     })
 
 
 
   }
+  
 
   /** 
   * 
@@ -79,7 +82,7 @@ export class UrlComponent implements OnInit {
   getProductByFilters(params, productArrObj) {
 
     console.log("parmas -->",params);
-
+    
     let orginalProduct = productArrObj.orginalProduct;
     let filteredProduct = productArrObj.filteredProduct;
     let tempProduct = productArrObj.tempProduct;

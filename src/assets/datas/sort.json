@@ -15,7 +15,7 @@
         "checked":false
     },
     {
-        "sortDisplayName":"Most Popularity",
+        "sortDisplayName":"Most Popular",
         "sortTypeName":"mostPopularity",
         "checked":false
     }

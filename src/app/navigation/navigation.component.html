@@ -7,8 +7,8 @@
     <nav class="wsmenu clearfix">
       <ul class="mobile-sub wsmenu-list">
 
-        <li *ngFor="let menu of menus;let i = index;" [ngClass]="{'wsmenu-actives':activeIndex==i}">
-          <a (click)="selectMenu(menu);activeIndex=i" class="navtext">
+        <li *ngFor="let menu of menus;let i = index;" (mouseenter)="setMenuClickedRow(i)" [ngClass]="{'wsmenulink-active':i == (selectedMenuRow?selectedMenuRow:0),'wscategoryactive':activeCategoryIndex==menuCategory,'wsmenu-actives':activeIndex==i}" (mouseleave)="setMenuClickedRow(-1)">
+          <a (click)="selectMenu(menu);setMenuClickedRow(i);activeIndex=i" class="navtext">
             <span>{{menu.menuName | translate}}</span>
           </a>
           <div class="wsshoptabing wtsbrandmenu clearfix">

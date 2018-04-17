@@ -42,7 +42,7 @@ export class NavigationComponent implements OnInit {
 
     this.setMenuClickedRow = function(index) {
       console.log(index)
-      this.removeMsg = ""
+      // this.removeMsg = ""
       this.selectedMenuRow = index;
     }
     this.activatedRoute.params.subscribe(routingUrl => {
@@ -60,6 +60,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
 
+    this.selectedMenuRow = -1;
 
 
     this.defaultService.getCategories().subscribe(response => {
