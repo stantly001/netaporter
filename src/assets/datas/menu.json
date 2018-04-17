@@ -46,7 +46,7 @@
                     },
                     {
                         "id": 3,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "Pants & Leggings",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 7,
@@ -68,7 +68,7 @@
                     },
                     {
                         "id": 4,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 11,
@@ -96,7 +96,7 @@
             },
             {
                 "categoryId": 2,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -263,19 +263,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 40,
-                                "subLevelCategoryName": "BOMBER JACKETS"
+                                "subLevelCategoryName": "Bomber Jackets"
                             },
                             {
                                 "subLevelCategoryId": 41,
-                                "subLevelCategoryName": "DENIM JACKETS"
+                                "subLevelCategoryName": "Denim Jackets"
                             },
                             {
                                 "subLevelCategoryId": 42,
-                                "subLevelCategoryName": "DOWN JACKETS"
+                                "subLevelCategoryName": "Down Jackets"
                             },
                             {
                                 "subLevelCategoryId": 43,
-                                "subLevelCategoryName": "GILETS"
+                                "subLevelCategoryName": "Gilets"
                             }
                         ]
                     },
@@ -303,7 +303,7 @@
                     },
                     {
                         "id": 13,
-                        "name": "sweaters&knitwear",
+                        "name": "Sweaters & knitwear",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 48,
@@ -327,7 +327,7 @@
             },
             {
                 "categoryId": 6,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -336,23 +336,23 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 52,
-                                "subLevelCategoryName": "LACE-UP BOOTS"
+                                "subLevelCategoryName": "Lace-up Boots"
                             },
                             {
                                 "subLevelCategoryId": 53,
-                                "subLevelCategoryName": "HIKING BOOTS"
+                                "subLevelCategoryName": "Hiking Boots"
                             },
                             {
                                 "subLevelCategoryId": 54,
-                                "subLevelCategoryName": "DESERT BOOTS"
+                                "subLevelCategoryName": "Desert Boots"
                             },
                             {
                                 "subLevelCategoryId": 55,
-                                "subLevelCategoryName": "CHELSEA BOOTS"
+                                "subLevelCategoryName": "Chelsia Boots"
                             },
                             {
                                 "subLevelCategoryId": 56,
-                                "subLevelCategoryName": "BIKER BOOTS"
+                                "subLevelCategoryName": "Biker Boots"
                             }
                         ]
                     },
@@ -362,15 +362,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 57,
-                                "subLevelCategoryName": "HIGH TOP SNEAKERS"
+                                "subLevelCategoryName": "High Top Sneakers"
                             },
                             {
                                 "subLevelCategoryId": 58,
-                                "subLevelCategoryName": "LOW TOP SNEAKERS"
+                                "subLevelCategoryName": "Low Top Sneakers"
                             },
                             {
                                 "subLevelCategoryId": 59,
-                                "subLevelCategoryName": "SLIP-ON SNEAKERS"
+                                "subLevelCategoryName": "Slip-On Sneakers"
                             }
                         ]
                     }
@@ -409,7 +409,7 @@
                     },
                     {
                         "id": 17,
-                        "name": "Brief cases",
+                        "name": "Brief Cases",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 65,
@@ -956,7 +956,7 @@
                     },
                     {
                         "id": 40,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "Pant & Leggings",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 152,
@@ -978,7 +978,7 @@
                     },
                     {
                         "id": 41,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 156,
@@ -1006,7 +1006,7 @@
             },
             {
                 "categoryId": 15,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -1152,19 +1152,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 181,
-                                "subLevelCategoryName": "belted"
+                                "subLevelCategoryName": "Belted"
                             },
                             {
                                 "subLevelCategoryId": 182,
-                                "subLevelCategoryName": "hippy"
+                                "subLevelCategoryName": "Hippy"
                             },
                             {
                                 "subLevelCategoryId": 183,
-                                "subLevelCategoryName": "tweed"
+                                "subLevelCategoryName": "Tweed"
                             },
                             {
                                 "subLevelCategoryId": 184,
-                                "subLevelCategoryName": "coller"
+                                "subLevelCategoryName": "Coller"
                             }
                         ]
                     },
@@ -1188,7 +1188,7 @@
                     },
                     {
                         "id": 49,
-                        "name": "PANTS",
+                        "name": "Pants",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 188,
@@ -1210,7 +1210,7 @@
                     },
                     {
                         "id": 50,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 192,
@@ -1238,7 +1238,7 @@
             },
             {
                 "categoryId": 19,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
