@@ -44,26 +44,28 @@ export class ProductsComponent implements OnInit {
       this.ln = response.ln;
       this.menuId = response.menuId;
       this.categoryId = response.categoryId;
-    });
+    })
     this.activatedRoute.queryParams.subscribe(response => {
       this.pageNo = response.page;
       this.pageSize = response.pageSize;
     })
 
     this.paramsService.fp.subscribe(response => {
+      console.log("called proecusdfasefasfsadasdfas");
+      console.log("response-->",response);
       if (response.length !== 0) {
         this.products = response;
-        console.log(this.products);
+        console.log("products >>>>>", this.products);
         this.itemsPerRow = 4
         this.rows = Array.from(Array(Math.ceil(this.products.length / this.itemsPerRow)).keys());
         let pageSize
         if (this.pageSize) {
-          pageSize = this.pageSize;
+          pageSize = parseInt(this.pageSize);
         } else {
-          this.pageSize=5;
+          this.pageSize = 5;
           pageSize = this.pageSize;
         }
-        let pageNo = this.pageNo
+        let pageNo = parseInt(this.pageNo)
         if (!pageNo) {
           pageNo = 1;
           this.setPage(pageNo, pageSize);
@@ -75,9 +77,9 @@ export class ProductsComponent implements OnInit {
       } else {
         this.products = response;
       }
-    });
+    })  
 
-  } 
+  }
 
   ngOnInit() {
 
@@ -108,6 +110,7 @@ export class ProductsComponent implements OnInit {
 
   setPage(page: number, len: number) {
     console.log(page)
+    console.log(len);
     this.router.navigate([], {
       relativeTo: this.activatedRoute,
       queryParams: {
@@ -115,22 +118,11 @@ export class ProductsComponent implements OnInit {
         pageSize: len
       },
       queryParamsHandling: 'merge',
-      // preserve the existing query params in the route
-      // skipLocationChange: true
+      //  skipLocationChange: true
     });
-    if (page < 1 || page > this.pager.totalPages) {
-      return;
-    }
-
-    // get pager object from service
-  
     this.pager = this.paginationService.getPager(this.products.length, page, len);
-   
-    // get current page of items
     this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    // this.paramsService.setPaginationProducts(this.pagedProducts);
-    // this.utilitiesService.sortArrayByOrders(this.pagedProducts, 'asc', "orginalPrice");
-
+    console.log("Paged Products --->", this.pagedProducts);
   }
 
 

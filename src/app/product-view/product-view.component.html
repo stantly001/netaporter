@@ -48,25 +48,36 @@
                 <span class="fa fa-play-circle"></span>
               </div>
             </div>
-            <div class="col-md-9">             
-                <popover-content #myPopover [closeOnMouseOutside]="false"  [closeOnClickOutside]="true">
-                    <div class="text-center"><b>Like This Item?</b></div>               
-                    <div class="text-center">
-                      <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
-                      <p class="text-nowrap">if it goes on sale and more.</p>
-                    </div>                
-                  </popover-content>
-                  <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}" [popoverOnHover]="true" [popover]="myPopover" 
-                   aria-hidden="true"></i>
-              <div class="pull-right">
-                  
-              </div>
+
+           
+
+            <div class="col-md-9">
+
+              <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
+                
+                <div class="text-center">
+                  <b>Like This Item?</b>
+                </div>
+                <div class="text-center">
+                  <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
+                  <p class="text-nowrap">if it goes on sale and more.</p>
+                </div>
+             
+              </popover-content>
+            
+              <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}"
+                [popoverOnHover]="true" [popover]="myPopover" aria-hidden="true"></i>
+                
+               
+              
+            
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
-                  <div class="item text-center" *ngFor="let image of images;let i = index"  [ngClass]="{'active':i==0}">
+                  <div class="item text-center" *ngFor="let image of images;let i = index" [ngClass]="{'active':i==0}">
                     <span>
-                        <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}"  alt='Daisy on the Ohoopee' class="img-responsive image-width" />
+                      <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}" alt='Daisy on the Ohoopee' class="img-responsive image-width"
+                      />
                       <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
                       <!-- <img appProductView src='{{image?.url}}' alt='Daisy on the Ohoopee' class="img-responsive" /> -->
                       <!-- <p>Hover</p> -->
@@ -109,7 +120,7 @@
           <span class="product-name">{{productsArr?.message}}</span>
         </div>
         <div>
-          <span class="product-name">product code: {{productsArr?.code}}</span>
+          <span class="product-name">Product Code: {{productsArr?.code}}</span>
         </div>
         <hr>
         <div *ngIf="productsArr?.available==true">
@@ -127,7 +138,7 @@
           </div>
           <div class="color-image">
             <a *ngFor="let color of availableColors;let colorIndex=index" (click)="imageColorSelection(color);currentColIndex=colorIndex;">
-              <img class="img-responsive" [class.active]="currentColIndex==colorIndex"  width="50" height="50" [src]="color.url">
+              <img class="img-responsive" [class.active]="currentColIndex==colorIndex" width="50" height="50" [src]="color.url">
             </a>
             <!-- <a (click)="imageColorSelection('blue')">
               <img class="img-resposive" width="50" height="50" src="assets/img/blueColor.png">
@@ -141,7 +152,7 @@
               Ship To:{{shipping}}
               <span class="fa fa-chevron-down"></span>
               <div>
-                Order Within 9 hours and 1 minute for garaunteed same day shipping
+                Order within 9 hours and 1 minute for guaranteed Same-Day Shipping.
               </div>
             </div>
           </div>
@@ -151,7 +162,7 @@
         </div>
         <div *ngIf="productsArr?.available!=true">
           <div class="product-name actual-price">
-            Out Of Stocks
+            Out Of Stock
             <p>
               Please Enter Your Email We'll Remind You When this Product Is Back in Stock Again.
             </p>

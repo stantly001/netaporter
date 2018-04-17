@@ -149,3 +149,11 @@ ngx-carousel button[NgxCarouselNext] {
 .product-name {
     color: #000;
 }
+
+.offer-price {
+    color: #b72929 !important;
+}
+
+span.strike {
+    text-decoration: line-through;
+}

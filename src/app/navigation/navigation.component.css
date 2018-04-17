@@ -729,6 +729,83 @@ background: none !important;
   color:#000;
 }
 
+.wsmenulink-active > a > span:before {
+  position: absolute;
+content: '';
+top: 42px;
+right: 50%;
+width: 13px;
+height: 13px;
+transform: rotate(225deg);
+-webkit-transform: rotate(225deg);
+-moz-transform: rotate(225deg);
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+z-index: 100;
+background-color: #000;
+} 
+.wsmenulink-active > a > span:after {
+  position: absolute;
+content: '';
+top: 42px;
+right: 50%;
+width: 13px;
+height: 13px;
+transform: rotate(225deg);
+-webkit-transform: rotate(225deg);
+-moz-transform: rotate(225deg);
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+z-index: 100;
+background-color: #000;
+} 
+/* .wsmenulink-active:hover:after {
+  position: absolute;
+content: '';
+top: 42px;
+right: 50%;
+width: 13px;
+height: 13px;
+transform: rotate(225deg);
+-webkit-transform: rotate(225deg);
+-moz-transform: rotate(225deg);
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+z-index: 100;
+background-color: #000;
+} */
+
+/* .wsmenu-list li a span:hover:after {
+position: absolute;
+content: '';
+top: 42px;
+right: 50%;
+width: 13px;
+height: 13px;
+transform: rotate(225deg);
+-webkit-transform: rotate(225deg);
+-moz-transform: rotate(225deg);
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+z-index: 100;
+background-color: #000;
+}
+.wsmenu-list li a span:hover:before {
+  position: absolute;
+  content: '';
+  top: 42px;
+  right: 50%;
+  width: 13px;
+  height: 13px;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  z-index: 100;
+  background-color: #000;
+  }
+
  .smallogo {
   width: 100%;
   display: block;
@@ -741,7 +818,7 @@ background: none !important;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
-}
+} */
 
 .smallogo>img {
   margin-top: 0px;
@@ -761,3 +838,25 @@ float: left;
 padding: 0px 0px 0px 0px;
 }
 
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+  left:0%;
+}
+span.glyphicon.glyphicon-chevron-right {
+  right:0%;
+}
+
+.wsshoplink-active:hover > a {
+  font-weight: bolder;
+} 
+
+.wsmenulink-inactive{
+  display: none;
+}
+
+li.wsmenu-actives > a > span {
+  font-weight: bolder;
+}
+
+li.wsshoplink-active > a {
+  font-weight: bolder;
+}

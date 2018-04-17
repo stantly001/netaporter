@@ -361,7 +361,7 @@ img {
     background-image:none !important;
 }
 .carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {
-    right: 12% !important;
+    right: 0% !important;
 }
 
 .carousel-control.right {
@@ -376,13 +376,13 @@ img {
     min-height: 300px;
 }
 #carousel-custom .carousel-control.right {
-    right: 28px;
+    right: -30px;
     left: auto;
     background-image: none !important;
     background-repeat: repeat-x;
 }
 #carousel-custom .carousel-control.left {
-    left: 0;
+    left: -30px;
     right: auto;
     background-image: none !important;
     background-repeat: repeat-x;
@@ -424,15 +424,18 @@ div#carousel-custom {
 .wish-list-popover{
     font-size:34px !important;
     cursor: pointer;
-    margin-left: 93% !important;
-    position: absolute !important;
+    float: right !important;
+    position: relative !important;
     z-index: 9999;
+}
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {
+    left:0%;
 }
 
 @media only screen and (min-width:1025px) and (max-width:1170px) {
-    #carousel-custom .carousel-outer {
+    /* #carousel-custom .carousel-outer {
         width: 637px;
-    }
+    } */
 
 }
 .product-size-image.active > button {

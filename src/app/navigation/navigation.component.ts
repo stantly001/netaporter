@@ -16,11 +16,15 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
 
+  removeSelectedIndex: Function;
   categoryId: any;
   filteredProducts: Array<any> = [];
   tempFilteredProducts: Array<any> = [];
   setClickedRow: Function;
+  setMenuClickedRow:Function;
   selectedRow: Number;
+  selectedMenuRow: Number;
+  removeMsg: string;
   ln: string;
   cn: string;
 
@@ -31,13 +35,24 @@ export class NavigationComponent implements OnInit {
     translateService.setDefaultLang('en');
     let browserLang = translateService.getBrowserLang();
     translateService.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+    this.removeMsg = ""
     this.setClickedRow = function (index) {
       this.selectedRow = index;
+    }
+
+    this.setMenuClickedRow = function(index) {
+      console.log(index)
+      // this.removeMsg = ""
+      this.selectedMenuRow = index;
     }
     this.activatedRoute.params.subscribe(routingUrl => {
       console.log("====>", routingUrl.ln);
 
     });
+
+    this.removeSelectedIndex = function(){
+      this.removeMsg = "removeMouse"
+    }
     console.log("navigaton called");
   }
 
@@ -45,6 +60,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
 
+    this.selectedMenuRow = -1;
 
 
     this.defaultService.getCategories().subscribe(response => {
@@ -100,7 +116,7 @@ export class NavigationComponent implements OnInit {
   selectMenu(menu) {
     this.defaultService.getCategories().subscribe(response => {
       this.categoryId = response.filter(res => res.menuId == menu.menuId)[0].categories[0]
-      this.router.navigate(["/shop", this.cn, this.ln, menu.menuId, this.categoryId.categoryId])
+      this.router.navigate(["/shop", this.cn, this.ln, menu.menuId, this.categoryId.categoryId]);
     })
   }
 

@@ -147,6 +147,7 @@ export class DataService {
    * Result will be  : [100,300]
    */
   public priceFilter(products: Array<any>, priceArr: Array<any>, key: string, value: Array<any>) {
+    console.log("price Arr -->",priceArr);
     let arr: Array<any> = [];
     let response: Array<any> = [];
     priceArr.forEach(element => {

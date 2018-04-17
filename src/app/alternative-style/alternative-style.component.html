@@ -48,24 +48,30 @@
     </span>
   </div>
   <div class="container">
-  <ngx-carousel [inputs]="carouselOne">
-    <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
-      <a (click)="viewAlternateProduct(alternativeProduct)">
-      <img [src]="alternativeProduct[i] ? alternativeProduct.outFitImg : alternativeProduct.productImg" (mouseover)="alternativeProduct[i] = true" (mouseout)="alternativeProduct[i] = false" class="img-responsive">
-      <div class="product-name">{{alternativeProduct.name}}</div>
-      <div class="product-price">
-        <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">
-          AED {{alternativeProduct.orginalPrice}}
-        </span>
-        <span *ngIf="alternativeProduct.offerPrice!=='0'">
-          AED {{alternativeProduct.offerPrice}}
-        </span>
-      </div>
-      <div class="product-description">{{alternativeProduct.description}}</div>
-    </a>
-    </ngx-item>
-    <button NgxCarouselPrev class="leftRs"><i class="fa fa-angle-left"></i></button>
-    <button NgxCarouselNext class="rightRs"><i class="fa fa-angle-right"></i></button>
-  </ngx-carousel>
-</div>
+    <ngx-carousel [inputs]="carouselOne">
+      <ngx-item *ngFor="let alternativeProduct of products" NgxCarouselItem>
+        <a (click)="viewAlternateProduct(alternativeProduct)">
+          <img [src]="alternativeProduct[i] ? alternativeProduct.outFitImg : alternativeProduct.productImg" (mouseover)="alternativeProduct[i] = true"
+            (mouseout)="alternativeProduct[i] = false" class="img-responsive">
+          <div class="product-name">{{alternativeProduct.name}}</div>
+          <div class="product-description">{{alternativeProduct.description}}</div>
+          <div class="product-price">
+            <span *ngIf="alternativeProduct.offerPrice!=='0'" class="offer-price">
+              AED {{alternativeProduct.offerPrice}}
+            </span>
+            <span [ngClass]="{strike:alternativeProduct.offerPrice!=='0'}">
+              AED {{alternativeProduct.orginalPrice}}
+            </span>
+
+          </div>
+        </a>
+      </ngx-item>
+      <button NgxCarouselPrev class="leftRs">
+        <i class="fa fa-angle-left"></i>
+      </button>
+      <button NgxCarouselNext class="rightRs">
+        <i class="fa fa-angle-right"></i>
+      </button>
+    </ngx-carousel>
+  </div>
 </section>

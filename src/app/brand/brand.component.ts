@@ -16,6 +16,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class BrandComponent implements OnInit {
 
+  pageNo: any;
   isCategory: boolean;
   paginationSize: any;
   brands: Array<any> = [];
@@ -44,6 +45,7 @@ export class BrandComponent implements OnInit {
           this.urlParams = routingUrl;
 
           this.defaultService.getMappingFilters().subscribe(response => {
+            console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
             let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'brandId');
             let tempArr = this.utilitiesService.mapArrays(arr, this.brandArr, 'brandId');
 
@@ -79,12 +81,15 @@ export class BrandComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     filterObj.checked = isChecked;
-    // this.activatedRoute.queryParams.subscribe(response => {
-    //   this.paginationSize = response.pageSize;
-    // });
+    this.activatedRoute.queryParams.subscribe(response => {
+      console.log("brandQuery",response)
+      this.pageNo=response.pageNo;
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
     console.log(filterData)
-    // filterData.queryParam.pageSize = this.paginationSize;
+    filterData.queryParam.pageSize = this.paginationSize;
+    filterData.queryParam.pageNo = this.pageNo;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
