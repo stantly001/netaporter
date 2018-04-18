@@ -16,9 +16,10 @@ import { FilterService } from '../services/filter.service';
 })
 export class BrandComponent implements OnInit {
 
+  pageNo: any;
   isCategory: boolean;
   paginationSize: any;
-  brands:Array<any>=[];
+  brands: Array<any> = [];
 
   menuId: number;
   categoryId: number;
@@ -27,35 +28,49 @@ export class BrandComponent implements OnInit {
 
   urlParams: Object;
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  brandArr: Array<any> = [];
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService,private router: Router) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
-
-  ngOnInit() {
     this.isCategory = false;
-    this.activatedRoute.params.subscribe(response => {
-      this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
-    });
 
-    this.defaultService.getProducts().subscribe(response => {
-      let arr: Array<any> = [];
-      let params: { [k: string]: any } = {};
-      let productResponse: any;
-      productResponse = response;
+    let url = window.location.href;
 
-      this.menuId ? (params['menuId'] = this.menuId) : (params["menuId"] = null)
-      this.categoryId ? (params['categoryId'] = this.categoryId) : (params["categoryId"] = null);
-      this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
-      this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
-      let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      this.brands = data.brand;
+    this.defaultService.getBrands().subscribe(response => {
+      if (response.length != 0) {
+        this.brandArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+
+          this.defaultService.getMappingFilters().subscribe(response => {
+            console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'brandId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.brandArr, 'brandId');
+
+            if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
+              let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);
+              // this.brands = this.utilitiesService.updateArrayObjectByURLKey('checked', brandFilterIds, tempArr, 'brandId', true);
+              brandFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['brandId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.brands = tempArr;
+
+
+
+          }); //end of getMappingFilter
+        }); // End of Params Subscribe
+      }
     });
   }
+
+  ngOnInit() { }
 
   /**
   * 
@@ -65,13 +80,17 @@ export class BrandComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response=>{
+    filterObj.checked = isChecked;
+    this.activatedRoute.queryParams.subscribe(response => {
+      console.log("brandQuery",response)
+      this.pageNo=response.pageNo;
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    console.log(filterData)
     filterData.queryParam.pageSize = this.paginationSize;
-    console.log(filterData);
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
+    filterData.queryParam.pageNo = this.pageNo;
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
-}
+} 

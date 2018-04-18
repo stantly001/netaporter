@@ -13,14 +13,18 @@ import { UtilitiesService } from '../services/utilities.service';
 })
 export class UrlComponent implements OnInit {
 
+
   orginalProduct: Array<any> = [];
   filteredProducts: Array<any> = [];
+  tempProducts: Array<any> = [];
   prices: Array<any> = [];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService) { }
 
+  obj: { [key: string]: string } = {};
+  subscription:any;
   ngOnInit() { }
 
   /**
@@ -30,6 +34,7 @@ export class UrlComponent implements OnInit {
    * updates url and get products
    */
   loadUrl(routeUrl, obj, priceArr) {
+
     this.prices = priceArr;
     /**
      * Products By Category / SubCategory / SubLevel
@@ -45,13 +50,26 @@ export class UrlComponent implements OnInit {
       this.filteredProducts = response;
     });
 
-    this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
+    this.paramsService.tProducts.subscribe(response => {
+      this.tempProducts = response;
+    })
+    
+    this.subscription = this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
       this.activatedRoute.queryParams.subscribe((params: Params) => {
+        console.log("**************************************************")
         this.paramsService.setQueryParams(params);
-        this.getProductByFilters(params);
-      });
-    });
+        obj.orginalProduct = this.orginalProduct;
+        obj.filteredProduct = this.filteredProducts;
+        obj.tempProduct = this.tempProducts;
+        obj.prices = this.prices;
+        this.getProductByFilters(params, obj);
+      }).unsubscribe();
+    })
+
+
+
   }
+  
 
   /** 
   * 
@@ -61,36 +79,54 @@ export class UrlComponent implements OnInit {
   * Filters By Levels done Here
   * Sorting by Products done Here
   */
-  getProductByFilters(params) {
+  getProductByFilters(params, productArrObj) {
+
+    console.log("parmas -->",params);
+    
+    let orginalProduct = productArrObj.orginalProduct;
+    let filteredProduct = productArrObj.filteredProduct;
+    let tempProduct = productArrObj.tempProduct;
+    let priceArr = productArrObj.prices;
+
     let arr: Array<any> = [];
     let filters = this.dataService.stringKeyToArray(params);
     if (Object.keys(filters).length == 0) {
-      this.filteredProducts = this.orginalProduct;
+      this.filteredProducts = orginalProduct;
     }
-    else if (Object.keys(filters).length == 1) { //first level filter
-      let key = Object.keys(filters)[0];
-      this.filteredProducts = this.getData(this.orginalProduct, key, filters[key]);
-    } else { //more than one filters
+    else { //more than one filters
       for (let key in filters) {
-        this.filteredProducts = this.getData(this.filteredProducts, key, filters[key]);
+        if (this.filteredProducts.length == 0) {
+          this.filteredProducts = this.getData(tempProduct, key, filters[key], priceArr);
+        } else {
+          this.filteredProducts = this.getData(orginalProduct, key, filters[key], priceArr);
+        }
       }
     }
+
     ("sortOrder" in params) ? this.utilitiesService.sortArrayByOrders(this.filteredProducts, params.sortOrder, "orginalPrice") : this.orginalProduct;
     this.paramsService.setFilteredProducts(this.filteredProducts);
+
+    console.log("filtered products -->",this.filteredProducts);
+
+    if (this.orginalProduct.length == 0) { // will be called page loaded with query params
+      this.paramsService.setOrginalProducts(this.filteredProducts);
+    }
   }
 
-  getData(products, key, value) {
+  getData(products, key, value, priceArr) {
     let arr: Array<any> = [];
     let status: boolean;
     if (key !== "rangeId") {
       products.forEach(element => {
         (key == "subLevelFilter") ? (key = 'subLevelId') : key;
-        // console.log("==> element[key]",element[key]);
         let length = this.dataService.findExist(element[key], value);
         (length > 0) ? arr.push(element) : '';
       });
     } else {
-      arr = this.dataService.priceFilter(products, this.prices, key, value);
+      arr = this.dataService.priceFilter(products, priceArr, key, value);
+    }
+    if (arr.length != 0) {
+      this.paramsService.setTempProductData(arr);
     }
     return arr;
   }

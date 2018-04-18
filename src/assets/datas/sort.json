@@ -1,10 +1,22 @@
 [
     {
+        "sortDisplayName":"Suggested",
+        "sortTypeName":"suggested",
+        "checked":false
+    },
+    {
         "sortDisplayName":"Price High To Low",
-        "sortTypeName":"priceHighToLow"
+        "sortTypeName":"priceHighToLow",
+        "checked":false
     },
     {
         "sortDisplayName":"Price Low To High",
-        "sortTypeName":"priceLowToHigh"
+        "sortTypeName":"priceLowToHigh",
+        "checked":false
+    },
+    {
+        "sortDisplayName":"Most Popular",
+        "sortTypeName":"mostPopularity",
+        "checked":false
     }
 ]

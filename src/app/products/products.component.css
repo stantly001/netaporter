@@ -56,4 +56,25 @@
 .agile_ecommerce_tab_left {
     text-align:left;
 }
+.pagination li:hover {
+    cursor: pointer;
+}
+.pagination li.active a {
+    background: #110303 !important;
+    color: #fff !important;
+}
 
+.pagination li.active:hover .pagination li.active a {
+    background: #110303 !important;
+    color: #fff !important;
+}
+.pagination > li {
+    display: inline-block !important;
+    margin: 0px 0px 0px 5px;
+}
+i.fa.fa-heart-o {
+    cursor: pointer;
+    right: 2px;
+    position: absolute;
+    z-index: 20000;
+}

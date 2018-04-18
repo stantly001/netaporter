@@ -1,10 +1,11 @@
 <div class="container product-view">
   <div class="col-md-12 category-banner">
     <div id="product-list-menu" class="product-list-menu ">
-      <div class="col-md-3">
+      <div class="col-md-12">
           <!-- <mc-breadcrumbs></mc-breadcrumbs>
           <router-outlet></router-outlet> -->
         <div class="breadcrumbs">
+          <!-- <mc-breadcrumbs></mc-breadcrumbs> -->
           Home /
           <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId]">{{breadCrumbMenuName}} </a>
           <span *ngIf="breadCrumbSubCategoryName">
@@ -25,26 +26,26 @@
           </h1>
           <div class="product-total">{{products?.length}} Items Found</div>
         </div>
+        </div>
+
+
       </div>
-
-
     </div>
+
+    <div class="row col-md-12 section-view">
+      <div class="col-md-3">
+        <app-category></app-category>
+        <app-brand></app-brand>
+        <app-colors></app-colors>
+        <app-price></app-price>
+        <app-size></app-size>
+      </div>
+      <div class="col-md-9">
+        <app-products></app-products>
+        <!-- <app-products [ImageView]="productImageView" [products]="products"></app-products> -->
+      </div>
+    </div>
+
+    <!--ads-->
+    <app-relatives></app-relatives>
   </div>
-
-  <div class="row col-md-12 section-view">
-    <div class="col-md-3">
-      <app-category></app-category>
-      <app-brand></app-brand>
-      <app-colors></app-colors>
-      <app-price></app-price>
-      <app-size></app-size>
-    </div>
-    <div class="col-md-9">
-      <app-products></app-products>
-      <!-- <app-products [ImageView]="productImageView" [products]="products"></app-products> -->
-    </div>
-  </div>
-
-  <!--ads-->
-  <app-relatives></app-relatives>
-</div>

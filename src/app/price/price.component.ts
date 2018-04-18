@@ -16,6 +16,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class PriceComponent implements OnInit {
 
+  paginationSize: any;
   isCategory: boolean;
   prices: Array<any> = [];
   menuId: number;
@@ -27,24 +28,42 @@ export class PriceComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
+    /**
+      * Price Option Call
+    */
+    let url = window.location.href;
+    this.defaultService.getPrice().subscribe(response => {
+
+      if (response.length != 0) {
+        if ((url.indexOf('?' + 'pricesFilter' + '=') != -1) || (url.indexOf('&' + 'pricesFilter' + '=') != -1)) {
+          let priceFilterIds = this.activatedRoute.snapshot.queryParams['pricesFilter'].split(",").map(Number);
+          priceFilterIds.forEach(elementIdArr => {
+            response.forEach(element => {
+              if (element['rangeId'] == elementIdArr) {
+                element.checked = true;
+              }
+            });
+          });
+        }
+      }
+
+
+      this.prices = response;
+
+
+    });
+
+  }
 
   ngOnInit() {
+
     this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
     });
 
-    /**
-    * Price Option Call
-    */
-    this.defaultService.getPrice().subscribe(response => {
-      this.prices = response;
-    });
+
   }
 
   /**
@@ -55,8 +74,13 @@ export class PriceComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
+    filterObj.checked = isChecked;
+    this.activatedRoute.queryParams.subscribe(response => {
+      this.paginationSize = response.pageSize;
+    });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    filterData.queryParam.pageSize = this.paginationSize;
     this.urlComponent.loadUrl(filterData.url, filterData.queryParam, this.prices);
   }
 
-}
+} 

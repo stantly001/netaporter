@@ -114,3 +114,46 @@ ngx-carousel button[NgxCarouselNext] {
     margin: 0 auto;
     width: 1170px;
 }
+.rightRs {
+	font-size: 68px !important;
+	background: transparent !important;
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	font-weight: normal !important;
+	margin-top: 16%;
+}
+.leftRs {
+	font-size: 68px !important;
+	background: transparent !important;
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+	font-weight: normal !important;
+	margin-top: 16%;
+}
+
+@media only screen and (min-width:320px) and (max-width:900px) {
+	.rightRs {
+		margin-top: 28%;
+	}
+	.leftRs {
+		margin-top: 28%;
+	}
+}
+
+.item:hover {
+	cursor: pointer !important;
+}
+
+.product-name {
+    color: #000;
+}
+
+.offer-price {
+    color: #b72929 !important;
+}
+
+span.strike {
+    text-decoration: line-through;
+}

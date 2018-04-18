@@ -25,8 +25,8 @@
                             <ul class="panel_bottom">
                                 <li *ngFor="let brand of brands">
                                     <div class="styled-input-single">
-                                        <input (click)="filter(brand,$event.target.checked,'brand')" id="product-filter-b{{brand.brandId}}" class="input-assumpte checkbox-border"
-                                            type="checkbox">
+                                        <input [(ngModel)]="brand.checked" (click)="filter(brand,$event.target.checked,'brand')" id="product-filter-b{{brand.brandId}}"
+                                            class="input-assumpte checkbox-border" type="checkbox">
                                         <label for="product-filter-b{{brand.brandId}}" class="checkbox-menu">
                                             {{brand.brandName}}</label>
                                     </div>

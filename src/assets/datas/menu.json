@@ -46,7 +46,7 @@
                     },
                     {
                         "id": 3,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "Pants & Leggings",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 7,
@@ -68,7 +68,7 @@
                     },
                     {
                         "id": 4,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 11,
@@ -96,7 +96,7 @@
             },
             {
                 "categoryId": 2,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -263,19 +263,19 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 40,
-                                "subLevelCategoryName": "BOMBER JACKETS"
+                                "subLevelCategoryName": "Bomber Jackets"
                             },
                             {
                                 "subLevelCategoryId": 41,
-                                "subLevelCategoryName": "DENIM JACKETS"
+                                "subLevelCategoryName": "Denim Jackets"
                             },
                             {
                                 "subLevelCategoryId": 42,
-                                "subLevelCategoryName": "DOWN JACKETS"
+                                "subLevelCategoryName": "Down Jackets"
                             },
                             {
                                 "subLevelCategoryId": 43,
-                                "subLevelCategoryName": "GILETS"
+                                "subLevelCategoryName": "Gilets"
                             }
                         ]
                     },
@@ -303,7 +303,7 @@
                     },
                     {
                         "id": 13,
-                        "name": "sweaters&knitwear",
+                        "name": "Sweaters & knitwear",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 48,
@@ -327,7 +327,7 @@
             },
             {
                 "categoryId": 6,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -336,23 +336,23 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 52,
-                                "subLevelCategoryName": "LACE-UP BOOTS"
+                                "subLevelCategoryName": "Lace-up Boots"
                             },
                             {
                                 "subLevelCategoryId": 53,
-                                "subLevelCategoryName": "HIKING BOOTS"
+                                "subLevelCategoryName": "Hiking Boots"
                             },
                             {
                                 "subLevelCategoryId": 54,
-                                "subLevelCategoryName": "DESERT BOOTS"
+                                "subLevelCategoryName": "Desert Boots"
                             },
                             {
                                 "subLevelCategoryId": 55,
-                                "subLevelCategoryName": "CHELSEA BOOTS"
+                                "subLevelCategoryName": "Chelsia Boots"
                             },
                             {
                                 "subLevelCategoryId": 56,
-                                "subLevelCategoryName": "BIKER BOOTS"
+                                "subLevelCategoryName": "Biker Boots"
                             }
                         ]
                     },
@@ -362,15 +362,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 57,
-                                "subLevelCategoryName": "HIGH TOP SNEAKERS"
+                                "subLevelCategoryName": "High Top Sneakers"
                             },
                             {
                                 "subLevelCategoryId": 58,
-                                "subLevelCategoryName": "LOW TOP SNEAKERS"
+                                "subLevelCategoryName": "Low Top Sneakers"
                             },
                             {
                                 "subLevelCategoryId": 59,
-                                "subLevelCategoryName": "SLIP-ON SNEAKERS"
+                                "subLevelCategoryName": "Slip-On Sneakers"
                             }
                         ]
                     }
@@ -409,7 +409,7 @@
                     },
                     {
                         "id": 17,
-                        "name": "Brief cases",
+                        "name": "Brief Cases",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 65,
@@ -956,7 +956,7 @@
                     },
                     {
                         "id": 40,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "Pant & Leggings",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 152,
@@ -978,7 +978,7 @@
                     },
                     {
                         "id": 41,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 156,
@@ -1006,7 +1006,7 @@
             },
             {
                 "categoryId": 15,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
@@ -1058,15 +1058,15 @@
                         "subLevelCategory": [
                             {
                                 "subLevelCategoryId": 167,
-                                "subLevelCategoryName": "Low Top"
+                                "subLevelCategoryName": "leather-trimmed"
                             },
                             {
                                 "subLevelCategoryId": 168,
-                                "subLevelCategoryName": "Slip-on"
+                                "subLevelCategoryName": "Quilted leather"
                             },
                             {
                                 "subLevelCategoryId": 169,
-                                "subLevelCategoryName": "Sport"
+                                "subLevelCategoryName": "textured-leather"
                             }
                         ]
                     }
@@ -1104,7 +1104,7 @@
                             },
                             {
                                 "subLevelCategoryId": 175,
-                                "subLevelCategoryName": "Cricket Hats"
+                                "subLevelCategoryName": "baseball Hats"
                             }
                         ]
                     }, {
@@ -1124,11 +1124,11 @@
                                 "subLevelCategoryName": "Thirller Books"
                             },
                             {
-                                "subLevelCategoryId": 178,
+                                "subLevelCategoryId": 179,
                                 "subLevelCategoryName": "Comic Books"
                             },
                             {
-                                "subLevelCategoryId": 179,
+                                "subLevelCategoryId": 180,
                                 "subLevelCategoryName": "Novels"
                             }
                         ]
@@ -1148,23 +1148,23 @@
                 "subCategory": [
                     {
                         "id": 47,
-                        "name": "Cotten",
+                        "name": "Coats",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 180,
-                                "subLevelCategoryName": "Hooded Top"
-                            },
-                            {
                                 "subLevelCategoryId": 181,
-                                "subLevelCategoryName": "Terry Top"
+                                "subLevelCategoryName": "Belted"
                             },
                             {
                                 "subLevelCategoryId": 182,
-                                "subLevelCategoryName": "Shirt"
+                                "subLevelCategoryName": "Hippy"
                             },
                             {
                                 "subLevelCategoryId": 183,
-                                "subLevelCategoryName": "T-Shirt"
+                                "subLevelCategoryName": "Tweed"
+                            },
+                            {
+                                "subLevelCategoryId": 184,
+                                "subLevelCategoryName": "Coller"
                             }
                         ]
                     },
@@ -1173,63 +1173,63 @@
                         "name": "Jeans",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 184,
-                                "subLevelCategoryName": "Straight Leg Jeans"
-                            },
-                            {
                                 "subLevelCategoryId": 185,
-                                "subLevelCategoryName": "Flared Jeans"
+                                "subLevelCategoryName": "shirt"
                             },
                             {
                                 "subLevelCategoryId": 186,
-                                "subLevelCategoryName": "Bootcut"
+                                "subLevelCategoryName": "Jacket"
+                            },
+                            {
+                                "subLevelCategoryId": 187,
+                                "subLevelCategoryName": "Pants"
                             }
                         ]
                     },
                     {
                         "id": 49,
-                        "name": "PANTS & LEGGINGS",
+                        "name": "Pants",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 187,
-                                "subLevelCategoryName": "Jeans"
-                            },
-                            {
                                 "subLevelCategoryId": 188,
-                                "subLevelCategoryName": "3-4 Leggings"
+                                "subLevelCategoryName": "Acid Washed"
                             },
                             {
                                 "subLevelCategoryId": 189,
-                                "subLevelCategoryName": "Pants"
+                                "subLevelCategoryName": "Baggy"
                             },
                             {
                                 "subLevelCategoryId": 190,
-                                "subLevelCategoryName": "Shorts"
+                                "subLevelCategoryName": "Bell Bottoms"
+                            },
+                            {
+                                "subLevelCategoryId": 191,
+                                "subLevelCategoryName": "Flared"
                             }
                         ]
                     },
                     {
                         "id": 50,
-                        "name": "DRESSES",
+                        "name": "Dresses",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 191,
-                                "subLevelCategoryName": "Evening Dresses"
-                            },
-                            {
                                 "subLevelCategoryId": 192,
-                                "subLevelCategoryName": "Formal"
+                                "subLevelCategoryName": "Swing"
                             },
                             {
                                 "subLevelCategoryId": 193,
-                                "subLevelCategoryName": "Wedding"
+                                "subLevelCategoryName": "Pencil"
                             },
                             {
                                 "subLevelCategoryId": 194,
-                                "subLevelCategoryName": "Clubbing"
+                                "subLevelCategoryName": "Bridal"
                             },
                             {
                                 "subLevelCategoryId": 195,
+                                "subLevelCategoryName": "Fit and Flare"
+                            },
+                            {
+                                "subLevelCategoryId": 196,
                                 "subLevelCategoryName": "Casual"
                             }
                         ]
@@ -1238,42 +1238,42 @@
             },
             {
                 "categoryId": 19,
-                "categoryName": "SHOES",
+                "categoryName": "Shoes",
                 "categoryImg": "assets/img/accessories.jpg",
                 "subCategory": [
                     {
                         "id": 51,
-                        "name": "Sandals",
+                        "name": "Heels",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 196,
-                                "subLevelCategoryName": "Slingback"
-                            },
-                            {
                                 "subLevelCategoryId": 197,
-                                "subLevelCategoryName": "Leather"
+                                "subLevelCategoryName": "T-Strap"
                             },
                             {
                                 "subLevelCategoryId": 198,
-                                "subLevelCategoryName": "Leather and Suede"
+                                "subLevelCategoryName": "Pumps"
+                            },
+                            {
+                                "subLevelCategoryId": 199,
+                                "subLevelCategoryName": "Wiggle"
                             }
                         ]
                     },
                     {
                         "id": 52,
-                        "name": "Sneakers",
+                        "name": "Boots",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 199,
-                                "subLevelCategoryName": "Glittered Leather"
-                            },
-                            {
                                 "subLevelCategoryId": 200,
-                                "subLevelCategoryName": "Leather and Suede"
+                                "subLevelCategoryName": "Ankle"
                             },
                             {
                                 "subLevelCategoryId": 201,
-                                "subLevelCategoryName": "Metallic Leather"
+                                "subLevelCategoryName": "Buckle"
+                            },
+                            {
+                                "subLevelCategoryId": 202,
+                                "subLevelCategoryName": "Knee High"
                             }
                         ]
                     }
@@ -1289,16 +1289,16 @@
                         "name": "Belt Bags",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 202,
-                                "subLevelCategoryName": "Low Top"
-                            },
-                            {
                                 "subLevelCategoryId": 203,
-                                "subLevelCategoryName": "Slip-on"
+                                "subLevelCategoryName": "Hand Bags"
                             },
                             {
                                 "subLevelCategoryId": 204,
-                                "subLevelCategoryName": "Sport"
+                                "subLevelCategoryName": "Clutch Bags"
+                            },
+                            {
+                                "subLevelCategoryId": 205,
+                                "subLevelCategoryName": "Back Packs"
                             }
                         ]
                     }
@@ -1315,28 +1315,28 @@
                         "name": "Hats",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 205,
-                                "subLevelCategoryName": "Beanies"
-                            },
-                            {
                                 "subLevelCategoryId": 206,
-                                "subLevelCategoryName": "Fedoras"
+                                "subLevelCategoryName": "Cinch"
                             },
                             {
                                 "subLevelCategoryId": 207,
-                                "subLevelCategoryName": "SunHats"
+                                "subLevelCategoryName": "Bella Bow"
                             },
                             {
                                 "subLevelCategoryId": 208,
-                                "subLevelCategoryName": "Cool Hats"
+                                "subLevelCategoryName": "Bridal Sash"
                             },
                             {
                                 "subLevelCategoryId": 209,
-                                "subLevelCategoryName": "Baby Hats"
+                                "subLevelCategoryName": "Leather Kailey"
                             },
                             {
                                 "subLevelCategoryId": 210,
-                                "subLevelCategoryName": "Cricket Hats"
+                                "subLevelCategoryName": "Buckle"
+                            },
+                            {
+                                "subLevelCategoryId": 211,
+                                "subLevelCategoryName": "Bow Belt"
                             }
                         ]
                     }, {
@@ -1344,20 +1344,20 @@
                         "name": "Sun Glasses",
                         "subLevelCategory": [
                             {
-                                "subLevelCategoryId": 211,
-                                "subLevelCategoryName": "Glittered acetate Sunglasses"
-                            },
-                            {
                                 "subLevelCategoryId": 212,
-                                "subLevelCategoryName": "Tortoise Shell acetate Sunglasses"
+                                "subLevelCategoryName": "Cat Eye"
                             },
                             {
                                 "subLevelCategoryId": 213,
-                                "subLevelCategoryName": "Cat Eye acetate Sunglasses"
+                                "subLevelCategoryName": "Round Frame"
                             },
                             {
                                 "subLevelCategoryId": 214,
-                                "subLevelCategoryName": "Gold Tone Sunglasses"
+                                "subLevelCategoryName": "Round LulU"
+                            },
+                            {
+                                "subLevelCategoryId": 215,
+                                "subLevelCategoryName": "Butterfly"
                             }
                         ]
                     }

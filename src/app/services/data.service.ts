@@ -51,115 +51,6 @@ export class DataService {
   }
 
 
-  /**
-   * 
-   * @param products 
-   * Returns subCategory filters By Product Category
-   */
-  getSubCategoriesByProductCategory(products: Array<any>, key: string, menuId: number) {
-    let categories: Array<any> = [];
-    let productCategories = products.map(response => response[key]);
-    let categoriesArr = this.utilitiesService.joinArrayOfArray(productCategories);//final categories
-    categoriesArr.forEach(parent => {
-      this.defaultService.getCategories().subscribe(response => {
-        response.forEach(children => {
-          if (parent == children.id) {
-            categories.push(children);
-          }
-        });
-      });
-    });
-    return categories;
-  }
-
-  /**
-   * 
-   * @param products 
-   * @param key 
-   * Get Brands By Product
-   */
-  getBrandsByProduct(products: Array<any>, key: string) {
-    let brands: Array<any> = [];
-    let productBrand = products.map(response => response[key]);
-    let brand = this.utilitiesService.joinArrayOfArray(productBrand);
-    brand.forEach(parent => {
-      this.defaultService.getBrands().subscribe(response => {
-        response.forEach(children => {
-          if (parent == children[key]) {
-            brands.push(children);
-          }
-        });
-      });
-    });
-    return brands;
-  }
-
-  /**
-   * 
-   * @param products 
-   * @param key
-   * Returns Designer filter By Product Category
-   */
-  getDesignersByProductCategory(products: Array<any>, key: string) {
-    let designers: Array<any> = [];
-    let productDesigner = products.map(response => response[key]);
-    let designer = this.utilitiesService.joinArrayOfArray(productDesigner);
-    designer.forEach(parent => {
-      this.defaultService.getDesigners().subscribe(response => {
-        response.forEach(children => {
-          if (parent == children[key]) {
-            designers.push(children);
-          }
-        });
-      });
-    });
-    return designers;
-  }
-
-  /**
-   * 
-   * @param products 
-   * @param key 
-   * Returns Color By Product Category / Both
-   */
-  getColosByProductCategory(products: Array<any>, key: string) {
-    let colorArr: Array<any> = [];
-    let productColors = products.map(response => response[key]);
-    let color = this.utilitiesService.joinArrayOfArray(productColors);
-    color.forEach(parent => {
-      this.defaultService.getColors().subscribe(response => {
-        response.forEach(children => {
-          if (parent == children[key]) {
-            colorArr.push(children);
-          }
-        });
-      });
-    });
-    return colorArr;
-  }
-
-  /**
-   * 
-   * @param products 
-   * @param key
-   * Returns size filter by Product Category
-   */
-  getSizeByProductCategory(products: Array<any>, key: string) {
-    let sizeArr: Array<any> = [];
-    let productSize = products.map(response => response[key]);
-    let size = this.utilitiesService.joinArrayOfArray(productSize);
-    size.forEach(parent => {
-      this.defaultService.getSizes().subscribe(response => {
-        response.forEach(children => {
-          if (parent == children[key]) {
-            sizeArr.push(children);
-          }
-        });
-      });
-    });
-    return sizeArr;
-  }
-
   /** 
     *   @param productArr 
     *   @param filterArr 
@@ -207,19 +98,20 @@ export class DataService {
   }
 
   public getSubCategory(params: Object) {
+    let arr: Array<any> = [];
     let menuId = params['menuId'];
     this.defaultService.getCategories().subscribe(response => {
       let menus = this.utilitiesService.mapArrayData(response, 'menuId', menuId);
-      this.response.push(this.utilitiesService.mapArrayData(menus['categories'], 'categoryId', params['categoryId']));
+      arr.push(this.utilitiesService.mapArrayData(menus['categories'], 'categoryId', params['categoryId']));
     });
-    return this.response;
+    return arr;
   }
 
   /**
    * 
    * @param products 
    * @param params 
-   * Returns Products By Query Params
+   * Returns Products By  Params
    */
   public getProductsByArrayMap(products: Array<any>, params: Object) {
     let arr: Array<any> = [];
@@ -228,36 +120,34 @@ export class DataService {
     let brand: Array<any> = [];
     let colors: Array<any> = [];
     let sizes: Array<any> = [];
-    
+
     let menuId = params['menuId'];
     let menus: Array<any> = [];
 
     if (params['categoryId']) {
       arr = this.getProductByCategory(products, params['categoryId']);
-      
-      brand = this.getBrandsByProduct(arr, 'brandId');
-      colors = this.getColosByProductCategory(arr, "colorId");
-      sizes = this.getSizeByProductCategory(arr, "sizeId");
     }
     if (params['subCategoryId']) {
       arr = this.getProductBySubCategory(arr, params['subCategoryId']);
-      brand = this.getBrandsByProduct(arr, 'subCategoryBrandId');
-      colors = this.getColosByProductCategory(arr, "subCategoryColorId");
-      sizes = this.getSizeByProductCategory(arr, "subCategorySizeId");
     }
     if (params['subLevelId']) {
       arr = this.getProductBySubLevel(arr, params['subLevelId']);
     }
-    // subCategories = this.getSubCategory(params);
     response['products'] = arr;
-    // response['subCategories'] = subCategories;
-    response['brand'] = brand;
-    response['colors'] = colors;
-    response['sizes'] = sizes;
     return response;
   }
 
+  /**
+   * 
+   * @param products 
+   * @param priceArr 
+   * @param key 
+   * @param value 
+   * Returns Unique Price Range as arrays.e.g.,when user selects 100-200 & 200-300 
+   * Result will be  : [100,300]
+   */
   public priceFilter(products: Array<any>, priceArr: Array<any>, key: string, value: Array<any>) {
+    console.log("price Arr -->",priceArr);
     let arr: Array<any> = [];
     let response: Array<any> = [];
     priceArr.forEach(element => {
@@ -274,6 +164,9 @@ export class DataService {
     arr = [];
     arr.push(min);
     arr.push(max);
+    console.log("min value -->", min);
+    console.log("max -->", max);
+
 
     products.forEach(element => {
       let productPrice = parseFloat(element.orginalPrice);
@@ -284,5 +177,22 @@ export class DataService {
     return response;
   }
 
-
+  /**
+   * 
+   * @param response 
+   * @param routingUrl 
+   */
+  getFilterComponentsData(response: Array<any>, routingUrl: Object, key: string) {
+    let arr = response.filter(data => data['categoryId'] == routingUrl['categoryId'])[0];
+    if (routingUrl['subCategoryId'] && !routingUrl['subLevelId']) {
+      console.log("cond1");
+      arr = arr['subCategory'].filter(data => data['subCategoryId'] == parseInt(routingUrl['subCategoryId']))[0];
+    }
+    if (routingUrl['subCategoryId'] && routingUrl['subLevelId']) {
+      console.log("cond2");
+      arr = arr['subCategory'].filter(data => data['subCategoryId'] == parseInt(routingUrl['subCategoryId']))[0];
+      arr = arr['subLevelCategory'].filter(data => data['subLevelId'] == parseInt(routingUrl['subLevelId']))[0];
+    }
+    return arr[key];
+  }
 }

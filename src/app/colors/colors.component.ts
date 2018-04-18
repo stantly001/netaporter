@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+
 import { UrlComponent } from '../url/url.component';
+
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
 import { DataService } from '../services/data.service';
@@ -18,43 +20,49 @@ export class ColorsComponent implements OnInit {
   colors: Array<any> = [];
   colorFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
-  menuId: number;
-  categoryId: number;
-  subCategoryId: number;
-  subLevelId: number;
 
-  // paginationSize:string;
   urlParams: Object;
+  colorArr: Array<any> = [];
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
-  ngOnInit() {
     this.isCategory = false;
-    this.activatedRoute.params.subscribe(response => {
-      this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
+    let url = window.location.href;
+
+    this.defaultService.getColors().subscribe(response => {
+      if (response.length != 0) {
+        this.colorArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+          this.defaultService.getMappingFilters().subscribe(response => {
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'colorId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.colorArr, 'colorId');
+            if ((url.indexOf('?' + 'colorFilter' + '=') != -1) || (url.indexOf('&' + 'colorFilter' + '=') != -1)) {
+              let colorFilterIds = this.activatedRoute.snapshot.queryParams['colorFilter'].split(",").map(Number);
+              colorFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['colorId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.colors = tempArr;
+
+          });
+        });
+      }
     });
 
-    this.defaultService.getProducts().subscribe(response => {
-      let arr: Array<any> = [];
-      let params: { [k: string]: any } = {};
-      let productResponse: any;
-      productResponse = response;
 
-      this.menuId ? (params['menuId'] = this.menuId) : (params["menuId"] = null)
-      this.categoryId ? (params['categoryId'] = this.categoryId) : (params["categoryId"] = null);
-      this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
-      this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
-      let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      this.colors = data.colors;
-      console.log(this.colors);
-    });
+
   }
+
+
+
+  ngOnInit() { }
 
   /**
   * 
@@ -63,18 +71,15 @@ export class ColorsComponent implements OnInit {
   * @param type 
   * 
   */
-
-
-
-
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response=>{
-      console.log(response);
+    filterObj.checked = isChecked;
+    this.activatedRoute.queryParams.subscribe(response => {
       this.paginationSize = response.pageSize;
     });
-    let filterData=this.filterService.filter(filterObj, isChecked, type,this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url,filterData.queryParam,'');
+    let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
+    console.log("color filter data -->",filterData);
+    // filterData.queryParam.pageSize = this.paginationSize;
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
 }

@@ -1,34 +1,42 @@
 [
     {
         "colorId": 1,
-        "colorName": "Red"
+        "colorName": "Red",
+        "checked": false
     },
     {
         "colorId": 2,
-        "colorName": "Blue"
+        "colorName": "Blue",
+        "checked": false
     },
     {
         "colorId": 3,
-        "colorName": "Green"
+        "colorName": "Green",
+        "checked": false
     },
     {
         "colorId": 4,
-        "colorName": "Yellow"
+        "colorName": "Yellow",
+        "checked": false
     },
     {
         "colorId": 5,
-        "colorName": "Orange"
+        "colorName": "Orange",
+        "checked": false
     },
     {
         "colorId": 6,
-        "colorName": "Pink"
+        "colorName": "Pink",
+        "checked": false
     },
     {
         "colorId": 7,
-        "colorName": "Black"
+        "colorName": "Black",
+        "checked": false
     },
     {
         "colorId": 8,
-        "colorName": "White"
+        "colorName": "White",
+        "checked": false
     }
 ]

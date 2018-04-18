@@ -20,13 +20,14 @@ export class SortComponent implements OnInit {
   sort: Array<any> = [];
   params: Object;
   pagedProducts: Array<any> = [];
-
+  sortTypeName: string;
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
 
   ngOnInit() {
-
+    let url = window.location.href;
+    this.sortTypeName = "suggested"
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
     });
@@ -35,6 +36,18 @@ export class SortComponent implements OnInit {
      * Sorting Call 
      */
     this.defaultService.getSortData().subscribe(response => {
+      // this.sort = response;
+      if (response.length != 0) {
+        if ((url.indexOf('?' + 'sortType' + '=') != -1) || (url.indexOf('&' + 'sortType' + '=') != -1)) {
+          let sortFilterIds = this.activatedRoute.snapshot.queryParams['sortType'];
+          response.forEach(element => {
+            if (element['sortTypeName'] == sortFilterIds) {
+              this.sortTypeName = sortFilterIds;
+            }
+          });
+        }
+      }
+
       this.sort = response;
     });
   }
@@ -47,27 +60,38 @@ export class SortComponent implements OnInit {
   sortProduct(type) {
     let routeUrl = this.utilitiesService.buildRoutingUrl(this.params);
     let sortOrder: string;
+    let key: string;
     if (type == "priceLowToHigh") {
       sortOrder = "asc";
+      key = "orginalPrice"
     }
     if (type == "priceHighToLow") {
       sortOrder = "desc";
+      key = "orginalPrice"
     }
-    this.paramsService.pagination.subscribe(response => {
-      if (response.length !== 0) {
-        this.pagedProducts = response;
-        
-        Observable.combineLatest(this.activatedRoute.params, this.activatedRoute.queryParams,
-          (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
-            let obj = JSON.parse(JSON.stringify(allParams.qParams));
-            (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-            //this.urlComponent.loadUrl(routeUrl, obj,'');
-
-            this.utilitiesService.sortArrayByOrders(this.pagedProducts, sortOrder, "orginalPrice");
-            this.router.navigate([routeUrl], { queryParams: obj });
-          });
-      }
+    if (type == "suggested") {
+      sortOrder = "desc";
+      key = "suggested"
+    }
+    if (type == "mostPopularity") {
+      sortOrder = "desc";
+      key = "mostPopularity";
+    }
+    this.paramsService.fp.subscribe(response => {
+      this.activatedRoute.queryParams.subscribe(queryParams => {
+        let obj = JSON.parse(JSON.stringify(queryParams));
+        obj["sortOrder"] = sortOrder;
+        obj['sortType'] = type;
+        let result = this.utilitiesService.sortArrayByOrders(response, sortOrder, key);
+        this.router.navigate([routeUrl], { queryParams: obj });
+      })
     });
+
+
+
+
+
+
 
   }
 

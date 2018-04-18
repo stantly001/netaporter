@@ -9,11 +9,12 @@ import { UrlComponent } from '../url/url.component';
 import { DataService } from '../services/data.service';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
-import { BreadcrumbService } from  '../services/breadcrumb.service';
+import { BreadcrumbService } from '../services/breadcrumb.service';
 
 import { Location } from '@angular/common';
 import { ParamsService } from '../services/params.service';
 import { THROW_IF_NOT_FOUND } from '@angular/core/src/di/injector';
+import { ISubscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -42,10 +43,10 @@ export class ViewComponent implements OnInit {
   cn: string;
   subCategoryName: string
 
-  breadCrumbMenuName:string;
-  breadCrumbCategoryName:string;
-  breadCrumbSubCategoryName:string;
-  breadCrumnSubLevelName:string;
+  breadCrumbMenuName: string;
+  breadCrumbCategoryName: string;
+  breadCrumbSubCategoryName: string;
+  breadCrumnSubLevelName: string;
 
   productObj: { [k: string]: any } = {};
   params: Object;
@@ -53,23 +54,27 @@ export class ViewComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient,
     private defaultService: DefaultService, private dataService: DataService,
     private router: Router, private utilitiesService: UtilitiesService,
-    private location: Location, private paramsService: ParamsService,private urlComponent:UrlComponent,
-    private breadCrumbService:BreadcrumbService) {
+    private location: Location, private paramsService: ParamsService, private urlComponent: UrlComponent,
+    private breadCrumbService: BreadcrumbService) {
   }
 
-  menus:Array<any>=[];
+  menus: Array<any> = [];
+  obj: { [key: string]: string } = {};
+
+  private paramsSubscripiton: ISubscription;
 
   ngOnInit() {
 
+
+
     this.activatedRoute.params.subscribe(response => {
       this.params = response;
-
-      this.breadCrumbService.generateBreadCrumb(response).subscribe(response=>{
-        this.breadCrumbMenuName=response.menuName;
-        this.breadCrumbCategoryName = response.categoryName;
-        this.breadCrumbSubCategoryName = response.subCategory;
-        this.breadCrumnSubLevelName = response.subLevel;
-    });
+      this.breadCrumbService.generateBreadCrumb(response).subscribe(response => {
+          this.breadCrumbMenuName = response.menuName;
+          this.breadCrumbCategoryName = response.categoryName;
+          this.breadCrumbSubCategoryName = response.subCategory;
+          this.breadCrumnSubLevelName = response.subLevel;
+        });
 
 
       this.menuId = parseInt(response.menuId);
@@ -81,6 +86,7 @@ export class ViewComponent implements OnInit {
       this.cn = response.cn;
 
       this.defaultService.getProducts().subscribe(response => {
+        console.log("products called");
         let arr: Array<any> = [];
         let params: { [k: string]: any } = {};
         let productResponse: any;
@@ -92,9 +98,31 @@ export class ViewComponent implements OnInit {
         this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
 
         let data = this.dataService.getProductsByArrayMap(productResponse, params);
-        this.products = data.products;
-        this.paramsService.setOrginalProducts(data.products);
-        this.paramsService.setFilteredProducts(this.products);
+
+
+
+        /**
+         * We Need to do above code for query params similar to params
+         */
+        this.paramsSubscripiton = this.activatedRoute.queryParams.subscribe(response => {
+          if (Object.keys(response).length !== 0) {
+
+            this.defaultService.getPrice().subscribe(res => {
+              if (res.length != 0) {
+                this.obj.orginalProduct = data.products;
+                this.obj.filteredProduct = data.products;
+                this.obj.tempProduct = data.products;
+                this.obj.prices = res;
+                this.urlComponent.getProductByFilters(response, this.obj);
+              }
+            })
+
+          } else {
+            this.products = data.products;
+            this.paramsService.setOrginalProducts(data.products);
+            this.paramsService.setFilteredProducts(this.products);
+          }
+        })
       });
     });
   }
@@ -118,8 +146,12 @@ export class ViewComponent implements OnInit {
       (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
         let obj = JSON.parse(JSON.stringify(allParams.qParams));
         (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        this.urlComponent.loadUrl(routeUrl, obj,'');
+        this.urlComponent.loadUrl(routeUrl, obj, '');
       });
   }
 
+  ngOnDestroy() {
+    this.paramsSubscripiton.unsubscribe();
   }
+
+}

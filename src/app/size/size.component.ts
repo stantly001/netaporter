@@ -24,37 +24,44 @@ export class SizeComponent implements OnInit {
   subCategoryId: number;
   subLevelId: number;
 
+  sizeArr: Array<any> = [];
+
   urlParams: Object;
 
   constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) { }
-
-  ngOnInit() {
+    private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
     this.isCategory = false;
-    this.activatedRoute.params.subscribe(response => {
-      this.urlParams = response;
-      this.menuId = parseInt(response.menuId);
-      this.categoryId = parseInt(response.categoryId);
-      this.subCategoryId = parseInt(response.subCategoryId);
-      this.subLevelId = parseInt(response.subLevelId);
-    });
+    let url = window.location.href;
 
-    this.defaultService.getProducts().subscribe(response => {
-      let arr: Array<any> = [];
-      let params: { [k: string]: any } = {};
-      let productResponse: any;
-      productResponse = response;
+    this.defaultService.getSizes().subscribe(response => {
+      if (response.length != 0) {
+        this.sizeArr = response;
+        this.activatedRoute.params.subscribe(routingUrl => {
+          this.urlParams = routingUrl;
+          this.defaultService.getMappingFilters().subscribe(response => {
+            let arr = this.dataService.getFilterComponentsData(response, routingUrl, 'sizeId');
+            let tempArr = this.utilitiesService.mapArrays(arr, this.sizeArr, 'sizeId');
 
-      this.menuId ? (params['menuId'] = this.menuId) : (params["menuId"] = null)
-      this.categoryId ? (params['categoryId'] = this.categoryId) : (params["categoryId"] = null);
-      this.subCategoryId ? (params['subCategoryId'] = this.subCategoryId) : (params["subCategoryId"] = null);
-      this.subLevelId ? (params['subLevelId'] = this.subLevelId) : (params['subLevelId'] = null);
-      let data = this.dataService.getProductsByArrayMap(productResponse, params);
-      this.sizes = data.sizes;
-      console.log(this.sizes);
+            if ((url.indexOf('?' + 'sizeFilter' + '=') != -1) || (url.indexOf('&' + 'sizeFilter' + '=') != -1)) {
+              let sizeFilterIds = this.activatedRoute.snapshot.queryParams['sizeFilter'].split(",").map(Number);
+              sizeFilterIds.forEach(elementIdArr => {
+                tempArr.forEach(element => {
+                  if (element['sizeId'] == elementIdArr) {
+                    element.checked = true;
+                  }
+                });
+              });
+            }
+            this.sizes = tempArr;
+
+          });
+        });
+      }
     });
   }
+
+  ngOnInit() { }
 
   /**
   * 
@@ -64,13 +71,12 @@ export class SizeComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response=>{
-      console.log(response);
+    this.activatedRoute.queryParams.subscribe(response => {
       this.paginationSize = response.pageSize;
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam,'');
+    // filterData.queryParam.pageSize = this.paginationSize;
+    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
 }

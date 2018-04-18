@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router, CanLoad, NavigationEnd } from '@angular/router';
 
 import { ParamsService } from '../services/params.service';
 import { DefaultService } from '../services/default.service';
@@ -17,77 +17,34 @@ export class FilterService {
   subLevelFilter: Array<any> = [];
   queryStringArr: Array<any> = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService) { }
-
-
-  private categoryFilterData = new BehaviorSubject<Array<any>>([]);
-  private brandFilterData = new BehaviorSubject<Array<any>>([]);
-  private colorFilterData = new BehaviorSubject<Array<any>>([]);
-  private sizeFiltersData = new BehaviorSubject<Array<any>>([]);
-
-  category = this.categoryFilterData.asObservable();
-  brand = this.brandFilterData.asObservable();
-  color = this.colorFilterData.asObservable();
-  size = this.sizeFiltersData.asObservable();
-
-
-  /**
-  * 
-   * @param arr 
-   * Set Category Filter By URL
-   */
-  public setCategoryFilter(arr: any) {
-    this.categoryFilterData.next(arr);
-  }
-
-  /**
-   * 
-   * @param arr 
-   * Set BrandFilter By URL
-   */
-  public setBrandFilter(arr: any) {
-    this.brandFilterData.next(arr);
-  }
-
-  /**
-   * 
-   * @param arr 
-   * Set ColorFilters By URL
-   */
-  public setColorFilter(arr: any) {
-    this.colorFilterData.next(arr);
-  }
-
-  /**
-   * 
-   * @param arr 
-   * Set SizeFilters By URL
-   */
-  public setSizeFilter(arr: any) {
-    this.sizeFiltersData.next(arr);
-  }
-
-  /**
-   * 
-   * @param params 
-   * Create Filters Based on URL / User Selection
-   */
-  public createFilters(params:Object) {
-    this.defaultService.getMappingFilters().subscribe(response=>{
-
-      let categoryArr = response.filter(data=>data['categoryId']==params['categoryId'])[0];
-      if(!(params['subCategoryId'] && params['subLevelId'])) {
-        this.defaultService.getBrands();
-        // this.utilitiesService.mapArrays(params['brandId']);
+    private utilitiesService: UtilitiesService) {
+    console.log(" CONSTRUCTOR IS CALLED .....");
+    let url = window.location.href;
+    if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
+      let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);
+      if (this.brandFilter.length == 0) {
+        this.brandFilter = brandFilterIds;
       }
+      this.queryStringArr.push('brandFilter');
+    }
+
+    if ((url.indexOf('?' + 'colorFilter' + '=') != -1) || (url.indexOf('&' + 'colorFilter' + '=') != -1)) {
+      let colorFilterIds = this.activatedRoute.snapshot.queryParams['colorFilter'].split(",").map(Number);
+      console.log("Color Filtered -->", this.colorFilter);
+      if (this.colorFilter.length == 0) {
+        this.colorFilter = colorFilterIds;
+      }
+      this.queryStringArr.push('colorFilter');
+    }
+
+    if ((url.indexOf('?' + 'sizeFilter' + '=') != -1) || (url.indexOf('&' + 'sizeFilter' + '=') != -1)) {
+      this.queryStringArr.push('sizeFilter');
+    }
 
 
-      
-    });
   }
-
 
   /**
   * 
@@ -97,29 +54,71 @@ export class FilterService {
   * For QueryString filters
   */
   public filter(filterObj, isChecked, type, urlParams) {
+
+    console.log("filter Service -->", type);
+
+    let url = window.location.href;
     let sortedMap: { [k: string]: any } = {};
 
+
+
     if (type == 'brand') {
-      console.log("brandId ==>", filterObj.brandId);
-      isChecked ? this.brandFilter.push(filterObj.brandId) : this.brandFilter.splice(this.brandFilter.indexOf(filterObj.brandId))
+      /**
+       * For Page Load with Query Params
+       */
+      if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
+        let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);
+        if (this.brandFilter.length == 0) {
+          this.brandFilter = brandFilterIds;
+        }
+      }
+      isChecked ? this.brandFilter.push(filterObj.brandId) : this.brandFilter.splice(this.brandFilter.indexOf(filterObj.brandId), 1);
+
       if (this.queryStringArr.indexOf("brandFilter") == -1 && (this.brandFilter.length > 0)) {
         this.queryStringArr.push("brandFilter");
       }
       if (this.queryStringArr.indexOf("brandFilter") != -1 && (this.brandFilter.length == 0)) {
         this.queryStringArr.splice(this.queryStringArr.indexOf("brandFilter"), 1);
       }
+
     }
     if (type == 'color') {
+
+      /**
+       * For Page Load with Query Params
+       */
+      if ((url.indexOf('?' + 'colorFilter' + '=') != -1) || (url.indexOf('&' + 'colorFilter' + '=') != -1)) {
+        let colorFilterIds = this.activatedRoute.snapshot.queryParams['colorFilter'].split(",").map(Number);
+        console.log("Color Filtered -->", this.colorFilter);
+        if (this.colorFilter.length == 0) {
+          this.colorFilter = colorFilterIds;
+        }
+      }
+      console.log("Color Filtered AFter -->", this.colorFilter);
       isChecked ? this.colorFilter.push(filterObj.colorId) : this.colorFilter.splice(this.colorFilter.indexOf(filterObj.colorId), 1);
+
       if (this.queryStringArr.indexOf("colorFilter") == -1 && (this.colorFilter.length > 0)) {
         this.queryStringArr.push("colorFilter");
       }
       if (this.queryStringArr.indexOf("colorFilter") != -1 && (this.colorFilter.length == 0)) {
         this.queryStringArr.splice(this.queryStringArr.indexOf("colorFilter"), 1);
       }
+
+      console.log("query string -->", this.queryStringArr);
     }
 
     if (type == "size") {
+
+      /**
+       * For Page Load with Query Params
+       */
+      if ((url.indexOf('?' + 'sizeFilter' + '=') != -1) || (url.indexOf('&' + 'sizeFilter' + '=') != -1)) {
+        let sizeFilterIds = this.activatedRoute.snapshot.queryParams['sizeFilter'].split(",").map(Number);
+        if (this.colorFilter.length == 0) {
+          this.sizeFilter = sizeFilterIds;
+        }
+      }
+
       isChecked ? this.sizeFilter.push(filterObj.sizeId) : this.sizeFilter.splice(this.sizeFilter.indexOf(filterObj.sizeId), 1);
       if (this.queryStringArr.indexOf("sizeFilter") == -1 && (this.sizeFilter.length > 0)) {
         this.queryStringArr.push("sizeFilter");
@@ -130,6 +129,17 @@ export class FilterService {
     }
 
     if (type == "price") {
+
+      /**
+       * For Page Load with Query Params
+       */
+      if ((url.indexOf('?' + 'subLevelFilter' + '=') != -1) || (url.indexOf('&' + 'pricesFilter' + '=') != -1)) {
+        let priceFilterIds = this.activatedRoute.snapshot.queryParams['pricesFilter'].split(",").map(Number);
+        if (this.pricesFilter.length == 0) {
+          this.pricesFilter = priceFilterIds;
+        }
+      }
+
       isChecked ? this.pricesFilter.push(filterObj.rangeId) : this.pricesFilter.splice(this.pricesFilter.indexOf(filterObj.rangeId, 1));
       if (this.queryStringArr.indexOf("pricesFilter") == -1 && (this.pricesFilter.length > 0)) {
         this.queryStringArr.push("pricesFilter");
@@ -140,6 +150,17 @@ export class FilterService {
     }
 
     if (type == "subLevel") {
+
+      /**
+       * For Page Load with Query Params
+       */
+      if ((url.indexOf('?' + 'subLevelFilter' + '=') != -1) || (url.indexOf('&' + 'subLevelFilter' + '=') != -1)) {
+        let subLevelFilterIds = this.activatedRoute.snapshot.queryParams['subLevelFilter'].split(",").map(Number);
+        if (this.colorFilter.length == 0) {
+          this.sizeFilter = subLevelFilterIds;
+        }
+      }
+
       isChecked ? this.subLevelFilter.push(filterObj.subLevelCategoryId) : this.subLevelFilter.splice(this.subLevelFilter.indexOf(filterObj.subLevelCategoryId, 1));
       if (this.queryStringArr.indexOf("subLevelFilter") == -1 && (this.subLevelFilter.length > 0)) {
         this.queryStringArr.push("subLevelFilter");
@@ -149,7 +170,7 @@ export class FilterService {
       }
     }
 
-    
+
 
     let filters: Object = {
       colorFilter: this.utilitiesService.convertArrayToString(this.colorFilter),
