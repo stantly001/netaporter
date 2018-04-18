@@ -13,7 +13,7 @@ import { Observable } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html',
+  templateUrl: './products.component.html', 
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
@@ -69,7 +69,7 @@ export class ProductsComponent implements OnInit {
         if (!pageNo) {
           pageNo = 1;
           this.setPage(pageNo, pageSize);
-          console.log("+++++++++++++++++");
+          console.log("+++++++++++++++++"); 
         } else {
           console.log("____________________________");
           this.setPage(pageNo, pageSize)
@@ -77,18 +77,18 @@ export class ProductsComponent implements OnInit {
       } else {
         this.products = response;
       }
-    })  
+    })   
 
-  }
-
+  } 
+ 
   ngOnInit() {
 
 
-  }
+  } 
 
 
   selectPageSize(number) {
-    this.pageSize = number;
+    this.pageSize = number;   
     // get pager object from service
     this.pager = this.paginationService.getPager(this.products.length, 1, this.pageSize);
     // get current page of items

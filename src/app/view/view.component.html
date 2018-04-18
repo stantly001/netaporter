@@ -11,6 +11,9 @@
           <span *ngIf="breadCrumbSubCategoryName">
             <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">/ {{breadCrumbCategoryName}}</a>
           </span>
+          <span *ngIf="breadCrumnSubLevelName">
+            <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">/ {{breadCrumbSubCategoryName}}</a>
+          </span>
         </div>
         
         <div class="w3ls_dresses_grid_left_grid2_left">
@@ -19,9 +22,14 @@
               {{breadCrumbCategoryName}}
             </a>
           </h1>
-          <h1 *ngIf="breadCrumbSubCategoryName">
+          <h1 *ngIf="breadCrumbSubCategoryName && !(breadCrumnSubLevelName)">
             <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId,subCategoryId]">
               {{breadCrumbSubCategoryName}}
+            </a>
+          </h1>
+          <h1 *ngIf="breadCrumnSubLevelName">
+            <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId,subCategoryId]">
+              {{breadCrumnSubLevelName}}
             </a>
           </h1>
           <div class="product-total">{{products?.length}} Items Found</div>
