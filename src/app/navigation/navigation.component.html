@@ -17,7 +17,7 @@
 
                 <li *ngFor="let category of menu.categories; let menuCategory = index" [ngClass]="{'wsshoplink-active':menuCategory == (selectedRow?selectedRow:0),'wscategoryactive':activeCategoryIndex==menuCategory}"
                   (mouseenter)="setClickedRow(menuCategory)">
-                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]" (click)="selectedCategoryIndex=menuCategory">{{category.categoryName | translate}}</a>
+                  <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId]" (click)="selectedCategoryIndex=menuCategory;activeIndex = i;">{{category.categoryName | translate}}</a>
                   <div class="wsshoptab-active wstbrandbottom clearfix">
                     <div class="container">
                       <div class="row">
@@ -25,13 +25,13 @@
                           <div class="col-lg-4 col-md-3" *ngFor="let subCategory of category.subCategory">
                             <ul class="wstliststy02 clearfix">
                               <li class="wstheading clearfix">
-                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]">
+                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id]" (click)="activeIndex = i">
                                   {{subCategory.name | translate}}
                                   <i class="fa fa-caret-right"></i>
                                 </a>
                               </li>
                               <li *ngFor="let subLevel of subCategory.subLevelCategory">
-                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]">
+                                <a [routerLink]="['/shop',cn,ln,menu.menuId,category.categoryId,subCategory.id,subLevel.subLevelCategoryId]" (click)="activeIndex = i">
                                   {{subLevel.subLevelCategoryName | translate}}</a>
                               </li>
                             </ul>

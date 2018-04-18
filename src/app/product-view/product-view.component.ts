@@ -16,6 +16,7 @@ declare var jQuery: any;
 })
 
 export class ProductViewComponent implements OnInit {
+  i: number;
   favourite: boolean;
   shipping: any;
   availableColors: any;

@@ -16,6 +16,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
 
+  activeIndex: number;
   removeSelectedIndex: Function;
   categoryId: any;
   filteredProducts: Array<any> = [];
@@ -61,8 +62,6 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
 
     this.selectedMenuRow = -1;
-
-
     this.defaultService.getCategories().subscribe(response => {
       this.menus = response;
     });
