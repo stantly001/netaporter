@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Approute } from './app.routes';
 import { RouterModule } from '@angular/router';
-import { McBreadcrumbsModule } from 'ngx-breadcrumbs';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +19,6 @@ import { ParamsService } from './services/params.service';
 import { FilterService } from './services/filter.service';
 import { PaginationService } from './services/index';
 import { BreadcrumbService } from './services/breadcrumb.service';
-import { AppBreadCrumbsResolver } from './app.breadcrumb.resolver';
 
 import * as $ from 'jquery';
 import { ProductViewDirective } from './directives/product-view.directive';
@@ -68,11 +66,10 @@ import 'hammerjs';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(Approute),
-    McBreadcrumbsModule.forRoot(),
     NgxCarouselModule,
     PopoverModule
   ],
-  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService,AppBreadCrumbsResolver],
+  providers: [DataService,DefaultService,UtilitiesService,ParamsService,PaginationService,UrlComponent,FilterService, BreadcrumbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

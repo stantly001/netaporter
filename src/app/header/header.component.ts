@@ -11,7 +11,6 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
