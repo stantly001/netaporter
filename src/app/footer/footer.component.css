@@ -1,6 +1,6 @@
 .footer {
     padding: 4em 0;
-    background: #282828;
+    background: #111;
 }
 .w3_footer_grid ul li a:hover {
     color: #999;
@@ -84,7 +84,7 @@ input[type="text"], input[type="email"]{
 }
 .footer-copy p {
     margin: 0.7em 0 0 0em;
-    color: #ddd;
+    color: #bcbcbc;
     line-height: 1.8em;
     font-size: 12px;
     text-align: left;
@@ -94,7 +94,7 @@ padding:0px;
 }
 .payment .payee {
     font-size: 11px;
-    color: #ddd;
+    color: #bcbcbc;
     display: inline-block;
     padding: 0;
     margin: 0 -15px;

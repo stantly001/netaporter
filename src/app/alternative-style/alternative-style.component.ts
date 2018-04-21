@@ -29,7 +29,7 @@ export class AlternativeStyleComponent implements OnInit {
   ngOnInit(): void {
     this.isCategory = false;
     this.carouselOne = {
-      grid: { xs: 2, sm: 2, md: 2, lg: 5, all: 0 },
+      grid: { xs: 1, sm: 2, md: 2, lg: 5, all: 0 },
       slide: 1,
       speed: 900,
       interval: 4000,

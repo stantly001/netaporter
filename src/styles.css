@@ -2,7 +2,6 @@
 	* Global Stylesheet for Entire Application
 */
 html, body{
-    font-size: 100%;
 	background:	#fff;
   font-family:'Open Sans', sans-serif;
   overflow-x:hidden;
@@ -12,7 +11,7 @@ p{
 	font-size:14px;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Glegoo', serif;
+	font-family:'Open Sans', sans-serif;
 	margin:0;
 }
 ul,label{
@@ -1234,7 +1233,7 @@ ul.wmuSliderPagination {
 .footer-copy p{
 	margin:4em 0 0;
 	text-align:center;
-	color:#999;
+	color: #bcbcbc;
 	line-height:1.8em;
 }
 .footer-copy p a{
@@ -1243,6 +1242,9 @@ ul.wmuSliderPagination {
 }
 .footer-copy p a:hover{
 	color:#999;
+}
+.text-center-ship span .dropdown-toggle {
+  color: #fff;
 }
 /*-- //footer --*/
 /*-- login --*/
@@ -1584,6 +1586,15 @@ a.pa_italic label {
 ul.panel_bottom {
     padding:1em 0 0 0em;
 }
+.size-guide {
+  color: #878484;
+  font-size: 14px;
+  border-bottom: 1px dotted #878484;
+}
+
+.size-guide:hover {
+  color: #878484;
+}
 
 .ecommerce_color ul li{
 	list-style-type:none;
@@ -1684,7 +1695,7 @@ ul.panel_bottom {
     margin: 2em 0;
 }
 select.select_item {
-    font-size: 14px;
+    font-size: 13px;
     color: #212121;
     padding: 0px;
 	outline:none;
@@ -2702,7 +2713,7 @@ td.invert-image a img {
 		font-size: 1.5em;
   }
   .wsshoptabing {
-    margin:50px 0px !important;
+    margin:49px 0px !important;
   }
 	.banner {
 		min-height: 500px;
@@ -2822,7 +2833,7 @@ td.invert-image a img {
 		font-size: 1.1em;
 	}
 	.wsshoptabing {
-    margin:50px 0px !important;
+    margin:49px 0px !important;
   }
   .wsmenu-list {
     margin: 0px 0px !important;
@@ -4358,10 +4369,10 @@ td.invert-image a img {
 	}
 }
 body {
-    font-family: '33535gillsansmt'
+  font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: '33535gillsansmt'
+	font-family: 'Open Sans', sans-serif;
 }
 *{
 	list-style-type: none;
@@ -4423,7 +4434,7 @@ input[type="radio"], input[type="checkbox"] {
 .zoomImg{
   /* width: 175% !important;
   height: 150% !important; */
-  z-index: 10000;
+  z-index: 1000;
 }
 .popover.bottom .arrow {
     left: 81% !important;
@@ -5728,7 +5739,7 @@ input[type="radio"], input[type="checkbox"] {
   }
 
   .wsshoptabing {
-    margin:50px 0px !important;
+    margin:49px 0px !important;
   }
 
   .model-menu-img {
@@ -5951,7 +5962,7 @@ input[type="radio"], input[type="checkbox"] {
       position: relative;
     }
     .wsshoptabing {
-      margin:50px 0px !important;
+      margin:0px 0px !important;
     }
     .wstabitem>li>a {
       width: 100%;
@@ -7209,7 +7220,7 @@ input[type="radio"], input[type="checkbox"] {
       background-color: #fff !important;
     }
     .wsshoptabing {
-      margin:50px 0px !important;
+      margin:0px 0px !important;
     }
     .red-grdt>.wsmenu>.wsmenu-list>li>a>.fa {
       color: #fff !important;
@@ -7381,7 +7392,7 @@ input[type="radio"], input[type="checkbox"] {
   height: 15px;
   margin: -8.5px 0px 0;
   background: #fff;
-  border: 2px solid #000;
+  border: 3px solid #000;
 }
 .styled-input-single label:after {
   left: 5px;
@@ -7445,4 +7456,66 @@ select.form-control.select_item {
     float:right !important;
     margin-top:32% !important;
   }
+}
+
+
+.address .dropdown .dropdown-toggle {
+  padding-right: 20px;
+  color: #000;
+}
+.description a span {
+  /* font-size: 18px; */
+  /* font-weight: 600; */
+}
+.product-description a {
+  font-size: 14px;
+line-height: 20px;
+}
+.item .product-name {
+  font-size: 16px;
+  /* font-weight: 600; */
+  padding-top:5%;
+}
+h1 .breadcrumb-anchor {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 42px;
+  font-weight:600;
+}
+.offer-price a {
+  font-weight: 600;
+}
+.strike {
+  font-weight: 600;
+}
+.pagination li a {
+  font-size: 11px;
+}
+.dropdown-menu > li > a {
+  font-size:12px;
+}
+.styled-input-single label {
+  font-size: .96em !important;
+}
+.orginal-price a {
+  /* font-weight: 600; */
+}
+.breadcrumbs {
+  font-size: 12px;
+}
+.product-total {
+  font-size: 13px;
+}
+#description h3 {
+  /* font-weight: 600; */
+}
+.product-price span {
+  /* font-weight:600; */
+}
+.alternate {
+  padding-bottom: 10px !important;
+}
+
+.rotate {
+  color:#878484;
 }

@@ -9,10 +9,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <app-sort></app-sort>
             <div class="btn-group">
-                <select name="select_item" (change)="callPaginatedProduct(pageCount,$event.target.value)" class="form-control select_item">
+                <select name="select_item" [(ngModel)]="pageSize" (change)="callPaginatedProduct(pageCount,$event.target.value)" class="form-control select_item">
                     <option value="5">5 items/page</option>
                     <option value="10">10 items/page</option>
                     <option value="25">25 items/page</option>

@@ -1,7 +1,9 @@
 .js-popup.enabled.help-link {
     color: #be181c !important;
     border-right: none;
-    font-size: 28px;
+    font-size: 24px;
+    border-bottom: 1px solid #ea9a9c;
+    /* font-weight:600; */
 }
 .address {
     padding-top:50px;

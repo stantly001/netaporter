@@ -75,7 +75,6 @@ export class ProductsComponent implements OnInit {
         this.pageSize = this.queryParams.pageSize ? this.queryParams.pageSize : 5;
         this.pager = this.paginationService.getPager(this.products.length, (this.queryParams.page ? this.queryParams.page : 1), (this.queryParams.pageSize ? this.queryParams.pageSize : 5));
         this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-        console.log("pagedProducts -->", this.pagedProducts);
       } else {
         this.products = response;
       }

@@ -16,6 +16,7 @@ declare var jQuery: any;
 })
 
 export class ProductViewComponent implements OnInit {
+  breadCrumbProductDescripton: any;
   countryName: any;
   countries: any;
   i: number;
@@ -78,6 +79,7 @@ export class ProductViewComponent implements OnInit {
             this.breadCrumbSubLevelName = response.subLevel;
             this.breadCrumbSubLevelId = response.subLevelId;
             this.breadCrumbProductName = this.productsArr.name;
+            this.breadCrumbProductDescripton = this.productsArr.description;
           });
         });
 
@@ -128,5 +130,5 @@ export class ProductViewComponent implements OnInit {
     this.storage.set("shipping", this.countryName);
   }
 
-
+  
 }
