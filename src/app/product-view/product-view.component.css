@@ -201,7 +201,7 @@ select.select_item {
     color: #000000;
     text-transform: capitalize;
     text-decoration: none;
-    font-family: Georgia,Times,serif !important;
+    font-family: 'Open Sans', sans-serif;
     padding: 16px 0px 0px 0px;
     cursor: pointer;
 }
@@ -320,24 +320,86 @@ a {
 
 .actualPrice {
     color: #be181c !important;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
-
+del {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.out-of-desc {
+    font-weight: normal;
+    padding-top: 5px;
+}
+.choose {
+    font-size:18px;
+    color:#000;
+    font-family: 'Open Sans', sans-serif;
+}
 .product-name.actual-price {
     color: #be181c !important;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom:15px;
+    font-size: 24px;
 }
-
+.product-code {
+    color: #747474;
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
 .product-name {
     color: #747474;
     margin-bottom: 5px;
+    font-size: 19px;
+font-weight: normal;
+font-style: normal;
+font-family: 'Open Sans', sans-serif;
 }
-
+.order-desc {
+    text-align: center;
+    padding: 5px 20px;
+    color: #747474;
+    line-height: 20px;
+    font-size:14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.btn.btn-primary.submit-button {
+    padding: 8px 20px;
+    border-radius: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    outline: 0;
+}
 .form-control {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+border-radius: 0px;
+font-family: 'Open Sans', sans-serif;
 }
-
-
+.panel-title {
+    font-size: 18px !important;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Open Sans',sans-serif !important;
+    line-height: 22px;
+    color: #000;
+}
+.thumb-arrow {
+    color:#000;
+}
 .share-icon h5 {
     padding-bottom: 10px;
+    font-size: 18px;
+font-weight: normal;
+font-style: normal;
+font-family: 'Open Sans', sans-serif;
+line-height: 22px;
+color: #000;
 }
 
 .accordion-container {
@@ -345,6 +407,10 @@ a {
 }
 .accordion-container p {
     padding-top:10px;
+    font-family: 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 22px;
+color: #000;
 }
 .share-icon a {
     margin-right:10px;
@@ -441,11 +507,12 @@ div#carousel-custom {
 .product-size-image.active > button {
     background: #000;
     color: #fff;
+    border-radius: 0px;
 }
 
 .color-image .active {
-    border:1px solid #000;
-    padding:3px;
+    padding: 5px;
+border: 1px solid #979797;
 }
 
 @media only screen and (min-width:320px) and (max-width:750px) {
@@ -555,9 +622,12 @@ section#description {
     background: #000;
     color: #FFF;
     border: 1px solid #000;
-    font-size:14px;
-    padding: 20px 30px;
-    text-transform:uppercase;
+    font-size: 22px;
+    padding: 10px 30px;
+    text-transform: Capitalize;
+    border-radius: 0px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
 }
 .shopping-cart {
     clear: both;
@@ -662,6 +732,7 @@ span.fa.fa-play-circle {
 }
 .active .thumbnail-image{
     border: 1px solid #979797;
+    padding:3px;
 }
 .thumbnail-prev-button a {
     color: #000000;
@@ -680,7 +751,7 @@ span.fa.fa-play-circle {
     font-weight: 500;
 }
 .icon-size_guide{
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #e8e8e8;
 }
 .product-size-image{
        line-height: 70px;
@@ -701,7 +772,9 @@ span.fa.fa-play-circle {
     
     .product-shipment{
         border: 1px solid #000;
-            }
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+             }
             .color-image{
                 margin-bottom: 10px;
             }
@@ -716,6 +789,16 @@ margin-top: 33px
 .disabled{
     pointer-events: none;
 }
+
+@media (min-width: 768px) {
+    #carousel-custom .carousel-control.left {
+        left: 0px;
+    }
+    #carousel-custom .carousel-control.right {
+        right:0px;
+    }
+}
+
 /* @media (min-width: 768px) {
 
     /* show 3 items */
@@ -823,4 +906,7 @@ margin-top: 33px
 
 .item img {
 	width: auto !important;
+}
+#description h3 {
+    margin-bottom: 15px;
 }

@@ -117,18 +117,18 @@
           </span>
         </div>
         <div>
-          <span class="product-name">{{productsArr?.message}}</span>
+          <span class="product-code">{{productsArr?.message}}</span>
         </div>
         <div>
-          <span class="product-name">Product Code: {{productsArr?.code}}</span>
+          <span class="product-code">Product Code: {{productsArr?.code}}</span>
         </div>
         <hr>
         <div *ngIf="productsArr?.available==true">
           <div class="product-name">
-            CHOOSE SIZE
+            <span class="choose">CHOOSE SIZE</span>
             <a class="size-guide pull-right" href="/intl/pssizechart.nap?productID=1045388&amp;tab=1" target="_blank">
               <i class="rotate fa fa-align-right"></i>
-              <span class="icon-size_guide">View Size Guide</span>
+              <span class="icon-size_guide">Size Guide</span>
             </a>
           </div>
           <div class="row col-md-12 product-sizes">
@@ -151,27 +151,27 @@
             <div class="product-shipment text-center">
               Ship To:{{shipping}}
               <span class="fa fa-chevron-down"></span>
-              <div>
+              <div class="order-desc">
                 Order within 9 hours and 1 minute for guaranteed Same-Day Shipping.
               </div>
             </div>
           </div>
           <div class="shopping-cart">
-            <button type="button" class="btn btn-primary btn-lg col-md-12 nap-button">Add to Basket</button>
+            <button type="button" class="btn btn-primary btn-lg col-md-12 nap-button btn-block">Add to Basket</button>
           </div>
         </div>
         <div *ngIf="productsArr?.available!=true">
           <div class="product-name actual-price">
             Out Of Stock
-            <p>
-              Please Enter Your Email We'll Remind You When this Product Is Back in Stock Again.
+            <p class="out-of-desc">
+              Please enter your email we'll remind you when this product is back in stock again.
             </p>
           </div>
           <div>
             <input type="text" class="form-control" placeholder="Your Email Adderss">
           </div>
           <div>
-            <button class="btn btn-primary submit-button">SUBMIT</button>
+            <button class="btn btn-primary submit-button">Submit</button>
           </div>
         </div>
         <div id="panel-group" class="panel-product accordion-container">
