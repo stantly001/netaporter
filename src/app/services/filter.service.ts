@@ -21,7 +21,13 @@ export class FilterService {
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService) {
     console.log(" CONSTRUCTOR IS CALLED .....");
+
+    /**
+     * Default initialization
+     */
+
     let url = window.location.href;
+    console.log("filter service constructor called -->",url);
     if ((url.indexOf('?' + 'brandFilter' + '=') != -1) || (url.indexOf('&' + 'brandFilter' + '=') != -1)) {
       let brandFilterIds = this.activatedRoute.snapshot.queryParams['brandFilter'].split(",").map(Number);
       if (this.brandFilter.length == 0) {
@@ -43,6 +49,10 @@ export class FilterService {
       this.queryStringArr.push('sizeFilter');
     }
 
+    if ((url.indexOf('?' + 'priceFilter' + '=') != -1) || (url.indexOf('&' + 'priceFilter' + '=') != -1)) {
+      this.queryStringArr.push('priceFilter');
+    }
+
 
   }
 
@@ -59,7 +69,7 @@ export class FilterService {
 
     let url = window.location.href;
     let sortedMap: { [k: string]: any } = {};
-
+    console.log("filter serviced -->",url);
 
 
     if (type == 'brand') {
@@ -133,14 +143,16 @@ export class FilterService {
       /**
        * For Page Load with Query Params
        */
-      if ((url.indexOf('?' + 'subLevelFilter' + '=') != -1) || (url.indexOf('&' + 'pricesFilter' + '=') != -1)) {
+      if ((url.indexOf('?' + 'pricesFilter' + '=') != -1) || (url.indexOf('&' + 'pricesFilter' + '=') != -1)) {
         let priceFilterIds = this.activatedRoute.snapshot.queryParams['pricesFilter'].split(",").map(Number);
         if (this.pricesFilter.length == 0) {
           this.pricesFilter = priceFilterIds;
         }
       }
-
-      isChecked ? this.pricesFilter.push(filterObj.rangeId) : this.pricesFilter.splice(this.pricesFilter.indexOf(filterObj.rangeId, 1));
+      console.log("price RangeId -->", filterObj.rangeId);
+      console.log("ischecked ==>", isChecked);
+      console.log("priceFilter-->", this.pricesFilter);
+      isChecked ? this.pricesFilter.push(filterObj.rangeId) : this.pricesFilter.splice(this.pricesFilter.indexOf(filterObj.rangeId), 1);
       if (this.queryStringArr.indexOf("pricesFilter") == -1 && (this.pricesFilter.length > 0)) {
         this.queryStringArr.push("pricesFilter");
       }

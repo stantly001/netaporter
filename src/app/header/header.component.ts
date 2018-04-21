@@ -52,25 +52,9 @@ export class HeaderComponent implements OnInit {
         this.cn = paramObj.cn;
       }
     });
-    console.log("hedear loaded okay");
+    
   }
 
   ngOnInit() {
   }
-
-  /**
-   * 
-   * @param event 
-   * @param value 
-   * Product Search Filter 
-   */
-  // onSearchProduct(event, value) {
-  //   this.filteredProducts = this.tempFilteredProducts;
-  //   if (event.key == 'Enter') {
-  //     let arr = (value) ? this.utilitiesService.searchFilter(this.filteredProducts, value) : this.tempFilteredProducts;
-  //     console.log("search Arr ==>",arr);
-  //     // this.paramsService.setFilteredProducts(arr);
-  //   }
-  // }
-
 }

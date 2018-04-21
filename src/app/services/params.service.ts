@@ -62,7 +62,6 @@ export class ParamsService {
    * @param arr 
    * This Collection is based on Category / SubCategory / SubLevel
    */
-  @Input()
   public setOrginalProducts(arr: Array<any>) {
     this.orginalProducts.next(arr);
   }
@@ -72,7 +71,6 @@ export class ParamsService {
    * @param arr 
    * This is a filtered product based on user filter selection
    */
-  @Input()
   public setFilteredProducts(arr: Array<any>) {
     this.filteredProducts.next(arr);
   }
@@ -81,13 +79,11 @@ export class ParamsService {
     this.categoryIdStr=categoryId;
   }
 
-  @Input()
   public setParams(paramsStr: Object) {
     this.params = paramsStr;
     this.urlParams.next(paramsStr);
   }
 
-  @Input()
   public setQueryParams(queryParamsStr: Object) {
     this.queryParams = queryParamsStr;
     this.urlQueryParams.next(queryParamsStr);

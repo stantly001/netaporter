@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit {
   filteredProducts: Array<any> = [];
   tempFilteredProducts: Array<any> = [];
   setClickedRow: Function;
-  setMenuClickedRow:Function;
+  setMenuClickedRow: Function;
   selectedRow: Number;
   selectedMenuRow: Number;
   removeMsg: string;
@@ -41,17 +41,12 @@ export class NavigationComponent implements OnInit {
       this.selectedRow = index;
     }
 
-    this.setMenuClickedRow = function(index) {
-      console.log(index)
+    this.setMenuClickedRow = function (index) {
       // this.removeMsg = ""
       this.selectedMenuRow = index;
     }
-    this.activatedRoute.params.subscribe(routingUrl => {
-      console.log("====>", routingUrl.ln);
 
-    });
-
-    this.removeSelectedIndex = function(){
+    this.removeSelectedIndex = function () {
       this.removeMsg = "removeMouse"
     }
     console.log("navigaton called");
@@ -69,22 +64,18 @@ export class NavigationComponent implements OnInit {
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
         let tempParams = data.state.root.firstChild.params;
+        console.log("navigation tempParams -->", tempParams);
         this.ln = tempParams.ln;
         this.cn = tempParams.cn;
+        this.activeIndex = tempParams.menuId - 1;
+
       }
     });
 
   }
 
   reloadproduct(menu, category, subCategory) {
-    console.log(menu)
-    console.log(category)
-    console.log(subCategory)
-    // let obj = {}
     this.router.navigate(['/shop/' + this.cn + "/" + this.ln + "/" + menu.menuId + "/" + category.categoryId + "/" + subCategory.id]);
-  }
-  switchLanguage(language: string) {
-
   }
 
   /**
@@ -95,16 +86,13 @@ export class NavigationComponent implements OnInit {
   */
   onSearchProduct(event, value) {
     console.log(value)
-    console.log("filteredProd", this.filteredProducts)
-    this.paramsService.fp.subscribe(response => {
-      this.filteredProducts = response;
-    })
+    let arr: Array<any> = [];
     if (event.key == 'Enter') {
       if (value) {
-        this.defaultService.getProducts().subscribe(response => {
-          let arr = this.utilitiesService.searchFilter(response, value);
-          this.paramsService.setFilteredProducts(arr);
-        });
+        this.paramsService.fp.subscribe(response => {
+          arr = this.utilitiesService.searchFilter(response, value);
+        })
+        this.paramsService.setFilteredProducts(arr);
       } else {
         this.paramsService.oProducts.subscribe(response => {
           this.paramsService.setFilteredProducts(response);
@@ -112,6 +100,11 @@ export class NavigationComponent implements OnInit {
       }
     }
   }
+
+  /**
+   * 
+   * @param menu 
+   */
   selectMenu(menu) {
     this.defaultService.getCategories().subscribe(response => {
       this.categoryId = response.filter(res => res.menuId == menu.menuId)[0].categories[0]

@@ -7377,7 +7377,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 .styled-input-single label:before {
   left: 1.5px;
-  width: 15px;
+  width: 16px;
   height: 15px;
   margin: -8.5px 0px 0;
   background: #fff;
@@ -7438,4 +7438,11 @@ select.form-control.select_item {
 }
 .panel-title>a {
   color:#000;
+}
+
+@media only screen and (min-width:320px) and (max-width:330px) {
+  .roundpoint-mobile {
+    float:right !important;
+    margin-top:32% !important;
+  }
 }

@@ -78,3 +78,14 @@ i.fa.fa-heart-o {
     position: absolute;
     z-index: 20000;
 }
+.product-description > a {
+    color: #747474;
+}
+
+.offer-price > a {
+    color:#b72929;
+}
+
+.orginal-price > a {
+    color: #000;;
+}

@@ -17,7 +17,7 @@ import { FilterService } from '../services/filter.service';
 })
 export class CategoryComponent implements OnInit {
 
-  
+
   accordion: boolean;
   paginationSize: any;
   queryStringArr: Array<any> = [];
@@ -32,7 +32,7 @@ export class CategoryComponent implements OnInit {
 
   categoryArr: Array<any> = [];
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
@@ -44,7 +44,7 @@ export class CategoryComponent implements OnInit {
 
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   /**
   * 
@@ -60,7 +60,8 @@ export class CategoryComponent implements OnInit {
     });
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
     filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
+    this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
+    // this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
   }
 
 }
