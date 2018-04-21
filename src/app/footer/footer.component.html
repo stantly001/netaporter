@@ -27,7 +27,7 @@
 					<li *ngFor="let topBrand of topBrands">
 						<a href="about.html">{{topBrand.brandName}}</a>
 					</li>
-					
+
 				</ul>
 			</div>
 			<div class="col-md-2 w3_footer_grid">
@@ -36,7 +36,7 @@
 					<li *ngFor="let topCategory of topCategories">
 						<a href="/shop/{{cn}}/{{ln}}/{{menuId}}/{{topCategory.categoryId}}">{{topCategory.categoryName}}</a>
 					</li>
-					
+
 				</ul>
 			</div>
 			<div class="col-md-2 w3_footer_grid">
@@ -96,18 +96,17 @@
 		</div>
 		<div class="col-md-2">
 			<p class="text-center-ship">Ship to
-					<span class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown">
-							  {{countryName}}
-							  <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
-							  <li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
-								<a>{{country.countryName}}</a>
-							  </li>
-							</ul>
-						  </span>
-				<!-- <app-country [displayType]="type"></app-country> -->
+				<span class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						{{countryName}}
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
+						<li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+							<a>{{country.countryName}}</a>
+						</li>
+					</ul>
+				</span>
 			</p>
 		</div>
 		<div class="col-md-6">

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
 import { DefaultService } from '../services/default.service';
 import { UtilitiesService } from '../services/utilities.service';
 import 'ngx-popover';
@@ -16,6 +16,8 @@ declare var jQuery: any;
 })
 
 export class ProductViewComponent implements OnInit {
+  countryName: any;
+  countries: any;
   i: number;
   favourite: boolean;
   shipping: any;
@@ -50,8 +52,8 @@ export class ProductViewComponent implements OnInit {
 
   @ViewChild('videoPlayer') videoplayer: any;
 
-  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
-    this.shipping=this.storage.get("shipping");
+  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService, private activatedRoute: ActivatedRoute, private defaultService: DefaultService, private utilitiesService: UtilitiesService, private paramsService: ParamsService, private breadCrumbService: BreadcrumbService) {
+    this.shipping = this.storage.get("shipping");
     this.activatedRoute.params.subscribe(response => {
       this.productId = parseInt(response.productId);
       let result;
@@ -84,11 +86,26 @@ export class ProductViewComponent implements OnInit {
         this.sizes = response;
       });
     });
+
+    this.paramsService.shipment.subscribe(response => {
+      this.countryName = response['countryName'];
+    });
+
+
   }
 
   ngOnInit() {
-    this.favourite=false;
-    
+    this.favourite = false;
+    this.defaultService.getCountry().subscribe(response => {
+      this.countries = response;
+      let countryName = this.storage.get("shipping");
+      if (countryName) {
+        this.countryName = countryName;
+      } else {
+        this.countryName = response[0].countryName;
+        this.storage.set("shipping", this.countryName);
+      }
+    });
   }
 
   imageColorSelection(color) {
@@ -100,14 +117,16 @@ export class ProductViewComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit() {
-  }
-
   toggleVideo(event: any) {
     this.isOn = false;
     this.videoplayer.nativeElement.play();
   }
 
+  shipTo(country) {
+    this.countryName = country.countryName;
+    this.paramsService.setShipTo(country);
+    this.storage.set("shipping", this.countryName);
+  }
 
 
 }

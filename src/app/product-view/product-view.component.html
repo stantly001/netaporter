@@ -49,12 +49,12 @@
               </div>
             </div>
 
-           
+
 
             <div class="col-md-9">
 
               <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
-                
+
                 <div class="text-center">
                   <b>Like This Item?</b>
                 </div>
@@ -62,15 +62,15 @@
                   <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
                   <p class="text-nowrap">if it goes on sale and more.</p>
                 </div>
-             
+
               </popover-content>
-            
+
               <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}"
                 [popoverOnHover]="true" [popover]="myPopover" aria-hidden="true"></i>
-                
-               
-              
-            
+
+
+
+
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">
@@ -111,9 +111,14 @@
         </h3>
         <span class="product-name" [innerText]="productsArr?.description"></span>
         <div class="full-price style-scope nap-price" itemprop="price" content="861.61">
-          <span [ngClass]="{'actualPrice':productsArr?.available==true}">AED {{productsArr?.offerPrice}}</span>
-          <span *ngIf="productsArr?.available==true">
-            <del>AED {{productsArr?.originalPrice}}</del>
+          <span *ngIf="productsArr?.offerPrice!=='0'">
+            <span [ngClass]="{'actualPrice':productsArr?.available==true}">AED {{productsArr?.offerPrice}}</span>
+          </span>
+          <span *ngIf="productsArr?.offerPrice!=='0'">
+            <span class="orginal-price-strike">AED {{productsArr?.orginalPrice}}</span>
+          </span>
+          <span *ngIf="productsArr?.offerPrice=='0'">
+            <span class="orginal-price">AED {{productsArr?.orginalPrice}}</span>
           </span>
         </div>
         <div>
@@ -126,9 +131,9 @@
         <div *ngIf="productsArr?.available==true">
           <div class="product-name">
             CHOOSE SIZE
-            <a class="size-guide pull-right" href="/intl/pssizechart.nap?productID=1045388&amp;tab=1" target="_blank">
+            <a class="size-guide pull-right" href="https://www.net-a-porter.com/intl/sizechart.nap" target="_blank">
               <i class="rotate fa fa-align-right"></i>
-              <span class="icon-size_guide">View Size Guide</span>
+              <span class="icon-size_guide">Size Guide</span>
             </a>
           </div>
           <div class="row col-md-12 product-sizes">
@@ -149,8 +154,19 @@
           </div>
           <div>
             <div class="product-shipment text-center">
-              Ship To:{{shipping}}
-              <span class="fa fa-chevron-down"></span>
+              Ship To:
+              <span class="dropdown">
+                <a class="dropdown-toggle" id="shipto" data-toggle="dropdown">
+                  {{countryName}}
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
+                  <li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                    <a>{{country.countryName}}</a>
+                  </li>
+                </ul>
+              </span>
+              <span class="fa fa-chevron-down" id="shiptoarrow"></span>
               <div>
                 Order within 9 hours and 1 minute for guaranteed Same-Day Shipping.
               </div>
@@ -171,7 +187,7 @@
             <input type="text" class="form-control" placeholder="Your Email Adderss">
           </div>
           <div>
-            <button class="btn btn-primary submit-button">SUBMIT</button>
+            <button class="btn btn-primary submit-button">Submit</button>
           </div>
         </div>
         <div id="panel-group" class="panel-product accordion-container">

@@ -441,6 +441,7 @@ div#carousel-custom {
 .product-size-image.active > button {
     background: #000;
     color: #fff;
+    outline:none;
 }
 
 .color-image .active {
@@ -457,6 +458,9 @@ div#carousel-custom {
     width:432px !important
 }
 
+#shiptoarrow {
+    cursor: pointer;
+}
 
 
 
@@ -823,4 +827,27 @@ margin-top: 33px
 
 .item img {
 	width: auto !important;
+}
+.orginal-price-strike {
+    text-decoration: line-through;
+}
+
+.orginal-price {
+    font-size: 14px;
+    color: #000;
+}
+
+#shipto {
+    color:#463339 !important;
+}
+
+.dropdown-menu > li > a {
+    color: #333 !important;
+}
+
+.dropdown-menu > li:hover {
+    cursor: pointer;
+}
+#shipto:hover {
+    cursor: pointer;
 }

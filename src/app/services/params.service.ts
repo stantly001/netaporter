@@ -18,6 +18,7 @@ export class ParamsService {
   private tempProducts = new BehaviorSubject<Array<any>>([]);
   private paginationProducts = new BehaviorSubject<Array<any>>([]);
   private menus = new BehaviorSubject<Array<any>>([]);
+  private shipTo = new BehaviorSubject<Object>({});
 
   urlParameters = this.urlParams.asObservable();
   urlQueryParameters = this.urlQueryParams.asObservable();
@@ -26,11 +27,16 @@ export class ParamsService {
   tProducts = this.tempProducts.asObservable();
   pagination = this.paginationProducts.asObservable();
   menu = this.menus.asObservable();
-
+  shipment = this.shipTo.asObservable();
   
   private categoryIdStr:string;
   private params:Object;
   private queryParams:Object;
+
+
+  public setShipTo(data:Object) {
+    this.shipTo.next(data);
+  }
 
 
   public setTempProductData(arr:Array<any>){

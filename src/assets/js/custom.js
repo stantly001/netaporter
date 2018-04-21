@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    
+
+    $("#shiptoarrow").click(function (e) {
+        $(this).prev('.dropdown').children().eq(0).dropdown('toggle');
+        $(this).prev('.dropdown').children().eq(0).addClass("sdf");
+        console.log("class-->", $(this).prev().attr('class'));
+        console.log("called arr");
+    });
+
     // $('.panel-group').on('shown.bs.collapse', function () {
     //     $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
     // }).on('hidden.bs.collapse', function () {
