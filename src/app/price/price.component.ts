@@ -26,7 +26,7 @@ export class PriceComponent implements OnInit {
 
   urlParams: Object;
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
     /**
@@ -61,6 +61,7 @@ export class PriceComponent implements OnInit {
     this.isCategory = false;
     this.activatedRoute.params.subscribe(response => {
       this.urlParams = response;
+      console.log("price Filter -->", this.urlParams);
     });
 
 
@@ -75,12 +76,12 @@ export class PriceComponent implements OnInit {
   */
   public filter(filterObj, isChecked, type) {
     filterObj.checked = isChecked;
-    this.activatedRoute.queryParams.subscribe(response => {
-      this.paginationSize = response.pageSize;
-    });
+    let queryParams = this.activatedRoute.snapshot.queryParams;
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, this.prices);
+    this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
+    filterData.queryParam.pageSize = queryParams.pageSize ? queryParams.pageSize : 5;
+    filterData.queryParam.page = 1;
+    this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
   }
 
 } 

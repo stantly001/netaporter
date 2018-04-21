@@ -21,11 +21,23 @@ export class UrlComponent implements OnInit {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
-    private utilitiesService: UtilitiesService) { }
+    private utilitiesService: UtilitiesService) {
+
+    this.defaultService.getPrice().subscribe(response => {
+      if (response.length !== 0) {
+        this.prices = response;
+      }
+    })
+
+  }
 
   obj: { [key: string]: string } = {};
-  subscription:any;
-  ngOnInit() { }
+  subscription: any;
+  ngOnInit() {
+
+
+
+  }
 
   /**
    * 
@@ -53,23 +65,8 @@ export class UrlComponent implements OnInit {
     this.paramsService.tProducts.subscribe(response => {
       this.tempProducts = response;
     })
-    
-    this.subscription = this.router.navigate([routeUrl], { queryParams: obj }).then(() => {
-      this.activatedRoute.queryParams.subscribe((params: Params) => {
-        console.log("**************************************************")
-        this.paramsService.setQueryParams(params);
-        obj.orginalProduct = this.orginalProduct;
-        obj.filteredProduct = this.filteredProducts;
-        obj.tempProduct = this.tempProducts;
-        obj.prices = this.prices;
-        this.getProductByFilters(params, obj);
-      }).unsubscribe();
-    })
-
-
-
   }
-  
+
 
   /** 
   * 
@@ -81,8 +78,9 @@ export class UrlComponent implements OnInit {
   */
   getProductByFilters(params, productArrObj) {
 
-    console.log("parmas -->",params);
-    
+    console.log("parmas -->", params);
+    console.log("productArrObj --->", productArrObj);
+
     let orginalProduct = productArrObj.orginalProduct;
     let filteredProduct = productArrObj.filteredProduct;
     let tempProduct = productArrObj.tempProduct;
@@ -90,27 +88,82 @@ export class UrlComponent implements OnInit {
 
     let arr: Array<any> = [];
     let filters = this.dataService.stringKeyToArray(params);
-    if (Object.keys(filters).length == 0) {
-      this.filteredProducts = orginalProduct;
-    }
-    else { //more than one filters
-      for (let key in filters) {
-        if (this.filteredProducts.length == 0) {
-          this.filteredProducts = this.getData(tempProduct, key, filters[key], priceArr);
-        } else {
-          this.filteredProducts = this.getData(orginalProduct, key, filters[key], priceArr);
-        }
+    console.log("filters -->",filters);
+    let filtersLength = Object.keys(filters).length;
+
+    if (orginalProduct.length !== 0) {
+      if (Object.keys(filters).length == 0) {
+        filteredProduct = orginalProduct;
+      }
+      else { //more than one filters
+
+        let len: Number;
+        let arr: Array<any> = [];
+        orginalProduct.forEach(product => {
+          let counter = 0;
+          for (let key in filters) {
+            if (key !== "rangeId") {
+              len = this.dataService.findExist(product[key], filters[key]);
+              if (len > 0) {
+                counter++;
+              }
+            } else {
+              let orginalPrice = parseFloat(product['orginalPrice']);
+              let tempArr = this.dataService.priceRanges(this.prices, filters.rangeId);
+              if (orginalPrice >= parseFloat(tempArr[0]) && orginalPrice <= parseFloat(tempArr[1])) {
+                counter++;
+              }
+            }
+          }
+          if (counter == filtersLength) {
+            arr.push(product);
+          }
+        });
+        // console.log("filter result ->", arr);
+        // if (filters.rangeId) {
+        //   console.log("Inside")
+        //   this.defaultService.getPrice().subscribe(response => {
+        //     if (response.length != 0) {
+        //       console.log("price res -->", response);
+        //       console.log("&&-->", this.dataService.priceFilter(arr, response, 'rangeId', filters.rangeId));
+        //     }
+        //   });
+        // }
+
+
+        console.log("final produsdfas arr ->", arr);
+        filteredProduct = arr;
+        // for (let key in filters) {
+        //   if (this.filteredProducts.length == 0 && orginalProduct.length != 0) {
+        //     filteredProduct = this.getData(tempProduct, key, filters[key], priceArr);
+        //   } else {
+        //     filteredProduct = this.getData(orginalProduct, key, filters[key], priceArr);
+        //   }
+        // }
+        // this.paramsService.setFilteredProducts(filteredProduct);
+        // console.log("filtered productesdasd sets")
       }
     }
+    //  else {
+    //   this.paramsService.setFilteredProducts(orginalProduct);
+    // }
 
-    ("sortOrder" in params) ? this.utilitiesService.sortArrayByOrders(this.filteredProducts, params.sortOrder, "orginalPrice") : this.orginalProduct;
-    this.paramsService.setFilteredProducts(this.filteredProducts);
 
-    console.log("filtered products -->",this.filteredProducts);
 
-    if (this.orginalProduct.length == 0) { // will be called page loaded with query params
-      this.paramsService.setOrginalProducts(this.filteredProducts);
+    // if (this.orginalProduct.length == 0) { // will be called page loaded with query params
+    //   this.paramsService.setOrginalProducts(filteredProduct);
+    // }
+    if ("sortOrder" in params) {
+      let sortType = params.sortType;
+      if (sortType == "priceLowToHigh" || sortType == "priceHighToLow") {
+        filteredProduct = this.utilitiesService.sortArrayByOrders(filteredProduct, params.sortOrder, "orginalPrice");
+      } else {
+        filteredProduct = this.utilitiesService.sortArrayByOrders(filteredProduct, params.sortOrder, params.sortType);
+      }
+
+
     }
+    return filteredProduct;
   }
 
   getData(products, key, value, priceArr) {

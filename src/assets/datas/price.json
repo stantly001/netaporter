@@ -1,7 +1,7 @@
 [
     {
         "rangeId":1,
-        "rangeFrom":"100",
+        "rangeFrom":"0",
         "rangeTo":"200",
         "checked":false
     },

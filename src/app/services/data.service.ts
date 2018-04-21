@@ -82,7 +82,7 @@ export class DataService {
         Obj.rangeId = filters[key].split(",").map(Number)
       }
       if (key == "subLevelFilter") {
-        Obj.subLevelFilter = filters[key].split(",").map(Number);
+        Obj.subLevelId = filters[key].split(",").map(Number);
       }
     }
     return Obj;
@@ -134,9 +134,28 @@ export class DataService {
       arr = this.getProductBySubLevel(arr, params['subLevelId']);
     }
     response['products'] = arr;
+    console.log("arrrrrrr -->", arr);
     return response;
   }
+  public priceRanges(priceArr, value) {
+    let arr: Array<any> = [];
+    priceArr.forEach(element => {
+      if (value.indexOf(element.rangeId) !== -1) {
+        arr.push(element.rangeFrom);
+        arr.push(element.rangeTo);
+      }
+    });
 
+    arr = arr.map(parseFloat);
+
+    let min = Math.min.apply(Math, arr);
+    let max = Math.max.apply(Math, arr);
+    arr = [];
+    arr.push(min);
+    arr.push(max);
+
+    return arr;
+  }
   /**
    * 
    * @param products 
@@ -147,7 +166,7 @@ export class DataService {
    * Result will be  : [100,300]
    */
   public priceFilter(products: Array<any>, priceArr: Array<any>, key: string, value: Array<any>) {
-    console.log("price Arr -->",priceArr);
+    console.log("products Arr -->", products);
     let arr: Array<any> = [];
     let response: Array<any> = [];
     priceArr.forEach(element => {
@@ -169,6 +188,7 @@ export class DataService {
 
 
     products.forEach(element => {
+      console.log("price element -->", element);
       let productPrice = parseFloat(element.orginalPrice);
       if (productPrice >= min && productPrice <= max) {
         response.push(element);

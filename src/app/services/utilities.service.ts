@@ -97,8 +97,6 @@ export class UtilitiesService {
    * Compare Arrays with Array of Objects & Returns Matched Array objects by Mapping key
    */
   mapArrays(fromarr: Array<any>, toArr: Array<any>, key: string) {
-    console.log("fromarr ==>", fromarr);
-    console.log("toArr ==>", toArr);
     let arr: Array<any> = [];
     fromarr.forEach(element => {
       toArr.forEach(ele => {
@@ -159,7 +157,6 @@ export class UtilitiesService {
     if (obj['subLevelId']) {
       routeUrl = routeUrl + "/" + obj['subLevelId'];
     }
-    console.log(routeUrl);
     return routeUrl;
   }
 
@@ -189,12 +186,11 @@ export class UtilitiesService {
    * Search By Product Name & Description 
    */
   searchFilter(arr: Array<any>, value: string) {
-    console.log("filterProd", arr)
     let response: Array<any> = [];
     arr.forEach(element => {
-      ((element.name.toLowerCase().search(value) !== -1) || (element.description.toLowerCase().search(value) !== -1)) ? response.push(element) : ''
+      // ((element.name.toLowerCase().search(value) !== -1) || (element.description.toLowerCase().search(value) !== -1)) ? response.push(element) : ''
+      (element.name.toLowerCase().search(value.toLocaleLowerCase()) !== -1) ? response.push(element) : ''
     });
-    console.log("searchfilter", response)
     return response;
   }
 
@@ -217,7 +213,6 @@ export class UtilitiesService {
    * @param searchKey 
    */
   updateArrayObjectByURLKey(columnName, fromArr, toArr, searchKey, value) {
-    console.log("columnName -->",columnName);
     fromArr.forEach(element => {
       toArr.forEach(ele => {
         if (ele[searchKey] == element) {

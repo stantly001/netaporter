@@ -1,12 +1,18 @@
 import * as _ from 'underscore';
 import { Injectable } from '@angular/core';
+import { CanLoad, Route } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable()
-export class PaginationService {
+export class PaginationService implements CanLoad {
 
+    canLoad(route: Route): any {
+        console.log("called canload")
+    }
     constructor() { }
-    getPager(totalItems: number, currentPage: number = 1, pageSize) {
-        let pagesiz = parseInt(pageSize)
+    getPager(totalItems: number, currentPage, pageSize) {
+        let pagesiz = parseInt(pageSize);
+        let currPage = parseInt(currentPage);
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pagesiz);
         let startPage: number, endPage: number;
@@ -16,18 +22,18 @@ export class PaginationService {
             startPage = 1;
             endPage = totalPages;
         } else {
-            if (currentPage <= 3) {
+            if (currPage <= 3) {
                 startPage = 1;
                 endPage = 5;
-            } else if (currentPage + 1 >= totalPages) {
+            } else if (currPage + 1 >= totalPages) {
                 startPage = totalPages - 4;
                 endPage = totalPages;
             } else {
-                startPage = currentPage - 2;
-                endPage = currentPage + 2;
+                startPage = currPage - 2;
+                endPage = currPage + 2;
             }
         }
-        
+
 
         // if (totalPages <= 10) {
         // less than 10 total pages so show all
@@ -48,7 +54,7 @@ export class PaginationService {
         // }
 
         // calculate start and end item indexes
-        let startIndex = (currentPage - 1) * pagesiz;
+        let startIndex = (currPage - 1) * pagesiz;
         let endIndex = Math.min(startIndex + pagesiz - 1, totalItems - 1);
 
         // create an array of pages to ng-repeat in the pager control
@@ -57,7 +63,7 @@ export class PaginationService {
         // return object with all pager properties required by the view
         return {
             totalItems: totalItems,
-            currentPage: currentPage,
+            currentPage: currPage,
             pageSize: pagesiz,
             totalPages: totalPages,
             startPage: startPage,

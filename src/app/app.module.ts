@@ -47,6 +47,7 @@ import { LanguageComponent } from './language/language.component';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 export function translateHttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -76,6 +77,7 @@ export function translateHttpLoaderFactory(http: HttpClient) {
     WaysToShopComponent,
     CountryComponent,
     LanguageComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

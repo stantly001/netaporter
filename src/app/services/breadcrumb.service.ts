@@ -8,7 +8,6 @@ export class BreadcrumbService {
 
 
   generateBreadCrumb(urlParams: Object): any {
-    console.log("url params ==>", urlParams);
 
     return this.defaultService.getCategories().map(response => {
 
@@ -35,7 +34,6 @@ export class BreadcrumbService {
         obj.subLevel = subLevelObj['subLevelCategoryName'];
         obj.subLevelId = urlParams['subLevelId'];
       }
-      console.log("Obj =====>",obj);
       return obj;
 
 

@@ -28,7 +28,7 @@ export class SizeComponent implements OnInit {
 
   urlParams: Object;
 
-  constructor(private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router:Router,private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
     this.isCategory = false;
@@ -71,12 +71,13 @@ export class SizeComponent implements OnInit {
   * 
   */
   public filter(filterObj, isChecked, type) {
-    this.activatedRoute.queryParams.subscribe(response => {
-      this.paginationSize = response.pageSize;
-    });
+    let queryParams = this.activatedRoute.snapshot.queryParams;
+
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    // filterData.queryParam.pageSize = this.paginationSize;
-    this.urlComponent.loadUrl(filterData.url, filterData.queryParam, '');
+    this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
+    filterData.queryParam.pageSize = queryParams.pageSize ? queryParams.pageSize : 5;
+    filterData.queryParam.page = 1;
+    this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
   }
 
 }
