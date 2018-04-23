@@ -7519,3 +7519,18 @@ h1 .breadcrumb-anchor {
 .rotate {
   color:#878484;
 }
+
+/*
+  * - IE10+ code Product Inside page
+*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .carousel-indicators li {
+    padding:10px;
+  }
+  .carousel-indicators li {
+    display:block;
+  }
+  .product-description {
+    white-space: normal;
+  }
+}
