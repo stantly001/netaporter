@@ -37,7 +37,7 @@
     <!-- product-display-filter -->
 
     <div class="row">
-        <div *ngIf="products.length==0">
+        <div *ngIf="(productFlag==false && products.length==0) || products.length==0">
             <h3>Unfortunately there are no matching items in your request.</h3>
         </div>
         <div *ngIf="products.length!==0" class="w31s_dresses_grid_right_grid3">

@@ -19,6 +19,7 @@ import { ISubscription } from 'rxjs/Subscription';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  productFlag: boolean;
   pageCount: any;
   queryParams: any;
   rows: number[];
@@ -82,11 +83,14 @@ export class ProductsComponent implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.productFlag = false;
+  }
 
   private newMethod() {
     this.defaultService.getProducts().subscribe(response => {
       if (response.length != 0) {
+        this.productFlag = true;
         let params: {
           [k: string]: any;
         } = {};
