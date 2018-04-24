@@ -57,6 +57,21 @@ export class FilterService {
   }
 
   /**
+   * Function to reset query params on state change with out query params
+   */
+  public resetQueryParams() {
+    console.log("query params reset");
+    this.brandFilter = [];
+    this.colorFilter = [];
+    this.sizeFilter = [];
+    this.pricesFilter = [];
+    this.subLevelFilter = [];
+    this.queryStringArr = [];
+  }
+
+
+
+  /**
   * 
   * @param filterObj 
   * @param isChecked 
@@ -69,7 +84,7 @@ export class FilterService {
 
     let url = window.location.href;
     let sortedMap: { [k: string]: any } = {};
-    console.log("filter serviced -->",url);
+    console.log("filter serviced -->", url);
 
 
     if (type == 'brand') {

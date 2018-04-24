@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { DefaultService } from './default.service';
 
 @Injectable()
 export class UtilitiesService {
 
-  constructor() { }
+  constructor(private defaultService: DefaultService) { }
 
   /**
    * 
@@ -221,6 +222,17 @@ export class UtilitiesService {
       });
     });
     return fromArr;
+  }
+
+
+  getProductObj(key, value) {
+    let result: any;
+    return this.defaultService.getProducts().map(response => {
+      result = response.filter(product => product[key] == value)[0];
+      if (Object.keys(result).length !== 0) {
+        return result;
+      }
+    });
   }
 
 }

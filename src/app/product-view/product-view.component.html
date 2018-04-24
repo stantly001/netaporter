@@ -1,29 +1,7 @@
 <section id="description">
   <div class="container">
     <div class="row">
-      <div class="breadcrumbs">
-        Home
-        <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId]">
-          / {{breadCrumbMenuName}}
-        </a>
-        <span *ngIf="breadCrumbCategoryName">
-          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId]">
-            / {{breadCrumbCategoryName}}
-          </a>
-        </span>
-        <span *ngIf="breadCrumbSubCategoryName">
-          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId]">
-            / {{breadCrumbSubCategoryName}}
-          </a>
-        </span>
-        <span *ngIf="breadCrumnSubLevelName">
-          <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,breadCrumbMenuId,breadCrumbCategoryId,breadCrumbSubCategoryId,breadCrumbSubLevelId]">
-            / {{breadCrumnSubLevelName}}
-          </a>
-        </span>
-        <span>/ {{breadCrumbProductName}}</span> 
-        <span *ngIf="breadCrumbProductDescripton">/ {{breadCrumbProductDescripton}}</span>
-      </div>
+      <app-breadcrumb></app-breadcrumb>
       <div class="col-md-8">
         <div id="carousel-custom" class="carousel slide " data-ride="carousel">
           <div class="row">
@@ -49,13 +27,8 @@
                 <span class="fa fa-play-circle"></span>
               </div>
             </div>
-
-
-
             <div class="col-md-9">
-
               <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
-
                 <div class="text-center">
                   <b>Like This Item?</b>
                 </div>
@@ -63,15 +36,9 @@
                   <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
                   <p class="text-nowrap">if it goes on sale and more.</p>
                 </div>
-
               </popover-content>
-
               <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}"
                 [popoverOnHover]="true" [popover]="myPopover" aria-hidden="true"></i>
-
-
-
-
               <div class="carousel-outer" *ngIf="isOn">
                 <!-- me art lab slider -->
                 <div class="carousel-inner " role="listbox">

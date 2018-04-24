@@ -36,9 +36,10 @@ export class BrandComponent implements OnInit {
 
     this.isCategory = false;
 
-    let url = window.location.href;
+
 
     this.defaultService.getBrands().subscribe(response => {
+      let url = window.location.href;
       if (response.length != 0) {
         this.brandArr = response;
         this.activatedRoute.params.subscribe(routingUrl => {
@@ -56,10 +57,12 @@ export class BrandComponent implements OnInit {
                   }
                 });
               });
+            } else {
+              tempArr.forEach(element => {
+                element.checked = false;
+              });
             }
-
             this.brands = tempArr;
-
           }); //end of getMappingFilter
         }); // End of Params Subscribe
       }
@@ -80,7 +83,7 @@ export class BrandComponent implements OnInit {
     let queryParams = this.activatedRoute.snapshot.queryParams;
 
     let filterData = this.filterService.filter(filterObj, isChecked, type, this.urlParams);
-    filterData.queryParam.pageSize = queryParams.pageSize ? queryParams.pageSize:5;
+    filterData.queryParam.pageSize = queryParams.pageSize ? queryParams.pageSize : 5;
     filterData.queryParam.page = 1;
     this.router.navigate([filterData.url], { queryParams: filterData.queryParam });
   }

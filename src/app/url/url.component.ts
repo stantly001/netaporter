@@ -45,27 +45,27 @@ export class UrlComponent implements OnInit {
    * @param obj 
    * updates url and get products
    */
-  loadUrl(routeUrl, obj, priceArr) {
+  // loadUrl(routeUrl, obj, priceArr) {
 
-    this.prices = priceArr;
-    /**
-     * Products By Category / SubCategory / SubLevel
-     */
-    this.paramsService.oProducts.subscribe(response => {
-      this.orginalProduct = response;
-    });
+  //   this.prices = priceArr;
+  //   /**
+  //    * Products By Category / SubCategory / SubLevel
+  //    */
+  //   this.paramsService.oProducts.subscribe(response => {
+  //     this.orginalProduct = response;
+  //   });
 
-    /**
-     * Filtered Products By Query Params
-     */
-    this.paramsService.fp.subscribe(response => {
-      this.filteredProducts = response;
-    });
+  //   /**
+  //    * Filtered Products By Query Params
+  //    */
+  //   this.paramsService.fp.subscribe(response => {
+  //     this.filteredProducts = response;
+  //   });
 
-    this.paramsService.tProducts.subscribe(response => {
-      this.tempProducts = response;
-    })
-  }
+  //   this.paramsService.tProducts.subscribe(response => {
+  //     this.tempProducts = response;
+  //   })
+  // }
 
 
   /** 
@@ -88,7 +88,7 @@ export class UrlComponent implements OnInit {
 
     let arr: Array<any> = [];
     let filters = this.dataService.stringKeyToArray(params);
-    console.log("filters -->",filters);
+    console.log("filters -->", filters);
     let filtersLength = Object.keys(filters).length;
 
     if (orginalProduct.length !== 0) {
@@ -119,40 +119,10 @@ export class UrlComponent implements OnInit {
             arr.push(product);
           }
         });
-        // console.log("filter result ->", arr);
-        // if (filters.rangeId) {
-        //   console.log("Inside")
-        //   this.defaultService.getPrice().subscribe(response => {
-        //     if (response.length != 0) {
-        //       console.log("price res -->", response);
-        //       console.log("&&-->", this.dataService.priceFilter(arr, response, 'rangeId', filters.rangeId));
-        //     }
-        //   });
-        // }
-
-
         console.log("final produsdfas arr ->", arr);
         filteredProduct = arr;
-        // for (let key in filters) {
-        //   if (this.filteredProducts.length == 0 && orginalProduct.length != 0) {
-        //     filteredProduct = this.getData(tempProduct, key, filters[key], priceArr);
-        //   } else {
-        //     filteredProduct = this.getData(orginalProduct, key, filters[key], priceArr);
-        //   }
-        // }
-        // this.paramsService.setFilteredProducts(filteredProduct);
-        // console.log("filtered productesdasd sets")
       }
     }
-    //  else {
-    //   this.paramsService.setFilteredProducts(orginalProduct);
-    // }
-
-
-
-    // if (this.orginalProduct.length == 0) { // will be called page loaded with query params
-    //   this.paramsService.setOrginalProducts(filteredProduct);
-    // }
     if ("sortOrder" in params) {
       let sortType = params.sortType;
       if (sortType == "priceLowToHigh" || sortType == "priceHighToLow") {
@@ -164,23 +134,5 @@ export class UrlComponent implements OnInit {
 
     }
     return filteredProduct;
-  }
-
-  getData(products, key, value, priceArr) {
-    let arr: Array<any> = [];
-    let status: boolean;
-    if (key !== "rangeId") {
-      products.forEach(element => {
-        (key == "subLevelFilter") ? (key = 'subLevelId') : key;
-        let length = this.dataService.findExist(element[key], value);
-        (length > 0) ? arr.push(element) : '';
-      });
-    } else {
-      arr = this.dataService.priceFilter(products, priceArr, key, value);
-    }
-    if (arr.length != 0) {
-      this.paramsService.setTempProductData(arr);
-    }
-    return arr;
   }
 }

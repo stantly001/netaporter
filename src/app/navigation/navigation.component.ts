@@ -49,7 +49,6 @@ export class NavigationComponent implements OnInit {
     this.removeSelectedIndex = function () {
       this.removeMsg = "removeMouse"
     }
-    console.log("navigaton called");
   }
 
   menus: Array<any> = [];
@@ -64,18 +63,12 @@ export class NavigationComponent implements OnInit {
     this.router.events.subscribe((data) => {
       if (data instanceof RoutesRecognized) {
         let tempParams = data.state.root.firstChild.params;
-        console.log("navigation tempParams -->", tempParams);
         this.ln = tempParams.ln;
         this.cn = tempParams.cn;
         this.activeIndex = tempParams.menuId - 1;
-
       }
     });
 
-  }
-
-  reloadproduct(menu, category, subCategory) {
-    this.router.navigate(['/shop/' + this.cn + "/" + this.ln + "/" + menu.menuId + "/" + category.categoryId + "/" + subCategory.id]);
   }
 
   /**
@@ -104,6 +97,7 @@ export class NavigationComponent implements OnInit {
   /**
    * 
    * @param menu 
+   * When click in menu, function is called and returns the selected menu first category name
    */
   selectMenu(menu) {
     this.defaultService.getCategories().subscribe(response => {

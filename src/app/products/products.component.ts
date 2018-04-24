@@ -7,8 +7,8 @@ import { UrlComponent } from '../url/url.component';
 import { UtilitiesService } from '../services/utilities.service';
 import { ParamsService } from '../services/params.service';
 import { DataService } from '../services/data.service';
+import { FilterService } from "../services/filter.service";
 import { PaginationService } from '../services/index';
-// import { PaginationService } from '../services/index';
 import { DefaultService } from '../services/default.service';
 import { Observable } from 'rxjs/Rx';
 import { ISubscription } from 'rxjs/Subscription';
@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit {
 
   // private paramsSubscripiton: ISubscription;
 
-  constructor(private paramsService: ParamsService,
+  constructor(private filterService: FilterService, private paramsService: ParamsService,
     private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute,
     private paginationService: PaginationService, private urlComponent: UrlComponent, private utilitiesService: UtilitiesService, private dataService: DataService) {
 
@@ -104,11 +104,13 @@ export class ProductsComponent implements OnInit {
         queryParamObj.filteredProduct = data.products;
         queryParamObj.tempProduct = data.products;
         queryParamObj.prices = [];
+        console.log("product component this.queryparams -->", this.queryParams);
         if (Object.keys(this.queryParams).length !== 0) {
           let req = this.urlComponent.getProductByFilters(this.queryParams, queryParamObj);
           this.paramsService.setFilteredProducts(req);
         }
         else {
+          this.filterService.resetQueryParams();
           this.paramsService.setOrginalProducts(data.products);
           this.paramsService.setFilteredProducts(data.products);
         }
@@ -134,19 +136,9 @@ export class ProductsComponent implements OnInit {
       (params: Params, qParams: Params) => ({ params, qParams })).subscribe(allParams => {
         let obj = JSON.parse(JSON.stringify(allParams.qParams));
         (type == "all") ? delete obj["sortOrder"] : (obj["sortOrder"] = sortOrder);
-        // this.urlComponent.loadUrl(routeUrl, obj, '');
         this.router.navigate([routeUrl], { queryParams: obj });
       });
   }
-
-  // setPage(page: number, len: number) {
-  //   console.log(page)
-  //   console.log(len);
-  //   console.log("setpage product lenght -->", this.products.length);
-  //   this.pager = this.paginationService.getPager(this.products.length, page, len);
-  //   this.pagedProducts = this.products.slice(this.pager.startIndex, this.pager.endIndex + 1);
-  //   console.log("Paged Products --->", this.pagedProducts);
-  // }
 
   callPaginatedProduct(page: number, len: number) {
     this.router.navigate([], {

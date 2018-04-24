@@ -7,9 +7,11 @@
   <span *ngIf="breadCrumnSubLevelName">
     <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId,subCategoryId]">/ {{breadCrumbSubCategoryName}}</a>
   </span>
+  <span *ngIf="breadCrumbProductName">/ {{breadCrumbProductName}}</span>
+  <span *ngIf="breadCrumbProductDescripton">/ {{breadCrumbProductDescripton}}</span>
 </div>
 <!-- breadcrumbs -->
-<div class="w3ls_dresses_grid_left_grid2_left">
+<div *ngIf="!breadCrumbProductName" class="w3ls_dresses_grid_left_grid2_left">
   <h1 *ngIf="breadCrumbCategoryName && !(breadCrumbSubCategoryName || breadCrumnSubLevelName)">
     <a class="breadcrumb-anchor" [routerLink]="['/shop',cn,ln,menuId,categoryId]">
       {{breadCrumbCategoryName}}

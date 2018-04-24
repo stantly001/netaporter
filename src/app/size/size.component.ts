@@ -28,13 +28,14 @@ export class SizeComponent implements OnInit {
 
   urlParams: Object;
 
-  constructor(private router:Router,private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private paramsService: ParamsService,
     private defaultService: DefaultService, private dataService: DataService,
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
     this.isCategory = false;
-    let url = window.location.href;
+    
 
     this.defaultService.getSizes().subscribe(response => {
+      let url = window.location.href;
       if (response.length != 0) {
         this.sizeArr = response;
         this.activatedRoute.params.subscribe(routingUrl => {
@@ -52,9 +53,12 @@ export class SizeComponent implements OnInit {
                   }
                 });
               });
+            } else {
+              tempArr.forEach(element => {
+                element.checked = false;
+              });
             }
             this.sizes = tempArr;
-
           });
         });
       }

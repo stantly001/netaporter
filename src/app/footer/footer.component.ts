@@ -33,13 +33,13 @@ export class FooterComponent implements OnInit {
         this.ln = paramObj.ln;
         this.menuId = paramObj.menuId;
         this.categoryId = paramObj.categoryId;
+        this.defaultService.getCategories().subscribe(response => {
+          this.topCategories = response.filter(res => res.menuId == this.menuId)[0].categories;
+        });
       }
     });
-    this.defaultService.getCategories().subscribe(response => {
-      this.topCategories = response.filter(res => res.menuId == this.menuId)[0].categories;
-    })
+
     this.defaultService.getMappingFilters().subscribe(response => {
-      console.log("ss", response)
       this.brandIds = response.filter(res => res.categoryId == this.categoryId)[0].brandId;
       this.defaultService.getBrands().subscribe(response => {
         this.brands = response;

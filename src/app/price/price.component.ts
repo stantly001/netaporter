@@ -32,9 +32,9 @@ export class PriceComponent implements OnInit {
     /**
       * Price Option Call
     */
-    let url = window.location.href;
-    this.defaultService.getPrice().subscribe(response => {
 
+    this.defaultService.getPrice().subscribe(response => {
+      let url = window.location.href;
       if (response.length != 0) {
         if ((url.indexOf('?' + 'pricesFilter' + '=') != -1) || (url.indexOf('&' + 'pricesFilter' + '=') != -1)) {
           let priceFilterIds = this.activatedRoute.snapshot.queryParams['pricesFilter'].split(",").map(Number);
@@ -44,6 +44,10 @@ export class PriceComponent implements OnInit {
                 element.checked = true;
               }
             });
+          });
+        } else {
+          response.forEach(element => {
+            element.checked = false;
           });
         }
       }

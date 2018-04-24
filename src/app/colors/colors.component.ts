@@ -29,9 +29,10 @@ export class ColorsComponent implements OnInit {
     private utilitiesService: UtilitiesService, private urlComponent: UrlComponent, private filterService: FilterService) {
 
     this.isCategory = false;
-    let url = window.location.href;
+
 
     this.defaultService.getColors().subscribe(response => {
+      let url = window.location.href;
       if (response.length != 0) {
         this.colorArr = response;
         this.activatedRoute.params.subscribe(routingUrl => {
@@ -47,6 +48,10 @@ export class ColorsComponent implements OnInit {
                     element.checked = true;
                   }
                 });
+              });
+            } else {
+              tempArr.forEach(element => {
+                element.checked = false;
               });
             }
             this.colors = tempArr;

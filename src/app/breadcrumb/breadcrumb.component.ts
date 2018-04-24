@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 
 import { BreadcrumbService } from '../services/breadcrumb.service';
 import { ParamsService } from '../services/params.service';
-
+import { DefaultService } from '../services/default.service';
+import { UtilitiesService } from '../services/utilities.service';
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
@@ -12,6 +13,9 @@ import { ParamsService } from '../services/params.service';
 })
 export class BreadcrumbComponent implements OnInit {
 
+  breadCrumbProductDescripton: any;
+  breadCrumbProductName: any;
+  productsArr: Array<any>;
   cn: any;
   ln: any;
   subLevelId: number;
@@ -25,8 +29,9 @@ export class BreadcrumbComponent implements OnInit {
   params: any;
   length: Number;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private breadcrumbService: BreadcrumbService, private paramsService: ParamsService) {
+  constructor(private utilitiesService: UtilitiesService, private defaultService: DefaultService, private router: Router, private activatedRoute: ActivatedRoute, private breadcrumbService: BreadcrumbService, private paramsService: ParamsService) {
     this.activatedRoute.params.subscribe(response => {
+      console.log("breadcrumb -->", response);
       this.params = response;
       this.breadcrumbService.generateBreadCrumb(response).subscribe(response => {
         this.breadCrumbMenuName = response.menuName;
@@ -43,10 +48,22 @@ export class BreadcrumbComponent implements OnInit {
       this.ln = response.ln;
       this.cn = response.cn;
 
+      if (response.productId) {
+        let result: any;
+        this.defaultService.getProducts().subscribe(productResponse => {
+          result = productResponse.filter(product => product.id == response.productId)[0];
+          if (Object.keys(result).length !== 0) {
+            console.log("breadcrumb productarr -->", result);
+            this.breadCrumbProductName = result['name'];
+            this.breadCrumbProductDescripton = result['description'];
+          }
+        });
+      }
+
     });
     this.paramsService.fp.subscribe(response => {
       this.length = response.length;
-    })
+    });
   }
 
 
