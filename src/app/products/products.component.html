@@ -1,38 +1,113 @@
+<app-product-ads></app-product-ads>
 <div class="w3ls_dresses_grid_right_grid3">
-    <div *ngFor="let product of products" class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
-      <div class="agile_ecommerce_tab_left dresses_grid">
-        <div class="hs-wrapper hs-wrapper2"> <img src="{{product.img}}" alt=" " class="img-responsive"> <img src="images/ss2.jpg" alt=" " class="img-responsive"> <img src="images/ss3.jpg" alt=" " class="img-responsive"> <img src="images/ss4.jpg" alt=" " class="img-responsive"> <img src="images/ss5.jpg" alt=" " class="img-responsive"> <img src="images/ss6.jpg" alt=" " class="img-responsive"> <img src="images/ss7.jpg" alt=" " class="img-responsive"> <img src="images/ss8.jpg" alt=" " class="img-responsive">
-          <div class="w3_hs_bottom w3_hs_bottom_sub1">
-            <ul>
-              <li> <a routerLink="product/{{product.id}}"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a> </li>
-            </ul>
-          </div>
+    <div class="row product-display-filter">
+        <div class="col-md-3">
+            <div class="styled-input-container styled-input--square">
+                <div class="styled-input-single">
+                    <input type="checkbox" id="product-filter-onsale" class="on-sale">
+                    <label for="product-filter-onsale" class="checkbox-menu">On Sale Items</label>
+                </div>
+            </div>
         </div>
-       
-       <div class="description">
-          <a href="/ae/en/product/1044497/marni/printed-satin-dress" title="Printed satin dress" data-position="1">
-            <span class="designer">{{product.name}}</span>
-          </a>
-          <br>
-          <span class="price ">
-              £ {{product.price}}
-          </span>
-          <br class="clearboth">
-          <span class="slug"></span>
+        <div class="col-md-5">
+            <app-sort></app-sort>
+            <div class="btn-group">
+                <select name="select_item" [(ngModel)]="pageSize" (change)="callPaginatedProduct(pageCount,$event.target.value)" class="form-control select_item">
+                    <option value="5">5 items/page</option>
+                    <option value="10">10 items/page</option>
+                    <option value="25">25 items/page</option>
+                    <option value="50">50 items/page</option>
+                </select>
+            </div>
         </div>
-      </div>
+        <!-- pagination code -->
+        <ul *ngIf="(pager.pages && pager.pages.length > 1) && (products.length!==0)" class="pagination pull-right">
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a (click)="callPaginatedProduct(pager.currentPage - 1,pageSize)">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage == page}">
+                <a (click)="callPaginatedProduct(page,pageSize)">{{page}}</a>
+            </li>
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a (click)="callPaginatedProduct(pager.currentPage + 1,pageSize)">Next</a>
+            </li>
+        </ul>
+        <!-- pagination code -->
     </div>
-  
-     
-    
-    <div id="product-list-menu-bottom">
-  <!-- <a class="back-to-top" href="#top">Back to top
-    
-  </a> -->
- 
-</div>
+    <!-- product-display-filter -->
 
-<span class="promotional_block">
-    <img src="https://www.net-a-porter.com/alfresco/nap/webAssets/webPage/category-landing-pages/clothing/2018/03/09/intl/en.jpg">
-    </span>
+    <div class="row">
+        <div *ngIf="(productFlag==false && products.length==0) || products.length==0">
+            <h3>Unfortunately there are no matching items in your request.</h3>
+        </div>
+        <div *ngIf="products.length!==0" class="w31s_dresses_grid_right_grid3">
+            <div class="row product-row" *ngFor="let row of rows">
+                <div *ngFor="let product of pagedProducts | slice:(row*itemsPerRow):(row+1)*itemsPerRow; let i = index" class="col-lg-3 col-md-6 col-xs-12 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+                    <div class="agile_ecommerce_tab_left dresses_grid">
+                        <div class="hs-wrapper hs-wrapper2">
+                            <div class="pull-right" *ngIf="product.wishList==true">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
+                                <img class="img-responsive" [src]="product[i] ? product.outFitImg : product.productImg" (mouseover)="product[i] = true" (mouseout)="product[i] = false">
+                            </a>
+                        </div>
+                        <div class="description">
+                            <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]' title="Printed satin dress" data-position="1">
+                                <span class="designer">{{product.brandName}}</span>
+                            </a>
+                            <br class="clearboth">
+                            <span class="product-description">
+                                <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
+                                    {{product.description}}
+                                </a>
+                            </span>
+                            <br>
+                            <span class="price ">
+                                <span class="price-detail">
+                                    <span *ngIf="product.offerPrice!='0'" class="offer-price">
+                                        <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
+                                            AED {{product.offerPrice}}
+                                        </a>
+                                    </span>
+                                    <span class="orginal-price" [ngClass]="{'strike':product.offerPrice!=='0'}">
+                                        <a [routerLink]='["/product",cn,ln,menuId,categoryId,product.id]'>
+                                            AED {{product.orginalPrice}}
+                                        </a>
+                                    </span>
+                                </span>
+                            </span>
+                            <br class="clearboth">
+                            <span class="slug"></span>
+                        </div>
+                    </div>
+
+                    <div class="clearfix" *ngIf="i%3==0"></div>
+                </div>
+                <!-- row -->
+            </div>
+        </div>
+    </div>
+    <!-- pagination code -->
+    <div class="pull-right">
+        <ul *ngIf="(pager.pages && pager.pages.length > 1) && (products.length!==0)" class="pagination pull-right">
+            <li *ngIf="pager.currentPage!=1" [ngClass]="{disabled:pager.currentPage === 1}">
+                <a (click)="callPaginatedProduct(pager.currentPage - 1,pageSize)">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage == page}">
+                <a (click)="callPaginatedProduct(page,pageSize)">{{page}}</a>
+            </li>
+            <li *ngIf="pager.currentPage!=pager.totalPages" [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                <a (click)="callPaginatedProduct(pager.currentPage + 1,pageSize)">Next</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- pagination code -->
+
+    <div id="product-list-menu-bottom">
+        <!-- <a class="back-to-top" href="#top">Back to top
+    </a> -->
+    </div>
+
 </div>

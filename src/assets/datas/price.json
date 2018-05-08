@@ -1,0 +1,26 @@
+[
+    {
+        "rangeId":1,
+        "rangeFrom":"0",
+        "rangeTo":"200",
+        "checked":false
+    },
+    {
+        "rangeId":2,
+        "rangeFrom":"200",
+        "rangeTo":"500",
+        "checked":false
+    },
+    {
+        "rangeId":3,
+        "rangeFrom":"500",
+        "rangeTo":"1000",
+        "checked":false
+    },
+    {
+        "rangeId":4,
+        "rangeFrom":"1000",
+        "rangeTo":"2000",
+        "checked":false
+    }
+]

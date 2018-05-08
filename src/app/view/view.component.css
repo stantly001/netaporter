@@ -9,3 +9,150 @@
     margin-bottom: 0em;
 	font-size:16px;
 }
+.panel_bottom li a {
+    font-family: '33535gillsansmt';
+    color: #000;
+}
+.checkbox-menu {
+    text-transform: capitalize;
+    vertical-align: top;
+    font-family: '33535gillsansmt';
+    color: #000;
+}
+.w3ls_dresses_grid_left_grid {
+    border-bottom: dotted 1px #000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.category-banner{
+    margin: 0px 0px 20px 0px !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+ }
+.product-list-menu hr {
+    border-top: 0;
+    border-bottom: 1px dotted #999;
+    float: none;
+    clear: both;
+    bottom: 8px;
+    position: relative;
+}
+.product-list-title {
+    z-index: 1;
+    position: relative;
+    margin-bottom: 1px;
+    margin-top: 7px;
+}
+.product-list-menu h1 {
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: #000;
+    float: none;
+    padding: 0;
+    min-height: 20px;
+}
+.product-list-menu h1 {
+    text-align: left;
+    line-height: 21px;
+    font-size:39px;
+    margin-bottom: 1%;
+    font-weight:bold;
+}
+.product-list-results {
+    text-align: center;
+}
+.product-list-results .product-list-results-container {
+    padding: 0 20px;
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    background: #FFF;
+}
+.product-list-menu hr {
+    border-top: 0;
+    border-bottom: 1px dotted #999;
+    float: none;
+    clear: both;
+    bottom: 32px;
+    position: relative;
+}
+.product-list-menu {
+    width: 100%;
+    clear: both;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+select.select_item {
+    font-size: 12px;
+    color: #212121;
+    padding: 3px 0px;
+    outline: none;
+    /* margin-right: 1em !important; */
+}   
+.size-guide {
+    font-size: 17px;
+    color: #000;
+    text-decoration: underline;
+    margin: 0px;
+}
+
+/*
+*   checkbox highligh code
+*/
+.panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-body {
+    padding:0px !important;
+}
+.panel-body ul li, .ecommerce_size ul li {
+    padding-left: 0px !important;
+    margin-bottom: 3px !important;
+}
+.panel-title, .panel_bottom li a {
+    color:#000;
+}
+.product-total {
+    margin-left:2px;
+}
+.breadcrumbs {
+    margin-bottom: 15px;
+    font-size: 13px;
+    margin-left: 2px;
+}
+.container.product-view {
+    margin-bottom: 2%;
+}
+.grid-size-filter {
+    border-bottom: none !important;
+}
+.ads {
+    padding-left:5%;
+    padding-top:5%;
+}
+.section-view {
+    border-bottom: 1px dotted #ccc;
+}
+a:focus {
+    outline: none !important;
+  }
+
+.inside-check {
+    margin: 4px 6px;
+vertical-align: middle;
+}
+ 

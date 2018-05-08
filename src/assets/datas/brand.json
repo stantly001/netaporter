@@ -1,0 +1,32 @@
+[
+    {
+        "brandId":1,
+        "brandName":"Robert Cavalli",
+        "checked":false
+    },
+    {
+        "brandId":2,
+        "brandName":"Just Cavalli",
+        "checked":false
+    },
+    {
+        "brandId":3,
+        "brandName":"Versus",
+        "checked":false
+    },
+    {
+        "brandId":4,
+        "brandName":"Iceberg",
+        "checked":false 
+    },
+    {
+        "brandId":5,
+        "brandName":"Escales",
+        "checked":false
+    },
+    {
+        "brandId":6,
+        "brandName":"Dark Bikkembergs",
+        "checked":false
+    }
+]

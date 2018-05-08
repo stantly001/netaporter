@@ -1,0 +1,199 @@
+<section id="description">
+  <div class="container">
+    <div class="row">
+      <app-breadcrumb></app-breadcrumb>
+      <div class="col-md-8">
+        <div id="carousel-custom" class="carousel slide " data-ride="carousel">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="thumbnail-prev-button swiper-button">
+                <a class="thumbnail-prev-button swiper-button" (click)="isOn = true" data-target="#carousel-custom" data-slide="prev">
+                  <span class="fa fa-chevron-up thumb-arrow"></span>
+                </a>
+              </div>
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-custom" *ngFor="let image of images;let i = index;" [attr.data-slide-to]="i" [ngClass]="{'active':i==0}"
+                  (click)="isOn=true">
+                  <img class="thumbnail-image" data-image="yellow" src="{{image?.url}}" />
+                </li>
+              </ol>
+
+              <div class="thumbnail-next-button swiper-button">
+                <a class="thumbnail-next-button swiper-button" (click)="isOn = true" data-target="#carousel-custom" data-slide="next">
+                  <span class="fa fa-chevron-down thumb-arrow"></span>
+                </a>
+              </div>
+              <div *ngIf="productsArr?.video" class="icon icon-video_play text-center" (click)="toggleVideo();">
+                <span class="fa fa-play-circle"></span>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <popover-content #myPopover [closeOnMouseOutside]="false" [closeOnClickOutside]="true">
+                <div class="text-center">
+                  <b>Like This Item?</b>
+                </div>
+                <div class="text-center">
+                  <p class="text-nowrap">Save It as a favorite, and we'll notify you</p>
+                  <p class="text-nowrap">if it goes on sale and more.</p>
+                </div>
+              </popover-content>
+              <i class="fa  wish-list-popover" (click)="favourite=!favourite" [ngClass]="{'fa-heart-o':favourite==false,'fa-heart':favourite==true}"
+                [popoverOnHover]="true" [popover]="myPopover" aria-hidden="true"></i>
+              <div class="carousel-outer" *ngIf="isOn">
+                <!-- me art lab slider -->
+                <div class="carousel-inner " role="listbox">
+                  <div class="item text-center" *ngFor="let image of images;let i = index" [ngClass]="{'active':i==0}">
+                    <span>
+                      <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.zoomUrl}}" alt='Daisy on the Ohoopee' class="img-responsive image-width"
+                      />
+                      <!-- <img appProductView src='{{image?.url}}' attr.data-zoom-image="{{image?.url}}" /> -->
+                      <!-- <img appProductView src='{{image?.url}}' alt='Daisy on the Ohoopee' class="img-responsive" /> -->
+                      <!-- <p>Hover</p> -->
+                    </span>
+                  </div>
+                </div>
+
+                <!-- sag sol -->
+                <a class="left zoom-arrow-index carousel-control" data-target="#carousel-custom" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right zoom-arrow-index carousel-control" data-target="#carousel-custom" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+              <div [hidden]="isOn">
+                <video preload="none" src="{{productsArr?.video}}" controls (click)="toggleVideo()" #videoPlayer class="img-responsive">
+                  <!-- <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4" /> Browser not supported -->
+                </video>
+              </div>
+              <!-- <video width="320" height="240" controls>
+                <source src="https://video.net-a-porter.com/videos/productPage/1048377_detail.mp4" type="video/mp4">
+              </video> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>
+          <span class="in_sport" [innerText]="productsArr?.name"></span>
+        </h3>
+        <span class="product-name" [innerText]="productsArr?.description"></span>
+        <div class="full-price style-scope nap-price" itemprop="price" content="861.61">
+          <span *ngIf="productsArr?.offerPrice!=='0'">
+            <span [ngClass]="{'actualPrice':productsArr?.available==true}">AED {{productsArr?.offerPrice}}</span>
+          </span>
+          <span *ngIf="productsArr?.offerPrice!=='0'">
+            <span class="orginal-price-strike">AED {{productsArr?.orginalPrice}}</span>
+          </span>
+          <span *ngIf="productsArr?.offerPrice=='0'">
+            <span class="orginal-price">AED {{productsArr?.orginalPrice}}</span>
+          </span>
+        </div>
+        <div>
+          <span class="product-code">{{productsArr?.message}}</span>
+        </div>
+        <div>
+          <span class="product-code">Product Code: {{productsArr?.code}}</span>
+        </div>
+        <hr>
+        <div *ngIf="productsArr?.available==true">
+          <div class="product-name">
+            CHOOSE SIZE
+            <a class="size-guide pull-right" href="https://www.net-a-porter.com/intl/sizechart.nap" target="_blank">
+              <i class="rotate fa fa-align-right"></i>
+              <span class="icon-size_guide">Size Guide</span>
+            </a>
+          </div>
+          <div class="row col-md-12 product-sizes">
+            <span class="product-size-image" [class.active]="currentIndex==sizeIndex" (click)="currentIndex=sizeIndex" *ngFor="let size of sizes;let sizeIndex=index;">
+              <button class="btn btn-default product-size-btn">{{size.sizeName}}</button>
+            </span>
+          </div>
+          <div class="color-image">
+            <a *ngFor="let color of availableColors;let colorIndex=index" (click)="imageColorSelection(color);currentColIndex=colorIndex;">
+              <img class="img-responsive" [class.active]="currentColIndex==colorIndex" width="50" height="50" [src]="color.url">
+            </a>
+            <!-- <a (click)="imageColorSelection('blue')">
+              <img class="img-resposive" width="50" height="50" src="assets/img/blueColor.png">
+            </a>
+            <a (click)="imageColorSelection('red')">
+              <img class="img-resposive" width="50" height="50" src="assets/img/RedColor.png">
+            </a> -->
+          </div>
+          <div>
+            <div class="product-shipment text-center">
+              <span>Ship To:</span>
+              <span class="dropdown ship-to-dropdown">
+                <a class="dropdown-toggle" id="shipto" data-toggle="dropdown">
+                  {{countryName}}
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
+                  <li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+                    <a>{{country.countryName}}</a>
+                  </li>
+                </ul>
+              </span>
+              <!-- <span class="fa fa-chevron-down" id="shiptoarrow"></span> -->
+              <div>
+                Order within 9 hours and 1 minute for guaranteed Same-Day Shipping.
+              </div>
+            </div>
+          </div>
+          <div class="shopping-cart">
+            <button type="button" class="btn btn-primary btn-lg col-md-12 nap-button btn-block">Add to Basket</button>
+          </div>
+        </div>
+        <div *ngIf="productsArr?.available!=true">
+          <div class="product-name actual-price">
+            Out Of Stock
+            <p class="out-of-desc">
+              Please enter your email we'll remind you when this product is back in stock again.
+            </p>
+          </div>
+          <div>
+            <input type="text" class="form-control" placeholder="Your Email Adderss">
+          </div>
+          <div>
+            <button class="btn btn-primary submit-button">Submit</button>
+          </div>
+        </div>
+        <div id="panel-group" class="panel-product accordion-container">
+          <div class="" *ngFor="let item of productsArr?.Items; let i = index">
+            <div class="" (click)="current = i">
+              <h5 class="panel-title">
+                {{item.title}}
+                <div class="pull-right">
+                  <i class='fa' [class.fa-plus]="i != current" [class.fa-minus]="i == current" aria-hidden="true"></i>
+                </div>
+              </h5>
+            </div>
+            <div id="collapse1" class="panel-collapse" [class.collapse]='current != i'>
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="share-icon">
+          <h5>SHARE ON</h5>
+          <a href="http://www.facebook.com">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a href="http://www.twitte.com">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="http://www.pinterest.com">
+            <i class="fa fa-pinterest"></i>
+          </a>
+          <a href="http://www.googleplus.com">
+            <i class="fa fa-google-plus"></i>
+          </a>
+          <a href="mailto:">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-alternative-style *ngIf="alternateProducts" [Products]="alternateProducts"></app-alternative-style>
+<app-ways-to-shop></app-ways-to-shop>

@@ -1,0 +1,21 @@
+<section class="address">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="text-center alternate">
+        <span>
+          <strong>More ways to shop</strong>
+        </span>
+      </div>
+      <div class="show-hide-content content row text-center" style="transition: max-height 0.5s ease-in-out 0s; max-height: 0px;">
+        <div class="delivery col-xs-12 col-lg-3" *ngFor="let moreCategory of moreCategories">
+          <div class="view-more">
+            <a href="/shop/{{cn}}/{{ln}}/{{menuId}}/{{moreCategory.categoryId}}" class="js-popup enabled help-link" data-link-name="delivery options">{{moreCategory.categoryName}}</a>
+          </div>
+          <div class="view-more" *ngFor="let subCategory of moreCategory.subCategory;let i=index" >
+          <a href="/shop/{{cn}}/{{ln}}/{{menuId}}/{{moreCategory.categoryId}}/{{subCategory.id}}"  class="js-popup enabled help-link" data-link-name="returns">{{subCategory.name}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

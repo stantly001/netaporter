@@ -1,48 +1,136 @@
-<!-- footer -->
 <div class="footer">
-    <div class="container">
-      <div class="w3_footer_grids">
-        <div class="col-md-8 w3_footer_grid">
-         <h4>Useful Information</h4>
-          <ul class="info col-md-4">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Short Codes</a></li>
-            <li><a href="#">FAQ's</a></li>
-            <li><a href="#">Special Products</a></li>
-          </ul>
-      <ul class="info col-md-4">
-            <li><a href="#">Dresses</a></li>
-            <li><a href="#">Sweaters</a></li>
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Sarees</a></li>
-            <li><a href="#">Shorts & Skirts</a></li>
-          </ul>
-      <ul class="info col-md-4">
-            <li><a href="#">Dresses</a></li>
-            <li><a href="#">Sweaters</a></li>
-            <li><a href="#">Shirts</a></li>
-            <li><a href="#">Sarees</a></li>
-            <li><a href="#">Shorts & Skirts</a></li>
-          </ul>
-        </div>
-   
-        <div class="col-md-4 w3_footer_grid">
-          <h4>Stay in Touch</h4>
-         <form class="aquisition-form" action="/ae/en/emailUpdatesRegistration.nap" method="get">
-                                    <div class="form-container">
-                                      <input class="email-input" name="emailAddress" placeholder="Sign up for NET-A-PORTER news" type="email">
-                                      <i class="fa fa-chevron-right" type="submit" ></i>
-                                    </div>
-                                  </form>
-          
-        </div>
-        <div class="clearfix"> </div>
-      <div class="copyright col-md-12">
-                                <span>© 2018</span>
-                                <img src="https://nap-assets.nap-live.ext.net-a-porter.com/girdle/images/header/logo-net-a-porter.80097ad030588586.svg" alt="Net-A-Porter" width="120" />
-                              </div>
-      </div>
-    </div>
-  </div>
-  <!-- //footer -->
+	<div class="container footer-link">
+		<div class="w3_footer_grids">
+			<div class="col-md-2 w3_footer_grid">
+				<h3>Ecommerce</h3>
+				<ul class="info">
+					<li>
+						<a href="about.html">About Us</a>
+					</li>
+					<li>
+						<a href="mail.html">Store Locator</a>
+					</li>
+					<li>
+						<a href="short-codes.html">Careers</a>
+					</li>
+				</ul>
+				<h3>Ecommerce</h3>
+				<ul class="info">
+					<li>
+						<a href="faq.html">My Concierge</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-2 w3_footer_grid">
+				<h3>Top Brands</h3>
+				<ul class="info">
+					<li *ngFor="let topBrand of topBrands">
+						<a href="about.html">{{topBrand.brandName}}</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="col-md-2 w3_footer_grid">
+				<h3>Top Categories</h3>
+				<ul class="info">
+					<li *ngFor="let topCategory of topCategories">
+						<a href="/shop/{{cn}}/{{ln}}/{{menuId}}/{{topCategory.categoryId}}">{{topCategory.categoryName}}</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="col-md-2 w3_footer_grid">
+				<h3>Customer Service</h3>
+				<ul class="info">
+					<li>
+						<a href="dresses.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="sweaters.html">Shipping Information</a>
+					</li>
+					<li>
+						<a href="shirts.html">Secure Payment</a>
+					</li>
+					<li>
+						<a href="sarees.html">Returns & Refunds</a>
+					</li>
+					<li>
+						<a href="skirts.html">Terms & Conditions</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4 w3_footer_grid">
+				<h3>Get Trend Updates, Style Tips and More</h3>
+				<form class="form-inline">
+					<div class="form-group">
+						<input name="Email" placeholder="Email Address" type="text" required="">
+					</div>
+					<input type="submit" value="Submit">
+
+				</form>
+				<h4>Connect With Us</h4>
+				<div class="agileits_social_button">
+					<ul>
+						<li>
+							<a href="#" class="facebook"> </a>
+						</li>
+						<li>
+							<a href="#" class="twitter"> </a>
+						</li>
+						<li>
+							<a href="#" class="google"> </a>
+						</li>
+						<li>
+							<a href="#" class="pinterest"> </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="footer-copy container">
+
+		<div class="col-md-4">
+			<p>&copy; 2018 Ecommerce. All rights reserved </p>
+		</div>
+		<div class="col-md-2">
+			<p class="text-center-ship">Ship to
+				<span class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown">
+						{{countryName}}
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" [ngClass]="{'bottom-dropdown':(displayType=='bottom'),'top-dropdown':(displayType=='top')}">
+						<li (click)="shipTo(country)" [value]="country.countryShortName" *ngFor="let country of countries">
+							<a>{{country.countryName}}</a>
+						</li>
+					</ul>
+				</span>
+			</p>
+		</div>
+		<div class="col-md-6">
+
+			<div class="pull-right payment">
+				<div class="col-md-4 col-xs-12">
+					<span class="payee">Payment Details</span>
+				</div>
+
+				<div class="col-md-2 col-xs-2">
+					<img class="img-responsive" src="../../assets/images/maestro.png" width="40">
+				</div>
+				<div class="col-md-2 col-xs-2">
+					<img class="img-responsive" src="../../assets/images/mastercard.png" width="40">
+				</div>
+				<div class="col-md-2 col-xs-2">
+					<img class="img-responsive" src="../../assets/images/visa.png" width="40">
+				</div>
+				<div class="col-md-2 col-xs-2">
+					<img class="img-responsive" src="../../assets/images/paypa.png" width="40">
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>

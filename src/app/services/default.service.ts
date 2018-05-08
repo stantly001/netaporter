@@ -34,4 +34,28 @@ export class DefaultService {
     return this.http.get(this.BASE_URL+"sort.json").map((res:Response)=>res);
   }
 
+  getLanuage():any {
+    return this.http.get(this.BASE_URL+"language.json").map((res:Response)=>res);
+  }
+
+  getCountry():any {
+    return this.http.get(this.BASE_URL+"country.json").map((res:Response)=>res);
+  }
+
+  getAds():any {
+    return this.http.get(this.BASE_URL+"ads.json").map((res:Response)=>res);
+  }
+
+  getPrice():any {
+    return this.http.get(this.BASE_URL+"price.json").map((res:Response)=>res);
+  }
+
+  getBrands():any {
+    return this.http.get(this.BASE_URL+"brand.json").map((res:Response)=>res);
+  }
+
+  getMappingFilters():any {
+    return this.http.get(this.BASE_URL+"filters.json").map((res:Response)=>res);
+}
+
 }

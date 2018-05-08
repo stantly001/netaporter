@@ -1,0 +1,29 @@
+.js-popup.enabled.help-link {
+    color: #be181c !important;
+    border-right: none;
+    font-size: 24px;
+    border-bottom: 1px solid #ea9a9c;
+    /* font-weight:600; */
+}
+.address {
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.like-gucci {
+    padding-bottom:10px;
+}
+
+.alternate {
+	padding-bottom: 50px;
+	font-size:30px;
+	text-transform:uppercase;
+}
+.view-more {
+    float: left !important;
+    padding: 15px 39px !important;
+    text-align:left;
+}
+
+.delivery.col-xs-12.col-lg-3 {
+    width: 100% !important;
+}

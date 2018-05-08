@@ -1,22 +1,37 @@
-import {Routes} from '@angular/router';
-import {ViewComponent} from './view/view.component';
-import {ProductDetailComponent} from './product-detail/product-detail.component';
+import { Routes } from '@angular/router';
+import { ViewComponent } from './view/view.component';
+import { ProductViewComponent } from './product-view/product-view.component';
+import { NavigationComponent } from './navigation/navigation.component';
 export const Approute:Routes=[
     {
-        path:"home",
+        path:"shop/:cn/:ln/:menuId",
         component:ViewComponent
     },
     {
-        path:"home/:categoryId",
-        component:ViewComponent
+        path: "shop/:cn/:ln/:menuId/:categoryId",
+        component: ViewComponent,
     },
     {
-        path:"home/:categoryId/:subCategoryId?",
-        component:ViewComponent
+        path: "shop/:cn/:ln/:menuId/:categoryId/:subCategoryId",
+        component: ViewComponent,
+       
     },
-    { 
+    {
+        path: "shop/:cn/:ln/:menuId/:categoryId/:subCategoryId/:subLevelId",
+        component: ViewComponent,
+       
+    },
+    {
+        path: "product/:cn/:ln/:menuId/:categoryId/:productId",
+        component: ProductViewComponent,
+    
+    },
+    {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
+        redirectTo: 'shop/us/en/1/1',
+        pathMatch: 'full',
+       
     }
 ]
+
+
